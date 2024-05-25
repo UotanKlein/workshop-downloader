@@ -1,6 +1,5 @@
-import fs from 'fs';
-import path from'path';
-import * as flatted from 'flatted';
+import fs from 'fs/promises';
+import path from 'path';
 
 class File {
     constructor(name, parent = null) {
@@ -26,19 +25,23 @@ class File {
       this.parent = parent;
       this.path = parent ? path.join(parent.path, name) : name;
       this.type = 'directory';
-      this.children = this.loadChildren();
+      this.children = [];
     }
   
-    loadChildren() {
-      const childrenNames = fs.readdirSync(this.path);
-      return childrenNames.map((childName) => {
+    async loadChildren() {
+      const childrenNames = await fs.readdir(this.path);
+      this.children = await Promise.all(childrenNames.map(async (childName) => {
         const childPath = path.join(this.path, childName);
-        if (fs.lstatSync(childPath).isDirectory()) {
-          return new Directory(childName, this);
+        if (((await fs.lstat(childPath))).isDirectory()) {
+          const newDirec = new Directory(childName, this);
+          await newDirec.loadChildren();
+          return newDirec;
         } else {
           return new File(childName, this);
         }
-      });
+
+      }));
+      return this.children;
     }
 
     getChildren(name) {
@@ -70,4 +73,5 @@ class File {
   }
 
 const rootDir = new Directory('/home/nikita/company-work/src'); 
+await rootDir.loadChildren(); //загрузка потомков
 console.log(rootDir.toString());
