@@ -1,0 +1,1775 @@
+country_decisions = {
+	soe_develop_country_one = {
+		potential = {
+			ai = yes
+			any_owned_province = {
+				is_core = ROOT
+				NOT = { trade_goods = gold }
+				NOT = { has_latent_trade_goods = coal }
+				NOT = { development = 20 }
+				NOT = { base_tax = 7 }
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_at_war = no
+			adm_power = 800
+			NOT = {	has_country_modifier = developed_adm_timer }
+			if = {
+				limit = {
+					has_idea_group = innovativeness_ideas
+				}
+				full_idea_group = innovativeness_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = religious_ideas
+				}
+				full_idea_group = religious_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = economic_ideas
+				}
+				full_idea_group = economic_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = expansion_ideas
+				}
+				full_idea_group = expansion_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = administrative_ideas
+				}
+				full_idea_group = administrative_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = humanist_ideas
+				}
+				full_idea_group = humanist_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = infrastructure_ideas
+				}
+				full_idea_group = infrastructure_ideas
+			}
+			
+		}
+		effect = {
+			add_adm_power = -60
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					NOT = { trade_goods = gold }
+					NOT = { has_latent_trade_goods = coal }
+					NOT = { development = 20 }
+					NOT = { base_tax = 7 }
+				}
+				add_base_tax = 1
+			}
+			if = {
+				limit = {
+					government = native
+				}
+				add_country_modifier = {
+					name = developed_adm_timer
+					duration = 7300
+					hidden = yes
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = developed_adm_timer
+					duration = 1825
+					hidden = yes
+				}
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_develop_country_two = {
+		potential = {
+			ai = yes
+			any_owned_province = {
+				is_core = ROOT
+				NOT = { trade_goods = gold }
+				NOT = { has_latent_trade_goods = coal }
+				NOT = { development = 20 }
+				NOT = { base_production = 8 }
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_at_war = no
+			dip_power = 800
+			NOT = {	has_country_modifier = developed_dip_timer }
+			if = {
+				limit = {
+					has_idea_group = diplomatic_ideas
+				}
+				full_idea_group = diplomatic_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = influence_ideas
+				}
+				full_idea_group = influence_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = spy_ideas
+				}
+				full_idea_group = spy_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = trade_ideas
+				}
+				full_idea_group = trade_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = exploration_ideas
+				}
+				full_idea_group = exploration_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = maritime_ideas
+				}
+				full_idea_group = maritime_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = court_ideas
+				}
+				full_idea_group = court_ideas
+			}
+			
+		}
+		effect = {
+			add_dip_power = -60
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					NOT = { trade_goods = gold }
+					NOT = { has_latent_trade_goods = coal }
+					NOT = { development = 20 }
+					NOT = { base_production = 8 }
+				}
+				add_base_production = 1
+			}
+			if = {
+				limit = {
+					government = native
+				}
+				add_country_modifier = {
+					name = developed_adm_timer
+					duration = 7300
+					hidden = yes
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = developed_adm_timer
+					duration = 1825
+					hidden = yes
+				}
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_develop_country_three = {
+		potential = {
+			ai = yes
+			any_owned_province = {
+				is_core = ROOT
+				NOT = { trade_goods = gold }
+				NOT = { has_latent_trade_goods = coal }
+				NOT = { development = 20 }
+				NOT = { base_manpower = 6 }
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_at_war = no
+			mil_power = 800
+			NOT = {	has_country_modifier = developed_mil_timer }
+			if = {
+				limit = {
+					has_idea_group = aristocracy_ideas
+				}
+				full_idea_group = aristocracy_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = offensive_ideas
+				}
+				full_idea_group = offensive_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = defensive_ideas
+				}
+				full_idea_group = defensive_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = quality_ideas
+				}
+				full_idea_group = quality_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = quantity_ideas
+				}
+				full_idea_group = quantity_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = theocracy_gov_ideas
+				}
+				full_idea_group = theocracy_gov_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = indigenous_ideas
+				}
+				full_idea_group = indigenous_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = horde_gov_ideas
+				}
+				full_idea_group = horde_gov_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = plutocracy_ideas
+				}
+				full_idea_group = plutocracy_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = naval_ideas
+				}
+				full_idea_group = naval_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = mercenary_ideas
+				}
+				full_idea_group = mercenary_ideas
+			}
+			
+		}
+		effect = {
+			add_mil_power = -60
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					NOT = { trade_goods = gold }
+					NOT = { has_latent_trade_goods = coal }
+					NOT = { development = 20 }
+					NOT = { base_manpower = 6 }
+				}
+				add_base_manpower = 1
+			}
+			if = {
+				limit = {
+					government = native
+				}
+				add_country_modifier = {
+					name = developed_adm_timer
+					duration = 7300
+					hidden = yes
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = developed_adm_timer
+					duration = 1825
+					hidden = yes
+				}
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+    soe_produce_gold = {
+		potential = {
+			ai = yes
+			OR = {
+				any_owned_province = {
+					NOT = { province_id = 2128 }
+					is_core = ROOT
+					trade_goods = gold
+					NOT = { base_production = 10 }
+				}
+				any_owned_province = {
+					OR = {
+						province_id = 2128
+						province_id = 2121
+					}
+					is_core = ROOT
+					trade_goods = gold
+					NOT = { base_production = 6 }
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			dip_power = 500
+			NOT = {	has_country_modifier = produce_gold_timer }
+			if = {
+				limit = {
+					has_idea_group = diplomatic_ideas
+				}
+				full_idea_group = diplomatic_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = influence_ideas
+				}
+				full_idea_group = influence_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = spy_ideas
+				}
+				full_idea_group = spy_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = trade_ideas
+				}
+				full_idea_group = trade_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = exploration_ideas
+				}
+				full_idea_group = exploration_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = maritime_ideas
+				}
+				full_idea_group = maritime_ideas
+			}
+			if = {
+				limit = {
+					has_idea_group = court_ideas
+				}
+				full_idea_group = court_ideas
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					trade_goods = gold
+					NOT = { base_production = 10 }
+				}
+				add_base_production = 1
+				random_list = { 
+					50 = { 	
+						add_base_manpower = 1
+					}
+					50 = { 
+						add_base_tax = 1
+					}
+				}
+			}
+			add_dip_power = -50
+			add_mil_power = -50
+			add_adm_power = -50
+			add_country_modifier = {
+				name = produce_gold_timer
+				duration = 3650
+				hidden = yes
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_destroy_coal_one = {
+		potential = {
+			ai = yes
+			any_owned_province = {
+				is_core = ROOT
+				NOT = { trade_goods = gold }
+				has_latent_trade_goods = coal
+				base_tax = 8
+			}
+		}
+		allow = {
+			is_at_war = no
+			
+		}
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { has_latent_trade_goods = coal }
+						NOT = { base_tax = 8 }
+					}
+				}
+				random_owned_province = {
+					limit = {
+						NOT = { trade_goods = gold }
+						has_latent_trade_goods = coal
+						base_tax = 8
+					}
+					add_base_tax = -2
+				}
+				random_owned_province = { limit = { NOT = { base_tax = 8 trade_goods = gold } } add_base_tax = 2 }
+			}
+			else = {
+				add_treasury = 100
+				random_owned_province = {
+					limit = {
+						NOT = { trade_goods = gold }
+						has_latent_trade_goods = coal
+						base_tax = 8
+					}
+					add_base_tax = -2
+				}
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_destroy_coal_two = {
+		potential = {
+			ai = yes
+			any_owned_province = {
+				is_core = ROOT
+				NOT = { trade_goods = gold }
+				has_latent_trade_goods = coal
+				base_manpower = 8
+			}
+		}
+		allow = {
+			is_at_war = no
+			
+		}
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { has_latent_trade_goods = coal }
+						NOT = { base_manpower = 8 }
+					}
+				}
+				random_owned_province = {
+					limit = {
+						NOT = { trade_goods = gold }
+						has_latent_trade_goods = coal
+						base_manpower = 8
+					}
+					add_base_manpower = -2
+				}
+				random_owned_province = { limit = { NOT = { base_manpower = 8 trade_goods = gold } } add_base_manpower = 2 }
+			}
+			else = {
+				add_manpower = 1
+				random_owned_province = {
+					limit = {
+						NOT = { trade_goods = gold }
+						has_latent_trade_goods = coal
+						base_manpower = 8
+					}
+					add_base_manpower = -2
+				}
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_destroy_coal_three = {
+		potential = {
+			ai = yes
+			any_owned_province = {
+				is_core = ROOT
+				NOT = { trade_goods = gold }
+				has_latent_trade_goods = coal
+				base_production = 9
+			}
+		}
+		allow = {
+			is_at_war = no
+			
+		}
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { has_latent_trade_goods = coal }
+						NOT = { base_production = 9 }
+					}
+				}
+				random_owned_province = {
+					limit = {
+						NOT = { trade_goods = gold }
+						has_latent_trade_goods = coal
+						base_production = 9
+					}
+					add_base_production = -2
+				}
+				random_owned_province = { limit = { NOT = { base_production = 9 trade_goods = gold } } add_base_production = 2 }
+			}
+			else = {
+				add_dip_power = 100
+				random_owned_province = {
+					limit = {
+						NOT = { trade_goods = gold }
+						has_latent_trade_goods = coal
+						base_production = 9
+					}
+					add_base_production = -2
+				}
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_build_furnace = {
+		potential = {
+			ai = yes
+			is_year = 1710
+		}
+		allow = {
+			is_at_war = no
+			any_owned_province = {
+				is_core = ROOT
+				enlightenment = 100
+				trade_goods = coal
+				NOT = { has_building = furnace }
+				num_free_building_slots = 1
+				has_manufactory_trigger = no
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					enlightenment = 100
+					trade_goods = coal
+					NOT = { has_building = furnace }
+					num_free_building_slots = 1
+					has_manufactory_trigger = no
+				}
+				add_building = furnace
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_manufactory_instead_of_church = {
+		potential = {
+			ai = yes
+			NOT = { tax_income_percentage = 0.4 }
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				AND = {
+					dip_tech = 15
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { base_tax = 5 }
+						base_production = 3
+						OR = {
+							trade_goods = salt
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+							trade_goods = copper
+							trade_goods = iron
+							trade_goods = sugar
+							trade_goods = coffee
+							trade_goods = tobacco
+							trade_goods = cocoa
+							trade_goods = cotton
+							trade_goods = tea
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = fur
+						}
+						has_manufactory_trigger = no
+						has_production_building_trigger = yes
+						has_tax_building_trigger = yes
+						NOT = { num_free_building_slots = 1 }
+					}
+				}
+				AND = {
+					adm_tech = 17
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { base_tax = 5 }
+						base_production = 3
+						trade_goods = paper
+						has_manufactory_trigger = no
+						has_production_building_trigger = yes
+						has_tax_building_trigger = yes
+						NOT = { num_free_building_slots = 1 }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					dip_tech = 15
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { base_tax = 5 }
+						base_production = 3
+						OR = {
+							trade_goods = salt
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+							trade_goods = copper
+							trade_goods = iron
+							trade_goods = sugar
+							trade_goods = coffee
+							trade_goods = tobacco
+							trade_goods = cocoa
+							trade_goods = cotton
+							trade_goods = tea
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = fur
+						}
+						has_manufactory_trigger = no
+						has_production_building_trigger = yes
+						has_tax_building_trigger = yes
+						NOT = { num_free_building_slots = 1 }
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+						NOT = { base_tax = 5 }
+						base_production = 3
+						OR = {
+							trade_goods = salt
+							trade_goods = cloth
+							trade_goods = silk
+							trade_goods = dyes
+							trade_goods = copper
+							trade_goods = iron
+							trade_goods = sugar
+							trade_goods = coffee
+							trade_goods = tobacco
+							trade_goods = cocoa
+							trade_goods = cotton
+							trade_goods = tea
+							trade_goods = spices
+							trade_goods = cloves
+							trade_goods = fur
+						}
+						has_manufactory_trigger = no
+						has_production_building_trigger = yes
+						has_tax_building_trigger = yes
+						NOT = { num_free_building_slots = 1 }
+					}
+					if = {
+						limit = {
+							has_building = temple
+						}
+						remove_building = temple
+					}
+					if = {
+						limit = {
+							has_building = cathedral
+						}
+						remove_building = cathedral
+					}
+					if = {
+						limit = {
+							trade_goods = salt
+						}
+						add_building = wharf
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
+						}
+						add_building = textile
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
+						}
+						add_building = weapons
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = sugar
+								trade_goods = coffee
+								trade_goods = tobacco
+								trade_goods = cocoa
+								trade_goods = cotton
+								trade_goods = tea
+							}
+						}
+						add_building = plantations
+					}
+					if = {
+						limit = {
+							OR = {
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+							}
+						}
+						add_building = tradecompany
+					}
+				}
+			}
+			if = {
+				limit = {
+					adm_tech = 17
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { base_tax = 5 }
+						base_production = 3
+						trade_goods = paper
+						has_manufactory_trigger = no
+						has_production_building_trigger = yes
+						has_tax_building_trigger = yes
+						NOT = { num_free_building_slots = 1 }
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+						NOT = { base_tax = 5 }
+						base_production = 3
+						trade_goods = paper
+						has_manufactory_trigger = no
+						has_production_building_trigger = yes
+						has_tax_building_trigger = yes
+						NOT = { num_free_building_slots = 1 }
+					}
+					if = {
+						limit = {
+							has_building = temple
+						}
+						remove_building = temple
+					}
+					if = {
+						limit = {
+							has_building = cathedral
+						}
+						remove_building = cathedral
+					}
+					add_building = mills
+				}
+			}
+		}
+	}
+	
+	soe_household_instead_of_manufactory = {
+		potential = {
+			ai = yes
+			NOT = {
+				OR = {
+					culture_group = east_slavic
+					culture_group = slavic
+					has_reform = monastic_breweries_reform
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			adm_tech = 15
+			any_owned_province = {
+				is_core = ROOT
+				NOT = { base_production = 4 }
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+					trade_goods = wine
+				}
+				has_building = farm_estate
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					adm_tech = 15
+					any_owned_province = {
+						is_core = ROOT
+						NOT = { base_production = 4 }
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+						}
+						has_building = farm_estate
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+						NOT = { base_production = 4 }
+						OR = {
+							trade_goods = grain
+							trade_goods = livestock
+							trade_goods = wine
+						}
+						has_building = farm_estate
+					}
+					remove_building = farm_estate
+					add_building = soldier_households
+					if = {
+						limit = {
+							has_building = workshop
+						}
+						remove_building = workshop
+						add_latest_building = {
+							manpower = yes
+							builder = ROOT
+						}
+					}
+					if = {
+						limit = {
+							has_building = counting_house
+						}
+						remove_building = counting_house
+						add_latest_building = {
+							manpower = yes
+							builder = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	soe_change_gov_reform = {
+		potential = {
+			ai = yes
+			tag = FRA
+			reform_level = 5
+			OR = {
+				has_reform = compagnie_dordonnance_reform
+				has_reform = gendarmes_reform
+			}
+			mission_completed = fra_musketeers
+		}
+		allow = {
+			government_reform_progress = 50
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		effect = {
+			change_government_reform_progress = -50
+			add_government_reform = musketeers_reform
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_change_gov_reform_two = {
+		potential = {
+			ai = yes
+			OR = {
+				culture = venetian
+				culture = ligurian
+			}
+			reform_level = 5
+			NOT = { has_reform = merchant_arsenal_reform }
+		}
+		allow = {
+			government_reform_progress = 50
+		}
+		effect = {
+			change_government_reform_progress = -50
+			add_government_reform = merchant_arsenal_reform
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_change_gov_reform_three = {
+		potential = {
+			ai = yes
+			government = theocracy
+			NOT = { has_reform = prussian_theocratic_reform }
+			NOT = { has_reform = dutch_theocracy_reform }
+			NOT = { has_reform = millennialistic_theocracy_reform }
+			OR = {
+				religion = protestant
+				religion = anglican
+				religion = reformed
+				religion = hussite
+			}
+		}
+		allow = {
+			government_reform_progress = 50
+		}
+		effect = {
+			change_government_reform_progress = -50
+			add_government_reform = millennialistic_theocracy_reform
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_change_gov_reform_four = {
+		potential = {
+			ai = yes
+			OR = {
+				AND = {
+					tag = AKK
+					mission_completed = aq_qoyunlu_shahanshahs_of_eranshahr
+				}
+				AND = {
+					tag = QAR
+					mission_completed = qara_qoyunlu_shahanshahs_of_eranshahr
+				}
+			}
+			OR = {
+				has_reform = tribe_tribal_unity
+				has_reform = tribe_remain_tribal_reform
+			}
+		}
+		allow = {
+			government_reform_progress = 50
+		}
+		effect = {
+			change_government_reform_progress = -50
+			add_government_reform = tribe_becomes_monarchy_reform
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_ditch_idea = {
+		potential = {
+			ai = yes
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				AND = {
+					adm_tech = 21
+					has_idea_group = exploration_ideas
+				}
+				AND = {
+					OR = {
+						tag = JAP
+						tag = TIM
+						tag = ORI
+						tag = FRA
+					}
+					has_idea_group = influence_ideas
+					NOT = { vassal = 2 }
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 30
+						}
+					}
+				}
+				AND = {
+					has_idea_group = influence_ideas
+					NOT = { num_of_subjects = 1 }
+					NOT = { has_government_attribute = has_tributaries }
+					NOT = { has_country_flag = can_create_tributaries_flag }
+					NOT = { has_country_flag = can_create_tributaries_flag_estate }
+					is_year = 1500
+				}
+				AND = {
+					has_idea_group = maritime_ideas
+					OR = {
+						NOT = { naval_forcelimit = 20 }
+						NOT = { num_of_ports = 2 }
+					}
+				}
+				AND = {
+					has_idea_group = naval_ideas
+					OR = {
+						NOT = { naval_forcelimit = 20 }
+						NOT = { num_of_ports = 2 }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					adm_tech = 21
+					has_idea_group = exploration_ideas
+				}
+				remove_idea_group = exploration_ideas
+				add_dip_power = 500
+			}
+			else_if = {
+				limit = {
+					OR = {
+						tag = JAP
+						tag = TIM
+						tag = ORI
+					}
+					has_idea_group = influence_ideas
+					NOT = { vassal = 2 }
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 30
+						}
+					}
+				}
+				remove_idea_group = influence_ideas
+				add_dip_power = 500
+			}
+			else_if = {
+				limit = {
+					has_idea_group = influence_ideas
+					NOT = { num_of_subjects = 1 }
+					is_year = 1500
+				}
+				remove_idea_group = influence_ideas
+				add_dip_power = 500
+			}
+			else_if = {
+				limit = {
+					has_idea_group = maritime_ideas
+					OR = {
+						NOT = { naval_forcelimit = 20 }
+						NOT = { num_of_ports = 2 }
+					}
+				}
+				remove_idea_group = maritime_ideas
+				add_dip_power = 500
+			}
+			else_if = {
+				limit = {
+					has_idea_group = naval_ideas
+					OR = {
+						NOT = { naval_forcelimit = 20 }
+						NOT = { num_of_ports = 2 }
+					}
+				}
+				remove_idea_group = naval_ideas
+				add_mil_power = 500
+			}
+		}
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_save_economy = {
+		potential = {
+			ai = yes
+		}
+		allow = {
+			NOT = { crown_land_share = 5 }
+		}
+		effect = {
+			change_estate_land_share = {
+				estate = all
+				share = -10
+			}
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_clear_borders_fra = {
+		potential = {
+			ai = yes
+			tag = FRA
+			OR = {
+				ENG = {
+					ai = yes
+					NOT = { truce_with = ROOT }
+					num_of_owned_provinces_with = {
+						region = france_region
+						is_core = ROOT
+						value = 1
+					}
+				}
+				GBR = {
+					ai = yes
+					NOT = { truce_with = ROOT }
+					num_of_owned_provinces_with = {
+						region = france_region
+						is_core = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		allow = {
+			is_year = 1455
+			manpower_percentage = 0.5
+			num_of_rebel_armies = 0
+			num_of_rebel_controlled_provinces = 0
+			has_any_disaster = no
+			is_at_war = no
+			if = {
+				limit = {
+					ENG = {
+						ai = yes
+						NOT = { truce_with = ROOT }
+						num_of_owned_provinces_with = {
+							region = france_region
+							is_core = ROOT
+							controlled_by = ENG
+							value = 1
+						}
+					}
+				}
+				ROOT = {
+					army_strength = {
+						who = ENG
+						value = 0.9
+					}
+				}
+				NOT = {
+					ENG = {
+						any_ally = { 
+							army_strength = {
+								who = ROOT
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					GBR = {
+						ai = yes
+						NOT = { truce_with = ROOT }
+						num_of_owned_provinces_with = {
+							region = france_region
+							is_core = ROOT
+							controlled_by = GBR
+							value = 1
+						}
+					}
+				}
+				ROOT = {
+					army_strength = {
+						who = GBR
+						value = 0.9
+					}
+				}
+				NOT = {
+					GBR = {
+						any_ally = { 
+							army_strength = {
+								who = ROOT
+								value = 1
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					174 = { is_core = ROOT }
+					174 = { 
+						owned_by = ENG
+						controlled_by = ENG
+					}
+				}	
+				declare_war_with_cb = {
+					who = ENG
+					casus_belli = cb_core
+					war_goal_province = 174
+				}
+			}
+			else_if = {
+				limit = {
+					174 = { is_core = ROOT }
+					174 = { 
+						owned_by = GBR
+						controlled_by = GBR
+					}
+				}	
+				declare_war_with_cb = {
+					who = GBR
+					casus_belli = cb_core
+					war_goal_province = 174
+				}
+			}
+			else_if = {
+				limit = {
+					177 = { is_core = ROOT }
+					177 = { 
+						owned_by = ENG
+						controlled_by = ENG
+					}
+				}	
+				declare_war_with_cb = {
+					who = ENG
+					casus_belli = cb_core
+					war_goal_province = 177
+				}
+			}
+			else_if = {
+				limit = {
+					177 = { is_core = ROOT }
+					177 = { 
+						owned_by = GBR
+						controlled_by = GBR
+					}
+				}	
+				declare_war_with_cb = {
+					who = GBR
+					casus_belli = cb_core
+					war_goal_province = 177
+				}
+			}
+			else_if = {
+				limit = {
+					168 = { is_core = ROOT }
+					168 = { 
+						owned_by = ENG
+						controlled_by = ENG
+					}
+				}	
+				declare_war_with_cb = {
+					who = ENG
+					casus_belli = cb_core
+					war_goal_province = 168
+				}
+			}
+			else_if = {
+				limit = {
+					168 = { is_core = ROOT }
+					168 = { 
+						owned_by = GBR
+						controlled_by = GBR
+					}
+				}	
+				declare_war_with_cb = {
+					who = GBR
+					casus_belli = cb_core
+					war_goal_province = 168
+				}
+			}
+			else_if = {
+				limit = {
+					167 = { is_core = ROOT }
+					167 = { 
+						owned_by = ENG
+						controlled_by = ENG
+					}
+				}	
+				declare_war_with_cb = {
+					who = ENG
+					casus_belli = cb_core
+					war_goal_province = 167
+				}
+			}
+			else_if = {
+				limit = {
+					167 = { is_core = ROOT }
+					167 = { 
+						owned_by = GBR
+						controlled_by = GBR
+					}
+				}	
+				declare_war_with_cb = {
+					who = GBR
+					casus_belli = cb_core
+					war_goal_province = 167
+				}
+			}
+			else_if = {
+				limit = {
+					173 = { is_core = ROOT }
+					173 = { 
+						owned_by = ENG
+						controlled_by = ENG
+					}
+				}	
+				declare_war_with_cb = {
+					who = ENG
+					casus_belli = cb_core
+					war_goal_province = 173
+				}
+			}
+			else_if = {
+				limit = {
+					173 = { is_core = ROOT }
+					173 = { 
+						owned_by = GBR
+						controlled_by = GBR
+					}
+				}	
+				declare_war_with_cb = {
+					who = GBR
+					casus_belli = cb_core
+					war_goal_province = 173
+				}
+			}
+			else_if = {
+				limit = {
+					4385 = { is_core = ROOT }
+					4385 = { 
+						owned_by = ENG
+						controlled_by = ENG
+					}
+				}	
+				declare_war_with_cb = {
+					who = ENG
+					casus_belli = cb_core
+					war_goal_province = 4385
+				}
+			}
+			else_if = {
+				limit = {
+					4385 = { is_core = ROOT }
+					4385 = { 
+						owned_by = GBR
+						controlled_by = GBR
+					}
+				}	
+				declare_war_with_cb = {
+					who = GBR
+					casus_belli = cb_core
+					war_goal_province = 4385
+				}
+			}
+			else_if = {
+				limit = {
+					1879 = { is_core = ROOT }
+					1879 = { 
+						owned_by = ENG
+						controlled_by = ENG
+					}
+				}	
+				declare_war_with_cb = {
+					who = ENG
+					casus_belli = cb_core
+					war_goal_province = 1879
+				}
+			}
+			else_if = {
+				limit = {
+					1879 = { is_core = ROOT }
+					1879 = { 
+						owned_by = GBR
+						controlled_by = GBR
+					}
+				}	
+				declare_war_with_cb = {
+					who = GBR
+					casus_belli = cb_core
+					war_goal_province = 1879
+				}
+			}
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_save_britain = {
+		potential = {
+			ai = yes
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+			NOT = {
+				any_owned_province = {
+					NOT = { province_id = 87 }
+					region = france_region
+				}
+			}
+			OR = {
+				FRA = { navy_size = SPA }
+				FRA = { num_of_heavy_ship = ROOT }
+			}
+			NOT = { has_country_flag = eng_last_hope }
+		}
+		allow = {
+			NOT = { num_of_loans = 10 }
+			is_bankrupt = no
+			NOT = { navy_size_percentage = 1 }
+			if = {
+				limit = { mission_completed = gbr_ave_the_men_of_war }
+				any_owned_province = {
+					controlled_by = ROOT
+					has_port = yes
+					is_blockaded = no
+					OR = {
+						has_shipyard_building_trigger = yes
+						has_dock_building_trigger = yes
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { mission_completed = gbr_ave_the_men_of_war }
+				random_owned_province = {
+					limit = {
+						controlled_by = ROOT
+						has_port = yes
+						is_blockaded = no
+						OR = {
+							has_shipyard_building_trigger = yes
+							has_dock_building_trigger = yes
+						}
+					}
+					man_of_war_heavy = ROOT
+					man_of_war_heavy = ROOT
+					man_of_war_heavy = ROOT
+					man_of_war_heavy = ROOT
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						controlled_by = ROOT
+						has_port = yes
+						is_blockaded = no
+					}
+					heavy_ship = ROOT
+					heavy_ship = ROOT
+					heavy_ship = ROOT
+					heavy_ship = ROOT
+				}
+			}
+			set_country_flag = eng_last_hope
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_russian_privileges = {
+		potential = {
+			ai = yes
+			has_reform = russian_empire_reform
+			if = {
+				limit = { has_estate = estate_church }
+				NOT = { has_estate_privilege = estate_church_religious_state }
+			}
+			if = {
+				limit = { has_estate = estate_burghers }
+				NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+			}
+			if = {
+				limit = { has_estate = estate_nobles }
+				NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			}
+		}
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			if = {
+				limit = { has_estate = estate_church NOT = { has_estate_privilege = estate_church_religious_state } }
+				set_estate_privilege = estate_church_religious_state
+				change_estate_land_share = {
+					estate = all
+					share = -10
+				}
+			}
+			if = {
+				limit = { has_estate = estate_burghers NOT = { has_estate_privilege = estate_burghers_land_of_commerce } }
+				set_estate_privilege = estate_burghers_land_of_commerce
+				change_estate_land_share = {
+					estate = all
+					share = -10
+				}
+			}
+			if = {
+				limit = { has_estate = estate_nobles NOT = { has_estate_privilege = estate_nobles_nobility_primacy } }
+				set_estate_privilege = estate_nobles_nobility_primacy
+				change_estate_land_share = {
+					estate = all
+					share = -10
+				}
+			}
+		}
+		
+		ai_importance = 500
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	soe_form_spain_no_pain = {
+		potential = {
+			ai = yes
+			OR = {
+				AND = {
+					tag = ARA
+					NOT = { is_enemy = CAS }
+					NOT = { is_rival = CAS }
+				}
+				AND = {
+					tag = CAS
+					NOT = { is_enemy = ARA }
+					NOT = { is_rival = ARA }
+				}
+			}
+			NOT = { exists = SPA }
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 213	# Barcelona
+			owns_core_province = 214	# Arag�n
+			owns_core_province = 215	# Castilla La Vieja
+			owns_core_province = 216	# Salamanca
+			owns_core_province = 224	# Andalucia
+			owns_core_province = 219	# Toledo
+			owns_core_province = 220	# Valencia
+			owns_core_province = 223	# Granada
+			iberia_region = {
+				type = all
+				NOT = { owner = { religion_group = muslim } }
+			}
+		}
+		effect = {
+			change_tag = SPA
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			if = {
+				limit = {
+					NOT = { 
+						AND = {
+							has_dlc = "Golden Century" 
+							OR = {
+								tag = ARA
+								tag = CAT
+								tag = VAL
+							}
+						}
+					}
+				}
+				swap_non_generic_missions = yes
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = spanish_unification_effect.tooltip
+			hidden_effect = {
+				iberia_region = {
+					limit = {
+						NOT = { area = alentejo_area }
+						NOT = { area = beieras_area }
+					}
+					add_permanent_claim = SPA
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_spain_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	stability_from_advisors = {
+		color = { 219 56 186 }
+		potential = {
+			ai = no
+			NOT = { has_country_flag = stability_done }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = inquisitor_tt
+				has_country_flag = inquisitor
+			}
+			custom_trigger_tooltip = {
+				tooltip = treasurer_tt
+				has_country_flag = treasurer
+			}
+			custom_trigger_tooltip = {
+				tooltip = master_of_mint_tt
+				has_country_flag = master_of_mint
+			}
+			custom_trigger_tooltip = {
+				tooltip = theologian_tt
+				has_country_flag = theologian
+			}
+			custom_trigger_tooltip = {
+				tooltip = natural_scientist_tt
+				has_country_flag = natural_scientist
+			}
+			custom_trigger_tooltip = {
+				tooltip = philosopher_tt
+				has_country_flag = philosopher
+			}
+			custom_trigger_tooltip = {
+				tooltip = artist_tt
+				has_country_flag = artist
+			}
+			custom_trigger_tooltip = {
+				tooltip = statesman_tt
+				has_country_flag = statesman
+			}
+			custom_trigger_tooltip = {
+				tooltip = diplomat_tt
+				has_country_flag = diplomat
+			}
+			custom_trigger_tooltip = {
+				tooltip = colonial_governor_tt
+				has_country_flag = colonial_governor
+			}
+			custom_trigger_tooltip = {
+				tooltip = spymaster_tt
+				has_country_flag = spymaster
+			}
+			custom_trigger_tooltip = {
+				tooltip = navigator_tt
+				has_country_flag = navigator
+			}
+			custom_trigger_tooltip = {
+				tooltip = trader_tt
+				has_country_flag = trader
+			}
+			custom_trigger_tooltip = {
+				tooltip = army_organiser_tt
+				has_country_flag = army_organiser
+			}
+			custom_trigger_tooltip = {
+				tooltip = grand_captain_tt
+				has_country_flag = grand_captain
+			}
+			custom_trigger_tooltip = {
+				tooltip = recruitmaster_tt
+				has_country_flag = recruitmaster
+			}
+			custom_trigger_tooltip = {
+				tooltip = army_reformer_tt
+				has_country_flag = army_reformer
+			}
+			custom_trigger_tooltip = {
+				tooltip = fortification_expert_tt
+				has_country_flag = fortification_expert
+			}
+			custom_trigger_tooltip = {
+				tooltip = quartermaster_tt
+				has_country_flag = quartermaster
+			}
+			custom_trigger_tooltip = {
+				tooltip = commandant_tt
+				has_country_flag = commandant
+			}
+			custom_trigger_tooltip = {
+				tooltip = naval_reformer_tt
+				has_country_flag = naval_reformer
+			}
+		}
+		effect = {
+			set_country_flag = stability_done
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

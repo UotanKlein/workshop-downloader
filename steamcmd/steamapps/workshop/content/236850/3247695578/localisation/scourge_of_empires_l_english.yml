@@ -1,0 +1,667 @@
+﻿########################################
+# LOC_VER: 0002 CP: UTF-8-BOM
+# TIMESTAMP: 11.06.2020 16:29:14
+# YML PARSER 0.4.1 FOR GEKS © Spectrum
+########################################
+
+l_english:
+ 
+ # Scourge of Empires Content
+ 
+ # New Decisions
+ 
+ doom_has_come_title:0 "SoE - Begin the madness!"
+ doom_has_come_desc:0 "Enact the Fifth Monarchists Regime government reform for even more hardcore experience. And may the RNJesus have mercy on you.\n\n§RThis action can be done only once. You win or die, no other way out!§!"
+ 
+ remove_extra_bonuses_title:0 "SoE - Disable AI Special Bonuses"
+ remove_extra_bonuses_desc:0 "Disable special bonuses and decisions that AI nations get while being at war against the Player.\n\n§RThis action can be done only once!§!"
+ 
+ remove_extra_bonuses_eco_title:0 "SoE - Disable AI Difficulty Bonus"
+ remove_extra_bonuses_eco_desc:0 "Disable basic bonuses that AI nations have.\n\n§RThis action can be done only once!§!"
+ 
+ soe_turn_off_dof_title:0 "SoE - Disable improved AI Defender of Faith"
+ soe_turn_off_dof_desc:0 "Disable improved Defender of Faith algorithm for AI nations.\n\n§RThis action can be done only once!§!"
+ 
+ remove_diplomacy_title:0 "SoE - Enable AI Special Diplomacy"
+ remove_diplomacy_desc:0 "Enable special decisions that allow AI nations to find new allies more effectively and maintain balance of powers. This may lead to slower expansion of AI nations and prevent the formation of blobbing powerhouses."
+ 
+ remove_diplomacy_two_title:0 "SoE - Disable AI Special Diplomacy"
+ remove_diplomacy_two_desc:0 "Disable special decisions that allow AI nations to find new allies more effectively and maintain balance of powers. This may lead to slower expansion of AI nations and prevent the formation of blobbing powerhouses.\n\n§RThis action can be done only once!§!"
+ 
+ war_against_the_player_start_title:0 "War against the player"
+ war_against_the_player_start_desc:0 ""
+ 
+ war_against_the_player_end_title:0 "War against the player"
+ war_against_the_player_end_desc:0 ""
+ 
+ war_against_the_player_economy_title:0 "War against the player"
+ war_against_the_player_economy_desc:0 ""
+ 
+ war_against_the_player_long_war_title:0 "War against the player"
+ war_against_the_player_long_war_desc:0 ""
+ 
+ soe_modifier_for_ai_title:0 "AI Special Bonuses for new countries"
+ soe_modifier_for_ai_desc:0 ""
+ 
+ soe_special_units_a_title:0 "Special units building"
+ soe_special_units_a_desc:0 ""
+ 
+ soe_special_units_b_title:0 "Special units building"
+ soe_special_units_b_desc:0 ""
+ 
+ soe_special_units_c_title:0 "Special units building"
+ soe_special_units_c_desc:0 ""
+ 
+ soe_special_units_two_title:0 "Special units building"
+ soe_special_units_two_desc:0 ""
+ 
+ soe_special_units_three_title:0 "Special units building"
+ soe_special_units_three_desc:0 ""
+ 
+ soe_special_units_four_title:0 "Special units building"
+ soe_special_units_four_desc:0 ""
+ 
+ soe_special_units_five_title:0 "Special units building"
+ soe_special_units_five_desc:0 ""
+ 
+ soe_special_units_six_title:0 "Special units building"
+ soe_special_units_six_desc:0 ""
+ 
+ soe_special_units_seven_title:0 "Special units building"
+ soe_special_units_seven_desc:0 ""
+ 
+ soe_special_units_eight_title:0 "Special units building"
+ soe_special_units_eight_desc:0 ""
+ 
+ soe_special_units_nine_title:0 "Special units building"
+ soe_special_units_nine_desc:0 ""
+ 
+ soe_special_units_ten_title:0 "Special units building"
+ soe_special_units_ten_desc:0 ""
+ 
+ soe_special_units_eleven_title:0 "Special units building"
+ soe_special_units_eleven_desc:0 ""
+ 
+ soe_special_units_twelve_title:0 "Special units building"
+ soe_special_units_twelve_desc:0 ""
+ 
+ soe_special_units_thirteen_title:0 "Special units building"
+ soe_special_units_thirteen_desc:0 ""
+ 
+ soe_special_units_fourteen_title:0 "Special units building"
+ soe_special_units_fourteen_desc:0 ""
+ 
+ soe_special_units_fiveteen_title:0 "Special units building"
+ soe_special_units_fiveteen_desc:0 ""
+ 
+ soe_special_units_sixteen_title:0 "Special units building"
+ soe_special_units_sixteen_desc:0 ""
+ 
+ soe_special_units_seventeen_title:0 "Special units building"
+ soe_special_units_seventeen_desc:0 ""
+ 
+ soe_remove_claims_on_russia_title:0 "Diplomacy"
+ 
+ soe_vassalize_tributaries_title:0 ""
+ soe_vassalize_tributaries_desc:0 ""
+ 
+ remove_priviliges_title:0 "Estates"
+ remove_priviliges_desc:0 ""
+ 
+ soe_become_hegemon_one_title:0 "Missions"
+ soe_become_hegemon_one_desc:0 ""
+ 
+ soe_become_hegemon_two_title:0 "Missions"
+ soe_become_hegemon_two_desc:0 ""
+ 
+ soe_vassalize_medina_title:0 "Diplomacy"
+ soe_vassalize_medina_desc:0 ""
+ 
+ soe_vassalize_muang_phuan_title:0 "Diplomacy"
+ soe_vassalize_muang_phuan_desc:0 ""
+ 
+ soe_vassalize_japan_title:0 "Diplomacy"
+ soe_vassalize_japan_desc:0 ""
+ 
+ soe_vassalize_japan_two_title:0 "Diplomacy"
+ soe_vassalize_japan_two_desc:0 ""
+ 
+ soe_ori_missions_title:0 "Missions"
+ soe_ori_missions_desc:0 ""
+ 
+ soe_nav_missions_title:0 "Missions"
+ soe_nav_missions_desc:0 ""
+ 
+ soe_jap_missions_title:0 "Missions"
+ soe_jap_missions_desc:0 ""
+ 
+ soe_tri_missions_title:0 "Missions"
+ soe_tri_missions_desc:0 ""
+ 
+ soe_liv_missions_title:0 "Missions"
+ soe_liv_missions_desc:0 ""
+ 
+ soe_aju_missions_title:0 "Missions"
+ soe_aju_missions_desc:0 ""
+ 
+ soe_guj_missions_title:0 "Missions"
+ soe_guj_missions_desc:0 ""
+ 
+ soe_guj_missions_two_title:0 "Missions"
+ soe_guj_missions_two_desc:0 ""
+ 
+ soe_guj_missions_three_title:0 "Missions"
+ soe_guj_missions_three_desc:0 ""
+ 
+ soe_mlw_missions_title:0 "Missions"
+ soe_mlw_missions_desc:0 ""
+ 
+ soe_mer_missions_title:0 "Missions"
+ soe_mer_missions_desc:0 ""
+ 
+ soe_tau_missions_title:0 "Missions"
+ soe_tau_missions_desc:0 ""
+ 
+ soe_gbr_missions_title:0 "Missions"
+ soe_gbr_missions_desc:0 ""
+ 
+ soe_china_missions_title:0 "Missions"
+ soe_china_missions_desc:0 ""
+ 
+ soe_fra_missions_title:0 "Missions"
+ soe_fra_missions_desc:0 ""
+ 
+ soe_fra_missions_two_title:0 "Missions"
+ soe_fra_missions_two_desc:0 ""
+ 
+ soe_fra_missions_three_title:0 "Missions"
+ soe_fra_missions_three_desc:0 ""
+ 
+ soe_fra_missions_four_title:0 "Missions"
+ soe_fra_missions_four_desc:0 ""
+ 
+ soe_fra_missions_five_title:0 "Missions"
+ soe_fra_missions_five_desc:0 ""
+ 
+ soe_fra_missions_six_title:0 "Missions"
+ soe_fra_missions_six_desc:0 ""
+ 
+ soe_fra_missions_seven_title:0 "Missions"
+ soe_fra_missions_seven_desc:0 ""
+ 
+ soe_fra_missions_eight_title:0 "Missions"
+ soe_fra_missions_eight_desc:0 ""
+ 
+ soe_fra_missions_nine_title:0 "Missions"
+ soe_fra_missions_nine_desc:0 ""
+ 
+ soe_fra_missions_ten_title:0 "Missions"
+ soe_fra_missions_ten_desc:0 ""
+ 
+ soe_spa_missions_title:0 "Missions"
+ soe_spa_missions_desc:0 ""
+ 
+ soe_spa_missions_two_title:0 "Missions"
+ soe_spa_missions_two_desc:0 ""
+ 
+ soe_spa_missions_three_title:0 "Missions"
+ soe_spa_missions_three_desc:0 ""
+ 
+ soe_spa_missions_four_title:0 "Missions"
+ soe_spa_missions_four_desc:0 ""
+ 
+ soe_spa_missions_five_title:0 "Missions"
+ soe_spa_missions_five_desc:0 ""
+ 
+ soe_spa_missions_six_title:0 "Missions"
+ soe_spa_missions_six_desc:0 ""
+ 
+ soe_pro_missions_title:0 "Missions"
+ soe_pro_missions_desc:0 ""
+ 
+ soe_pru_missions_title:0 "Missions"
+ soe_pru_missions_desc:0 ""
+ 
+ soe_sax_missions_title:0 "Missions"
+ soe_sax_missions_desc:0 ""
+ 
+ soe_mor_missions_title:0 "Missions"
+ soe_mor_missions_desc:0 ""
+ 
+ soe_mor_missions_two_title:0 "Missions"
+ soe_mor_missions_two_desc:0 ""
+ 
+ soe_por_missions_title:0 "Missions"
+ soe_por_missions_desc:0 ""
+ 
+ soe_por_missions_two_title:0 "Missions"
+ soe_por_missions_two_desc:0 ""
+ 
+ soe_tun_missions_title:0 "Missions"
+ soe_tun_missions_desc:0 ""
+ 
+ soe_tun_missions_two_title:0 "Missions"
+ soe_tun_missions_two_desc:0 ""
+ 
+ soe_qar_missions_title:0 "Missions"
+ soe_qar_missions_desc:0 ""
+ 
+ soe_arb_missions_title:0 "Missions"
+ soe_arb_missions_desc:0 ""
+ 
+ soe_byz_missions_title:0 "Missions"
+ soe_byz_missions_desc:0 ""
+ 
+ soe_byz_missions_two_title:0 "Missions"
+ soe_byz_missions_two_desc:0 ""
+ 
+ soe_mam_missions_title:0 "Missions"
+ soe_mam_missions_desc:0 ""
+ 
+ soe_mam_missions_two_title:0 "Missions"
+ soe_mam_missions_two_desc:0 ""
+ 
+ soe_per_missions_title:0 "Missions"
+ soe_per_missions_desc:0 ""
+ 
+ soe_per_missions_two_title:0 "Missions"
+ soe_per_missions_two_desc:0 ""
+ 
+ soe_per_missions_three_title:0 "Missions"
+ soe_per_missions_three_desc:0 ""
+ 
+ soe_per_missions_four_title:0 "Missions"
+ soe_per_missions_four_desc:0 ""
+ 
+ soe_yem_missions_title:0 "Missions"
+ soe_yem_missions_desc:0 ""
+ 
+ soe_kor_missions_title:0 "Missions"
+ soe_kor_missions_desc:0 ""
+ 
+ soe_pue_missions_title:0 "Missions"
+ soe_pue_missions_desc:0 ""
+ 
+ soe_mlc_missions_title:0 "Missions"
+ soe_mlc_missions_desc:0 ""
+ 
+ soe_tnd_missions_title:0 "Missions"
+ soe_tnd_missions_desc:0 ""
+ 
+ soe_dai_missions_title:0 "Missions"
+ soe_dai_missions_desc:0 ""
+ 
+ soe_nah_missions_title:0 "Missions"
+ soe_nah_missions_desc:0 ""
+ 
+ soe_poly_missions_title:0 "Missions"
+ soe_poly_missions_desc:0 ""
+ 
+ soe_nov_missions_title:0 "Missions"
+ soe_nov_missions_desc:0 ""
+ 
+ soe_fin_missions_title:0 "Missions"
+ soe_fin_missions_desc:0 ""
+ 
+ soe_minor_missions_title:0 "Missions"
+ soe_minor_missions_desc:0 ""
+ 
+ soe_pirate_missions_title:0 "Missions"
+ soe_pirate_missions_desc:0 ""
+ 
+ soe_dan_missions_title:0 "Missions"
+ soe_dan_missions_desc:0 ""
+ 
+ soe_dan_missions_two_title:0 "Missions"
+ soe_dan_missions_two_desc:0 ""
+ 
+ soe_dan_missions_three_title:0 "Missions"
+ soe_dan_missions_three_desc:0 ""
+ 
+ soe_lit_missions_title:0 "Missions"
+ soe_lit_missions_desc:0 ""
+ 
+ soe_pol_missions_title:0 "Missions"
+ soe_pol_missions_desc:0 ""
+ 
+ soe_rig_missions_title:0 "Missions"
+ soe_rig_missions_desc:0 ""
+ 
+ soe_teu_missions_title:0 "Missions"
+ soe_teu_missions_desc:0 ""
+ 
+ soe_yua_missions_title:0 "Missions"
+ soe_yua_missions_desc:0 ""
+ 
+ soe_ven_missions_title:0 "Missions"
+ soe_ven_missions_desc:0 ""
+ 
+ soe_goth_missions_title:0 "Missions"
+ soe_goth_missions_desc:0 ""
+ 
+ soe_oma_missions_title:0 "Missions"
+ soe_oma_missions_desc:0 ""
+ 
+ soe_oma_missions_two_title:0 "Missions"
+ soe_oma_missions_two_desc:0 ""
+ 
+ soe_mug_missions_title:0 "Missions"
+ soe_mug_missions_desc:0 ""
+ 
+ soe_mug_missions_two_title:0 "Missions"
+ soe_mug_missions_two_desc:0 ""
+ 
+ soe_inc_missions_title:0 "Missions"
+ soe_inc_missions_desc:0 ""
+ 
+ soe_hun_missions_title:0 "Missions"
+ soe_hun_missions_desc:0 ""
+ 
+ soe_orm_missions_title:0 "Missions"
+ soe_orm_missions_desc:0 ""
+ 
+ soe_hsk_missions_title:0 "Missions"
+ soe_hsk_missions_desc:0 ""
+ 
+ soe_hsk_missions_two_title:0 "Missions"
+ soe_hsk_missions_two_desc:0 ""
+ 
+ soe_ger_missions_title:0 "Missions"
+ soe_ger_missions_desc:0 ""
+ 
+ soe_ger_missions_two_title:0 "Missions"
+ soe_ger_missions_two_desc:0 ""
+ 
+ soe_hol_missions_title:0 "Missions"
+ soe_hol_missions_desc:0 ""
+ 
+ soe_hol_missions_two_title:0 "Missions"
+ soe_hol_missions_two_desc:0 ""
+ 
+ soe_hol_missions_three_title:0 "Missions"
+ soe_hol_missions_three_desc:0 ""
+ 
+ soe_hol_missions_four_title:0 "Missions"
+ soe_hol_missions_four_desc:0 ""
+ 
+ soe_azt_missions_title:0 "Missions"
+ soe_azt_missions_desc:0 ""
+ 
+ soe_boh_missions_title:0 "Missions"
+ soe_boh_missions_desc:0 ""
+ 
+ soe_kill_rebels_a_title:0 "Inner management"
+ soe_kill_rebels_a_desc:0 ""
+ 
+ soe_kill_rebels_b_title:0 "Inner management"
+ soe_kill_rebels_b_desc:0 ""
+ 
+ soe_upgrade_fort_title:0 "Inner management"
+ soe_upgrade_fort_desc:0 ""
+ 
+ soe_add_capital_fort_title:0 "Inner management"
+ soe_add_capital_fort_desc:0 ""
+ 
+ soe_add_gold_fort_title:0 "Inner management"
+ soe_add_gold_fort_desc:0 ""
+ 
+ soe_move_forts_title:0 "Inner management"
+ soe_move_forts_desc:0 ""
+ 
+ soe_add_forts_tur_title:0 "Inner management"
+ soe_add_forts_tur_desc:0 ""
+ 
+ soe_add_forts_mng_title:0 "Inner management"
+ soe_add_forts_mng_desc:0 ""
+ 
+ soe_add_forts_lit_title:0 "Inner management"
+ soe_add_forts_lit_desc:0 ""
+ 
+ soe_add_forts_other_title:0 "Inner management"
+ soe_add_forts_other_desc:0 ""
+ 
+ soe_add_forts_title:0 "Inner management"
+ soe_add_forts_desc:0 ""
+ 
+ soe_remove_fort_one_title:0 "Inner management"
+ soe_remove_fort_one_desc:0 ""
+ 
+ soe_remove_fort_two_title:0 "Inner management"
+ soe_remove_fort_two_desc:0 ""
+ 
+ soe_remove_fort_three_title:0 "Inner management"
+ soe_remove_fort_three_desc:0 ""
+ 
+ soe_remove_fort_four_title:0 "Inner management"
+ soe_remove_fort_four_desc:0 ""
+ 
+ soe_remove_fort_five_title:0 "Inner management"
+ soe_remove_fort_five_desc:0 ""
+ 
+ soe_remove_fort_special_title:0 "Inner management"
+ soe_remove_fort_special_desc:0 ""
+ 
+ soe_make_ramparts_gold_title:0 "Inner management"
+ soe_make_ramparts_gold_desc:0 ""
+ 
+ soe_make_ramparts_one_title:0 "Inner management"
+ soe_make_ramparts_one_desc:0 ""
+ 
+ soe_make_ramparts_two_title:0 "Inner management"
+ soe_make_ramparts_two_desc:0 ""
+ 
+ soe_make_ramparts_three_title:0 "Inner management"
+ soe_make_ramparts_three_desc:0 ""
+ 
+ soe_make_special_ramparts_title:0 "Inner management"
+ soe_make_special_ramparts_desc:0 ""
+ 
+ soe_make_chinese_ramparts_title:0 "Inner management"
+ soe_make_chinese_ramparts_desc:0 ""
+ 
+ soe_remove_ramparts_title:0 "Inner management"
+ soe_remove_ramparts_desc:0 ""
+ 
+ soe_become_dof_title:0 "Inner management"
+ soe_become_dof_desc:0 ""
+ 
+ dissolve_alliances_title:0 "Diplomacy"
+ dissolve_alliances_desc:0 ""
+ 
+ dissolve_alliances_kill_trs_title:0 "Diplomacy"
+ dissolve_alliances_kill_trs_desc:0 ""
+ 
+ dissolve_alliances_root_title:0 "Diplomacy"
+ dissolve_alliances_root_desc:0 ""
+ 
+ soe_release_aztec_tribs_title:0 "Diplomacy"
+ soe_release_aztec_tribs_desc:0 ""
+ 
+ soe_vassalize_minors_title:0 "Diplomacy"
+ soe_vassalize_minors_desc:0 ""
+ 
+ soe_return_cores_to_vassalize_title:0 "Diplomacy"
+ soe_return_cores_to_vassalize_desc:0 ""
+ 
+ soe_declare_independence_with_support_title:0 "Diplomacy"
+ soe_declare_independence_with_support_desc:0 ""
+ 
+ soe_declare_independence_with_support_two_title:0 "Diplomacy"
+ soe_declare_independence_with_support_two_desc:0 ""
+ 
+ soe_strong_alliances_title:0 "Diplomacy"
+ soe_strong_alliances_desc:0 ""
+ 
+ soe_strong_alliances_two_title:0 "Diplomacy"
+ soe_strong_alliances_two_desc:0 ""
+ 
+ soe_strong_alliances_russia_special_title:0 "Diplomacy"
+ soe_strong_alliances_russia_special_desc:0 ""
+ 
+ soe_develop_country_one_title:0 "Inner management"
+ soe_develop_country_one_desc:0 ""
+ 
+ soe_develop_country_two_title:0 "Inner management"
+ soe_develop_country_two_desc:0 ""
+ 
+ soe_develop_country_three_title:0 "Inner management"
+ soe_develop_country_three_desc:0 ""
+ 
+ soe_produce_gold_title:0 "Inner management"
+ soe_produce_gold_desc:0 ""
+ 
+ soe_destroy_coal_one_title:0 "Inner management"
+ soe_destroy_coal_one_desc:0 ""
+ 
+ soe_destroy_coal_two_title:0 "Inner management"
+ soe_destroy_coal_two_desc:0 ""
+ 
+ soe_destroy_coal_three_title:0 "Inner management"
+ soe_destroy_coal_three_desc:0 ""
+ 
+ soe_build_furnace_title:0 "Inner management"
+ soe_build_furnace_desc:0 ""
+ 
+ soe_manufactory_instead_of_church_title:0 "Inner management"
+ soe_manufactory_instead_of_church_desc:0 ""
+ 
+ soe_household_instead_of_manufactory_title:0 "Inner management"
+ soe_household_instead_of_manufactory_desc:0 ""
+ 
+ soe_change_gov_reform_title:0 "Inner management"
+ soe_change_gov_reform_desc:0 ""
+ 
+ soe_change_gov_reform_two_title:0 "Inner management"
+ soe_change_gov_reform_two_desc:0 ""
+ 
+ soe_change_gov_reform_three_title:0 "Inner management"
+ soe_change_gov_reform_three_desc:0 ""
+ 
+ soe_change_gov_reform_four_title:0 "Inner management"
+ soe_change_gov_reform_four_desc:0 ""
+ 
+ soe_ditch_idea_title:0 "Inner management"
+ soe_ditch_idea_desc:0 ""
+ 
+ soe_save_economy_title:0 "Inner management"
+ soe_save_economy_desc:0 ""
+ 
+ soe_clear_borders_fra_title:0 "Diplomacy"
+ soe_clear_borders_fra_desc:0 ""
+ 
+ soe_save_britain_title:0 "Inner management"
+ soe_save_britain_desc:0 ""
+ 
+ soe_russian_privileges_title:0 "Inner management"
+ soe_russian_privileges_desc:0 ""
+ 
+ soe_form_spain_no_pain_title:0 "Diplomacy"
+ soe_form_spain_no_pain_desc:0 ""
+ 
+ stability_from_advisors_title:0 "Advisors that triggered special events"
+ stability_from_advisors_desc:0 ""
+ 
+ artist_tt:0 "Artist"
+ inquisitor_tt:0 "Inquisitor"
+ master_of_mint_tt:0 "Master of Mint"
+ natural_scientist_tt:0 "Natural Scientist"
+ philosopher_tt:0 "Philosopher"
+ theologian_tt:0 "Theologian"
+ treasurer_tt:0 "Treasurer"
+ colonial_governor_tt:0 "Colonial governor"
+ diplomat_tt:0 "Diplomat"
+ naval_reformer_tt:0 "Naval reformer"
+ navigator_tt:0 "Navigator"
+ spymaster_tt:0 "Spymaster"
+ statesman_tt:0 "Statesman"
+ trader_tt:0 "Trader"
+ army_organiser_tt:0 "Army Organizer"
+ army_reformer_tt:0 "Army Reformer"
+ commandant_tt:0 "Commandant"
+ grand_captain_tt:0 "Grand Captain"
+ recruitmaster_tt:0 "Master Recruiter"
+ fortification_expert_tt:0 "Military Engineer"
+ quartermaster_tt:0 "Quartermaster"
+ 
+ # New Modifiers
+ 
+ war_against_the_player_one:0 "Great Power AI Military Bonus"
+ war_against_the_player_two:0 "AI Military Bonus"
+ extra_power:0 "AI Basic Bonus"
+ 
+ mughals_invade_india:0 "Mughal invasion"
+ afghans_invade_india:0 "Afghan raid on India"
+ 
+ important_figure:0 "Historical Figure"
+ important_figure_two:0 "Historical Figure"
+ 
+ prussian_glory:0 "Prussia's Glory"
+ 
+ estate_burghers_mountain_expansion_glacier:0 "Expansion into the Glacier"
+ desc_estate_burghers_mountain_expansion_glacier:0 "The burghers and peasants of this country gained resources from their government, which allows them to expand into the difficult terrain of the glacier."
+ 
+ estate_jains_patronage_of_the_arts:0 "Patronage of the Arts"
+ estate_jains_patronage_of_the_arts_desc:0 "By offering patronage to prominent artists and intellectuals, we can convince the world of the splendor of [Root.GetAdjective] culture."
+ 
+ poland_can_form_plc:0 "This action §Ywill not prevent§! formation of the Commonwealth."
+ 
+ # New Events
+ 
+ soe_event.0.t:0 "Scourge of Empires Introduction"
+ soe_event.0.d:0 "Welcome to §RSCOURGE OF EMPIRES§! - a modification that will challenge your skills in Europa Universalis IV.\n\nThis event allows to activate §Radditional bonuses for the AI nations§! for more challenging gameplay experience.\n\nAI bonuses can be §Rdeactivated separately§! through the special decisions §Ronce per campaign§!."
+ soe_event.0.a:0 "Activate basic AI bonuses only"
+ soe_event.0.b:0 "Activate all available AI bonuses"
+ soe_event.0.c:0 "Don't activate any AI bonuses this time"
+ soe_event_tooltip_one:0 "In addition to §TAI Difficulty Bonus§!, AI nations will get the following bonuses while being §Tat war against the Player§!.\n\n§TEvery Great Power and Lucky nation will gain the following bonuses:§!"
+ soe_event_tooltip_two:0 "§TAny other nations will gain the following bonuses:§!"
+ soe_event_tooltip_three:0 "§TWhile being at war against the Player, AI nations would be able to enact special decisions in order to get extra bonuses, like loosing War Exhaustion, getting extra Manpower, Ducats, losing Inflation etc. These decisions could be enacted only once in 5 years for each AI nation separately.§!"
+ soe_event_tooltip_four:0 "§TAll AI nations will get the following bonuses:§!"
+ soe_event_tooltip_null:0 "AI will not get extra bonuses."
+ 
+ # East Prussia Ceded to Brandenburg
+
+ soe_event.18.t:0 "The rise of the Kingdom of Prussia"
+ soe_event.18.d:0 "The lands of West and East Prussia, previously owned by the knights of the Teutonic Order, are again united under the rule of a single monarch. His ambitions know no limits - he dreams of conquering new possessions from Pomerania to Silesia and even further, deep into the Holy Roman Empire. Only time will tell whether he will be able to carry out his ambitious plans."
+ soe_event.18.a:0 "All hail the Prussia's King!"
+ 
+ soe_event.21.t:0 "Treaty of Bydgoszcz"
+ soe_event.21.d:0 "The difficult war in which our state was drawn into is not going well. However, we have the opportunity to change its course by enlisting the support of one of the neighboring powerful German principalities. The Electors of Brandenburg, like the rulers of the Pomeranian principalities, have long declared their claims to the lands of the Duchy of Prussia. We can take advantage of this and transfer the duchy to their control in exchange for military support."
+ soe_event.21.a:0 "Ratify the agreement and cede Duchy of Prussia"
+ soe_event.21.b:0 "We will not abandon Duchy of Prussia!"
+ 
+ soe_event.22.t:0 "Treaty of Bydgoszcz"
+ soe_event.22.d:0 "Finding himself drawn into a long and unsuccessful war, the King of Poland turned to us for help - he offers us to enter into an alliance, and in exchange for our military assistance he undertakes to transfer the lands of the Duchy of Prussia to us."
+ soe_event.22.a:0 "We don't need handouts from the Polish king!"
+ 
+ soe_event.29.t:0 "Ambitions of the Amir of Kabul"
+ soe_event.29.d:0 "Shah Rukh's death led to a long civil war between Timur's many descendants. As a result of this, the Timurid state disintegrated into numerous independent principalities led by ambitious Amirs.\nThus, the Amir of Kabul drew attention to the rich and fertile lands of the Punjab Valley and began to carry out regular raids on lands that had previously been under the authority of the Sultan of Delhi.\nIf the local governors fail to confront this threat, it will lead to the emergence of a new powerful force in the region."
+ soe_event.29.a:0 "A Gathering Storm is reaching India too..."
+ 
+ soe_event.30.t:0 "Timurid prince invades India"
+ soe_event.30.d:0 "After the death of the last great Timurid, Shah Rukh, Timur's state plunged into the abyss of civil war. Numerous descendants of Tamerlane are waging a fierce struggle for the right to rule the rich lands of Persia, Khorasan and Mavarannahr.\nRealizing that there were too many contenders for the throne in Samarkand, one of the princes turned his attention to India, torn apart by internal contradictions and conflicts of the principalities formed after the collapse of the Delhi Sultanate. Having gathered a large army, he was able to occupy part of the fertile Punjab valley and is now ready to lead his troops further to the very heart of India. Time will tell whether he will succeed in realizing his ambitious plan or not..."
+ soe_event.30.a:0 "Let them tremble before the Mughals!"
+ 
+ russia_tech_eight_tt:0 "We will be able to form @RUS Russia at §YAdministrative Technology 8§!\n"
+ siam_may_form_early_tt:0 "We will be able to form @SIA Siam via decision\n"
+ mlc_may_vassalize_tt:0 "We will be able to convert tributaries into vassals without §YInfluence Ideas§!\n"
+ 
+ NOT_AT_WAR_WE:0 "§R §Y[Root.GetName]§! is at peace.§!"
+ NOT_AT_WAR_TARGET:0 "§R §Y[From.GetName]§! is at peace.§!"
+ TRUST_NINETY:0 "§R You need at least §Y90§! Trust with §Y[From.GetName]§!.§!"
+ OPINION_NINETY:0 "§R You need at least §Y190§! opinion with §Y[From.GetName]§!.§!"
+ DEV_THIRTY:0 "§R §Y[From.GetName]§! total development is less than §Y25%§! of our total development.§!"
+ DEV_HUNDRED:0 "§R §Y[From.GetName]§! total development is less than §Y100§!.§!"
+ ALLOWED_TO_VASSALIZE:0 "§R §Y[Root.GetName]§! has completed §YInfluence Ideas§! or mission Malaccan mission §YLoyal Subjects§!.§!"
+ 
+ vassalize_tributary_two_title:0 "Convert tributary into vassal"
+ vassalize_tributary_two_desc:0 "We will ask §Y[From.GetName]§! to become our vassal state in exchange for §Y40§! Trust.\n\nThis will degrade our relations with other tributaries by §R-50§!."
+ vassalize_tributary_two_tooltip:0 "Spend §Y40§! Trust to convert them into the vassal."
+ vassalized_tributary:0 "Vassalized tributary"
+ 
+ EST_VAL_CRISIS:0 "Crisis of the Ming Dynasty"
+ 
+ OTTOMAN_EMPIRE:0 "Ottoman Empire"
+ OTTOMAN_EMPIRE_ADJ:0 "Ottoman"
+ 
+ RUSSIAN_EMPIRE:0 "Russian Empire"
+ RUSSIAN_EMPIRE_ADJ:0 "Russian"

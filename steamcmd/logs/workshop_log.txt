@@ -1,0 +1,557 @@
+
+
+[2024-05-16 07:58:45] Client version: 1715636761
+[2024-05-16 07:58:45] Loading workshop items for 0 installed apps for user [a:1:4118478908]:
+[2024-05-16 07:59:35] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (0 installed, 0 needed)
+[2024-05-16 07:59:35] [AppID 4000] Download item 2925774481 requested by app
+[2024-05-16 07:59:35] [AppID 4000] Starting Workshop download job (requested item 2925774481 )
+[2024-05-16 07:59:36] [AppID 4000] Detected workshop change (latest from server) : changed cached item 2925774481, new manifest 3432538141457621303
+[2024-05-16 07:59:38] [AppID 4000] Download item 2925774481 result : OK
+[2024-05-16 07:59:38] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 07:59:39] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 08:14:40] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 08:29:41] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 08:44:43] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 08:59:44] [AppID 4000] Updating workshop item details failed with Access Denied
+
+
+[2024-05-16 10:30:08] Client version: 1715636761
+[2024-05-16 10:30:08] Loading workshop items for 0 installed apps for user [a:1:68841746]:
+[2024-05-16 10:30:10] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 1 needed)
+[2024-05-16 10:30:10] [AppID 4000] Download item 2925774481 requested by app
+[2024-05-16 10:30:10] [AppID 4000] Starting Workshop download job (requested item 2925774481 )
+[2024-05-16 10:30:10] [AppID 4000] Download item 2925774481 result : OK
+[2024-05-16 10:30:10] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-05-16 10:41:51] Client version: 1715636761
+[2024-05-16 10:41:51] Loading workshop items for 0 installed apps for user [a:1:4092623104]:
+[2024-05-16 10:41:53] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 1 needed)
+[2024-05-16 10:41:53] [AppID 4000] Download item 2925774481 requested by app
+[2024-05-16 10:41:53] [AppID 4000] Starting Workshop download job (requested item 2925774481 )
+[2024-05-16 10:41:54] [AppID 4000] Download item 2925774481 result : OK
+[2024-05-16 10:41:54] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 10:41:54] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 12:48:12] Client version: 1715636761
+[2024-05-16 12:48:12] Loading workshop items for 0 installed apps for user [a:1:326227366]:
+[2024-05-16 12:48:15] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 1 needed)
+[2024-05-16 12:48:15] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 12:48:15] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 12:48:15] [AppID 4000] Detected workshop change (latest from server) : changed cached item 3024317004, new manifest 3464215742853616018
+[2024-05-16 12:48:19] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 12:48:19] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 12:48:19] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 12:56:29] Client version: 1715636761
+[2024-05-16 12:56:29] Loading workshop items for 0 installed apps for user [a:1:428692512]:
+[2024-05-16 12:56:32] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 12:56:32] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 12:56:32] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 12:56:33] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 12:56:33] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 12:56:33] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 12:59:22] Client version: 1715636761
+[2024-05-16 12:59:22] Loading workshop items for 0 installed apps for user [a:1:556687465]:
+[2024-05-16 12:59:24] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 12:59:24] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 12:59:24] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 12:59:25] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 12:59:25] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 12:59:26] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 13:00:31] Client version: 1715636761
+[2024-05-16 13:00:31] Loading workshop items for 0 installed apps for user [a:1:188185645]:
+[2024-05-16 13:00:33] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 13:00:33] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 13:00:33] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 13:00:35] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 13:00:35] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-05-16 13:01:59] Client version: 1715636761
+[2024-05-16 13:01:59] Loading workshop items for 0 installed apps for user [a:1:3089638450]:
+[2024-05-16 13:02:01] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 13:02:01] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 13:02:01] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 13:02:02] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 13:02:02] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 13:02:02] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 13:02:32] Client version: 1715636761
+[2024-05-16 13:02:32] Loading workshop items for 0 installed apps for user [a:1:3728045263]:
+[2024-05-16 13:02:34] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 13:02:34] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 13:02:34] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 13:02:35] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 13:02:35] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 13:02:35] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 13:03:57] Client version: 1715636761
+[2024-05-16 13:03:57] Loading workshop items for 0 installed apps for user [a:1:2577854808]:
+[2024-05-16 13:03:58] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 13:03:58] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 13:03:58] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 13:03:59] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 13:03:59] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 13:03:59] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 13:05:57] Client version: 1715636761
+[2024-05-16 13:05:57] Loading workshop items for 0 installed apps for user [a:1:142167148]:
+[2024-05-16 13:05:58] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 13:05:58] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 13:05:58] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 13:06:00] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 13:06:00] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 13:06:00] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 13:26:05] Client version: 1715636761
+[2024-05-16 13:26:05] Loading workshop items for 0 installed apps for user [a:1:2404166025]:
+[2024-05-16 13:26:07] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 13:26:07] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 13:26:07] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 13:26:08] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 13:26:08] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 13:26:08] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 19:24:26] Client version: 1715636761
+[2024-05-16 19:24:26] Loading workshop items for 0 installed apps for user [a:1:2753279394]:
+[2024-05-16 19:25:04] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 19:25:04] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 19:25:04] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 19:25:05] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 19:25:05] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 19:25:05] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 19:40:07] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 19:55:08] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 20:10:09] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 20:25:08] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 20:40:10] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 20:55:11] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 21:10:12] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 21:25:14] [AppID 4000] Updating workshop item details failed with Access Denied
+
+
+[2024-05-16 22:30:18] Client version: 1715636761
+[2024-05-16 22:30:18] Loading workshop items for 0 installed apps for user [a:1:1515160576]:
+[2024-05-16 22:30:19] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 22:30:19] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 22:30:19] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 22:30:20] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 22:30:20] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-05-16 22:34:00] Client version: 1715636761
+[2024-05-16 22:34:00] Loading workshop items for 0 installed apps for user [a:1:2535027983]:
+[2024-05-16 22:34:01] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 22:34:01] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 22:34:02] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 22:34:07] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 22:34:07] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 22:34:07] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 22:45:41] Client version: 1715636761
+[2024-05-16 22:45:41] Loading workshop items for 0 installed apps for user [a:1:1286046870]:
+[2024-05-16 22:45:43] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 22:45:43] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-16 22:45:43] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-16 22:45:45] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-16 22:45:45] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 22:45:45] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-16 23:11:03] Client version: 1715636761
+[2024-05-16 23:11:03] Loading workshop items for 0 installed apps for user [a:1:1674196138]:
+[2024-05-16 23:12:52] [AppID 236850] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (0 installed, 0 needed)
+[2024-05-16 23:12:52] [AppID 236850] Download item 3233483384 requested by app
+[2024-05-16 23:12:52] [AppID 236850] Starting Workshop download job (requested item 3233483384 )
+[2024-05-16 23:12:52] [AppID 236850] Detected workshop change (latest from server) : changed cached item 3233483384, new manifest 5036247993337129612
+[2024-05-16 23:12:53] [AppID 236850] Update canceled: Failed to initialize depot 236850, manifest 5036247993337129612 (Missing decryption key) (Missing decryption key)
+[2024-05-16 23:12:53] [AppID 236850] Download item 3233483384 result : Failure
+[2024-05-16 23:12:53] [AppID 236850] Updating workshop item details failed with Access Denied
+[2024-05-16 23:15:17] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-16 23:15:17] [AppID 4000] Download item 2160669896 requested by app
+[2024-05-16 23:15:17] [AppID 4000] Starting Workshop download job (requested item 2160669896 )
+[2024-05-16 23:15:17] [AppID 4000] Detected workshop change (latest from server) : changed cached item 2160669896, new manifest 1855536845919544334
+[2024-05-16 23:15:19] [AppID 4000] Download item 2160669896 result : OK
+[2024-05-16 23:15:19] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-16 23:15:20] [AppID 4000] Updating workshop item details failed with Access Denied
+[2024-05-16 23:17:58] [AppID 236850] Download item 3170696958 requested by app
+[2024-05-16 23:17:58] [AppID 236850] Starting Workshop download job (requested item 3170696958 )
+[2024-05-16 23:17:58] [AppID 236850] Detected workshop change (latest from server) : changed cached item 3170696958, new manifest 889204171749920390
+[2024-05-16 23:17:58] [AppID 236850] Update canceled: Failed to initialize depot 236850, manifest 889204171749920390 (Missing decryption key) (Missing decryption key)
+[2024-05-16 23:17:58] [AppID 236850] Download item 3170696958 result : Failure
+[2024-05-16 23:22:17] [AppID 236850] Download item 3233483384 requested by app
+[2024-05-16 23:22:17] [AppID 236850] Starting Workshop download job (requested item 3233483384 )
+[2024-05-16 23:22:24] [AppID 236850] Download item 3233483384 result : OK
+[2024-05-16 23:22:24] [AppID 236850] Finished Workshop download job : No Error
+
+
+[2024-05-17 03:21:52] Client version: 1715891821
+[2024-05-17 03:21:52] Loading workshop items for 0 installed apps for user [a:1:1845399767]:
+[2024-05-17 03:21:53] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (3 installed, 3 needed)
+[2024-05-17 03:21:53] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-17 03:21:53] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-17 03:21:55] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-17 03:21:55] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-17 03:21:55] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-17 03:25:53] Client version: 1715891821
+[2024-05-17 03:25:53] Loading workshop items for 0 installed apps for user [a:1:842308771]:
+[2024-05-17 03:25:55] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (3 installed, 3 needed)
+[2024-05-17 03:25:55] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-17 03:25:55] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-17 03:25:56] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-17 03:25:56] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-17 03:25:56] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-17 03:33:57] Client version: 1715891821
+[2024-05-17 03:33:57] Loading workshop items for 0 installed apps for user [a:1:2271633457]:
+[2024-05-17 03:34:29] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (3 installed, 3 needed)
+[2024-05-17 03:34:29] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-17 03:34:29] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-17 03:34:30] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-17 03:34:30] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-17 03:34:31] [AppID 4000] Updating workshop item details failed with Access Denied
+
+
+[2024-05-18 07:33:05] Client version: 1715891821
+[2024-05-18 07:33:05] Loading workshop items for 0 installed apps for user [a:1:4078076230]:
+
+
+[2024-05-18 07:36:25] Client version: 1715891821
+[2024-05-18 07:36:25] Loading workshop items for 0 installed apps for user [a:1:2952225192]:
+
+
+[2024-05-18 07:38:49] Client version: 1715891821
+[2024-05-18 07:38:49] Loading workshop items for 0 installed apps for user [a:1:3046721884]:
+[2024-05-18 07:38:51] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (3 installed, 3 needed)
+[2024-05-18 07:38:51] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-18 07:38:51] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-18 07:38:51] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-18 07:38:51] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-05-21 10:09:23] Client version: 1716242337
+[2024-05-21 10:09:23] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+[2024-05-21 10:10:29] [AppID 236850] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 2 needed)
+[2024-05-21 10:10:29] [AppID 236850] Download item 3233483384 requested by app
+[2024-05-21 10:10:29] [AppID 236850] Starting Workshop download job (requested item 3233483384 )
+[2024-05-21 10:10:29] [AppID 236850] Download item 3233483384 result : OK
+[2024-05-21 10:10:29] [AppID 236850] Finished Workshop download job : No Error
+
+
+[2024-05-21 10:11:17] Client version: 1716242337
+[2024-05-21 10:11:17] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:45:44] Client version: 1716242337
+[2024-05-22 11:45:44] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:46:56] Client version: 1716242337
+[2024-05-22 11:46:56] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:47:42] Client version: 1716242337
+[2024-05-22 11:47:42] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:48:41] Client version: 1716242337
+[2024-05-22 11:48:41] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:49:44] Client version: 1716242337
+[2024-05-22 11:49:44] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:50:16] Client version: 1716242337
+[2024-05-22 11:50:16] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:51:10] Client version: 1716242337
+[2024-05-22 11:51:10] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:51:35] Client version: 1716242337
+[2024-05-22 11:51:35] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:52:02] Client version: 1716242337
+[2024-05-22 11:52:02] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:52:33] Client version: 1716242337
+[2024-05-22 11:52:33] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:53:09] Client version: 1716242337
+[2024-05-22 11:53:09] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 11:56:30] Client version: 1716242337
+[2024-05-22 11:56:30] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 12:03:39] Client version: 1716242337
+[2024-05-22 12:03:39] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 12:04:29] Client version: 1716242337
+[2024-05-22 12:04:29] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:40:26] Client version: 1716242337
+[2024-05-22 13:40:26] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:41:10] Client version: 1716242337
+[2024-05-22 13:41:10] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:41:48] Client version: 1716242337
+[2024-05-22 13:41:48] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:42:44] Client version: 1716242337
+[2024-05-22 13:42:44] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:42:50] Client version: 1716242337
+[2024-05-22 13:42:50] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:43:20] Client version: 1716242337
+[2024-05-22 13:43:20] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:47:51] Client version: 1716242337
+[2024-05-22 13:47:51] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 13:50:35] Client version: 1716242337
+[2024-05-22 13:50:35] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 14:42:19] Client version: 1716242337
+[2024-05-22 14:42:19] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 14:49:57] Client version: 1716242337
+[2024-05-22 14:49:57] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-22 14:50:42] Client version: 1716242337
+[2024-05-22 14:50:42] Loading workshop items for 0 installed apps for user [a:1:596019618]:
+
+
+[2024-05-22 14:51:05] Client version: 1716242337
+[2024-05-22 14:51:05] Loading workshop items for 0 installed apps for user [a:1:1537860762]:
+
+
+[2024-05-22 14:52:18] Client version: 1716242337
+[2024-05-22 14:52:18] Loading workshop items for 0 installed apps for user [a:1:1410024818]:
+
+
+[2024-05-23 06:46:22] Client version: 1716242337
+[2024-05-23 06:46:22] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+
+
+[2024-05-23 06:48:58] Client version: 1716242337
+[2024-05-23 06:48:58] Loading workshop items for 0 installed apps for user [a:1:3505661017]:
+
+
+[2024-05-23 06:49:32] Client version: 1716242337
+[2024-05-23 06:49:32] Loading workshop items for 0 installed apps for user [a:1:19565844]:
+
+
+[2024-05-23 06:51:49] Client version: 1716242337
+[2024-05-23 06:51:49] Loading workshop items for 0 installed apps for user [a:1:597952547]:
+[2024-05-23 06:52:08] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (3 installed, 3 needed)
+[2024-05-23 06:52:08] [AppID 4000] Download item 1420590255 requested by app
+[2024-05-23 06:52:08] [AppID 4000] Starting Workshop download job (requested item 1420590255 )
+[2024-05-23 06:52:08] [AppID 4000] Detected workshop change (latest from server) : changed cached item 1420590255, new manifest 8941429388296460093
+[2024-05-23 06:52:36] [AppID 4000] Download item 1420590255 result : OK
+[2024-05-23 06:52:36] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 06:52:36] [AppID 4000] Updating workshop item details failed with Access Denied
+
+
+[2024-05-23 06:56:04] Client version: 1716242337
+[2024-05-23 06:56:04] Loading workshop items for 0 installed apps for user [a:1:4222339191]:
+[2024-05-23 06:56:06] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (4 installed, 4 needed)
+[2024-05-23 06:56:06] [AppID 4000] Download item 1420590255 requested by app
+[2024-05-23 06:56:06] [AppID 4000] Starting Workshop download job (requested item 1420590255 )
+[2024-05-23 06:56:06] [AppID 4000] Download item 1420590255 result : OK
+[2024-05-23 06:56:06] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-05-23 06:56:07] Client version: 1716242337
+[2024-05-23 06:56:07] Loading workshop items for 0 installed apps for user [a:1:3736028401]:
+[2024-05-23 06:56:08] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (4 installed, 4 needed)
+[2024-05-23 06:56:08] [AppID 4000] Download item 1420590255 requested by app
+[2024-05-23 06:56:08] [AppID 4000] Starting Workshop download job (requested item 1420590255 )
+[2024-05-23 06:56:08] [AppID 4000] Download item 1420590255 result : OK
+[2024-05-23 06:56:08] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-05-23 06:56:09] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (4 installed, 4 needed)
+[2024-05-23 06:56:09] [AppID 4000] Download item 1420590255 requested by app
+[2024-05-23 06:56:09] [AppID 4000] Starting Workshop download job (requested item 1420590255 )
+[2024-05-23 06:56:09] [AppID 4000] Download item 1420590255 result : OK
+[2024-05-23 06:56:09] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-05-23 06:56:14] [AppID 4000] Download item 1420590255 result : OK
+[2024-05-23 06:56:14] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 06:56:14] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 07:44:52] Client version: 1716242337
+[2024-05-23 07:44:52] Loading workshop items for 0 installed apps for user [a:1:711015492]:
+[2024-05-23 07:44:54] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 1 needed)
+[2024-05-23 07:44:54] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-23 07:44:54] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-23 07:44:54] [AppID 4000] Detected workshop change (latest from server) : changed cached item 3024317004, new manifest 3464215742853616018
+[2024-05-23 07:44:55] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-23 07:44:55] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 07:44:55] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 07:46:29] Client version: 1716242337
+[2024-05-23 07:46:29] Loading workshop items for 0 installed apps for user [a:1:4294532112]:
+[2024-05-23 07:46:31] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-23 07:46:31] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-23 07:46:31] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-23 07:46:32] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-23 07:46:32] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 07:46:32] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 07:52:14] Client version: 1716242337
+[2024-05-23 07:52:14] Loading workshop items for 0 installed apps for user [a:1:921004298]:
+[2024-05-23 07:52:16] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-23 07:52:16] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-23 07:52:16] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-23 07:52:17] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-23 07:52:17] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 07:52:17] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 07:53:19] Client version: 1716242337
+[2024-05-23 07:53:19] Loading workshop items for 0 installed apps for user [a:1:158295458]:
+[2024-05-23 07:53:21] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-23 07:53:21] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-23 07:53:21] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-23 07:53:22] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-23 07:53:22] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 07:53:22] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 07:54:43] Client version: 1716242337
+[2024-05-23 07:54:43] Loading workshop items for 0 installed apps for user [a:1:654813442]:
+[2024-05-23 07:54:44] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-23 07:54:44] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-23 07:54:44] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-23 07:54:46] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-23 07:54:46] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 07:54:46] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 07:57:26] Client version: 1716242337
+[2024-05-23 07:57:26] Loading workshop items for 0 installed apps for user [a:1:3153076305]:
+[2024-05-23 07:57:28] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-23 07:57:28] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-23 07:57:28] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-23 07:57:29] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-23 07:57:29] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 07:57:29] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 11:45:14] Client version: 1716242337
+[2024-05-23 11:45:14] Loading workshop items for 0 installed apps for user [a:1:3283174446]:
+[2024-05-23 11:45:19] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-23 11:45:19] [AppID 4000] Download item 3024317004 requested by app
+[2024-05-23 11:45:19] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-05-23 11:45:20] [AppID 4000] Download item 3024317004 result : OK
+[2024-05-23 11:45:20] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 11:45:20] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-05-23 12:02:58] Client version: 1716242337
+[2024-05-23 12:02:58] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+[2024-05-23 12:03:02] [AppID 236850] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 2 needed)
+[2024-05-23 12:03:02] [AppID 236850] Download item 3247695578 requested by app
+[2024-05-23 12:03:02] [AppID 236850] Starting Workshop download job (requested item 3247695578 )
+[2024-05-23 12:03:03] [AppID 236850] Detected workshop change (latest from server) : changed cached item 3247695578, new manifest 8040269199567139602
+[2024-05-23 12:03:03] [AppID 236850] Update canceled: Failed to initialize depot 236850, manifest 5036247993337129612 (Missing decryption key) (Missing decryption key)
+[2024-05-23 12:03:03] [AppID 236850] Download item 3247695578 result : Failure
+
+
+[2024-05-23 12:03:38] Client version: 1716242337
+[2024-05-23 12:03:38] Loading workshop items for 0 installed apps for user [U:1:1583857126]:
+[2024-05-23 12:04:29] [AppID 236850] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 3 needed)
+[2024-05-23 12:04:29] [AppID 236850] Download item 3247695578 requested by app
+[2024-05-23 12:04:29] [AppID 236850] Starting Workshop download job (requested item 3247695578 )
+[2024-05-23 12:04:30] [AppID 236850] Update canceled: Failed to initialize depot 236850, manifest 5036247993337129612 (Missing decryption key) (Missing decryption key)
+[2024-05-23 12:04:30] [AppID 236850] Download item 3247695578 result : Failure
+
+
+[2024-05-23 12:06:41] Client version: 1716242337
+[2024-05-23 12:06:41] Loading workshop items for 0 installed apps for user [U:1:885391787]:
+[2024-05-23 12:07:26] [AppID 236850] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (1 installed, 3 needed)
+[2024-05-23 12:07:26] [AppID 236850] Download item 3247695578 requested by app
+[2024-05-23 12:07:26] [AppID 236850] Starting Workshop download job (requested item 3247695578 )
+[2024-05-23 12:07:33] [AppID 236850] Download item 3247695578 result : OK
+[2024-05-23 12:07:33] [AppID 236850] Finished Workshop download job : No Error
+
+
+[2024-05-23 15:42:50] Client version: 1716242337
+[2024-05-23 15:42:50] Loading workshop items for 0 installed apps for user [a:1:1757101254]:
+[2024-05-23 15:42:52] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 2 needed)
+[2024-05-23 15:42:52] [AppID 4000] Download item 2841063827 requested by app
+[2024-05-23 15:42:52] [AppID 4000] Starting Workshop download job (requested item 2841063827 )
+[2024-05-23 15:42:53] [AppID 4000] Detected workshop change (latest from server) : changed cached item 2841063827, new manifest 3918572798995098159
+[2024-05-23 15:42:54] [AppID 4000] Update canceled: Failed to download manifest 3918572798995098159 (Busy) (Still busy)
+[2024-05-23 15:42:54] [AppID 4000] Download item 2841063827 result : Busy
+
+
+[2024-05-23 15:44:17] Client version: 1716242337
+[2024-05-23 15:44:17] Loading workshop items for 0 installed apps for user [a:1:2560779647]:
+[2024-05-23 15:44:18] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 3 needed)
+[2024-05-23 15:44:18] [AppID 4000] Download item 2841063827 requested by app
+[2024-05-23 15:44:18] [AppID 4000] Starting Workshop download job (requested item 2841063827 )
+[2024-05-23 15:44:20] [AppID 4000] Update canceled: Failed to download manifest 3918572798995098159 (Timeout) (Connection timeout)
+[2024-05-23 15:44:20] [AppID 4000] Download item 2841063827 result : Timeout
+
+
+[2024-05-23 15:47:47] Client version: 1716242337
+[2024-05-23 15:47:47] Loading workshop items for 0 installed apps for user [a:1:175296616]:
+[2024-05-23 15:47:57] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (2 installed, 3 needed)
+[2024-05-23 15:47:57] [AppID 4000] Download item 2841063827 requested by app
+[2024-05-23 15:47:57] [AppID 4000] Starting Workshop download job (requested item 2841063827 )
+[2024-05-23 15:48:33] [AppID 4000] Download item 2841063827 result : OK
+[2024-05-23 15:48:33] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 15:48:34] [AppID 4000] Updating workshop item details failed with Access Denied
+
+
+[2024-05-23 15:51:44] Client version: 1716242337
+[2024-05-23 15:51:44] Loading workshop items for 0 installed apps for user [a:1:2663196986]:
+[2024-05-23 15:51:45] [AppID 4000] Loaded workshop items in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop" (3 installed, 3 needed)
+[2024-05-23 15:51:45] [AppID 4000] Download item 2841063827 requested by app
+[2024-05-23 15:51:45] [AppID 4000] Starting Workshop download job (requested item 2841063827 )
+[2024-05-23 15:53:19] [AppID 4000] Download item 2841063827 result : OK
+[2024-05-23 15:53:19] [AppID 4000] Finished Workshop download job : No Error
+[2024-05-23 15:53:19] [AppID 4000] Updating workshop item details failed with Failure

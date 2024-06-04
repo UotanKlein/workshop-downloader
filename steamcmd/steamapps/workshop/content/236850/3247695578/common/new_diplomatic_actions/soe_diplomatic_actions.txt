@@ -1,0 +1,114 @@
+vassalize_tributary_two =  {
+    category = influence
+
+    require_acceptance = no
+
+    is_visible = {
+        ROOT = {
+			has_subject_of_type = tributary_state
+			is_emperor_of_china = no
+		}
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = tributary_state
+		}
+    }
+
+    is_allowed = {
+	custom_trigger_tooltip = {
+		tooltip = ALLOWED_TO_VASSALIZE
+		hidden_trigger = {
+			ROOT = {
+				OR = {
+					has_country_flag = mlc_may_vassalize
+					full_idea_group = influence_ideas
+				}
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = NOT_AT_WAR_WE
+		hidden_trigger = {
+			ROOT = {
+				is_at_war = no
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = NOT_AT_WAR_TARGET
+		hidden_trigger = {
+			FROM = {
+				is_at_war = no
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = OPINION_NINETY
+		hidden_trigger = {
+			FROM = {
+				has_opinion = { 	
+					who = ROOT 
+					value = 190 
+				}
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = TRUST_NINETY
+		hidden_trigger = {
+			FROM = {
+				trust = { 	
+					who = ROOT 
+					value = 90 
+				}
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = DEV_THIRTY
+		hidden_trigger = {
+			FROM = {
+				NOT = { development_of_overlord_fraction = 0.25 }
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = DEV_HUNDRED
+		hidden_trigger = {
+			FROM = {
+				NOT = { total_development = 100 }
+			}
+		}
+	}
+    }
+
+    on_accept = {
+	vassalize = FROM
+	FROM = {
+		add_trust = {
+    			who = ROOT
+   			value = -40
+		}
+	}
+	ROOT = {
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = tributary_state
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = vassalized_tributary
+			}
+		}
+	}
+    }
+
+    ai_will_do = {
+	NOT = {
+		any_subject_country = {
+			liberty_desire = 30
+		}
+	}
+	NOT = { vassal = 2 }
+    }
+}

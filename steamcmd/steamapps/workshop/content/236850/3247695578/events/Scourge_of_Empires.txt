@@ -1,0 +1,8847 @@
+###########################################
+# Hidden Events For Scourge of Europe Mod
+#
+# Scripted by Bubble Gum
+###########################################
+
+namespace = soe_event
+normal_or_historical_nations = yes
+
+###########################################
+# Introduction
+###########################################
+
+# Introduction
+country_event = {
+	id = soe_event.0
+	title = soe_event.0.t
+	desc = soe_event.0.d
+	picture = TOURNAMENT_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		ai = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		set_global_flag = soe_intro_done
+	}
+
+	option = {
+		name = soe_event.0.a # Skanderbeg is my second name
+		highlight = yes
+		custom_tooltip = soe_event_tooltip_four
+		tooltip = {
+			add_country_modifier = {
+				name = extra_power
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			set_global_flag = soe_ai_bonuses_flag
+			every_country = {
+				limit = {
+					ai = yes
+				}
+				add_country_modifier = {
+					name = "extra_power"
+					duration = -1
+				}
+				add_manpower = 5
+				add_treasury = 50
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = soe_event.0.b # Skanderbeg is my second name
+		highlight = yes
+		set_global_flag = soe_extra_bonuses_flag
+		custom_tooltip = soe_event_tooltip_one
+		tooltip = {
+			add_country_modifier = {
+				name = war_against_the_player_one
+				duration = -1
+			}
+		}
+		custom_tooltip = soe_event_tooltip_two
+		tooltip = {
+			add_country_modifier = {
+				name = war_against_the_player_two
+				duration = -1
+			}
+		}
+		custom_tooltip = soe_event_tooltip_three
+		hidden_effect = {
+			set_global_flag = soe_ai_bonuses_flag
+			every_country = {
+				limit = {
+					ai = yes
+				}
+				add_country_modifier = {
+					name = "extra_power"
+					duration = -1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = soe_event.0.c # I'm just an average diplomacy enjoer
+		custom_tooltip = soe_event_tooltip_null
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Remove the buff for non-AI
+country_event = {
+	id = soe_event.100
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	trigger = {
+		ai = no
+		OR = {
+			has_country_modifier = extra_power
+			has_country_modifier = war_against_the_player_one
+			has_country_modifier = war_against_the_player_two
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		remove_country_modifier = extra_power
+		remove_country_modifier = war_against_the_player_one
+		remove_country_modifier = war_against_the_player_two
+		ai_chance = { factor = 1 }
+	}
+}
+
+###########################################
+# Muscowy Events
+###########################################
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.1
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		tag = MOS
+		ai = yes
+		is_at_war = no
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		NOT = { war_exhaustion = 5 }
+		is_free_or_tributary_trigger = yes
+		is_year = 1445
+		NOT = { is_year = 1455 }
+		NOT = { has_country_modifier = important_war_timer }
+		NOT = { truce_with = NOV }
+		NOV = { ai = yes }
+		NOV = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			NOV = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				NOV = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		NOV = { NOT = { guaranteed_by = LIT } }
+		NOV = { NOT = { guaranteed_by = POL } }
+		NOV = { NOT = { guaranteed_by = DAN } }
+		310 = { 
+			OR = {
+				is_permanent_claim = ROOT
+				is_claim = ROOT
+				is_core = ROOT
+			}
+		}
+		310 = { 
+			owned_by = NOV
+			controlled_by = NOV
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.1.a"
+		declare_war_with_cb = {
+			who = NOV
+			casus_belli = cb_conquest
+			war_goal_province = 310
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 730
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.2
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		NOT = { war_exhaustion = 5 }
+		is_free_or_tributary_trigger = yes
+		is_year = 1448
+		NOT = { has_country_modifier = important_war_timer }
+		NOT = { truce_with = TVE }
+		TVE = { ai = yes }
+		TVE = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			TVE = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				TVE = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		TVE = { NOT = {	alliance_with = ROOT } }
+		TVE = { NOT = { guaranteed_by = LIT } }
+		TVE = { NOT = { guaranteed_by = POL } }
+		TVE = { NOT = { guaranteed_by = DAN } }
+		TVE = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				294 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				294 = { 
+					owned_by = TVE
+					controlled_by = TVE
+				}
+			}
+			AND = {
+				4249 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				4249 = { 
+					owned_by = TVE
+					controlled_by = TVE
+				}
+			}
+			AND = {
+				4248 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				4248 = { 
+					owned_by = TVE
+					controlled_by = TVE
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.2.a"
+		if = {
+			limit = {
+				294 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				294 = { 
+					owned_by = TVE
+					controlled_by = TVE
+				}
+			}
+			declare_war_with_cb = {
+				who = TVE
+				casus_belli = cb_conquest
+				war_goal_province = 294
+			}
+		}
+		else_if = {
+			limit = {
+				4249 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				4249 = { 
+					owned_by = TVE
+					controlled_by = TVE
+				}
+			}
+			declare_war_with_cb = {
+				who = TVE
+				casus_belli = cb_conquest
+				war_goal_province = 4249
+			}
+		}
+		else_if = {
+			limit = {
+				4248 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				4248 = { 
+					owned_by = TVE
+					controlled_by = TVE
+				}
+			}
+			declare_war_with_cb = {
+				who = TVE
+				casus_belli = cb_conquest
+				war_goal_province = 4248
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 730
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.3
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		NOT = { war_exhaustion = 5 }
+		is_free_or_tributary_trigger = yes
+		is_year = 1446
+		NOT = { has_country_modifier = important_war_timer }
+		NOT = { truce_with = RYA }
+		RYA = { ai = yes }
+		RYA = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			RYA = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				RYA = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		RYA = { NOT = {	alliance_with = ROOT } }
+		RYA = { NOT = { guaranteed_by = LIT } }
+		RYA = { NOT = { guaranteed_by = POL } }
+		RYA = { NOT = { guaranteed_by = DAN } }
+		RYA = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			RYA = { NOT = { is_subject_of_type = tributary_state } }
+			army_size = 35
+		}
+		OR = {
+			AND = {
+				301 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				301 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+			AND = {
+				300 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				300 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+			AND = {
+				2408 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				2408 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+			AND = {
+				4255 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				4255 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.3.a"
+		if = {
+			limit = {
+				301 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				301 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+			declare_war_with_cb = {
+				who = RYA
+				casus_belli = cb_conquest
+				war_goal_province = 301
+			}
+		}
+		else_if = {
+			limit = {
+				300 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				300 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+			declare_war_with_cb = {
+				who = RYA
+				casus_belli = cb_conquest
+				war_goal_province = 300
+			}
+		}
+		else_if = {
+			limit = {
+				2408 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				2408 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+			declare_war_with_cb = {
+				who = RYA
+				casus_belli = cb_conquest
+				war_goal_province = 2408
+			}
+		}
+		else_if = {
+			limit = {
+				4255 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				4255 = { 
+					owned_by = RYA
+					controlled_by = RYA
+				}
+			}
+			declare_war_with_cb = {
+				who = RYA
+				casus_belli = cb_conquest
+				war_goal_province = 4255
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 730
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.4
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1455
+		has_any_disaster = no
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		NOT = { war_exhaustion = 5 }
+		NOT = { has_country_modifier = important_war_timer }
+		NOT = { truce_with = NOV }
+		NOV = { ai = yes }
+		NOV = { NOT = {	num_of_allies = 3 } }
+		OR = {
+			NOV = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				NOV = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		OR = {
+			NOV = { NOT = {	alliance_with = DAN } }
+			AND = {
+				NOV = { alliance_with = DAN }
+				army_strength = {
+					who = DAN
+					value = 1.25
+				}
+				SWE = { NOT = { junior_union_with = DAN } }
+			}
+		}
+		OR = {
+			NOV = { NOT = { guaranteed_by = LIT } }
+			AND = {
+				NOV = { guaranteed_by = LIT }
+				army_strength = {
+					who = LIT
+					value = 1.25
+				}
+			}
+		}
+		NOV = { NOT = { guaranteed_by = POL } }
+		NOV = { NOT = {	guaranteed_by = PLC } }
+		OR = {
+			NOV = { NOT = { guaranteed_by = DAN } }
+			AND = {
+				NOV = { guaranteed_by = DAN }
+				army_strength = {
+					who = DAN
+					value = 1.25
+				}
+				SWE = { NOT = { junior_union_with = DAN } }
+			}
+		}
+		OR = {
+			NOV = { NOT = { guaranteed_by = SWE } }
+			AND = {
+				NOV = { guaranteed_by = SWE }
+				army_strength = {
+					who = SWE
+					value = 1.25
+				}
+			}
+		}
+		OR = {
+			AND = {
+				310 = { is_permanent_claim = ROOT }
+				310 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+			AND = {
+				2749 = { is_permanent_claim = ROOT }
+				2749 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+			AND = {
+				309 = { is_permanent_claim = ROOT }
+				309 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+			AND = {
+				313 = { is_permanent_claim = ROOT }
+				313 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+			AND = {
+				4148 = { is_permanent_claim = ROOT }
+				4148 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+			AND = {
+				33 = { is_permanent_claim = ROOT }
+				33 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+			AND = {
+				1961 = { is_permanent_claim = ROOT }
+				1961 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+			AND = {
+				1777 = { is_permanent_claim = ROOT }
+				1777 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.4.a"
+		if = {
+			limit = {
+				310 = { is_permanent_claim = ROOT }
+				310 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 310
+			}
+		}
+		else_if = {
+			limit = {
+				2749 = { is_permanent_claim = ROOT }
+				2749 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 2749
+			}
+		}
+		else_if = {
+			limit = {
+				309 = { is_permanent_claim = ROOT }
+				309 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 309
+			}
+		}
+		else_if = {
+			limit = {
+				313 = { is_permanent_claim = ROOT }
+				313 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 313
+			}
+		}
+		else_if = {
+			limit = {
+				4148 = { is_permanent_claim = ROOT }
+				4148 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 4148
+			}
+		}
+		else_if = {
+			limit = {
+				33 = { is_permanent_claim = ROOT }
+				33 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 33
+			}
+		}
+		else_if = {
+			limit = {
+				1961 = { is_permanent_claim = ROOT }
+				1961 = { 
+					owned_by = NOV
+					controlled_by = NOV
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 1961
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = NOV
+				casus_belli = cb_conquest
+				war_goal_province = 1777
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 730
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.5
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1448
+		army_size = 25
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { truce_with = GOL }
+		NOT = { has_country_modifier = important_war_timer }
+		GOL = { is_neighbor_of = ROOT }
+		GOL = { ai = yes }
+		GOL = { NOT = {	num_of_allies = 4 } }
+		OR = {
+			GOL = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				GOL = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		NOT = {
+			TUR = {
+				religion = sunni
+				is_defender_of_faith = yes
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			GOL = { NOT = {	num_of_allies = 2 } }
+			army_size = 40
+		}
+		GOL = { NOT = {	alliance_with = TUR } }
+		GOL = { NOT = {	alliance_with = ROOT } }
+		GOL = { NOT = { guaranteed_by = TUR } }
+		NOT = {
+			any_country = {
+				has_guaranteed = GOL
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		GOL = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				302 = { is_permanent_claim = ROOT }
+				302 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			AND = {
+				299 = { is_permanent_claim = ROOT }
+				299 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			AND = {
+				466 = { is_permanent_claim = ROOT }
+				466 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			AND = {
+				464 = { is_permanent_claim = ROOT }
+				464 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			AND = {
+				474 = { is_permanent_claim = ROOT }
+				474 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			AND = {
+				2367 = { is_permanent_claim = ROOT }
+				2367 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			AND = {
+				2418 = { is_permanent_claim = ROOT }
+				2418 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.5.a"
+		if = {
+			limit = {
+				302 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			declare_war_with_cb = {
+				who = GOL
+				casus_belli = cb_conquest
+				war_goal_province = 302
+			}
+		}
+		else_if = {
+			limit = {
+				299 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			declare_war_with_cb = {
+				who = GOL
+				casus_belli = cb_conquest
+				war_goal_province = 299
+			}
+		}
+		else_if = {
+			limit = {
+				466 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			declare_war_with_cb = {
+				who = GOL
+				casus_belli = cb_conquest
+				war_goal_province = 466
+			}
+		}
+		else_if = {
+			limit = {
+				2418 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			declare_war_with_cb = {
+				who = GOL
+				casus_belli = cb_conquest
+				war_goal_province = 2418
+			}
+		}
+		else_if = {
+			limit = {
+				464 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			declare_war_with_cb = {
+				who = GOL
+				casus_belli = cb_conquest
+				war_goal_province = 464
+			}
+		}
+		else_if = {
+			limit = {
+				474 = { 
+					owned_by = GOL
+					controlled_by = GOL
+				}
+			}
+			declare_war_with_cb = {
+				who = GOL
+				casus_belli = cb_conquest
+				war_goal_province = 474
+			}
+		}
+		else = {
+			declare_war_with_cb = {
+				who = GOL
+				casus_belli = cb_conquest
+				war_goal_province = 2367
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.6
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1455
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		KAZ = { is_neighbor_of = ROOT }
+		NOT = { corruption = 5 }
+		NOT = { truce_with = KAZ }
+		NOT = { has_country_modifier = important_war_timer }
+		KAZ = { ai = yes }
+		KAZ = { NOT = {	num_of_allies = 4 } }
+		OR = {
+			KAZ = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				KAZ = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		NOT = {
+			TUR = {
+				religion = sunni
+				is_defender_of_faith = yes
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			KAZ = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				KAZ = { NOT = {	num_of_allies = 4 } }
+				army_size = 50
+				army_strength = {
+					who = KAZ
+					value = 1.25
+				}
+			}
+		}
+		KAZ = { NOT = { guaranteed_by = TUR } }
+		NOT = {
+			any_country = {
+				has_guaranteed = KAZ
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		KAZ = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				1082 = { is_permanent_claim = ROOT }
+				1082 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				4266 = { is_permanent_claim = ROOT }
+				4266 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				4267 = { is_permanent_claim = ROOT }
+				4267 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				4265 = { is_permanent_claim = ROOT }
+				4265 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				2366 = { is_permanent_claim = ROOT }
+				2366 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				1965 = { is_permanent_claim = ROOT }
+				1965 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				470 = { is_permanent_claim = ROOT }
+				470 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				474 = { is_permanent_claim = ROOT }
+				474 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				479 = { is_permanent_claim = ROOT }
+				479 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				4692 = { is_permanent_claim = ROOT }
+				4692 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.6.a"
+		if = {
+			limit = {
+				1082 = { is_permanent_claim = ROOT }
+				1082 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 1082
+			}
+		}
+		else_if = {
+			limit = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 2444
+			}
+		}
+		else_if = {
+			limit = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 475
+			}
+		}
+		else_if = {
+			limit = {
+				4266 = { is_permanent_claim = ROOT }
+				4266 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 4266
+			}
+		}
+		else_if = {
+			limit = {
+				4267 = { is_permanent_claim = ROOT }
+				4267 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 4267
+			}
+		}
+		else_if = {
+			limit = {
+				4265 = { is_permanent_claim = ROOT }
+				4265 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 4265
+			}
+		}
+		else_if = {
+			limit = {
+				2366 = { is_permanent_claim = ROOT }
+				2366 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 2366
+			}
+		}
+		else_if = {
+			limit = {
+				1965 = { is_permanent_claim = ROOT }
+				1965 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 1965
+			}
+		}
+		else_if = {
+			limit = {
+				470 = { is_permanent_claim = ROOT }
+				470 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 470
+			}
+		}
+		else_if = {
+			limit = {
+				474 = { is_permanent_claim = ROOT }
+				474 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 474
+			}
+		}
+		else_if = {
+			limit = {
+				479 = { is_permanent_claim = ROOT }
+				479 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 474
+			}
+		}
+		else_if = {
+			limit = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 2441
+			}
+		}
+		else_if = {
+			limit = {
+				4692 = { is_permanent_claim = ROOT }
+				4692 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 4692
+			}
+		}
+		else_if = {
+			limit = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = KAZ
+					controlled_by = KAZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 1076
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = KAZ
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.7
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1455
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		NOG = { is_neighbor_of = ROOT }
+		NOT = { truce_with = NOG }
+		NOT = { has_country_modifier = important_war_timer }
+		NOG = { ai = yes }
+		NOG = { NOT = {	num_of_allies = 4 } }
+		OR = {
+			NOG = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				NOG = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			NOG = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				NOG = { NOT = {	num_of_allies = 4 } }
+				army_size = 50
+				army_strength = {
+					who = NOG
+					value = 1.25
+				}
+			}
+		}
+		NOG = { NOT = { guaranteed_by = TUR } }
+		NOG = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = NOG
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				2420 = { is_permanent_claim = ROOT }
+				2420 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				4266 = { is_permanent_claim = ROOT }
+				4266 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				465 = { is_permanent_claim = ROOT }
+				465 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				2367 = { is_permanent_claim = ROOT }
+				2367 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				472 = { is_permanent_claim = ROOT }
+				472 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.7.a"
+		if = {
+			limit = {
+				2420 = { is_permanent_claim = ROOT }
+				2420 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 2420
+			}
+		}
+		else_if = {
+			limit = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 2444
+			}
+		}
+		else_if = {
+			limit = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 475
+			}
+		}
+		else_if = {
+			limit = {
+				4266 = { is_permanent_claim = ROOT }
+				4266 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 4266
+			}
+		}
+		else_if = {
+			limit = {
+				465 = { is_permanent_claim = ROOT }
+				465 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 465
+			}
+		}
+		else_if = {
+			limit = {
+				2367 = { is_permanent_claim = ROOT }
+				2367 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 2367
+			}
+		}
+		else_if = {
+			limit = {
+				472 = { is_permanent_claim = ROOT }
+				472 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 472
+			}
+		}
+		else_if = {
+			limit = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 471
+			}
+		}
+		else_if = {
+			limit = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 2358
+			}
+		}
+		else_if = {
+			limit = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 2359
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = NOG
+					controlled_by = NOG
+				}
+			}	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = NOG
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.8
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1475
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		SHY = { is_neighbor_of = ROOT }
+		NOT = { truce_with = SHY }
+		NOT = { has_country_modifier = important_war_timer }
+		SHY = { ai = yes }
+		SHY = { NOT = {	num_of_allies = 4 } }
+		OR = {
+			SHY = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				SHY = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			SHY = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				SHY = { NOT = {	num_of_allies = 4 } }
+				army_size = 50
+				army_strength = {
+					who = SHY
+					value = 1.25
+				}
+			}
+		}
+		SHY = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = SHY
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				1074 = { is_permanent_claim = ROOT }
+				1074 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				1071 = { is_permanent_claim = ROOT }
+				1071 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				2427 = { is_permanent_claim = ROOT }
+				2427 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				2429 = { is_permanent_claim = ROOT }
+				2429 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				480 = { is_permanent_claim = ROOT }
+				480 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+			AND = {
+				4687 = { is_permanent_claim = ROOT }
+				4687 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.8.a"
+		if = {
+			limit = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 1076
+			}
+		}
+		else_if = {
+			limit = {
+				1074 = { is_permanent_claim = ROOT }
+				1074 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 1074
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else_if = {
+			limit = {
+				1071 = { is_permanent_claim = ROOT }
+				1071 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 1071
+			}
+		}
+		else_if = {
+			limit = {
+				2427 = { is_permanent_claim = ROOT }
+				2427 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 2427
+			}
+		}
+		else_if = {
+			limit = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 4689
+			}
+		}
+		else_if = {
+			limit = {
+				2429 = { is_permanent_claim = ROOT }
+				2429 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 2429
+			}
+		}
+		else_if = {
+			limit = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 2444
+			}
+		}
+		else_if = {
+			limit = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		else_if = {
+			limit = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 475
+			}
+		}
+		else_if = {
+			limit = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 2353
+			}
+		}
+		else_if = {
+			limit = {
+				480 = { is_permanent_claim = ROOT }
+				480 = { 
+					owned_by = SHY
+					controlled_by = SHY
+				}
+			}	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 480
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = SHY
+				casus_belli = cb_conquest
+				war_goal_province = 4687
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.9
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1475
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		SIB = { is_neighbor_of = ROOT }
+		NOT = { truce_with = SIB }
+		NOT = { has_country_modifier = secondary_war_timer }
+		SIB = { ai = yes }
+		OR = {
+			SIB = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				SIB = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		OR = {
+			SIB = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				SIB = { NOT = {	num_of_allies = 4 } }
+				army_size = 50
+				army_strength = {
+					who = SIB
+					value = 1.25
+				}
+			}
+		}
+		SIB = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			TUR = {
+				religion = sunni
+				is_defender_of_faith = yes
+			}
+		}
+		NOT = {
+			any_country = {
+				has_guaranteed = SIB
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				1074 = { is_permanent_claim = ROOT }
+				1074 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				1071 = { is_permanent_claim = ROOT }
+				1071 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				2427 = { is_permanent_claim = ROOT }
+				2427 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				2429 = { is_permanent_claim = ROOT }
+				2429 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				480 = { is_permanent_claim = ROOT }
+				480 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+			AND = {
+				4687 = { is_permanent_claim = ROOT }
+				4687 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.9.a"
+		if = {
+			limit = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 1076
+			}
+		}
+		else_if = {
+			limit = {
+				1074 = { is_permanent_claim = ROOT }
+				1074 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 1074
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else_if = {
+			limit = {
+				1071 = { is_permanent_claim = ROOT }
+				1071 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 1071
+			}
+		}
+		else_if = {
+			limit = {
+				2427 = { is_permanent_claim = ROOT }
+				2427 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 2427
+			}
+		}
+		else_if = {
+			limit = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 4689
+			}
+		}
+		else_if = {
+			limit = {
+				2429 = { is_permanent_claim = ROOT }
+				2429 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 2429
+			}
+		}
+		else_if = {
+			limit = {
+				2444 = { is_permanent_claim = ROOT }
+				2444 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 2444
+			}
+		}
+		else_if = {
+			limit = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		else_if = {
+			limit = {
+				475 = { is_permanent_claim = ROOT }
+				475 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 475
+			}
+		}
+		else_if = {
+			limit = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 2353
+			}
+		}
+		else_if = {
+			limit = {
+				480 = { is_permanent_claim = ROOT }
+				480 = { 
+					owned_by = SIB
+					controlled_by = SIB
+				}
+			}	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 480
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = SIB
+				casus_belli = cb_conquest
+				war_goal_province = 4687
+			}
+		}
+		add_country_modifier = {
+			name = secondary_war_timer
+			duration = 730
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.10
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = MOS
+				is_year = 1500
+			}
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1475
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		KZH = { is_neighbor_of = ROOT }
+		NOT = { truce_with = KZH }
+		NOT = { has_country_modifier = secondary_war_timer }
+		KZH = { ai = yes }
+		OR = {
+			KZH = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				KZH = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		OR = {
+			KZH = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				KZH = { NOT = {	num_of_allies = 4 } }
+				army_size = 50
+				army_strength = {
+					who = KZH
+					value = 1.25
+				}
+			}
+		}
+		KZH = { NOT = {	alliance_with = ROOT } }
+		KZH = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = KZH
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+			AND = {
+				472 = { is_permanent_claim = ROOT }
+				472 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.10.a"
+		if = {
+			limit = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 1076
+			}
+		}
+		else_if = {
+			limit = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 2359
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else_if = {
+			limit = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 2358
+			}
+		}
+		else_if = {
+			limit = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 2441
+			}
+		}
+		else_if = {
+			limit = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 4686
+			}
+		}
+		else_if = {
+			limit = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 2352
+			}
+		}
+		else_if = {
+			limit = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 2351
+			}
+		}
+		else_if = {
+			limit = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		else_if = {
+			limit = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 471
+			}
+		}
+		else_if = {
+			limit = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 2353
+			}
+		}
+		else_if = {
+			limit = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = KZH
+					controlled_by = KZH
+				}
+			}	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 4689
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = KZH
+				casus_belli = cb_conquest
+				war_goal_province = 472
+			}
+		}
+		add_country_modifier = {
+			name = secondary_war_timer
+			duration = 730
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.11
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = MOS
+				is_year = 1550
+			}
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1580
+		if = {
+			limit = {
+				exists = PLC
+				PLC = { is_neighbor_of = ROOT }
+				PLC = { NOT = { alliance_with = ROOT } }
+			}
+			PLC = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = LIT
+				LIT = { is_neighbor_of = ROOT }
+				LIT = { NOT = { alliance_with = ROOT } }
+			}
+			LIT = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUR
+				TUR = { is_neighbor_of = ROOT }
+				TUR = { NOT = { alliance_with = ROOT } }
+			}
+			TUR = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		manpower_percentage = 0.5
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { governing_capacity_percentage = 0.9 }
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		TRS = { is_neighbor_of = ROOT }
+		NOT = { truce_with = TRS }
+		NOT = { has_country_modifier = important_war_timer }
+		TRS = { ai = yes }
+		TRS = { NOT = {	num_of_allies = 4 } }
+		OR = {
+			TRS = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				TRS = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			TRS = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				TRS = { NOT = {	num_of_allies = 4 } }
+				army_size = 80
+				army_strength = {
+					who = TRS
+					value = 1.25
+				}
+			}
+		}
+		TRS = { NOT = {	alliance_with = TUR } }
+		TRS = { NOT = {	alliance_with = ROOT } }
+		TRS = { NOT = { guaranteed_by = TUR } }
+		NOT = {
+			any_country = {
+				has_guaranteed = TRS
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		TRS = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				442 = { is_permanent_claim = ROOT }
+				442 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				454 = { is_permanent_claim = ROOT }
+				454 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				441 = { is_permanent_claim = ROOT }
+				441 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+			AND = {
+				472 = { is_permanent_claim = ROOT }
+				472 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.11.a"
+		if = {
+			limit = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 1076
+			}
+		}
+		else_if = {
+			limit = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 2359
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else_if = {
+			limit = {
+				442 = { is_permanent_claim = ROOT }
+				442 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 442
+			}
+		}
+		else_if = {
+			limit = {
+				454 = { is_permanent_claim = ROOT }
+				454 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 454
+			}
+		}
+		else_if = {
+			limit = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 2358
+			}
+		}
+		else_if = {
+			limit = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 2441
+			}
+		}
+		else_if = {
+			limit = {
+				441 = { is_permanent_claim = ROOT }
+				441 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 441
+			}
+		}
+		else_if = {
+			limit = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 4686
+			}
+		}
+		else_if = {
+			limit = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 2352
+			}
+		}
+		else_if = {
+			limit = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 2351
+			}
+		}
+		else_if = {
+			limit = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		else_if = {
+			limit = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 471
+			}
+		}
+		else_if = {
+			limit = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 2353
+			}
+		}
+		else_if = {
+			limit = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = TRS
+					controlled_by = TRS
+				}
+			}	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 4689
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = TRS
+				casus_belli = cb_conquest
+				war_goal_province = 472
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 7300
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.12
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = MOS
+				is_year = 1550
+			}
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1580
+		if = {
+			limit = {
+				exists = PLC
+				PLC = { is_neighbor_of = ROOT }
+				PLC = { NOT = { alliance_with = ROOT } }
+			}
+			PLC = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = LIT
+				LIT = { is_neighbor_of = ROOT }
+				LIT = { NOT = { alliance_with = ROOT } }
+			}
+			LIT = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUR
+				TUR = { is_neighbor_of = ROOT }
+				TUR = { NOT = { alliance_with = ROOT } }
+			}
+			TUR = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		manpower_percentage = 0.5
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { governing_capacity_percentage = 0.9 }
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		TIM = { is_neighbor_of = ROOT }
+		NOT = { truce_with = TIM }
+		NOT = { has_country_modifier = important_war_timer }
+		TIM = { ai = yes }
+		OR = {
+			TIM = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				TIM = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			TIM = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				TIM = { NOT = {	num_of_allies = 4 } }
+				army_size = 80
+				army_strength = {
+					who = TIM
+					value = 1.25
+				}
+			}
+		}
+		TIM = { NOT = {	alliance_with = TUR } }
+		TIM = { NOT = {	alliance_with = ROOT } }
+		TIM = { NOT = { guaranteed_by = TUR } }
+		NOT = {
+			any_country = {
+				has_guaranteed = TIM
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		TIM = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				441 = { is_permanent_claim = ROOT }
+				441 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+			AND = {
+				472 = { is_permanent_claim = ROOT }
+				472 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.12.a"
+		if = {
+			limit = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 1076
+			}
+		}
+		else_if = {
+			limit = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 2359
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else_if = {
+			limit = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 2358
+			}
+		}
+		else_if = {
+			limit = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 2441
+			}
+		}
+		else_if = {
+			limit = {
+				441 = { is_permanent_claim = ROOT }
+				441 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 441
+			}
+		}
+		else_if = {
+			limit = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 4686
+			}
+		}
+		else_if = {
+			limit = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 2352
+			}
+		}
+		else_if = {
+			limit = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 2351
+			}
+		}
+		else_if = {
+			limit = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		else_if = {
+			limit = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 471
+			}
+		}
+		else_if = {
+			limit = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 2353
+			}
+		}
+		else_if = {
+			limit = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = TIM
+					controlled_by = TIM
+				}
+			}	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 4689
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = TIM
+				casus_belli = cb_conquest
+				war_goal_province = 472
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 7300
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.13
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = MOS
+				is_year = 1550
+			}
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1580
+		if = {
+			limit = {
+				exists = PLC
+				PLC = { is_neighbor_of = ROOT }
+				PLC = { NOT = { alliance_with = ROOT } }
+			}
+			PLC = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = LIT
+				LIT = { is_neighbor_of = ROOT }
+				LIT = { NOT = { alliance_with = ROOT } }
+			}
+			LIT = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUR
+				TUR = { is_neighbor_of = ROOT }
+				TUR = { NOT = { alliance_with = ROOT } }
+			}
+			TUR = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		manpower_percentage = 0.5
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { governing_capacity_percentage = 0.9 }
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		MUG = { is_neighbor_of = ROOT }
+		NOT = { truce_with = MUG }
+		NOT = { has_country_modifier = important_war_timer }
+		MUG = { ai = yes }
+		OR = {
+			MUG = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				MUG = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			MUG = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				MUG = { NOT = {	num_of_allies = 4 } }
+				army_size = 80
+				army_strength = {
+					who = MUG
+					value = 1.25
+				}
+			}
+		}
+		MUG = { NOT = {	alliance_with = TUR } }
+		MUG = { NOT = {	alliance_with = ROOT } }
+		MUG = { NOT = { guaranteed_by = TUR } }
+		NOT = {
+			any_country = {
+				has_guaranteed = MUG
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		MUG = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				441 = { is_permanent_claim = ROOT }
+				441 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+			AND = {
+				472 = { is_permanent_claim = ROOT }
+				472 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.13.a"
+		if = {
+			limit = {
+				1075 = { is_permanent_claim = ROOT }
+				1075 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				1076 = { is_permanent_claim = ROOT }
+				1076 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 1076
+			}
+		}
+		else_if = {
+			limit = {
+				2359 = { is_permanent_claim = ROOT }
+				2359 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 2359
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else_if = {
+			limit = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 2358
+			}
+		}
+		else_if = {
+			limit = {
+				2441 = { is_permanent_claim = ROOT }
+				2441 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 2441
+			}
+		}
+		else_if = {
+			limit = {
+				441 = { is_permanent_claim = ROOT }
+				441 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 441
+			}
+		}
+		else_if = {
+			limit = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 4686
+			}
+		}
+		else_if = {
+			limit = {
+				2352 = { is_permanent_claim = ROOT }
+				2352 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 2352
+			}
+		}
+		else_if = {
+			limit = {
+				2351 = { is_permanent_claim = ROOT }
+				2351 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 2351
+			}
+		}
+		else_if = {
+			limit = {
+				1966 = { is_permanent_claim = ROOT }
+				1966 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 1966
+			}
+		}
+		else_if = {
+			limit = {
+				471 = { is_permanent_claim = ROOT }
+				471 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 471
+			}
+		}
+		else_if = {
+			limit = {
+				2353 = { is_permanent_claim = ROOT }
+				2353 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 2353
+			}
+		}
+		else_if = {
+			limit = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = MUG
+					controlled_by = MUG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 4689
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = MUG
+				casus_belli = cb_conquest
+				war_goal_province = 472
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 7300
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.14
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1550
+		if = {
+			limit = {
+				exists = PLC
+				PLC = { is_neighbor_of = ROOT }
+				PLC = { NOT = { alliance_with = ROOT } }
+			}
+			PLC = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = LIT
+				LIT = { is_neighbor_of = ROOT }
+				LIT = { NOT = { alliance_with = ROOT } }
+			}
+			LIT = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUR
+				TUR = { is_neighbor_of = ROOT }
+				TUR = { NOT = { alliance_with = ROOT } }
+			}
+			TUR = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { governing_capacity_percentage = 0.9 }
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		OIR = {
+			NOT = {
+				is_subject_of_type_with_overlord = { who = MNG type = tributary_state }
+			}
+		}
+		OIR = { is_neighbor_of = ROOT }
+		NOT = { truce_with = OIR }
+		NOT = { has_country_modifier = secondary_war_timer }
+		OIR = { ai = yes }
+		OR = {
+			OIR = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				OIR = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			OIR = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				OIR = { NOT = {	num_of_allies = 4 } }
+				army_size = 80
+				army_strength = {
+					who = OIR
+					value = 1.25
+				}
+			}
+		}
+		OIR = { NOT = {	alliance_with = TUR } }
+		OIR = { NOT = {	alliance_with = ROOT } }
+		OIR = { NOT = { guaranteed_by = TUR } }
+		NOT = {
+			any_country = {
+				has_guaranteed = OIR
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OIR = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				4687 = { is_permanent_claim = ROOT }
+				4687 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				480 = { is_permanent_claim = ROOT }
+				480 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				2434 = { is_permanent_claim = ROOT }
+				2434 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				2360 = { is_permanent_claim = ROOT }
+				2360 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				1065 = { is_permanent_claim = ROOT }
+				1065 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				4679 = { is_permanent_claim = ROOT }
+				4679 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				2433 = { is_permanent_claim = ROOT }
+				2433 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				1071 = { is_permanent_claim = ROOT }
+				1071 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				2354 = { is_permanent_claim = ROOT }
+				2354 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				2355 = { is_permanent_claim = ROOT }
+				2355 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+			AND = {
+				418 = { is_permanent_claim = ROOT }
+				418 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.14.a"
+		if = {
+			limit = {
+				4687 = { is_permanent_claim = ROOT }
+				4687 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 4687
+			}
+		}
+		else_if = {
+			limit = {
+				480 = { is_permanent_claim = ROOT }
+				480 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 480
+			}
+		}
+		else_if = {
+			limit = {
+				2434 = { is_permanent_claim = ROOT }
+				2434 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 2434
+			}
+		}
+		else_if = {
+			limit = {
+				476 = { is_permanent_claim = ROOT }
+				476 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 476
+			}
+		}
+		else_if = {
+			limit = {
+				2360 = { is_permanent_claim = ROOT }
+				2360 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 2360
+			}
+		}
+		else_if = {
+			limit = {
+				1065 = { is_permanent_claim = ROOT }
+				1065 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 1065
+			}
+		}
+		else_if = {
+			limit = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 4686
+			}
+		}
+		else_if = {
+			limit = {
+				4679 = { is_permanent_claim = ROOT }
+				4679 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 4679
+			}
+		}
+		else_if = {
+			limit = {
+				2433 = { is_permanent_claim = ROOT }
+				2433 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 2433
+			}
+		}
+		else_if = {
+			limit = {
+				1071 = { is_permanent_claim = ROOT }
+				1071 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 1071
+			}
+		}
+		else_if = {
+			limit = {
+				2354 = { is_permanent_claim = ROOT }
+				2354 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 2354
+			}
+		}
+		else_if = {
+			limit = {
+				2355 = { is_permanent_claim = ROOT }
+				2355 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 2355
+			}
+		}
+		else_if = {
+			limit = {
+				4689 = { is_permanent_claim = ROOT }
+				4689 = { 
+					owned_by = OIR
+					controlled_by = OIR
+				}
+			}	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 4689
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = OIR
+				casus_belli = cb_conquest
+				war_goal_province = 418
+			}
+		}
+		add_country_modifier = {
+			name = secondary_war_timer
+			duration = 7300
+			hidden = yes
+		}
+	}
+}
+
+# Muscowy scripted wars
+country_event = {
+	id = soe_event.15
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = MOS
+			tag = RUS
+			was_tag = RUS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1550
+		if = {
+			limit = {
+				exists = PLC
+				PLC = { is_neighbor_of = ROOT }
+				PLC = { NOT = { alliance_with = ROOT } }
+			}
+			PLC = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = LIT
+				LIT = { is_neighbor_of = ROOT }
+				LIT = { NOT = { alliance_with = ROOT } }
+			}
+			LIT = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUR
+				TUR = { is_neighbor_of = ROOT }
+				TUR = { NOT = { alliance_with = ROOT } }
+			}
+			TUR = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { governing_capacity_percentage = 0.9 }
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		NOT = { governing_capacity_percentage = 1.1 }
+		NOT = { corruption = 5 }
+		CHG = {
+			NOT = {
+				is_subject_of_type_with_overlord = { who = MNG type = tributary_state }
+			}
+		}
+		CHG = { is_neighbor_of = ROOT }
+		NOT = { truce_with = CHG }
+		NOT = { has_country_modifier = secondary_war_timer }
+		CHG = { ai = yes }
+		CHG = { NOT = {	num_of_allies = 4 } }
+		OR = {
+			CHG = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				CHG = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			CHG = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				CHG = { NOT = {	num_of_allies = 4 } }
+				army_size = 80
+				army_strength = {
+					who = CHG
+					value = 1.25
+				}
+			}
+		}
+		CHG = { NOT = {	alliance_with = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = CHG
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		CHG = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				477 = { is_permanent_claim = ROOT }
+				477 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				4685 = { is_permanent_claim = ROOT }
+				4685 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				459 = { is_permanent_claim = ROOT }
+				459 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				2361 = { is_permanent_claim = ROOT }
+				2361 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				454 = { is_permanent_claim = ROOT }
+				454 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				2354 = { is_permanent_claim = ROOT }
+				2354 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				1066 = { is_permanent_claim = ROOT }
+				1066 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				2125 = { is_permanent_claim = ROOT }
+				2125 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				2126 = { is_permanent_claim = ROOT }
+				2126 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				2368 = { is_permanent_claim = ROOT }
+				2368 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				461 = { is_permanent_claim = ROOT }
+				461 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+			AND = {
+				480 = { is_permanent_claim = ROOT }
+				480 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = "soe_event.15.a"
+		if = {
+			limit = {
+				477 = { is_permanent_claim = ROOT }
+				477 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 477
+			}
+		}
+		else_if = {
+			limit = {
+				4685 = { is_permanent_claim = ROOT }
+				4685 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 4685
+			}
+		}
+		else_if = {
+			limit = {
+				459 = { is_permanent_claim = ROOT }
+				459 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 459
+			}
+		}
+		else_if = {
+			limit = {
+				2361 = { is_permanent_claim = ROOT }
+				2361 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 2361
+			}
+		}
+		else_if = {
+			limit = {
+				4686 = { is_permanent_claim = ROOT }
+				4686 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 4686
+			}
+		}
+		else_if = {
+			limit = {
+				454 = { is_permanent_claim = ROOT }
+				454 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 454
+			}
+		}
+		else_if = {
+			limit = {
+				2354 = { is_permanent_claim = ROOT }
+				2354 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 2354
+			}
+		}
+		else_if = {
+			limit = {
+				1066 = { is_permanent_claim = ROOT }
+				1066 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 1066
+			}
+		}
+		else_if = {
+			limit = {
+				2125 = { is_permanent_claim = ROOT }
+				2125 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 2125
+			}
+		}
+		else_if = {
+			limit = {
+				2126 = { is_permanent_claim = ROOT }
+				2126 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 2126
+			}
+		}
+		else_if = {
+			limit = {
+				2358 = { is_permanent_claim = ROOT }
+				2358 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 2358
+			}
+		}
+		else_if = {
+			limit = {
+				2368 = { is_permanent_claim = ROOT }
+				2368 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 2368
+			}
+		}
+		else_if = {
+			limit = {
+				461 = { is_permanent_claim = ROOT }
+				461 = { 
+					owned_by = CHG
+					controlled_by = CHG
+				}
+			}	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 461
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = CHG
+				casus_belli = cb_conquest
+				war_goal_province = 480
+			}
+		}
+		add_country_modifier = {
+			name = secondary_war_timer
+			duration = 7300
+			hidden = yes
+		}
+	}
+}
+
+###########################################
+# Prussia Events
+###########################################
+
+# Rise of Prussia
+country_event = {
+	id = soe_event.18
+	title = soe_event.18.t
+	desc = soe_event.18.d
+	picture = LAND_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		ai = yes
+		tag = PRU
+		total_development = 100
+		owns_core_province = 41
+		owns_core_province = 43
+	}
+	option = {
+		name = "soe_event.18.a"
+		add_prestige_or_monarch_power = { amount = 20 }
+		custom_tooltip = ""
+		add_army_tradition = 20
+		custom_tooltip = ""
+		if = { 
+			limit = {
+				has_regency = no
+				has_dlc = "Rights of Man" 
+				NOT = { num_of_ruler_traits = { amount = 3 } }
+				NOT = { ruler_has_personality = careful_personality }
+			}
+			add_ruler_personality = careful_personality
+		}
+		custom_tooltip = ""
+		change_ruler_stat = {
+			type = mil
+			amount = 2
+		}
+		custom_tooltip = ""
+		create_general = {
+			tradition = 100
+		}
+		custom_tooltip = ""
+		hidden_effect = {
+			for = {
+				amount = 5
+				effect = "
+					random_owned_province = {
+						limit = {
+							NOT = { base_manpower = 8 }
+						}
+						add_base_manpower = 2
+					}
+				"
+			}
+		}
+		add_country_modifier = {
+			name = prussian_glory
+			duration = 10950
+		}
+		mittelmark_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		neumark_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		vorpommern_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		hinter_pommern_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		west_prussia_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		east_prussia_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		kuyavia_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		wielkopolska_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		silesia_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+# Brandenburg into Prussia for AI
+country_event = {
+	id = soe_event.20
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		ai = yes
+		religion = catholic
+		is_religion_enabled = protestant
+		OR = {
+			AND = {
+				tag = BRA
+				owns_core_province = 41
+				OR = {
+					owns_core_province = 43
+					owns_core_province = 2995
+				}
+			}
+			AND = {
+				OR = {
+					tag = WOL
+					tag = POM
+					tag = STE
+				}
+				owns_core_province = 41
+				owns_core_province = 42
+				owns_core_province = 43
+			}
+			AND = {
+				tag = TEU
+				owns_core_province = 41
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = WOL
+					tag = POM
+					tag = STE
+					tag = BRA
+				}
+			}
+			OR = {
+				ROOT = { dominant_religion = protestant }
+				ROOT = { dominant_religion = reformed }
+			}
+		}
+	}
+	
+	option = {
+		name = "soe_event.20.a"
+		if = {
+			limit = {
+				OR = {
+					dominant_religion = protestant
+					tag = TEU
+				}
+			}
+			change_religion = protestant
+		}
+		else = {
+			change_religion = reformed
+		}
+	}
+}
+
+# Treaty of Bydgoszcz
+country_event = {
+	id = soe_event.21
+	title = soe_event.21.t
+	desc = "soe_event.21.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		is_year = 1540
+		OR = {
+			tag = POL
+			tag = PLC
+		}
+		NOT = { exists = TEU }
+		if = {
+			limit = {
+				tag = POL
+			}
+			east_prussia_area = {
+				type = all
+				owned_by = ROOT	
+			}
+			ROOT = {
+				is_in_war = {
+					duration = 365
+				}
+			}
+			any_country = {
+				war_score_against = {
+					who = ROOT
+					value = 20
+				}
+			}
+			OR = {
+				AND = {
+					BRA = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = BRA
+						}
+					}
+				}
+				AND = {
+					POM = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = POM
+						}
+					}
+				}
+				AND = {
+					WOL = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = WOL
+						}
+					}
+				}
+				AND = {
+					STE = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = STE
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { exists = POL }
+				exists = PLC
+			}
+			east_prussia_area = {
+				type = all
+				owned_by = ROOT	
+			}
+			ROOT = {
+				is_in_war = {
+					duration = 365
+				}
+			}
+			any_country = {
+				war_score_against = {
+					who = ROOT
+					value = 20
+				}
+			}
+			OR = {
+				AND = {
+					BRA = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = BRA
+						}
+					}
+				}
+				AND = {
+					POM = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = POM
+						}
+					}
+				}
+				AND = {
+					WOL = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = WOL
+						}
+					}
+				}
+				AND = {
+					STE = {
+						ai = yes
+						num_of_cities = 10
+						owns_core_province = 2995
+						NOT = {	alliance_with = ROOT }
+						NOT = { war_with = ROOT }
+						NOT = { is_rival = ROOT }
+						NOT = { is_enemy = ROOT }
+					}
+					43 = {
+						OR = {
+							owned_by = ROOT
+							owned_by = STE
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "soe_event.21.a" #We need support of the Brandenburg
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				BRA = {
+					ai = yes
+					num_of_cities = 10
+					owns_core_province = 2995
+					NOT = {	alliance_with = ROOT }
+					NOT = { war_with = ROOT }
+					NOT = { is_rival = ROOT }
+					NOT = { is_enemy = ROOT }
+				}
+			}
+			tooltip = {
+				create_alliance = BRA
+				add_manpower = 10
+				40 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = BRA
+						add_core = BRA
+						remove_core = ROOT
+					}
+				}
+				41 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = BRA
+						add_core = BRA
+						remove_core = ROOT
+					}
+				}
+				767 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = BRA
+						add_core = BRA
+						remove_core = ROOT
+					}
+				}
+				2958 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = BRA
+						add_core = BRA
+						remove_core = ROOT
+					}
+				}
+			}
+			BRA = {
+				country_event = { id = soe_event.22 }
+				add_opinion = {
+					who = ROOT
+					modifier = returned_province
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				POM = {
+					ai = yes
+					num_of_cities = 10
+					owns_core_province = 2995
+					NOT = {	alliance_with = ROOT }
+					NOT = { war_with = ROOT }
+					NOT = { is_rival = ROOT }
+					NOT = { is_enemy = ROOT }
+				}
+			}
+			tooltip = {
+				create_alliance = POM
+				add_manpower = 10
+				40 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = POM
+						add_core = POM
+						remove_core = ROOT
+					}
+				}
+				41 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = POM
+						add_core = POM
+						remove_core = ROOT
+					}
+				}
+				42 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = POM
+						add_core = POM
+						remove_core = ROOT
+					}
+				}
+				43 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = POM
+						add_core = POM
+						remove_core = ROOT
+					}
+				}
+				767 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = POM
+						add_core = POM
+						remove_core = ROOT
+					}
+				}
+				2958 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = POM
+						add_core = POM
+						remove_core = ROOT
+					}
+				}
+			}
+			POM = {
+				country_event = { id = soe_event.22 }
+				add_opinion = {
+					who = ROOT
+					modifier = returned_province
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				WOL = {
+					ai = yes
+					num_of_cities = 10
+					owns_core_province = 2995
+					NOT = {	alliance_with = ROOT }
+					NOT = { war_with = ROOT }
+					NOT = { is_rival = ROOT }
+					NOT = { is_enemy = ROOT }
+				}
+			}
+			tooltip = {
+				create_alliance = WOL
+				add_manpower = 10
+				40 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = WOL
+						add_core = WOL
+						remove_core = ROOT
+					}
+				}
+				41 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = WOL
+						add_core = WOL
+						remove_core = ROOT
+					}
+				}
+				42 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = WOL
+						add_core = WOL
+						remove_core = ROOT
+					}
+				}
+				43 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = WOL
+						add_core = WOL
+						remove_core = ROOT
+					}
+				}
+				767 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = WOL
+						add_core = WOL
+						remove_core = ROOT
+					}
+				}
+				2958 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = WOL
+						add_core = WOL
+						remove_core = ROOT
+					}
+				}
+			}
+			WOL = {
+				country_event = { id = soe_event.22 }
+				add_opinion = {
+					who = ROOT
+					modifier = returned_province
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				STE = {
+					ai = yes
+					num_of_cities = 10
+					owns_core_province = 2995
+					NOT = {	alliance_with = ROOT }
+					NOT = { war_with = ROOT }
+					NOT = { is_rival = ROOT }
+					NOT = { is_enemy = ROOT }
+				}
+			}
+			tooltip = {
+				create_alliance = STE
+				add_manpower = 10
+				40 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = STE
+						add_core = STE
+						remove_core = ROOT
+					}
+				}
+				41 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = STE
+						add_core = STE
+						remove_core = ROOT
+					}
+				}
+				42 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = STE
+						add_core = STE
+						remove_core = ROOT
+					}
+				}
+				43 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = STE
+						add_core = STE
+						remove_core = ROOT
+					}
+				}
+				767 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = STE
+						add_core = STE
+						remove_core = ROOT
+					}
+				}
+				2958 = {
+					if = {
+						limit = {
+							owned_by = ROOT
+						}
+						cede_province = STE
+						add_core = STE
+						remove_core = ROOT
+					}
+				}
+			}
+			STE = {
+				country_event = { id = soe_event.22 }
+				add_opinion = {
+					who = ROOT
+					modifier = returned_province
+				}
+			}
+		}
+	}
+	option = {
+		name = "soe_event.21.b" #Prussia shall remain ours!
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Treaty of Bydgoszcz - Brandenburg
+country_event = {
+	id = soe_event.22
+	title = soe_event.22.t
+	desc = "soe_event.22.d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "flavor_brapru.17.a" #Deal
+		create_alliance = FROM
+		add_manpower = -10
+		FROM = {
+			add_manpower = 10
+			40 = {
+				if = {
+					limit = {
+						owned_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					change_controller = ROOT
+					remove_core = FROM
+				}
+			}
+			41 = {
+				if = {
+					limit = {
+						owned_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					change_controller = ROOT
+					remove_core = FROM
+				}
+			}
+			42 = {
+				if = {
+					limit = {
+						OR = {
+							tag = POM
+							tag = WOL
+							tag = STE
+						}
+						owned_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					change_controller = ROOT
+					remove_core = FROM
+				}
+			}
+			43 = {
+				if = {
+					limit = {
+						OR = {
+							tag = POM
+							tag = WOL
+							tag = STE
+						}
+						owned_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					change_controller = ROOT
+					remove_core = FROM
+				}
+			}
+			767 = {
+				if = {
+					limit = {
+						owned_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					change_controller = ROOT
+					remove_core = FROM
+				}
+			}
+			2958 = {
+				if = {
+					limit = {
+						owned_by = FROM
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					change_controller = ROOT
+					remove_core = FROM
+				}
+			}
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = returned_province
+			}
+		}
+	}
+	
+	option = {
+		name = "soe_event.22.a" #No Deal
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Scripted wars
+country_event = {
+	id = soe_event.23
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		tag = BRA
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1450
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		WOL = { is_neighbor_of = ROOT }
+		NOT = { truce_with = WOL }
+		NOT = { has_country_modifier = important_war_timer }
+		WOL = { ai = yes }
+		WOL = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		WOL = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			WOL = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				WOL = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = WOL
+				value = 1
+			}
+		}
+		WOL = { NOT = {	alliance_with = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = WOL
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		WOL = {	NOT = { is_subject_of = ROOT } }
+		OR = {
+			AND = {
+				2994 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2994 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}
+			AND = {
+				1858 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				1858 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}
+			AND = {
+				4746 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4746 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}
+			AND = {
+				47 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				47 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}
+			AND = {
+				2995 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2995 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}
+			AND = {
+				48 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				48 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}
+			AND = {
+				4745 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4745 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.23.a"
+		if = {
+			limit = {
+				2994 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}	
+			declare_war_with_cb = {
+				who = WOL
+				casus_belli = cb_conquest
+				war_goal_province = 2994
+			}
+		}
+		else_if = {
+			limit = {
+				1858 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}	
+			declare_war_with_cb = {
+				who = WOL
+				casus_belli = cb_conquest
+				war_goal_province = 1858
+			}
+		}
+		else_if = {
+			limit = {
+				4746 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}	
+			declare_war_with_cb = {
+				who = WOL
+				casus_belli = cb_conquest
+				war_goal_province = 4746
+			}
+		}
+		else_if = {
+			limit = {
+				47 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}	
+			declare_war_with_cb = {
+				who = WOL
+				casus_belli = cb_conquest
+				war_goal_province = 47
+			}
+		}
+		else_if = {
+			limit = {
+				2995 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}	
+			declare_war_with_cb = {
+				who = WOL
+				casus_belli = cb_conquest
+				war_goal_province = 2995
+			}
+		}
+		else_if = {
+			limit = {
+				48 = { 
+					owned_by = WOL
+					controlled_by = WOL
+				}
+			}	
+			declare_war_with_cb = {
+				who = WOL
+				casus_belli = cb_conquest
+				war_goal_province = 48
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = WOL
+				casus_belli = cb_conquest
+				war_goal_province = 4745
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 2190
+			hidden = yes
+		}
+	}
+}
+
+# Scripted wars
+country_event = {
+	id = soe_event.24
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		tag = BRA
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1450
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		STE = { is_neighbor_of = ROOT }
+		NOT = { truce_with = STE }
+		NOT = { has_country_modifier = important_war_timer }
+		STE = { ai = yes }
+		STE = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		STE = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			STE = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				STE = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = STE
+				value = 1
+			}
+		}
+		STE = { NOT = {	alliance_with = ROOT } }
+		STE = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = STE
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				2994 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2994 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}
+			AND = {
+				1858 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				1858 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}
+			AND = {
+				4746 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4746 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}
+			AND = {
+				47 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				47 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}
+			AND = {
+				2995 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2995 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}
+			AND = {
+				48 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				48 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}
+			AND = {
+				4745 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4745 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.24.a"
+		if = {
+			limit = {
+				1858 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}	
+			declare_war_with_cb = {
+				who = STE
+				casus_belli = cb_conquest
+				war_goal_province = 1858
+			}
+		}
+		else_if = {
+			limit = {
+				4746 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}	
+			declare_war_with_cb = {
+				who = STE
+				casus_belli = cb_conquest
+				war_goal_province = 4746
+			}
+		}
+		else_if = {
+			limit = {
+				2994 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}	
+			declare_war_with_cb = {
+				who = STE
+				casus_belli = cb_conquest
+				war_goal_province = 2994
+			}
+		}
+		else_if = {
+			limit = {
+				47 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}	
+			declare_war_with_cb = {
+				who = STE
+				casus_belli = cb_conquest
+				war_goal_province = 47
+			}
+		}
+		else_if = {
+			limit = {
+				2995 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}	
+			declare_war_with_cb = {
+				who = STE
+				casus_belli = cb_conquest
+				war_goal_province = 2995
+			}
+		}
+		else_if = {
+			limit = {
+				48 = { 
+					owned_by = STE
+					controlled_by = STE
+				}
+			}	
+			declare_war_with_cb = {
+				who = STE
+				casus_belli = cb_conquest
+				war_goal_province = 48
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = STE
+				casus_belli = cb_conquest
+				war_goal_province = 4745
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 2190
+			hidden = yes
+		}
+	}
+}
+
+# Scripted wars
+country_event = {
+	id = soe_event.25
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		tag = BRA
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1450
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		POM = { is_neighbor_of = ROOT }
+		NOT = { truce_with = POM }
+		NOT = { has_country_modifier = important_war_timer }
+		POM = { ai = yes }
+		POM = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		POM = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			POM = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				POM = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = POM
+				value = 1
+			}
+		}
+		POM = { NOT = {	alliance_with = ROOT } }
+		POM = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = POM
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				2994 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2994 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}
+			AND = {
+				1858 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				1858 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}
+			AND = {
+				4746 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4746 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}
+			AND = {
+				47 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				47 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}
+			AND = {
+				2995 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2995 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}
+			AND = {
+				48 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				48 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}
+			AND = {
+				4745 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4745 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.25.a"
+		if = {
+			limit = {
+				1858 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}	
+			declare_war_with_cb = {
+				who = POM
+				casus_belli = cb_conquest
+				war_goal_province = 1858
+			}
+		}
+		else_if = {
+			limit = {
+				4746 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}	
+			declare_war_with_cb = {
+				who = POM
+				casus_belli = cb_conquest
+				war_goal_province = 4746
+			}
+		}
+		else_if = {
+			limit = {
+				2994 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}	
+			declare_war_with_cb = {
+				who = POM
+				casus_belli = cb_conquest
+				war_goal_province = 2994
+			}
+		}
+		else_if = {
+			limit = {
+				47 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}	
+			declare_war_with_cb = {
+				who = POM
+				casus_belli = cb_conquest
+				war_goal_province = 47
+			}
+		}
+		else_if = {
+			limit = {
+				2995 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}	
+			declare_war_with_cb = {
+				who = POM
+				casus_belli = cb_conquest
+				war_goal_province = 2995
+			}
+		}
+		else_if = {
+			limit = {
+				48 = { 
+					owned_by = POM
+					controlled_by = POM
+				}
+			}	
+			declare_war_with_cb = {
+				who = POM
+				casus_belli = cb_conquest
+				war_goal_province = 48
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = POM
+				casus_belli = cb_conquest
+				war_goal_province = 4745
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 2190
+			hidden = yes
+		}
+	}
+}
+
+# Scripted wars
+country_event = {
+	id = soe_event.26
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		tag = BRA
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1450
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		TEU = { is_neighbor_of = ROOT }
+		NOT = { truce_with = TEU }
+		NOT = { has_country_modifier = important_war_timer }
+		TEU = { ai = yes }
+		TEU = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		TEU = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			TEU = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				TEU = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = TEU
+				value = 1
+			}
+		}
+		TEU = { NOT = {	alliance_with = ROOT } }
+		TEU = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = TEU
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				41 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				41 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}
+			AND = {
+				43 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				43 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}
+			AND = {
+				1841 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				1841 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}
+			AND = {
+				2997 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2997 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}
+			AND = {
+				42 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				42 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}
+			AND = {
+				40 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				40 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}
+			AND = {
+				2958 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2958 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.26.a"
+		if = {
+			limit = {
+				41 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}	
+			declare_war_with_cb = {
+				who = TEU
+				casus_belli = cb_conquest
+				war_goal_province = 41
+			}
+		}
+		else_if = {
+			limit = {
+				43 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}	
+			declare_war_with_cb = {
+				who = TEU
+				casus_belli = cb_conquest
+				war_goal_province = 43
+			}
+		}
+		else_if = {
+			limit = {
+				1841 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}	
+			declare_war_with_cb = {
+				who = TEU
+				casus_belli = cb_conquest
+				war_goal_province = 1841
+			}
+		}
+		else_if = {
+			limit = {
+				2997 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}	
+			declare_war_with_cb = {
+				who = TEU
+				casus_belli = cb_conquest
+				war_goal_province = 2997
+			}
+		}
+		else_if = {
+			limit = {
+				42 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}	
+			declare_war_with_cb = {
+				who = TEU
+				casus_belli = cb_conquest
+				war_goal_province = 42
+			}
+		}
+		else_if = {
+			limit = {
+				40 = { 
+					owned_by = TEU
+					controlled_by = TEU
+				}
+			}	
+			declare_war_with_cb = {
+				who = TEU
+				casus_belli = cb_conquest
+				war_goal_province = 40
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = TEU
+				casus_belli = cb_conquest
+				war_goal_province = 2958
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 2190
+			hidden = yes
+		}
+	}
+}
+
+# Scripted wars
+country_event = {
+	id = soe_event.27
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		tag = BRA
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1450
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		DNZ = { is_neighbor_of = ROOT }
+		NOT = { truce_with = DNZ }
+		NOT = { has_country_modifier = important_war_timer }
+		DNZ = { ai = yes }
+		DNZ = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		DNZ = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			DNZ = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				DNZ = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = DNZ
+				value = 1
+			}
+		}
+		DNZ = { NOT = {	alliance_with = ROOT } }
+		DNZ = { NOT = { guaranteed_by = POL } }
+		DNZ = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = DNZ
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				41 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				41 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}
+			AND = {
+				43 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				43 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}
+			AND = {
+				1841 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				1841 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}
+			AND = {
+				2997 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2997 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}
+			AND = {
+				42 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				42 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}
+			AND = {
+				40 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				40 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}
+			AND = {
+				2958 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2958 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.27.a"
+		if = {
+			limit = {
+				41 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = DNZ
+				casus_belli = cb_conquest
+				war_goal_province = 41
+			}
+		}
+		else_if = {
+			limit = {
+				43 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = DNZ
+				casus_belli = cb_conquest
+				war_goal_province = 43
+			}
+		}
+		else_if = {
+			limit = {
+				1841 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = DNZ
+				casus_belli = cb_conquest
+				war_goal_province = 1841
+			}
+		}
+		else_if = {
+			limit = {
+				2997 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = DNZ
+				casus_belli = cb_conquest
+				war_goal_province = 2997
+			}
+		}
+		else_if = {
+			limit = {
+				42 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = DNZ
+				casus_belli = cb_conquest
+				war_goal_province = 42
+			}
+		}
+		else_if = {
+			limit = {
+				40 = { 
+					owned_by = DNZ
+					controlled_by = DNZ
+				}
+			}	
+			declare_war_with_cb = {
+				who = DNZ
+				casus_belli = cb_conquest
+				war_goal_province = 40
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = DNZ
+				casus_belli = cb_conquest
+				war_goal_province = 2958
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 2190
+			hidden = yes
+		}
+	}
+}
+
+# Scripted wars
+country_event = {
+	id = soe_event.28
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		tag = BRA
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1450
+		manpower_percentage = 0.35
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		MAG = { is_neighbor_of = ROOT }
+		NOT = { truce_with = MAG }
+		NOT = { has_country_modifier = important_war_timer }
+		MAG = { ai = yes }
+		MAG = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		MAG = { NOT = {	num_of_allies = 2 } }
+		OR = {
+			MAG = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				MAG = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = MAG
+				value = 1
+			}
+		}
+		MAG = { NOT = {	alliance_with = ROOT } }
+		MAG = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = MAG
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				52 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				52 = { 
+					owned_by = MAG
+					controlled_by = MAG
+				}
+			}
+			AND = {
+				4741 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4741 = { 
+					owned_by = MAG
+					controlled_by = MAG
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.28.a"
+		if = {
+			limit = {
+				52 = { 
+					owned_by = MAG
+					controlled_by = MAG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MAG
+				casus_belli = cb_conquest
+				war_goal_province = 52
+			}
+		}
+		else_if = {
+			limit = {
+				4741 = { 
+					owned_by = MAG
+					controlled_by = MAG
+				}
+			}	
+			declare_war_with_cb = {
+				who = MAG
+				casus_belli = cb_conquest
+				war_goal_province = 4741
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 2190
+			hidden = yes
+		}
+	}
+}
+
+###########################################
+# India Events
+###########################################
+
+# Afghans raid India
+country_event = {
+	id = soe_event.29
+	title = soe_event.29.t
+	desc = soe_event.29.d
+	picture = CONQUEST_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = AFG
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		OR = {
+			DLH = { is_neighbor_of = ROOT }
+			AND = {
+				ai = yes
+				DLH = { NOT = { is_neighbor_of = ROOT } }
+				2078 = { owned_by = MUL }
+				MUL = { is_at_war = no }
+				4511 = { owned_by = DLH }
+				MUL = { ai = yes }
+			}
+			AND = {
+				ai = yes
+				DLH = { NOT = { is_neighbor_of = ROOT } }
+				2078 = { owned_by = TIM }
+				TIM = { is_at_war = no }
+				4511 = { owned_by = DLH }
+				DLH = { is_subject = no }
+				TIM = { ai = yes }
+			}
+			AND = {
+				ai = yes
+				SRH = { NOT = { is_neighbor_of = ROOT } }
+				2078 = { owned_by = MUL }
+				MUL = { is_at_war = no }
+				4511 = { owned_by = SRH }
+				SRH = { is_subject = no }
+				MUL = { ai = yes }
+			}
+			AND = {
+				ai = yes
+				SRH = { NOT = { is_neighbor_of = ROOT } }
+				2078 = { owned_by = TIM }
+				TIM = { is_at_war = no }
+				4511 = { owned_by = SRH }
+				SRH = { is_subject = no }
+				TIM = { ai = yes }
+			}
+		}
+		NOT = {
+			num_of_owned_provinces_with = {
+				value = 10
+				superregion = india_superregion
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 24 } 
+	
+	option = {
+		name = soe_event.29.a
+		add_prestige_or_monarch_power = { amount = 20 }
+		custom_tooltip = ""
+		if = { 
+			limit = {
+				has_regency = no
+				has_dlc = "Rights of Man" 
+				NOT = { num_of_ruler_traits = { amount = 3 } }
+				NOT = { ruler_has_personality = bold_fighter_personality }
+			}
+			add_ruler_personality = bold_fighter_personality
+		}
+		else_if = {
+			limit = {
+				has_regency = yes
+				has_dlc = "Rights of Man" 
+				NOT = { num_of_ruler_traits = { amount = 3 } }
+				NOT = { ruler_has_personality = bold_fighter_personality }
+			}
+			add_heir_personality = bold_fighter_personality
+		}
+		else = {
+			change_ruler_stat = {
+				type = mil
+				amount = 1
+			}
+		}
+		custom_tooltip = ""
+		if = {
+			limit = {
+				is_monarch_leader = yes
+			}
+			define_general = {
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = cuirassier_leader_personality
+			}
+		}
+		else = {
+			define_ruler_to_general = {
+				fire = 3
+				shock = 5
+				manuever = 4
+				siege = 1
+				trait = cuirassier_leader_personality
+			}
+		}
+		custom_tooltip = ""
+		custom_tooltip = timurid_claims_abandoned_tooltip
+		hidden_effect = {
+			every_province = {
+				limit = {
+					NOT = { owned_by = AFG }
+					OR = {
+						region = persia_region
+						region = khorasan_region
+						region = caucasia_region
+						region = central_asia_region
+					}
+					is_permanent_claim = AFG
+				}
+				remove_claim = AFG
+			}
+			every_province = {
+				limit = {
+					NOT = { owned_by = AFG }
+					OR = {
+						region = persia_region
+						region = khorasan_region
+						region = caucasia_region
+						region = central_asia_region
+					}
+					is_core = AFG
+				}
+				remove_core = AFG
+			}
+			add_mil_tech = 1
+			add_army_tradition = 20
+			add_country_modifier = {
+				name = afghans_invade_india
+				duration = 10950
+			}
+			if = {
+				limit = {
+					DLH = { NOT = { is_neighbor_of = ROOT } }
+					2078 = { owned_by = MUL }
+					MUL = { is_at_war = no }
+					4511 = { owned_by = DLH }
+					MUL = { ai = yes }
+				}
+				2078 = {
+					cede_province = AFG
+					add_core = AFG
+					remove_core = MUL
+				}
+			}
+			if = {
+				limit = {
+					DLH = { NOT = { is_neighbor_of = ROOT } }
+					2078 = { owned_by = TIM }
+					TIM = { is_at_war = no }
+					4511 = { owned_by = DLH }
+					TIM = { ai = yes }
+				}
+				2078 = {
+					cede_province = AFG
+					add_core = AFG
+					remove_core = TIM
+				}
+			}
+			if = {
+				limit = {
+					SRH = { NOT = { is_neighbor_of = ROOT } }
+					2078 = { owned_by = MUL }
+					MUL = { is_at_war = no }
+					4511 = { owned_by = SRH }
+					MUL = { ai = yes }
+				}
+				2078 = {
+					cede_province = AFG
+					add_core = AFG
+					remove_core = MUL
+				}
+			}
+			if = {
+				limit = {
+					SRH = { NOT = { is_neighbor_of = ROOT } }
+					2078 = { owned_by = TIM }
+					TIM = { is_at_war = no }
+					4511 = { owned_by = SRH }
+					TIM = { ai = yes }
+				}
+				2078 = {
+					cede_province = AFG
+					add_core = AFG
+					remove_core = TIM
+				}
+			}
+		}
+		custom_tooltip = ""
+		sind_sagar_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		lahore_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		sirhind_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		upper_doab_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+# Timurid prince moves to India
+country_event = {
+	id = soe_event.30
+	title = soe_event.30.t
+	desc = "soe_event.30.d"
+	picture = QIZILBASH_CAVALRY_CHARGING_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		ai = yes
+		is_at_war = no
+		OR = {
+			AND = {
+				tag = AFG
+				num_of_owned_provinces_with = {
+					value = 10
+					is_core = ROOT
+					superregion = india_superregion
+				}
+			}
+			AND = {
+				tag = TIM
+				num_of_owned_provinces_with = {
+					value = 10
+					is_core = ROOT
+					superregion = india_superregion
+				}
+				OR = {
+					capital_scope = { superregion = india_superregion }
+					NOT = {
+						num_of_owned_provinces_with = {
+							value = 15
+							superregion = persia_superregion
+						}
+					}
+				}
+				OR = {
+					NOT = { num_of_subjects = 1 }
+					all_subject_country = {
+						liberty_desire = 50
+					}
+				}
+			}
+		}
+		NOT = {
+			AND = {
+				446 = {
+					owned_by = ROOT
+				}
+				454 = {
+					owned_by = ROOT
+				}
+			}
+		}
+		NOT = { is_year = 1550 }
+	}
+	
+	#The wheel has turned.
+	option = {
+		name = soe_event.30.a
+		change_tag = MUG
+		if = { 
+			limit = { 
+				NOT = {	OR = { tag = TIM was_tag = TIM } }	
+				has_dlc = "Rights of Man" 
+				NOT = { num_of_ruler_traits = { amount = 3 } }
+				NOT = { ruler_has_personality = conqueror_personality }
+				NOT = { ruler_has_personality = legendary_conqueror_personality }
+			}
+			add_ruler_personality = conqueror_personality
+		}
+		if = { 
+			limit = { OR = { tag = TIM was_tag = TIM } }
+			every_subject_country = {
+				limit = {
+					liberty_desire = 50
+					OR = {
+						capital_scope = { superregion = persia_superregion }
+						capital_scope = { superregion = near_east_superregion }
+					}
+				}
+				ROOT = { free_vassal = PREV }
+			}
+		}
+		hidden_effect = {
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			swap_free_idea_group = yes
+			add_yearly_manpower = 5
+			add_years_of_income = 5
+			change_primary_culture = kanauji
+			add_mil_tech = 1
+			add_prestige_or_monarch_power = { amount = 25 }
+			if = {
+				limit = { NOT = { has_leader = "Abu Said Timurid" } NOT = { has_leader = "Chin Timur Khan" } }
+				define_general = {
+					name = "Chin Timur Khan"
+					shock = 5
+					fire = 3
+					manuever = 3
+					siege = 2
+					trait = cruel_tactician_personality
+				}
+			}
+			else_if = {
+				limit = { NOT = { is_monarch_leader = yes } }
+				define_ruler_to_general = {
+					shock = 5
+					fire = 3
+					manuever = 3
+					siege = 2
+					trait = cruel_tactician_personality
+				}
+			}
+			else = { add_army_tradition = 20 }
+			if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					owns_core_province = 522
+				}
+				522 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					owns_core_province = 507
+				}
+				507 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					owns_core_province = 2075
+				}
+				2075 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					owns_core_province = 510
+				}
+				510 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					owns_core_province = 506
+				}
+				506 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					owns_core_province = 4513
+				}
+				4513 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					owns_core_province = 4510
+				}
+				4510 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { superregion = persia_superregion }
+					NOT = { owns_core_province = 522 }
+					NOT = { owns_core_province = 2075 }
+					NOT = { owns_core_province = 507 }
+					NOT = { owns_core_province = 506 }
+					NOT = { owns_core_province = 510 }
+					NOT = { owns_core_province = 4513 }
+					NOT = { owns_core_province = 4510 }
+				}
+				random_owned_province = {
+					limit = { 
+						controlled_by = ROOT
+						superregion = india_superregion 
+					}
+					move_capital_effect = yes
+				}
+			}
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			if = {
+				limit = {
+					capital_scope = { NOT = { has_building = fort_15th } }
+				}
+				add_building = fort_15th
+			}
+			if = {
+				limit = {
+					NOT = { technology_group = indian }
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+					is_revolutionary = no
+				}
+				change_government = monarchy
+			}
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+					is_revolutionary = no
+				}
+				add_government_reform = indian_sultanate_reform
+				add_government_reform = mughal_government
+			}
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+					reform_level = 3
+				}
+				add_government_reform = mansabdari_reform
+			}
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+					reform_level = 4
+				}
+				add_government_reform = zabt_reform
+			}
+			if = {
+				limit = {
+					has_reform = states_general_reform
+				}
+				remove_government_reform = states_general_reform
+			}
+			if = {
+				limit = {
+					is_lacking_institutions = yes
+				}
+				capital_scope = {
+					add_next_institution_embracement = 100
+				}
+			}
+			every_province = {
+				limit = {
+					NOT = { owned_by = MUG }
+					OR = {
+						region = persia_region
+						region = khorasan_region
+						region = caucasia_region
+						region = central_asia_region
+					}
+					is_permanent_claim = MUG
+				}
+				remove_claim = MUG
+			}
+			every_province = {
+				limit = {
+					NOT = { owned_by = MUG }
+					OR = {
+						region = persia_region
+						region = khorasan_region
+						region = caucasia_region
+						region = central_asia_region
+					}
+					is_core = MUG
+				}
+				remove_core = MUG
+			}
+			set_country_flag = formed_mughal_empire_flag
+			if = {
+				limit = {
+					has_idea_group = influence_ideas
+					influence_ideas = 7
+				}
+				remove_idea_group = influence_ideas
+				add_idea_group = administrative_ideas
+				add_idea = stable_government
+				add_idea = administrative_council
+				add_idea = adaptability
+				add_idea = civil_servants
+				add_idea = centralization
+				add_idea = local_rule
+				add_idea = expanded_policies
+			}
+			else_if = {
+				limit = {
+					has_idea_group = influence_ideas
+					influence_ideas = 6
+				}
+				remove_idea_group = influence_ideas
+				add_idea_group = administrative_ideas
+				add_idea = stable_government
+				add_idea = administrative_council
+				add_idea = adaptability
+				add_idea = civil_servants
+				add_idea = centralization
+				add_idea = local_rule
+			}
+			else_if = {
+				limit = {
+					has_idea_group = influence_ideas
+					influence_ideas = 5
+				}
+				remove_idea_group = influence_ideas
+				add_idea_group = administrative_ideas
+				add_idea = stable_government
+				add_idea = administrative_council
+				add_idea = adaptability
+				add_idea = civil_servants
+				add_idea = centralization
+			}
+			else_if = {
+				limit = {
+					has_idea_group = influence_ideas
+					influence_ideas = 4
+				}
+				remove_idea_group = influence_ideas
+				add_idea_group = administrative_ideas
+				add_idea = stable_government
+				add_idea = administrative_council
+				add_idea = adaptability
+				add_idea = civil_servants
+			}
+			else_if = {
+				limit = {
+					has_idea_group = influence_ideas
+					influence_ideas = 3
+				}
+				remove_idea_group = influence_ideas
+				add_idea_group = administrative_ideas
+				add_idea = stable_government
+				add_idea = administrative_council
+				add_idea = adaptability
+			}
+			else_if = {
+				limit = {
+					has_idea_group = influence_ideas
+					influence_ideas = 2
+				}
+				remove_idea_group = influence_ideas
+				add_idea_group = administrative_ideas
+				add_idea = stable_government
+				add_idea = administrative_council
+				add_idea = adaptability
+			}
+			else_if = {
+				limit = {
+					has_idea_group = influence_ideas
+					influence_ideas = 1
+				}
+				remove_idea_group = influence_ideas
+				add_idea_group = administrative_ideas
+				add_idea = stable_government
+				add_idea = administrative_council
+				add_idea = adaptability
+			}
+			if = {
+				limit = { has_country_modifier = afghans_invade_india }
+				remove_country_modifier = afghans_invade_india
+			}
+		}
+		hindusthan_region = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = MUG
+		}
+		add_country_modifier = {
+			name = mughals_invade_india
+			duration = 10950
+		}
+		if = {
+			limit = { NOT = { mil_tech = 7 } }
+			capital_scope = {
+				large_cast_bronze_mortar = ROOT
+				large_cast_bronze_mortar = ROOT
+				large_cast_bronze_mortar = ROOT
+				large_cast_bronze_mortar = ROOT
+			}
+			custom_tooltip = tur_guns_of_urban_ct
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Mughals scripted wars
+country_event = {
+	id = soe_event.31
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = AFG
+			tag = TRS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1445
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		SRH = { is_neighbor_of = ROOT }
+		NOT = { truce_with = SRH }
+		NOT = { has_country_modifier = important_war_timer }
+		SRH = { ai = yes }
+		SRH = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			SRH = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				SRH = { NOT = {	num_of_allies = 4 } }
+				army_strength = {
+					who = SRH
+					value = 2
+				}
+			}
+		}
+		OR = {
+			SRH = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				SRH = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = SRH
+				value = 1
+			}
+		}
+		SRH = { NOT = {	alliance_with = ROOT } }
+		SRH = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = SRH
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				507 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				507 = { 
+					owned_by = SRH
+					controlled_by = SRH
+				}
+			}
+			AND = {
+				2075 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2075 = { 
+					owned_by = SRH
+					controlled_by = SRH
+				}
+			}
+			AND = {
+				510 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				510 = { 
+					owned_by = SRH
+					controlled_by = SRH
+				}
+			}
+			AND = {
+				522 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				522 = { 
+					owned_by = SRH
+					controlled_by = SRH
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.31.a"
+		if = {
+			limit = {
+				522 = { 
+					owned_by = SRH
+					controlled_by = SRH
+				}
+			}	
+			declare_war_with_cb = {
+				who = SRH
+				casus_belli = cb_conquest
+				war_goal_province = 522
+			}
+		}
+		else_if = {
+			limit = {
+				507 = { 
+					owned_by = SRH
+					controlled_by = SRH
+				}
+			}	
+			declare_war_with_cb = {
+				who = SRH
+				casus_belli = cb_conquest
+				war_goal_province = 507
+			}
+		}
+		else_if = {
+			limit = {
+				2075 = { 
+					owned_by = SRH
+					controlled_by = SRH
+				}
+			}	
+			declare_war_with_cb = {
+				who = SRH
+				casus_belli = cb_conquest
+				war_goal_province = 2075
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = SRH
+				casus_belli = cb_conquest
+				war_goal_province = 510
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}
+
+# Mughals scripted wars
+country_event = {
+	id = soe_event.32
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = AFG
+			tag = TRS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1445
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		PUN = { is_neighbor_of = ROOT }
+		NOT = { truce_with = PUN }
+		NOT = { has_country_modifier = important_war_timer }
+		PUN = { ai = yes }
+		PUN = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			PUN = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				PUN = { NOT = {	num_of_allies = 4 } }
+				army_strength = {
+					who = PUN
+					value = 2
+				}
+			}
+		}
+		OR = {
+			PUN = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				PUN = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = PUN
+				value = 1
+			}
+		}
+		PUN = { NOT = {	alliance_with = ROOT } }
+		PUN = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = PUN
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				507 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				507 = { 
+					owned_by = PUN
+					controlled_by = PUN
+				}
+			}
+			AND = {
+				2075 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2075 = { 
+					owned_by = PUN
+					controlled_by = PUN
+				}
+			}
+			AND = {
+				510 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				510 = { 
+					owned_by = PUN
+					controlled_by = PUN
+				}
+			}
+			AND = {
+				522 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				522 = { 
+					owned_by = PUN
+					controlled_by = PUN
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.32.a"
+		if = {
+			limit = {
+				522 = { 
+					owned_by = PUN
+					controlled_by = PUN
+				}
+			}	
+			declare_war_with_cb = {
+				who = PUN
+				casus_belli = cb_conquest
+				war_goal_province = 522
+			}
+		}
+		else_if = {
+			limit = {
+				507 = { 
+					owned_by = PUN
+					controlled_by = PUN
+				}
+			}	
+			declare_war_with_cb = {
+				who = PUN
+				casus_belli = cb_conquest
+				war_goal_province = 507
+			}
+		}
+		else_if = {
+			limit = {
+				2075 = { 
+					owned_by = PUN
+					controlled_by = PUN
+				}
+			}	
+			declare_war_with_cb = {
+				who = PUN
+				casus_belli = cb_conquest
+				war_goal_province = 2075
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = PUN
+				casus_belli = cb_conquest
+				war_goal_province = 510
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}
+
+# Mughals scripted wars
+country_event = {
+	id = soe_event.33
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = AFG
+			tag = TRS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1445
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		DLH = { is_neighbor_of = ROOT }
+		NOT = { truce_with = DLH }
+		NOT = { has_country_modifier = important_war_timer }
+		DLH = { ai = yes }
+		DLH = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			DLH = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				DLH = { NOT = {	num_of_allies = 4 } }
+				army_strength = {
+					who = DLH
+					value = 2
+				}
+			}
+		}
+		OR = {
+			DLH = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				DLH = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = DLH
+				value = 1
+			}
+		}
+		DLH = { NOT = {	alliance_with = ROOT } }
+		DLH = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = DLH
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				507 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				507 = { 
+					owned_by = DLH
+					controlled_by = DLH
+				}
+			}
+			AND = {
+				2075 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2075 = { 
+					owned_by = DLH
+					controlled_by = DLH
+				}
+			}
+			AND = {
+				510 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				510 = { 
+					owned_by = DLH
+					controlled_by = DLH
+				}
+			}
+			AND = {
+				522 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				522 = { 
+					owned_by = DLH
+					controlled_by = DLH
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.33.a"
+		if = {
+			limit = {
+				522 = { 
+					owned_by = DLH
+					controlled_by = DLH
+				}
+			}	
+			declare_war_with_cb = {
+				who = DLH
+				casus_belli = cb_conquest
+				war_goal_province = 522
+			}
+		}
+		else_if = {
+			limit = {
+				507 = { 
+					owned_by = DLH
+					controlled_by = DLH
+				}
+			}	
+			declare_war_with_cb = {
+				who = DLH
+				casus_belli = cb_conquest
+				war_goal_province = 507
+			}
+		}
+		else_if = {
+			limit = {
+				2075 = { 
+					owned_by = DLH
+					controlled_by = DLH
+				}
+			}	
+			declare_war_with_cb = {
+				who = DLH
+				casus_belli = cb_conquest
+				war_goal_province = 2075
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = DLH
+				casus_belli = cb_conquest
+				war_goal_province = 510
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}
+
+# Mughals scripted wars
+country_event = {
+	id = soe_event.34
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			tag = AFG
+			tag = TRS
+		}
+		ai = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		is_year = 1445
+		manpower_percentage = 0.25
+		num_of_rebel_armies = 0
+		num_of_rebel_controlled_provinces = 0
+		has_any_disaster = no
+		NOT = { war_exhaustion = 5 }
+		NOT = { overextension_percentage = 0.2 }
+		MUL = { is_neighbor_of = ROOT }
+		NOT = { truce_with = MUL }
+		NOT = { has_country_modifier = important_war_timer }
+		MUL = { ai = yes }
+		MUL = { is_subject = no }
+		any_neighbor_country = { 
+			OR = {
+				AND = {
+					ai = yes
+					army_strength = { who = ROOT value = 1 }
+				}
+				AND = {
+					ai = no
+					army_strength = { who = ROOT value = 0.75 }
+				}
+			}
+		}
+		OR = {
+			MUL = { NOT = {	num_of_allies = 2 } }
+			AND = {
+				MUL = { NOT = {	num_of_allies = 4 } }
+				army_strength = {
+					who = MUL
+					value = 2
+				}
+			}
+		}
+		OR = {
+			MUL = { NOT = {	num_of_allies = 1 } }
+			NOT = {
+				MUL = {
+					any_ally = { 
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		ROOT = {
+			army_strength = {
+				who = MUL
+				value = 1
+			}
+		}
+		MUL = { NOT = {	alliance_with = ROOT } }
+		MUL = {	NOT = { is_subject_of = ROOT } }
+		NOT = {
+			any_country = {
+				has_guaranteed = MUL
+				army_strength = { who = ROOT value = 1 }
+			}
+		}
+		OR = {
+			AND = {
+				2078 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				2078 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}
+			AND = {
+				4509 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4509 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}
+			AND = {
+				506 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				506 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}
+			AND = {
+				507 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				507 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}
+			AND = {
+				4510 = { 
+					OR = {
+						is_permanent_claim = ROOT
+						is_claim = ROOT
+					}
+				}
+				4510 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "soe_event.34.a"
+		if = {
+			limit = {
+				2078 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUL
+				casus_belli = cb_conquest
+				war_goal_province = 2078
+			}
+		}
+		else_if = {
+			limit = {
+				4509 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUL
+				casus_belli = cb_conquest
+				war_goal_province = 4509
+			}
+		}
+		else_if = {
+			limit = {
+				506 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUL
+				casus_belli = cb_conquest
+				war_goal_province = 506
+			}
+		}
+		else_if = {
+			limit = {
+				507 = { 
+					owned_by = MUL
+					controlled_by = MUL
+				}
+			}	
+			declare_war_with_cb = {
+				who = MUL
+				casus_belli = cb_conquest
+				war_goal_province = 507
+			}
+		}
+		else = {	
+			declare_war_with_cb = {
+				who = MUL
+				casus_belli = cb_conquest
+				war_goal_province = 4510
+			}
+		}
+		add_country_modifier = {
+			name = important_war_timer
+			duration = 5475
+			hidden = yes
+		}
+	}
+}

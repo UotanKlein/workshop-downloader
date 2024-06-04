@@ -1,0 +1,3360 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+# ai_will do is only used to determine which idea group is picked if AI_USES_HISTORICAL_IDEA_GROUPS define is 0, OR start is custom/random
+# ai never picks an idea that resolves to ai_will_do = 0, even if AI_USES_HISTORICAL_IDEA_GROUPS = 1
+# ROOT = country picking the idea
+# groups set to colonial=yes will be higher prioritized by the AI when spending power
+
+#ideas in the group can have effect = {} and removed_effect = {}
+
+aristocracy_ideas = {
+	category = MIL
+
+	bonus = {
+		leader_siege = 1
+		nobles_loyalty_modifier = 0.1
+		rajput_loyalty_modifier = 0.1
+		maratha_loyalty_modifier = 0.1
+	}
+
+	trigger = {
+		has_government_attribute = enables_aristocratic_idea_group
+	}
+	
+	noble_knights = {
+		cavalry_power = 0.15
+	}
+	serfdom = {
+		global_manpower_modifier = 0.15
+		development_cost = -0.05
+	}
+	noble_resilience = {
+		cav_to_inf_ratio = 0.1
+		cavalry_cost = -0.20
+	}
+	noble_officers = {
+		army_tradition_decay = -0.01
+		navy_tradition_decay = -0.01
+		num_of_pronoiars = 1
+	}
+	international_nobility = {
+		diplomats = 1
+		general_cost = -0.1
+	}
+	rightful_conquest = {
+		fabricate_claims_cost = -0.5
+		unjustified_demands = -0.25
+	}
+	local_nobility = {
+		global_autonomy = -0.025
+		yearly_absolutism = 0.5
+	}
+	
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 25
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = bold_fighter_personality 
+				ruler_has_personality = expansionist_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = influence_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = court_ideas
+				has_idea_group = spy_ideas
+				has_idea_group = innovativeness_ideas
+			}
+		}
+		modifier = {
+			factor = 3
+			has_global_modifier_value = {
+				which = cavalry_power
+				value = 0.2
+			}
+		}
+		modifier = {
+			factor = 3
+			has_global_modifier_value = {
+				which = cavalry_power
+				value = 0.25
+			}
+		}
+		modifier = {
+			factor = 3
+			has_global_modifier_value = {
+				which = cavalry_power
+				value = 0.3
+			}
+		}
+		modifier = {
+			factor = 6
+			OR = {
+				tag = POL
+				tag = PLC
+				tag = HUN
+				tag = LIT
+				tag = AYU
+				tag = AVA
+				tag = ARB
+				tag = LXA
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				tag = MOS
+				tag = RUS
+				tag = BYZ
+				tag = HAB
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = indigenous_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = plutocracy_ideas
+			}
+		}
+	}
+}
+
+
+plutocracy_ideas = {
+	category = MIL
+
+	bonus = {
+		global_prov_trade_power_modifier = 0.25
+		burghers_loyalty_modifier = 0.1
+		vaisyas_loyalty_modifier = 0.1
+	}
+
+	trigger = {
+		has_government_attribute = enables_plutocratic_idea_group
+	}
+
+	tradition_of_payment = {
+		mercenary_cost = -0.2
+		global_regiment_cost = -0.05
+	}
+	abolished_serfdom = {
+		land_morale = 0.10
+		global_unrest = -1
+	}
+	bill_of_rights = {
+		monthly_reform_progress = 0.1
+	}
+	free_merchants = {
+		merchants = 1
+	}
+	free_subjects = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	free_cities = {
+		caravan_power = 0.25
+		development_cost = -0.05
+	}
+	emancipation = {
+		manpower_recovery_speed = 0.2
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 25
+			OR = {
+				personality = ai_militarist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = industrious_personality 
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = peasant_revolt_leader_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = influence_ideas
+				has_idea_group = spy_ideas
+				has_idea_group = maritime_ideas
+				has_idea_group = infrastructure_ideas
+				has_idea_group = administrative_ideas
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_government_attribute = is_merchant_republic
+				has_reform = peasants_republic
+				has_reform = free_city
+				has_reform = ikko_ikki_republic_reform
+				has_reform = kongsi_federation
+				has_reform = signoria_reform
+				has_reform = oligarchy_reform
+				has_reform = ambrosian_republic
+				has_reform = plutocratic_reform
+				has_reform = dutch_republic
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+				has_reform = prussian_republic_reform
+				has_reform = great_russian_republic_reform
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_reform = military_dictatorship_reform
+				has_reform = united_cantons_reform
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_colonial_nation = yes
+				is_vassal = yes
+				is_lesser_in_union = yes
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = indigenous_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+horde_gov_ideas = {
+	category = MIL
+	
+	bonus = {
+		cavalry_power = 0.25
+		nomadic_tribes_loyalty_modifier = 0.1
+	}
+	
+	trigger = {
+		has_government_attribute = enables_horde_idea_group
+	}
+	
+	horse_lords = {
+		cavalry_cost = -0.33
+		cav_to_inf_ratio = 0.10
+	}
+	beyond_the_sun = {
+		ae_impact = -0.1
+	}
+	mandate_of_the_khan = {
+		religious_unity = 0.25
+	}
+	there_shall_be_no_grass = {
+		land_attrition = -0.2
+	}
+	horde_loyalty = {
+		global_unrest = -1
+		horde_unity = 0.5
+	}
+	watchers_of_the_silk_road = {	
+		caravan_power = 0.20
+	}
+	a_magnanimous_empire = {
+		num_accepted_cultures = 2
+	}
+	
+	ai_will_do = {
+		factor = 25
+		modifier = {
+			factor = 25
+			OR = {
+				personality = ai_militarist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = conqueror_personality 
+				ruler_has_personality = legendary_conqueror_personality
+				ruler_has_personality = careful_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = administrative_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = court_ideas
+				has_idea_group = spy_ideas
+				has_idea_group = diplomatic_ideas
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = indigenous_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+theocracy_gov_ideas = {
+	category = MIL
+	
+	bonus = {
+		global_heretic_missionary_strength = 0.01
+		church_loyalty_modifier = 0.1
+		brahmins_hindu_loyalty_modifier = 0.1
+		brahmins_muslim_loyalty_modifier = 0.1
+	}
+	
+	trigger = {
+		has_government_attribute = enables_divine_idea_group
+	}
+	servants_of_god = {
+		devotion = 1
+		legitimacy = 0.5
+		development_cost = -0.05
+	}
+	by_the_grace_of_god = {
+		fire_damage_received = -0.1
+	}
+	friends_in_high_places = {
+		leader_cost = -0.1
+		war_exhaustion_cost = -0.33
+	}
+	flesh_is_weak = {
+		morale_damage_received = -0.1
+	}
+	alpha_and_omega = {
+		enforce_religion_cost = -0.3
+		culture_conversion_cost = -0.1
+	}
+	conviction_of_sin = {
+		global_unrest = -2
+	}
+	martyrs = {
+		manpower_in_true_faith_provinces = 0.15
+		prestige_from_land = 0.5
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 25
+			OR = {
+				personality = ai_militarist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = tolerant_personality 
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = sinner_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = administrative_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = spy_ideas
+				has_idea_group = trade_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_country = {
+				OR = {
+					NOT = { religion = ROOT }
+					has_hostile_reformation_center = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = indigenous_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+indigenous_ideas = {
+	category = MIL
+
+	bonus = {
+		global_institution_spread = 0.25
+	}
+
+	trigger = {
+		has_government_attribute = enables_natives_idea_group
+	}
+
+	indigenous_bountiful_land = {
+		tribal_development_growth = 0.015
+		development_cost = -0.05
+	}
+	indigenous_irregular_warfare = {
+		hostile_attrition = 1
+	}
+	indigenous_constitution = {
+		monthly_reform_progress_modifier = 0.25
+	}
+	indigenous_braves = {
+		land_morale = 0.10
+	}
+	indigenous_controlled_burns = {
+		global_manpower_modifier = 0.15
+	}
+	indigenous_trade_with_foreigners = {
+		idea_cost = -0.1
+	}
+	indigenous_treaties = {
+		province_warscore_cost = -0.2
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+innovativeness_ideas = {
+	category = ADM
+
+	bonus = {
+		advisor_cost = -0.2
+	}
+
+	patron_of_art  = {
+		prestige_decay = -0.01
+	}
+	empiricism = {
+		innovativeness_gain = 0.5
+	}
+	scientific_revolution = {
+		technology_cost = -0.1
+		embracement_cost = -0.1
+	}
+	dynamic_court = {
+		advisor_pool = 1
+	}
+	print_culture = {
+		global_institution_spread = 0.25
+	}
+	optimism = {
+		war_exhaustion = -0.05
+		monthly_splendor = 1
+	}
+	expanded_policies = {
+		free_policy = 1
+	}
+
+	ai_will_do = {
+		factor = 0.9
+		modifier = {
+			factor = 1.5
+			OR = {
+				personality = ai_capitalist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = scholar_personality 
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = patron_of_arts_personality
+				ruler_has_personality = well_advised_personality
+				ruler_has_personality = well_connected_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = greedy_personality 
+				ruler_has_personality = babbling_buffoon_personality
+				ruler_has_personality = naive_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = aristocracy_ideas
+				has_idea_group = offensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = maritime_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			innovativeness = 10
+			NOT = { is_year = 1550 }
+		}
+		modifier = {
+			factor = 2
+			innovativeness = 20
+			NOT = { is_year = 1550 }
+		}
+		modifier = {
+			factor = 2
+			innovativeness = 30
+			NOT = { is_year = 1550 }
+		}
+		modifier = {
+			factor = 2
+			innovativeness = 40
+		}
+		modifier = {
+			factor = 6
+			OR = {
+				tag = KOR
+				tag = EGY
+				tag = PRU
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = {
+				region = italy_region
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = english
+				primary_culture = american
+			}
+		}
+		modifier = {
+			factor = 1.3
+			capital_scope = {
+				OR = {
+					region = north_german_region
+					region = south_german_region
+					region = france_region
+					region = scandinavia_region
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				OR = {
+					tag = KOR
+					tag = JAP
+					tag = EGY
+					capital_scope = {
+						continent = europe
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_reform = steppe_horde
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { has_institution = renaissance }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_institution = feudalism }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = religious_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = administrative_ideas
+				has_idea_group = humanist_ideas
+				has_idea_group = infrastructure_ideas
+			}
+		}
+	}
+}
+
+
+religious_ideas = {
+	category = ADM
+
+	bonus = {
+		culture_conversion_cost = -0.25
+		brahmins_hindu_loyalty_modifier = 0.1
+		church_loyalty_modifier = 0.1
+	}
+
+	missionary_schools = {
+		missionaries = 1
+		missionary_maintenance_cost = -0.5
+	}
+	church_attendance_duty = { 
+		manpower_in_true_faith_provinces = 0.1
+	}
+	divine_supremacy = {
+		global_missionary_strength = 0.03
+	}
+	devoutness = {
+		tolerance_own = 2
+	}
+	inquisition = {
+		papal_influence = 2
+		devotion = 0.25
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.1
+		monthly_piety_accelerator = 0.001
+		yearly_karma_decay = 0.1
+		yearly_doom_reduction = 1
+		yearly_authority = 0.15
+		yearly_patriarch_authority = 0.005
+		prestige_per_development_from_conversion = 0.1
+	}
+	religious_tradition = {
+		reverse_relation_with_same_religion = 10
+	}
+	deus_vult = {
+		cb_on_religious_enemies = yes
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+				personality = ai_balanced
+				personality = ai_militarist
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = tolerant_personality 
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = sinner_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = spy_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = offensive_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			government = theocracy
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_country = {
+				OR = {
+					NOT = { religion = ROOT }
+					has_hostile_reformation_center = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.75 }
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = buddhism
+				religion = mahayana
+				religion = vajrayana
+				religion = confucianism
+				religion = hinduism
+			}
+		}
+		modifier = {
+			factor = 0.5
+			government = republic
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = innovativeness_ideas
+		}
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = administrative_ideas
+				has_idea_group = humanist_ideas
+				has_idea_group = infrastructure_ideas
+			}
+		}
+	}
+}
+
+
+spy_ideas = {
+	category = DIP
+
+	bonus = {
+		rebel_support_efficiency = 1
+		spy_action_cost_modifier = -0.2
+	}
+	
+	claim_fabrication = {
+		can_claim_states = yes
+		can_transfer_vassal_wargoal = yes
+	}
+
+	state_propaganda = {
+		ae_impact = -0.2
+	}
+
+	efficient_spies = {
+		spy_offence = 0.5
+		siege_ability = 0.1
+	}	
+	
+	agent_training = {
+		diplomats = 1
+		advisor_cost = -0.15
+	}
+
+	vetting = {
+		global_spy_defence = 0.33
+		yearly_corruption = -0.2
+	}
+	
+	privateers = {
+		capture_ship_chance = 0.25
+		privateer_efficiency = 0.33
+	}
+	
+	blackmailing = {
+		monthly_favor_modifier = 0.33
+		accept_vassalization_reasons = 15
+		num_of_pronoiars = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			OR = {
+				ruler_has_personality = intricate_web_weaver_personality
+				ruler_has_personality = secretive_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = loose_lips_personality 
+				ruler_has_personality = babbling_buffoon_personality
+				ruler_has_personality = naive_personality
+			}
+		}
+		modifier = {
+			factor = 10
+			has_idea_group = aristocracy_ideas
+			OR = {
+				tag = POL
+				tag = PLC
+				tag = HUN
+				tag = LIT
+				tag = AYU
+				tag = AVA
+				tag = ARB
+				tag = LXA
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_idea_group = aristocracy_ideas
+				has_idea_group = horde_gov_ideas
+			}
+			NOT = {
+				OR = {
+					tag = POL
+					tag = PLC
+					tag = HUN
+					tag = LIT
+					tag = AYU
+					tag = AVA
+					tag = ARB
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			is_march = yes
+		}
+		modifier = {
+			factor = 2
+			is_vassal = yes
+		}
+		modifier = {
+			factor = 2
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = exploration_ideas
+				has_idea_group = maritime_ideas
+				has_idea_group = influence_ideas
+				has_idea_group = court_ideas
+			}
+		}
+	}
+}
+
+
+diplomatic_ideas = {
+	category = DIP
+	bonus = {
+		reduced_stab_impacts = yes
+	}
+	
+	grand_banquets = {
+		diplomats = 1
+	}
+	foreign_embassies = {
+		dip_advisor_cost = -0.25
+	}
+	cabinet = {
+		diplomatic_upkeep = 1
+	}
+	benign_diplomats = {
+		improve_relation_modifier = 0.25
+		diplomats = 1
+	}
+	experienced_diplomats  = {
+		diplomatic_reputation = 2
+	}
+	flexible_negotiation = {
+		province_warscore_cost = -0.2
+	}
+	diplomatic_corps = {
+		dip_tech_cost_modifier = -0.1
+	}
+
+	ai_will_do = {
+		factor = 0.9
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = charismatic_negotiator_personality 
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = fierce_negotiator_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = babbling_buffoon_personality
+				ruler_has_personality = loose_lips_personality
+				ruler_has_personality = naive_personality
+				ruler_has_personality = malevolent_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = infrastructure_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = offensive_ideas
+			}
+		}
+		modifier = {
+			factor = 3
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 2
+			is_elector = yes
+		}
+		modifier = {
+			factor = 2
+			is_emperor = no
+			calc_true_if = {
+				all_elector = {
+					preferred_emperor = ROOT
+				}
+				amount = 2
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_global_modifier_value = { 
+				which = improve_relation_modifier 
+				value = 0.45
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				capital_scope = {
+					continent = europe
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				tag = KOR
+				tag = POL
+				tag = MOS
+				tag = TUR
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_subject_of_type = tributary_state
+		}
+		modifier = {
+			factor = 0
+			is_subject_other_than_tributary_trigger = yes
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = spy_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = exploration_ideas
+				has_idea_group = maritime_ideas
+				has_idea_group = influence_ideas
+				has_idea_group = court_ideas
+			}
+		}
+	}
+}
+
+
+offensive_ideas = {
+	category = MIL
+
+	bonus = {
+		recover_army_morale_speed = 0.1
+		qizilbash_loyalty_modifier = 0.1
+	}
+
+	bayonet_leaders = {
+		leader_land_shock = 1
+	}
+	national_conscripts = {
+		global_regiment_recruit_speed = -0.1
+	}
+	superior_firepower = {
+		leader_land_fire = 1
+	}
+	glorious_arms = {
+		prestige_from_land = 1.0
+		num_of_pronoiars = 1
+	}
+	engineer_corps = {
+		siege_ability = 0.20
+	}
+	grand_army = {
+		land_forcelimit_modifier = 0.15
+		special_unit_cost_modifier = -0.2
+	}
+	napoleonic_warfare = {
+		discipline = 0.05
+	}
+
+	#shock_tactics = {
+	#	morale_damage = 0.1
+	#}
+	#
+	#melee_combat_training = {
+	#	shock_damage = 0.1
+	#}
+	#
+	#volley_fire = {
+	#	fire_damage = 0.1
+	#}
+	#
+	#fort_breaker = {
+	#	assault_fort_ability = 0.1
+	#	assault_fort_cost_modifier = -1
+	#}
+	#
+	#glory_on_the_battlefield = {
+	#	artillery_barrage_cost = -0.25
+	#	warscore_from_battles_modifier = 0.15
+	#}
+
+	ai_will_do = {
+		factor = 1.25
+		modifier = {
+			factor = 25
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = conqueror_personality
+				ruler_has_personality = legendary_conqueror_personality
+				ruler_has_personality = careful_personality
+				ruler_has_personality = bold_fighter_personality
+				ruler_has_personality = strict_personality
+				ruler_has_personality = cruel_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = calm_personality
+				ruler_has_personality = craven_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = humanist_ideas
+				has_idea_group = infrastructure_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = court_ideas
+				has_idea_group = trade_ideas
+			}
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 40
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 60
+		}
+		modifier = {
+			factor = 1.5
+			army_size = 40
+		}
+		modifier = {
+			factor = 1.5
+			army_size = 60
+		}
+		modifier = {
+			factor = 2
+			has_global_modifier_value = { 
+				which = discipline
+				value = 0.05
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				army_tradition = 30
+			}
+		}
+		modifier = {
+			factor = 0.25
+			has_idea_group = defensive_ideas
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = indigenous_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+
+defensive_ideas = {
+	category = MIL
+
+	bonus = {
+		hostile_attrition = 1
+		max_hostile_attrition = 1 
+	}
+
+	battlefield_commisions = {
+		army_tradition_from_battle = 1.0
+	}
+	military_drill = {
+		land_morale = 0.15
+	}
+	improved_manuever = {
+		leader_land_manuever = 1
+	}
+	regimental_system = {
+		land_maintenance_modifier = -0.05
+		regiment_manpower_usage = -0.05
+	}
+	defensive_mentality = {
+		defensiveness = 0.25
+		fort_maintenance_modifier = -0.1
+	}
+	supply_trains = {
+		reinforce_speed = 0.3
+	}
+	improved_foraging = {
+		garrison_size = 0.33
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = ned_buffed_forts_flag
+					}
+					every_owned_province = {
+						limit = {
+							region = low_countries_region
+							has_fort_building_trigger = yes
+						}
+						remove_province_modifier = ned_low_countries_fort_buff
+						add_province_modifier = {
+							name = ned_low_countries_fort_buff_buffed
+							duration = -1
+							hidden = yes
+						}
+					}
+				}
+			}
+		}
+		removed_effect = {
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_province_modifier = ned_low_countries_fort_buff_buffed }
+					remove_province_modifier = ned_low_countries_fort_buff_buffed
+				}
+			}
+		}
+	}
+
+	#until_the_last_man = {
+	#	morale_damage_received = -0.1
+	#}
+	#
+	#improved_body_armor = {
+	#	shock_damage_received = -0.1
+	#}
+	#
+	#terrain_defence = {
+	#	fire_damage_received = -0.1
+	#}
+	#
+	#homeland_specialization = {
+	#	attack_bonus_in_capital_terrain = yes
+	#}
+	#
+	#guerilla_warfare_defense = {
+	#	global_defender_dice_roll_bonus = 1
+	#}
+	#
+	#relentless_charge = {
+	#	global_attacker_dice_roll_bonus = 1
+	#}
+	#
+	#ditch_defense = {
+	#	garrison_damage = 0.5
+	#	garrison_size = 0.25
+	#}
+	
+	ai_will_do = {
+		factor = 0.9
+		modifier = {
+			factor = 25
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = inspiring_leader_personality
+				ruler_has_personality = secretive_personality
+				ruler_has_personality = calm_personality
+				ruler_has_personality = kind_hearted_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = conqueror_personality
+				ruler_has_personality = legendary_conqueror_personality
+			}
+		}
+		modifier = {
+			factor = 3
+			NOT = {
+				num_of_cities = 5
+			}
+			num_of_owned_provinces_with = {
+				value = 1
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			num_of_owned_provinces_with = {
+				value = 2
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				OR = {
+					has_terrain = hills
+					has_terrain = highlands
+					has_terrain = mountain
+					has_terrain = marsh
+					has_terrain = jungle
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_year = 1500
+			NOT = { grown_by_states = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			capital_scope = {
+				OR = {
+					region = japan_region
+					region = russia_region
+					region = ural_region
+					region = khorasan_region
+					region = balkan_region
+					region = central_america_region
+					region = mexico_region
+					region = great_lakes_region
+					region = indo_china_region
+					region = upper_peru_region
+					region = peru_region
+					region = tibet_region
+					region = korea_region
+					region = caucasia_region
+					region = persia_region
+					region = maghreb_region
+					region = carpathia_region 
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				tag = HAB
+				tag = TTL
+				tag = SWI
+				tag = GRA
+				tag = NAV
+				tag = TRE
+				tag = YEM
+				tag = RAS
+				tag = ETH
+				tag = NED
+				tag = HOL
+			}
+		}
+		modifier = {
+			factor = 2
+			tag = MNG
+		}
+		modifier = {
+			factor = 3
+			NOT = { advisor = fortification_expert }
+			has_global_modifier_value = { 
+				which = defensiveness 
+				value = 0.2
+			}
+		}
+		modifier = {
+			factor = 3
+			advisor = fortification_expert
+			has_global_modifier_value = { 
+				which = defensiveness 
+				value = 0.4
+			}
+		}
+		modifier = {
+			factor = 4
+			is_march = yes
+		}
+		modifier = {
+			factor = 0.5
+			army_size = 80
+			NOT = { tag = MNG }
+			NOT = { tag = HAB }
+			NOT = { tag = ETH }
+		}
+		modifier = {
+			factor = 0.75
+			tag = TUR
+		}
+		modifier = {
+			factor = 0.25
+			has_idea_group = offensive_ideas
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = indigenous_ideas
+				has_idea_group = offensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+
+trade_ideas = {
+	category = DIP
+
+	bonus = {
+		merchants = 1
+		burghers_loyalty_modifier = 0.1
+		jains_loyalty_modifier = 0.1
+		vaisyas_loyalty_modifier = 0.1
+	}
+
+	shrewd_commerce_practise = {
+ 		global_trade_power = 0.2
+  	}
+  	free_trade = {
+  		merchants = 1
+  	}
+	merchant_adventures = {
+		trade_range_modifier = 0.25
+	}
+	national_trade_policy = {
+		trade_efficiency = 0.1
+		mercantilism_cost = -0.25
+	}
+	overseas_merchants = {
+		placed_merchant_power = 15
+	}
+	trade_manipulation = {
+		trade_steering = 0.25
+	}
+	fast_negotiations = {
+		caravan_power = 0.25
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+				personality = ai_capitalist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = expansionist_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = drunkard_personality
+				ruler_has_personality = greedy_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = administrative_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = infrastructure_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = innovativeness_ideas
+				has_idea_group = aristocracy_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = naval_ideas
+				has_idea_group = offensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_colonial_nation = yes
+				has_government_attribute = is_merchant_republic
+				has_reform = peasants_republic
+				has_reform = free_city
+				has_reform = kongsi_federation
+				has_reform = signoria_reform
+				has_reform = oligarchy_reform
+				has_reform = plutocratic_reform
+				has_reform = dutch_republic
+				has_reform = veche_republic
+				has_reform = great_veche_republic
+				has_reform = great_russian_republic_reform
+			}
+		}
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.5
+		}
+		modifier = {
+			factor = 0.25
+			NOT = {
+				trade_income_percentage = 0.2
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_vassal = yes
+				is_lesser_in_union = yes
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = spy_ideas
+				has_idea_group = diplomatic_ideas
+				has_idea_group = exploration_ideas
+				has_idea_group = maritime_ideas
+				has_idea_group = influence_ideas
+				has_idea_group = court_ideas
+			}
+		}
+	}
+}
+
+
+
+
+economic_ideas = {
+	category = ADM
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	bureaucracy = { 
+		global_tax_modifier = 0.15
+	}
+	national_bank = {
+		inflation_reduction = 0.1
+	}
+	merchant_passes = {
+		merchants = 1
+	}
+	efficient_mining = {
+		gold_depletion_chance_modifier = -0.25
+	}
+	debt_and_loans = {
+		interest = -0.5
+	}
+	nationalistic_enthusiasm = {
+		land_maintenance_modifier = -0.05
+	}
+	smithian_economics = { 
+		#Mechanic: +1/-1 Dev from Manufactories		#Note for modders; the two mechanics introduced in 1.35   
+		production_efficiency = 0.1					#for eco ideas are done so via on_actions 
+ 	}	
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+				personality = ai_capitalist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = midas_touched_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = drunkard_personality
+				ruler_has_personality = greedy_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = court_ideas
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = aristocracy_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = naval_ideas
+				has_idea_group = offensive_ideas
+				has_idea_group = quality_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			inflation = 5
+		}
+		modifier = {
+			factor = 2
+			inflation = 10
+		}
+		modifier = {
+			factor = 2
+			gold_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 2
+			gold_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 2
+			production_income_percentage = 0.5
+		}
+		modifier = {
+			factor = 1.5
+			tax_income_percentage = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = administrative_ideas
+				has_idea_group = humanist_ideas
+				has_idea_group = infrastructure_ideas
+			}
+		}
+	}
+}
+
+exploration_ideas = {
+	category = DIP
+	important = yes
+
+	bonus = {
+		cb_on_primitives = yes
+	}
+
+	quest_for_the_new_world	= {
+		may_explore = yes
+		naval_attrition = -0.1
+	}
+	colonial_ventures = {
+		colonists = 1
+		effect = { remove_temporary_colonist = yes }
+	}
+	overseas_exploration = {
+		range = 0.5
+	}
+	land_of_opportunity = {
+		global_colonial_growth = 10
+	}
+	factories = {
+		trade_company_governing_cost = -0.1
+		trade_company_investment_cost = -0.1
+	}
+	free_colonies = {
+		colonist_placement_chance = 0.1
+	}
+	global_empire = {
+		naval_forcelimit_modifier = 0.25
+		treasure_fleet_income = 0.25
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			is_colonial_nation = yes
+		}
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+		}		
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			adm_tech = 22 #too late
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+					sea_zone = {
+						NOT = { area = eastern_mediterrenean_area }
+					}
+				}
+			}
+			NOT = { 
+				any_owned_province = { 
+					is_in_capital_area = yes
+					has_empty_adjacent_province = yes
+				} 
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				any_owned_province = {
+					has_port = yes
+					sea_zone = {
+						OR = {
+							NOT = { region = mediterrenean_region }
+							province_id = 1293 #Gibraltar
+							province_id = 1294 #Almeria
+						}
+						NOT = { area = red_sea_area }
+						NOT = { area = baltic_area }
+					}
+				}
+			}
+			NOT = { 
+				any_owned_province = { 
+					is_in_capital_area = yes
+					has_empty_adjacent_province = yes
+				} 
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { num_of_ports = 3 }
+			NOT = { 
+				any_owned_province = { 
+					is_in_capital_area = yes
+					has_empty_adjacent_province = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { has_institution = renaissance }
+			NOT = { tag = POR }
+			NOT = { tag = CAS }
+		}
+		modifier = {
+			factor = 0.1
+			capital_scope = {
+				NOT = {
+					region = france_region
+					region = iberia_region
+					region = british_isles_region
+					region = low_countries_region
+				}
+			}
+			NOT = {
+				OR = {
+					tag = KUR
+					tag = SWE
+					AND = {
+						has_mission = mng_inward_perfection
+						mission_completed = mng_inward_perfection
+					}
+					AND = {
+						has_mission = zan_explore_the_malacca_trade
+						mission_completed = zan_explore_the_malacca_trade
+					}
+					AND = {
+						has_mission = aju_maldives_dynasty
+						mission_completed = aju_maldives_dynasty
+					}
+					AND = {
+						has_mission = mal_create_navy
+						mission_completed = mal_create_navy
+					}
+				}
+			}
+			NOT = { technology_group = high_american }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = ARA
+				tag = TUR
+				tag = MAM
+				tag = RUS
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				AND = {
+					has_mission = nav_north_sea_whaling
+					mission_completed = nav_north_sea_whaling
+				}
+				AND = {
+					has_mission = bri_brest
+					mission_completed = bri_brest
+				}
+				AND = {
+					has_mission = mng_inward_perfection
+					mission_completed = mng_inward_perfection
+				}
+				AND = {
+					has_mission = zan_explore_the_malacca_trade
+					mission_completed = zan_explore_the_malacca_trade
+				}
+				AND = {
+					has_mission = aju_maldives_dynasty
+					mission_completed = aju_maldives_dynasty
+				}
+				AND = {
+					has_mission = mal_create_navy
+					mission_completed = mal_create_navy
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { is_year = 1490 }
+			capital_scope = {
+				NOT = {
+					region = iberia_region
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			technology_group = high_american
+		}
+		modifier = {
+			factor = 2.0
+			num_of_ports = 10
+		}
+		modifier = {
+			factor = 2.0
+			num_of_ports = 15
+		}
+		modifier = {
+			factor = 2.0
+			num_of_ports = 20
+		}
+		modifier = {
+			factor = 1000
+			OR = {
+				tag = POR
+				tag = CAS
+				tag = SPA
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				tag = GBR
+				tag = NED
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				tag = GBR
+				tag = NED
+				tag = ENG
+				tag = FRA
+			}
+		}
+		modifier = {
+			factor = 3
+			is_year = 1500
+			OR = {
+				tag = KUR
+				tag = SWE
+			}
+			NOT = { num_of_colonists = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = spy_ideas
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = maritime_ideas
+				has_idea_group = influence_ideas
+				has_idea_group = court_ideas
+			}
+		}
+	}
+}
+
+
+maritime_ideas = {
+	category = DIP
+
+	trigger = {
+		primitives = no
+	}
+
+	bonus = {
+		sea_repair = yes
+		movement_speed_in_fleet_modifier = 1 
+	}
+
+	merchant_traditions = {
+		naval_tradition_from_trade = 1.0
+		trade_range_modifier = 0.25
+	}
+	merchant_marine = {
+		global_sailors_modifier = 0.5
+		allowed_marine_fraction = 0.25
+	}
+	sheltered_ports = {
+		global_ship_repair = 0.1
+		sailor_maintenance_modifer = -0.1
+	}
+	grand_navy = {
+		naval_forcelimit_modifier = 0.5
+		ship_power_propagation = 0.25
+	}
+	ships_penny = {
+		global_ship_cost = -0.1
+	}
+	sea_hawks = {
+		global_naval_engagement_modifier = 0.1
+		admiral_cost = -0.25
+	}
+	naval_fighting_instruction = {
+		blockade_efficiency = 0.5
+		privateer_efficiency = 0.25
+	}
+
+	ai_will_do = {
+		factor = 0.7
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = plutocracy_ideas
+				has_idea_group = quantity_ideas
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_government_attribute = is_merchant_republic
+				has_reform = plutocratic_reform
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_government_attribute = is_pirate_republic_reform
+				has_reform = barbary_sultanate_reform
+			}
+		}
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}
+		modifier = {
+			factor = 0.25
+			AND = {
+				NOT = { num_of_ports = 10 }
+				NOT = { has_government_attribute = is_merchant_republic }
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				tag = ARA
+				tag = MLC
+				tag = MSA
+				tag = HSA
+				tag = MAM
+				tag = EGY
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				tag = MAM
+				tag = EGY
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					has_port = yes
+					sea_zone = {
+						area = eastern_mediterrenean_area
+					}
+					value = 8
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			num_of_light_ship = 50
+			NOT = { tag = TUR }
+		}
+		modifier = {
+			factor = 0.5
+			tag = TUR
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = spy_ideas
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = exploration_ideas
+				has_idea_group = influence_ideas
+				has_idea_group = court_ideas
+			}
+		}
+	}
+}
+
+
+quality_ideas = {
+	category = MIL
+
+	bonus = {
+		discipline = 0.05
+		janissaries_loyalty_modifier = 0.1
+		ghulams_loyalty_modifier = 0.1
+	}
+
+	private_to_marshal = {
+		infantry_power = 0.1
+	}
+	quality_education = {
+		army_tradition = 0.5
+		navy_tradition = 0.5
+	}
+	finest_of_horses = {
+		cavalry_power = 0.1
+	}
+	escort_ships = {
+		ship_durability = 0.05
+	}
+	naval_drill = {
+		naval_morale = 0.10
+	}
+	copper_bottoms = {
+		naval_attrition = -0.25
+	}
+	massed_battery = {
+		artillery_power = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1.25
+		modifier = {
+			factor = 25
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = strict_personality
+				ruler_has_personality = tactical_genius_personality
+				ruler_has_personality = martial_educator_personality
+				ruler_has_personality = inspiring_leader_personality
+				ruler_has_personality = bold_fighter_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = craven_personality
+				ruler_has_personality = cruel_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = economic_ideas
+				has_idea_group = humanist_ideas
+				has_idea_group = innovativeness_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = court_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = maritime_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			army_professionalism = 0.2
+		}
+		modifier = {
+			factor = 2
+			army_professionalism = 0.3
+		}
+		modifier = {
+			factor = 2
+			army_professionalism = 0.4
+		}
+		modifier = {
+			factor = 2
+			has_strong_mil_national_ideas = yes 
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				tag = SWI
+				tag = GNV
+				tag = HES
+				tag = BRA
+				tag = HAN
+				tag = ENG
+				tag = TTL
+				tag = BRU
+				tag = BUR
+				tag = HAB
+				tag = BOH
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			OR = { 
+				has_global_modifier_value = { 
+					which = infantry_power 
+					value = 0.1
+				}
+				has_global_modifier_value = { 
+					which = cavalry_power 
+					value = 0.25
+				}
+				has_global_modifier_value = { 
+					which = artillery_power 
+					value = 0.1
+				}
+				has_global_modifier_value = { 
+					which = heavy_ship_power 
+					value = 0.1
+				}
+				has_global_modifier_value = { 
+					which = galley_power 
+					value = 0.15
+				}
+				has_global_modifier_value = { 
+					which = army_tradition
+					value = 0.01
+				}
+				has_global_modifier_value = { 
+					which = discipline
+					value = 0.05
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				capital_scope = {
+					continent = europe
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = indigenous_ideas
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}	
+	}
+}
+
+
+quantity_ideas = {
+	category = MIL
+
+	bonus = {
+		land_forcelimit_modifier  = 0.33
+		num_of_pronoiars = 1
+	}
+	mass_army = {
+		global_manpower_modifier = 0.33
+		num_of_pronoiars = 1
+	}
+	the_young_can_serve = {
+		manpower_recovery_speed = 0.20
+	}
+	enforced_service = {
+		global_regiment_cost = -0.1
+	}
+	camp_followers = {
+		global_supply_limit_modifier = 0.33
+	}
+	reinforcement_drafts = {
+		reinforce_cost_modifier = -0.33
+	}
+	the_old_and_infirm = {
+		land_maintenance_modifier = -0.05
+	}
+	expanded_supply_trains = {
+		land_attrition = -0.25
+	}
+
+	ai_will_do = {
+		factor = 1.25
+		modifier = {
+			factor = 25
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = conqueror_personality
+				ruler_has_personality = legendary_conqueror_personality
+				ruler_has_personality = cruel_personality
+				ruler_has_personality = strict_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = tactical_genius_personality
+				ruler_has_personality = martial_educator_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = administrative_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = spy_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = maritime_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_reform = steppe_horde
+				tag = TUR
+				tag = RUS
+				tag = MOS
+				tag = MUG
+				tag = PER
+				tag = MCH
+				tag = QNG
+				tag = YUA
+				tag = MGE
+				tag = GLH
+			}
+		}
+		modifier = {
+			factor = 1.25
+			is_vassal = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_march = yes
+		}
+		modifier = {
+			factor = 1.5
+			army_size = 40
+		}
+		modifier = {
+			factor = 1.5
+			army_size = 60
+		}
+		modifier = { 
+			factor = 1.5
+			OR = { 
+				has_global_modifier_value = { 
+					which = global_manpower_modifier 
+					value = 0.2
+				}
+				has_global_modifier_value = { 
+					which = land_forcelimit_modifier 
+					value = 0.15
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_idea_group = quality_ideas
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				tag = SWI
+				tag = PRU
+				tag = SWE
+				tag = HES
+				tag = HAN
+				tag = TEU
+				tag = TTL
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = indigenous_ideas
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+
+expansion_ideas = {
+	category = ADM
+	important = yes
+
+	bonus = {
+ 		min_autonomy_in_territories = -0.1
+	}
+
+	additional_colonists = {
+		colonists = 1
+		effect = { remove_temporary_colonist = yes }
+	}
+	additional_merchants = {
+		merchants = 1
+	}
+	faster_colonists = {
+		global_colonial_growth = 20
+	}
+	vice_roys  = {
+		global_tariffs = 0.10
+ 		envoy_travel_time = -0.20
+ 	}
+	additional_diplomats = {
+		diplomats = 1
+		reduced_liberty_desire_on_other_continent = 5
+	}
+	general_colonization_law  = {
+		colonists = 1
+		colonist_placement_chance = 0.05
+		effect = { remove_temporary_colonist = yes }
+	}
+	competetive_merchants  = {
+		global_trade_power = 0.2
+	}
+
+	ai_will_do = {
+		factor = 0.8
+		modifier = {
+			factor = 5
+			personality = ai_colonialist
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				has_idea_group = exploration_ideas
+				is_colonial_nation = yes
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				tag = CAS
+				tag = POR
+				tag = SPA
+			}
+		}
+		modifier = {
+			factor = 10
+			NOT = { has_dlc = "Third Rome" } # Has siberian frontier instead
+			tag = RUS
+			num_of_cities = 20
+			any_owned_province = {
+				has_empty_adjacent_province = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_idea_group = exploration_ideas }
+			NOT = { is_colonial_nation = yes }
+			NOT = {
+				any_owned_province = {
+					has_empty_adjacent_province = yes
+				}
+			}
+			NOT = { tag = JAP }
+			NOT = { tag = MNG }
+			NOT = { tag = ZAN }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = {
+				technology_group = western
+				technology_group = eastern
+				technology_group = muslim
+				technology_group = chinese
+				technology_group = east_african
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				tag = SWE
+				tag = KUR
+			}
+		}
+		modifier = {
+			factor = 6
+			OR = {
+				AND = {
+					has_mission = zan_discover_the_cape
+					has_discovered = 1177
+				}
+				AND = {
+					tag = JAP
+					num_of_ports = 20
+				}
+				AND = {
+					tag = MNG
+					empire_of_china_num_reforms_passed = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = administrative_ideas
+				has_idea_group = humanist_ideas
+				has_idea_group = infrastructure_ideas
+			}
+		}
+	}
+}
+
+
+administrative_ideas = {
+	category = ADM
+
+	bonus = {
+		governing_capacity_modifier = 0.2
+		eunuchs_loyalty_modifier = 0.1
+	}
+
+	administrative_council = {
+		adm_advisor_cost = -0.25 
+	}
+	local_rule = {
+		advisor_pool = 1
+		num_of_pronoiars = 1
+	}
+	adaptability = {
+		core_creation = -0.25
+	}
+	cultural_regulations = {
+		promote_culture_cost = -0.3
+	}
+	stable_government = {
+		stability_cost_modifier = -0.25 
+	}
+	centralization = {
+		global_autonomy = -0.05
+	}
+	civil_servants = {
+		adm_tech_cost_modifier = -0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+				personality = ai_militarist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = conqueror_personality 
+				ruler_has_personality = legendary_conqueror_personality
+				ruler_has_personality = humane_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = court_ideas
+				has_idea_group = spy_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = influence_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = indigenous_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = quantity_ideas
+			}
+		}
+		modifier = {
+			factor = 3
+			is_emperor_of_china = yes
+		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 2
+			average_autonomy_above_min = 20
+		}
+		modifier = { 
+			factor = 2
+			OR = {
+				num_of_cities = 35
+				has_reform = livonian_military_monarchy
+				has_reform = prussian_theocratic_reform
+				has_reform = prussian_republic_reform
+				has_reform = prussian_monarchy
+				has_reform = prussian_monarchy_base
+				has_reform = byzantine_autocracy_reform
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = {	num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = humanist_ideas
+				has_idea_group = infrastructure_ideas
+			}
+		}
+	}
+}
+
+humanist_ideas = {
+	category = ADM
+
+	bonus = {
+		idea_cost = -0.1
+		yearly_harmony = 0.25  # Used if religion uses harmony (confucianism)
+		brahmins_muslim_loyalty_modifier = 0.1
+		dhimmi_loyalty_modifier = 0.1
+	}
+
+	local_traditions = {
+		global_unrest = -2
+		harmonization_speed = 0.25
+	}
+	indirect_rule = {
+		years_of_nationalism = -10
+	}
+	ecumenism = {
+		tolerance_heretic = 2
+	}
+	cultural_ties = {
+		num_accepted_cultures = 2
+	}
+	humanist_tolerance = {
+		tolerance_heathen = 2
+		religious_unity = 0.2
+	}
+	benevolence = {
+		improve_relation_modifier = 0.3
+	}
+	tolerance_idea = {
+		tolerance_of_heretics_capacity = 1 
+		tolerance_of_heathens_capacity = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+				personality = ai_diplomat
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = tolerant_personality 
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = conqueror_personality
+				ruler_has_personality = legendary_conqueror_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = zealot_personality 
+				ruler_has_personality = pious_personality
+				ruler_has_personality = cruel_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = offensive_ideas
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				religion = buddhism
+				religion = confucianism
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.75 }
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = orthodox
+				religion = hussite
+				religion = coptic
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_estate_privilege = estate_dhimmi_guaranteed_autonomy
+				has_estate_privilege = estate_brahmins_guaranteed_autonomy
+				has_estate_privilege = estate_burghers_orthodox_tolerance
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_global_modifier_value = { 
+				which = tolerance_heretic 
+				value = 3
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_global_modifier_value = { 
+				which = tolerance_heathen 
+				value = 3
+			}
+		}
+		modifier = {
+			factor = 0.5
+			government = theocracy
+		}
+		modifier = {
+			factor = 0
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = administrative_ideas
+				has_idea_group = infrastructure_ideas
+			}
+		}
+	}
+}
+
+influence_ideas = {
+	category = DIP
+
+	bonus = {
+		unjustified_demands = -0.5
+	}
+
+	tribute_system = {
+		vassal_income = 0.25
+	}
+	
+	additional_loyalist_recruitment = {
+		reduced_liberty_desire = 15
+		vassal_naval_forcelimit_bonus = 0.1
+	}
+	
+	integrated_elites = {
+		diplomatic_annexation_cost = -0.25
+	}
+	buffer_states = {
+		diplomatic_upkeep = 1
+	}
+	diplomatic_influence = {
+		diplomatic_reputation = 2
+	}
+	postal_service = {
+		envoy_travel_time = -0.25
+		liberty_desire_from_subject_development = -0.1
+	}
+	marcher_lords = {
+		vassal_forcelimit_bonus = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = charismatic_negotiator_personality 
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = benevolent_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = malevolent_personality 
+				ruler_has_personality = petty_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = plutocracy_ideas
+			}
+		}
+		modifier = {
+			factor = 5
+			has_subject_of_type = tributary_state
+			is_emperor_of_china = no
+			OR = {
+				NOT = { tag = AYU }
+				adm_tech = 14
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				tributary_state = 3
+				num_of_non_tributary_subjects = 3
+			}
+			NOT = { tag = TUR }
+			is_emperor_of_china = no
+		}
+		modifier = {
+			factor = 5
+			colony = 2
+			has_idea_group = aristocracy_ideas
+		}
+		modifier = {
+			factor = 4
+			colony = 3
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				tributary_state = 2
+				num_of_non_tributary_subjects = 2
+			}
+			is_emperor_of_china = no
+			NOT = { tag = TUR }
+		}
+		modifier = {
+			factor = 3
+			any_subject_country = {
+				liberty_desire = 40
+			}
+		}
+		modifier = {
+			factor = 3
+			tag = BYZ
+		}
+		modifier = {
+			factor = 0.5
+			has_reform = steppe_horde
+		}
+		modifier = {
+			factor = 0
+			is_subject_other_than_tributary_trigger = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					AND = {
+						personal_union = 1
+						any_subject_country = {
+							liberty_desire = 25
+						}
+					}
+					any_subject_country = {
+						liberty_desire = 40
+					}
+					has_subject_of_type = tributary_state
+					colony = 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			tag = POL
+			OR = {
+				NOT = {
+					vassal = 3
+					is_year = 1480
+				}
+				NOT = { personal_union = 2 }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = spy_ideas
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = exploration_ideas
+				has_idea_group = maritime_ideas
+				has_idea_group = court_ideas
+			}
+		}
+	}
+}
+
+naval_ideas = {
+	category = MIL
+
+	trigger = {
+		primitives = no
+	}
+
+	bonus = {
+		global_naval_barrage_cost = -1
+		disengagement_chance = 0.15
+	}
+
+	boarding_parties = {
+		leader_naval_shock = 1
+		landing_penalty = -1
+	}
+	improved_rams = {
+		galley_power = 0.25
+	}
+	naval_cadets = {
+		leader_naval_fire = 1
+		sunk_ship_morale_hit_recieved = -0.33
+	}
+	naval_glory = {
+		navy_tradition = 1
+		siege_blockade_progress = 1
+	}
+	press_gangs = {
+		sailors_recovery_speed = 0.25
+		allowed_marine_fraction = 0.25
+	}
+	oak_forests_for_ships = {
+		heavy_ship_power = 0.20
+		ship_durability = 0.1
+	}
+	superior_seamanship = {
+		naval_morale = 0.1
+		global_naval_engagement_modifier = 0.1
+	}
+
+	ai_will_do = {
+		factor = 0.8
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = navigator_personality 
+				ruler_has_personality = expansionist_personality
+				ruler_has_personality = legendary_pirate_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = conqueror_personality 
+				ruler_has_personality = legendary_conqueror_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = economic_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = trade_ideas
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_government_attribute = is_pirate_republic_reform
+				has_reform = barbary_sultanate_reform
+			}
+		}
+		modifier = {
+			factor = 2
+			capital_scope = {
+				is_island = yes
+			}
+		}
+		modifier = {
+			factor = 4
+			tag = GBR
+			NOT = {
+				num_of_owned_provinces_with = {
+					region = france_region
+					value = 2
+				}
+			}
+			NOT = {
+				FRA = {
+					num_of_owned_provinces_with = {
+						region = british_isles_region
+						value = 4
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			tag = FRA
+			GBR = {
+				has_idea_group = naval_ideas
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				tag = MAM
+				tag = EGY
+			}
+			OR = {
+				is_enemy = SPA
+				is_enemy = ARA
+				is_enemy = POR
+				is_enemy = CAS
+				is_enemy = VEN
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				tag = POR
+				tag = NED
+				tag = DAN
+				tag = SPA
+				tag = KNI
+				tag = SOO
+				tag = VEN
+				tag = BEI
+				tag = MLC
+				tag = MSA
+				tag = JAP
+			}
+		}
+		modifier = {
+			factor = 3
+			num_of_heavy_ship = 20
+			NOT = { tag = TUR }
+		}
+		modifier = {
+			factor = 3
+			num_of_galley = 30
+			NOT = { tag = TUR }
+		}
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+			NOT = { is_colonial_nation = yes }
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = offensive_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = quantity_ideas
+				has_idea_group = theocracy_gov_ideas
+				has_idea_group = indigenous_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+	}
+}
+
+court_ideas = {
+	category = DIP
+
+
+	bonus = {
+		legitimacy = 0.5 
+		republican_tradition = 0.2
+		devotion = 0.5 
+		horde_unity = 0.5
+		meritocracy = 0.25 
+		imperial_mandate = 0.1
+		imperial_authority = 0.05
+		monthly_cultural_unity = 0.5
+	}
+	
+	long_echo = {
+		power_projection_from_insults = 1
+		diplomatic_reputation = 1
+	}
+	recognize_hierarchy = {
+		all_estate_loyalty_equilibrium = 0.1
+		loyalty_change_on_revoked = 0.05
+	}
+	welcoming_ceremonies = {
+		prestige = 1 
+		monthly_persian_influence = 0.1
+	}
+	tranquil_coordination = {
+		reform_progress_growth = 0.2
+	}
+	respected_authority = {
+		all_estate_possible_privileges = 1
+	}
+	palace_of_splendor = {
+		monthly_splendor = 2 
+		estate_interaction_cooldown_modifier = -0.20
+	}
+	court_embassies = {
+		possible_dip_policy = 1 
+		monarch_diplomatic_power = 1 
+	}
+
+	ai_will_do = {
+		factor = 0.9
+		modifier = {
+			factor = 2
+			OR = {
+				personality = ai_diplomat
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = reformist_personality
+				ruler_has_personality = righteous_personality
+				ruler_has_personality = well_connected_personality
+				ruler_has_personality = well_advised_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = malevolent_personality
+				ruler_has_personality = petty_personality
+				ruler_has_personality = babbling_buffoon_personality
+				ruler_has_personality = embezzler_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = expansion_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = administrative_ideas
+				has_idea_group = horde_gov_ideas
+				has_idea_group = aristocracy_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = offensive_ideas
+			}
+		}
+		modifier = {
+			factor = 20
+			OR = {
+				is_emperor = yes
+				is_emperor_of_china = yes
+				tag = PER
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = diplomatic_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = exploration_ideas
+				has_idea_group = maritime_ideas
+				has_idea_group = influence_ideas
+				has_idea_group = spy_ideas
+			}
+		}
+	}
+}
+
+mercenary_ideas = {
+	category = MIL 
+
+	bonus = {
+		mercenary_discipline = 0.05
+		possible_condottieri = 1 
+	}
+
+	organised_mercenary_payment = {
+		mercenary_cost = -0.25
+	}
+	war_council = {
+		mil_advisor_cost = -0.25
+		merc_independent_from_trade_range = yes
+	}
+	expanded_contracts = {
+		merc_maintenance_modifier = -0.25
+	}
+	nation_of_war = {
+		mil_tech_cost_modifier = -0.1
+	}
+	benefits_for_mercenaries = {
+		war_taxes_cost_modifier = -0.5
+		merc_leader_army_tradition = 0.5
+	}
+	seasoned_veterans = {
+		infantry_power = 0.1
+	}
+	organised_mercenary_recruitment = { 
+		mercenary_manpower = 0.3
+		allow_mercenary_drill = yes
+	}
+
+	ai_will_do = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			NOT = { num_of_mercenaries = 10 }
+		}
+		modifier = {
+			factor = 2
+			num_of_mercenaries = 20
+		}
+		modifier = {
+			factor = 2
+			num_of_mercenaries = 30
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				has_reform = doppelsoldner_reform
+				has_reform = swiss_mercenary_reform
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = infrastructure_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = court_ideas
+			}
+		}
+	}
+}
+
+infrastructure_ideas = {
+	category = ADM
+	
+
+	bonus = {
+		development_cost = -0.1
+	}
+
+	state_efficiency = {
+		global_prosperity_growth = 0.25
+		state_maintenance_modifier = -0.33
+	}
+	organised_construction = {
+		build_cost = -0.1 
+	}
+	efficient_construction_plans = {
+		expand_infrastructure_cost_modifier = -0.25
+	}
+	expanded_infrastructure_network = {
+		movement_speed = 0.1
+		center_of_trade_upgrade_cost = -0.2
+	}
+	administrative_efficiency_idea = {
+		state_governing_cost = -0.1
+	}
+	fort_logistics = {
+		fort_maintenance_modifier = -0.25
+ 	}
+	regulation_bureau = {
+		expand_administration_cost = -1
+		build_time = -0.25
+	}
+
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 2
+			OR = {
+				personality = ai_capitalist
+				personality = ai_balanced
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = { 
+				ruler_has_personality = architectural_visionary_personality 
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = great_engineer_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = { 
+				ruler_has_personality = obsessive_perfectionist_personality 
+				ruler_has_personality = greedy_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_idea_group = exploration_ideas
+				has_idea_group = trade_ideas
+				has_idea_group = defensive_ideas
+				has_idea_group = offensive_ideas
+				has_idea_group = plutocracy_ideas
+				has_idea_group = quality_ideas
+				has_idea_group = aristocracy_ideas
+			}
+		}
+		modifier = {
+			factor = 2
+			is_year = 1500
+			NOT = { grown_by_states = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_colonial_nation = yes
+				is_vassal = yes
+				is_lesser_in_union = yes
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm_tech = 14 }
+			OR = {
+				has_idea_group = innovativeness_ideas
+				has_idea_group = religious_ideas
+				has_idea_group = economic_ideas
+				has_idea_group = expansion_ideas
+				has_idea_group = administrative_ideas
+				has_idea_group = humanist_ideas
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+on_startup = { # SOE Edited
+	events = {
+		soe_event.0
+	}
+}

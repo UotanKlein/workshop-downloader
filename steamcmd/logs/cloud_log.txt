@@ -1,0 +1,647 @@
+
+
+[2024-05-16 23:21:31] Client version: 1715636761
+[2024-05-16 23:21:31] [AppID 7] Starting sync (init,)
+[2024-05-16 23:21:31] [AppID 7] AutoCloud checking local state for user 885391787
+[2024-05-16 23:21:31] [U:1:885391787] [AppID 7] Init cache request complete
+[2024-05-16 23:21:31] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'
+[2024-05-16 23:21:32] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-16 23:21:32] [AppID 7] Starting sync (eval,)
+[2024-05-16 23:21:32] [AppID 7] AutoCloud checking local state for user 885391787
+[2024-05-16 23:21:32] [AppID 7] Need to sync from local change number '0' to global change number '15723363953329621131', but not attempting now
+[2024-05-16 23:21:32] [AppID 7] Need to download file serverbrowser_hist.vdf
+[2024-05-16 23:21:32] [AppID 7] Need to download file sharedconfig.vdf
+[2024-05-16 23:21:32] [AppID 7] Eval complete
+[2024-05-16 23:21:32] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-16 23:21:32] [AppID 7] YldWriteCacheDirectoryToFile - saved to 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'
+[2024-05-16 23:21:32] [Roaming Config] PerformSyncCloud - syncing cloud files locally
+[2024-05-16 23:21:32] [AppID 7] Starting sync (down,)
+[2024-05-16 23:21:35] [AppID 7] Attempting to sync from local change number '0' to global change number '15723363953329621131'
+[2024-05-16 23:21:35] [AppID 7] Need to download file serverbrowser_hist.vdf
+[2024-05-16 23:21:35] [AppID 7] Need to download file sharedconfig.vdf
+[2024-05-16 23:21:35] [AppID 7] HTTP download for file 'sharedconfig.vdf' from host 'steamcloudsweden.blob.core.windows.net', path /cloud/AB/01/C6/34/7/034_B_19609BFC_78772_210.dat?sv=2017-04-17&se=2024-05-16T21%3A21%3A35Z&sr=b&sp=r&sig=CXqoVxm28POoBlYzDwj1eX2kTSQOifTvTkomO2MfI8M%3D, beginning. . .
+[2024-05-16 23:21:35] [AppID 7] HTTP download for file 'serverbrowser_hist.vdf' from host 'steamcloudsweden.blob.core.windows.net', path /cloud/AB/01/C6/34/7/034_B_19644BE1_44BEB_6662.dat?sv=2017-04-17&se=2024-05-16T21%3A21%3A35Z&sr=b&sp=r&sig=OGiyguHDwkwWNcZARFXK3TJRpY%2FeLFtRMg2Q5ZeNcrA%3D, beginning. . .
+[2024-05-16 23:21:36] [AppID 7] HTTP download for file 'serverbrowser_hist.vdf' from host 'steamcloudsweden.blob.core.windows.net' - Success.
+[2024-05-16 23:21:36] [AppID 7] HTTP download for file 'sharedconfig.vdf' from host 'steamcloudsweden.blob.core.windows.net' - Success.
+[2024-05-16 23:21:36] [AppID 7] Download OK for file serverbrowser_hist.vdf
+[2024-05-16 23:21:36] [AppID 7] Download OK for file sharedconfig.vdf
+[2024-05-16 23:21:36] [AppID 7] Download complete, result OK
+[2024-05-16 23:21:36] [AppID 7] Successfully synced to ChangeNumber 15723363953329621131
+[2024-05-16 23:21:36] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-16 23:21:36] [AppID 7] YldWriteCacheDirectoryToFile - saved to 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'
+[2024-05-16 23:21:37] [AppID 7] Starting sync (down,)
+[2024-05-16 23:21:38] [AppID 7] Currently already synced to global change number '15723363953329621131', should be nothing to download
+[2024-05-16 23:21:38] [AppID 7] Download complete in build list
+[2024-05-16 23:21:38] [AppID 7] Successfully synced to ChangeNumber 0
+[2024-05-16 23:21:38] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-16 23:21:38] [AppID 7] YldWriteCacheDirectoryToFile - saved to 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'
+[2024-05-16 23:22:32] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-21 10:09:23] Client version: 1716242337
+[2024-05-21 10:09:23] [AppID 7] Starting sync (init,)
+[2024-05-21 10:09:23] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-21 10:09:23] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-21 10:09:23] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-21 10:09:24] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-21 10:09:24] [AppID 7] Starting sync (eval,)
+[2024-05-21 10:09:24] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-21 10:09:24] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-21 10:09:24] [AppID 7] Eval complete
+[2024-05-21 10:09:24] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-21 10:09:24] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-21 10:09:24] [AppID 7] Starting sync (down,)
+[2024-05-21 10:09:24] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-21 10:09:24] [AppID 7] Download complete in build list
+[2024-05-21 10:09:24] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-21 10:09:24] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-21 10:09:24] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-21 10:10:24] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-21 10:11:17] Client version: 1716242337
+[2024-05-21 10:11:17] [AppID 7] Starting sync (init,)
+[2024-05-21 10:11:17] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-21 10:11:17] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-21 10:11:17] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-21 10:11:19] [AppID 7] Starting sync (init,)
+[2024-05-21 10:11:19] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-21 10:11:19] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-21 10:11:19] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-21 10:11:20] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-21 10:11:20] [AppID 7] Starting sync (eval,)
+[2024-05-21 10:11:20] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-21 10:11:20] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-21 10:11:20] [AppID 7] Eval complete
+[2024-05-21 10:11:20] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-21 10:11:20] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-21 10:11:20] [AppID 7] Starting sync (down,)
+[2024-05-21 10:11:20] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-21 10:11:20] [AppID 7] Download complete in build list
+[2024-05-21 10:11:20] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-21 10:11:20] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-21 10:11:20] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-21 10:12:20] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-22 11:45:44] Client version: 1716242337
+[2024-05-22 11:45:44] [AppID 7] Starting sync (init,)
+[2024-05-22 11:45:44] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:45:44] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:45:44] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:45:46] [AppID 7] Starting sync (init,)
+[2024-05-22 11:45:46] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:45:46] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:45:46] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:45:46] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 11:45:46] [AppID 7] Starting sync (eval,)
+[2024-05-22 11:45:46] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:45:47] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 11:45:47] [AppID 7] Eval complete
+[2024-05-22 11:45:47] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 11:45:47] [AppID 7] Starting sync (down,)
+[2024-05-22 11:45:47] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:45:47] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 11:45:47] [AppID 7] Download complete in build list
+[2024-05-22 11:45:47] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 11:45:47] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 11:45:47] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:46:56] Client version: 1716242337
+[2024-05-22 11:46:56] [AppID 7] Starting sync (init,)
+[2024-05-22 11:46:56] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:46:56] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:46:56] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:46:58] [AppID 7] Starting sync (init,)
+[2024-05-22 11:46:58] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:46:58] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:46:58] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:46:59] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 11:46:59] [AppID 7] Starting sync (eval,)
+[2024-05-22 11:46:59] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:46:59] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 11:46:59] [AppID 7] Eval complete
+[2024-05-22 11:46:59] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 11:46:59] [AppID 7] Starting sync (down,)
+[2024-05-22 11:46:59] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:46:59] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 11:46:59] [AppID 7] Download complete in build list
+[2024-05-22 11:46:59] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 11:46:59] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 11:46:59] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:47:42] Client version: 1716242337
+[2024-05-22 11:47:42] [AppID 7] Starting sync (init,)
+[2024-05-22 11:47:42] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:47:42] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:47:42] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:48:41] Client version: 1716242337
+[2024-05-22 11:48:41] [AppID 7] Starting sync (init,)
+[2024-05-22 11:48:41] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:48:41] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:48:41] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:48:43] [AppID 7] Starting sync (init,)
+[2024-05-22 11:48:43] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:48:43] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:48:43] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:48:43] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 11:48:43] [AppID 7] Starting sync (eval,)
+[2024-05-22 11:48:43] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:48:44] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 11:48:44] [AppID 7] Eval complete
+[2024-05-22 11:48:44] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 11:48:44] [AppID 7] Starting sync (down,)
+[2024-05-22 11:48:44] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:48:44] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 11:48:44] [AppID 7] Download complete in build list
+[2024-05-22 11:48:44] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 11:48:44] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 11:48:44] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:49:44] Client version: 1716242337
+[2024-05-22 11:49:44] [AppID 7] Starting sync (init,)
+[2024-05-22 11:49:44] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:49:44] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:49:44] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:49:46] [AppID 7] Starting sync (init,)
+[2024-05-22 11:49:46] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:49:46] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:49:46] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:49:46] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 11:49:46] [AppID 7] Starting sync (eval,)
+[2024-05-22 11:49:46] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:49:46] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 11:49:46] [AppID 7] Eval complete
+[2024-05-22 11:49:46] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 11:49:46] [AppID 7] Starting sync (down,)
+[2024-05-22 11:49:46] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:49:47] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 11:49:47] [AppID 7] Download complete in build list
+[2024-05-22 11:49:47] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 11:49:47] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 11:49:47] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:50:16] Client version: 1716242337
+[2024-05-22 11:50:16] [AppID 7] Starting sync (init,)
+[2024-05-22 11:50:16] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:50:16] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:50:16] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:50:18] [AppID 7] Starting sync (init,)
+[2024-05-22 11:50:18] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:50:18] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:50:18] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:50:19] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 11:50:19] [AppID 7] Starting sync (eval,)
+[2024-05-22 11:50:19] [AppID 7] AutoCloud checking local state for user 1583857126
+
+
+[2024-05-22 11:51:10] Client version: 1716242337
+[2024-05-22 11:51:10] [AppID 7] Starting sync (init,)
+[2024-05-22 11:51:10] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:51:10] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:51:10] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:51:35] Client version: 1716242337
+[2024-05-22 11:51:35] [AppID 7] Starting sync (init,)
+[2024-05-22 11:51:35] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:51:35] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:51:36] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:52:02] Client version: 1716242337
+[2024-05-22 11:52:02] [AppID 7] Starting sync (init,)
+[2024-05-22 11:52:02] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:52:02] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:52:02] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:52:33] Client version: 1716242337
+[2024-05-22 11:52:33] [AppID 7] Starting sync (init,)
+[2024-05-22 11:52:33] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:52:33] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:52:34] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:53:09] Client version: 1716242337
+[2024-05-22 11:53:09] [AppID 7] Starting sync (init,)
+[2024-05-22 11:53:09] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:53:09] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:53:09] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:53:11] [AppID 7] Starting sync (init,)
+[2024-05-22 11:53:11] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:53:11] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:53:11] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 11:56:30] Client version: 1716242337
+[2024-05-22 11:56:30] [AppID 7] Starting sync (init,)
+[2024-05-22 11:56:30] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:56:30] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:56:30] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:56:32] [AppID 7] Starting sync (init,)
+[2024-05-22 11:56:32] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:56:32] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 11:56:32] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:56:32] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 11:56:32] [AppID 7] Starting sync (eval,)
+[2024-05-22 11:56:32] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 11:56:33] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 11:56:33] [AppID 7] Eval complete
+[2024-05-22 11:56:33] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 11:56:33] [AppID 7] Starting sync (down,)
+[2024-05-22 11:56:33] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 11:56:33] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 11:56:33] [AppID 7] Download complete in build list
+[2024-05-22 11:56:33] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 11:56:33] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 11:56:33] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 12:03:39] Client version: 1716242337
+[2024-05-22 12:03:39] [AppID 7] Starting sync (init,)
+[2024-05-22 12:03:39] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 12:03:39] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 12:03:39] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 12:03:41] [AppID 7] Starting sync (init,)
+[2024-05-22 12:03:41] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 12:03:41] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 12:03:41] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 12:03:41] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 12:03:41] [AppID 7] Starting sync (eval,)
+[2024-05-22 12:03:41] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 12:03:42] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 12:03:42] [AppID 7] Eval complete
+[2024-05-22 12:03:42] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 12:03:42] [AppID 7] Starting sync (down,)
+[2024-05-22 12:03:42] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 12:03:42] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 12:03:42] [AppID 7] Download complete in build list
+[2024-05-22 12:03:42] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 12:03:42] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 12:03:42] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 12:04:29] Client version: 1716242337
+[2024-05-22 12:04:29] [AppID 7] Starting sync (init,)
+[2024-05-22 12:04:29] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 12:04:29] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 12:04:29] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 12:04:31] [AppID 7] Starting sync (init,)
+[2024-05-22 12:04:31] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 12:04:31] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 12:04:31] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 12:04:31] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 12:04:31] [AppID 7] Starting sync (eval,)
+[2024-05-22 12:04:31] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 12:04:32] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 12:04:32] [AppID 7] Eval complete
+[2024-05-22 12:04:32] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 12:04:32] [AppID 7] Starting sync (down,)
+[2024-05-22 12:04:32] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 12:04:32] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 12:04:32] [AppID 7] Download complete in build list
+[2024-05-22 12:04:32] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 12:04:32] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 12:04:32] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 12:05:32] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-22 13:40:26] Client version: 1716242337
+[2024-05-22 13:40:26] [AppID 7] Starting sync (init,)
+[2024-05-22 13:40:26] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:40:26] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:40:26] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:40:28] [AppID 7] Starting sync (init,)
+[2024-05-22 13:40:28] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:40:28] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:40:28] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:40:29] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 13:40:29] [AppID 7] Starting sync (eval,)
+[2024-05-22 13:40:29] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:40:29] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 13:40:29] [AppID 7] Eval complete
+[2024-05-22 13:40:29] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 13:40:29] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:40:29] [AppID 7] Starting sync (down,)
+[2024-05-22 13:40:29] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 13:40:29] [AppID 7] Download complete in build list
+[2024-05-22 13:40:29] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 13:40:29] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 13:40:29] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 13:41:10] Client version: 1716242337
+[2024-05-22 13:41:10] [AppID 7] Starting sync (init,)
+[2024-05-22 13:41:10] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:41:10] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:41:10] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:41:11] [AppID 7] Starting sync (init,)
+[2024-05-22 13:41:11] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:41:11] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:41:11] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:41:12] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 13:41:12] [AppID 7] Starting sync (eval,)
+[2024-05-22 13:41:12] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:41:12] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 13:41:12] [AppID 7] Eval complete
+[2024-05-22 13:41:12] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 13:41:12] [AppID 7] Starting sync (down,)
+[2024-05-22 13:41:12] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:41:12] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 13:41:12] [AppID 7] Download complete in build list
+[2024-05-22 13:41:12] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 13:41:12] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 13:41:12] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 13:41:48] Client version: 1716242337
+[2024-05-22 13:41:48] [AppID 7] Starting sync (init,)
+[2024-05-22 13:41:48] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:41:48] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:41:48] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:41:50] [AppID 7] Starting sync (init,)
+[2024-05-22 13:41:50] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:41:50] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:41:50] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:41:50] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 13:41:50] [AppID 7] Starting sync (eval,)
+[2024-05-22 13:41:50] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:41:50] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 13:41:50] [AppID 7] Eval complete
+[2024-05-22 13:41:50] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 13:41:50] [AppID 7] Starting sync (down,)
+[2024-05-22 13:41:50] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:41:51] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 13:41:51] [AppID 7] Download complete in build list
+[2024-05-22 13:41:51] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 13:41:51] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 13:41:51] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 13:42:44] Client version: 1716242337
+[2024-05-22 13:42:44] [AppID 7] Starting sync (init,)
+[2024-05-22 13:42:44] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:42:44] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:42:44] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 13:42:50] Client version: 1716242337
+[2024-05-22 13:42:50] [AppID 7] Starting sync (init,)
+[2024-05-22 13:42:50] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:42:50] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:42:50] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:42:52] [AppID 7] Starting sync (init,)
+[2024-05-22 13:42:52] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:42:52] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:42:52] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:42:53] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 13:42:53] [AppID 7] Starting sync (eval,)
+[2024-05-22 13:42:53] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:42:53] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 13:42:53] [AppID 7] Eval complete
+[2024-05-22 13:42:53] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 13:42:53] [AppID 7] Starting sync (down,)
+[2024-05-22 13:42:53] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:42:53] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 13:42:53] [AppID 7] Download complete in build list
+[2024-05-22 13:42:53] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 13:42:53] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 13:42:53] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 13:43:20] Client version: 1716242337
+[2024-05-22 13:43:20] [AppID 7] Starting sync (init,)
+[2024-05-22 13:43:20] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:43:20] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:43:20] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:43:22] [AppID 7] Starting sync (init,)
+[2024-05-22 13:43:22] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:43:22] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:43:22] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:43:22] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 13:43:22] [AppID 7] Starting sync (eval,)
+[2024-05-22 13:43:22] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:43:23] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 13:43:23] [AppID 7] Eval complete
+[2024-05-22 13:43:23] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 13:43:23] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:43:23] [AppID 7] Starting sync (down,)
+[2024-05-22 13:43:23] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 13:43:23] [AppID 7] Download complete in build list
+[2024-05-22 13:43:23] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 13:43:23] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 13:43:23] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:44:23] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-22 13:47:51] Client version: 1716242337
+[2024-05-22 13:47:51] [AppID 7] Starting sync (init,)
+[2024-05-22 13:47:51] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:47:51] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:47:51] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:47:53] [AppID 7] Starting sync (init,)
+[2024-05-22 13:47:53] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:47:53] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:47:53] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:47:53] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 13:47:53] [AppID 7] Starting sync (eval,)
+[2024-05-22 13:47:53] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:47:54] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 13:47:54] [AppID 7] Eval complete
+[2024-05-22 13:47:54] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 13:47:54] [AppID 7] Starting sync (down,)
+[2024-05-22 13:47:54] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:47:54] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 13:47:54] [AppID 7] Download complete in build list
+[2024-05-22 13:47:54] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 13:47:54] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 13:47:54] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-22 13:50:34] Client version: 1716242337
+[2024-05-22 13:50:34] [AppID 7] Starting sync (init,)
+[2024-05-22 13:50:34] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:50:34] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:50:35] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:50:37] [AppID 7] Starting sync (init,)
+[2024-05-22 13:50:37] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:50:37] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 13:50:37] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:50:37] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 13:50:37] [AppID 7] Starting sync (eval,)
+[2024-05-22 13:50:37] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 13:50:38] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 13:50:38] [AppID 7] Eval complete
+[2024-05-22 13:50:38] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 13:50:38] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:50:38] [AppID 7] Starting sync (down,)
+[2024-05-22 13:50:38] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 13:50:38] [AppID 7] Download complete in build list
+[2024-05-22 13:50:38] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 13:50:38] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 13:50:38] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 13:51:38] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-22 14:42:19] Client version: 1716242337
+[2024-05-22 14:42:19] [AppID 7] Starting sync (init,)
+[2024-05-22 14:42:19] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 14:42:19] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 14:42:19] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 14:42:21] [AppID 7] Starting sync (init,)
+[2024-05-22 14:42:21] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 14:42:21] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 14:42:21] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 14:42:22] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 14:42:22] [AppID 7] Starting sync (eval,)
+[2024-05-22 14:42:22] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 14:42:22] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 14:42:22] [AppID 7] Eval complete
+[2024-05-22 14:42:22] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 14:42:22] [AppID 7] Starting sync (down,)
+[2024-05-22 14:42:22] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 14:42:22] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 14:42:22] [AppID 7] Download complete in build list
+[2024-05-22 14:42:22] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 14:42:22] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 14:42:22] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 14:43:22] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-22 14:49:57] Client version: 1716242337
+[2024-05-22 14:49:57] [AppID 7] Starting sync (init,)
+[2024-05-22 14:49:57] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 14:49:57] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 14:49:57] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 14:49:59] [AppID 7] Starting sync (init,)
+[2024-05-22 14:49:59] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 14:49:59] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-22 14:49:59] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 14:50:00] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-22 14:50:00] [AppID 7] Starting sync (eval,)
+[2024-05-22 14:50:00] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-22 14:50:00] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-22 14:50:00] [AppID 7] Eval complete
+[2024-05-22 14:50:00] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-22 14:50:00] [AppID 7] Starting sync (down,)
+[2024-05-22 14:50:00] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-22 14:50:00] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-22 14:50:00] [AppID 7] Download complete in build list
+[2024-05-22 14:50:00] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-22 14:50:00] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-22 14:50:00] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-23 06:46:21] Client version: 1716242337
+[2024-05-23 06:46:21] [AppID 7] Starting sync (init,)
+[2024-05-23 06:46:21] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 06:46:21] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-23 06:46:22] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 06:46:24] [AppID 7] Starting sync (init,)
+[2024-05-23 06:46:24] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 06:46:24] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-23 06:46:25] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 06:46:25] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-23 06:46:25] [AppID 7] Starting sync (eval,)
+[2024-05-23 06:46:25] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 06:46:25] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-23 06:46:25] [AppID 7] Eval complete
+[2024-05-23 06:46:25] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-23 06:46:25] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 06:46:25] [AppID 7] Starting sync (down,)
+[2024-05-23 06:46:45] [AppID 7] BYieldingBuildFileListToSync Failed for 'down,'
+[2024-05-23 06:46:45] [Roaming Config] OnRemoteStorageSyncedClient() - result Failure
+[2024-05-23 06:46:45] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-23 12:02:58] Client version: 1716242337
+[2024-05-23 12:02:58] [AppID 7] Starting sync (init,)
+[2024-05-23 12:02:58] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 12:02:58] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-23 12:02:58] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 12:03:00] [AppID 7] Starting sync (init,)
+[2024-05-23 12:03:00] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 12:03:00] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-23 12:03:00] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 12:03:01] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-23 12:03:01] [AppID 7] Starting sync (eval,)
+[2024-05-23 12:03:01] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 12:03:01] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-23 12:03:01] [AppID 7] Eval complete
+[2024-05-23 12:03:01] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-23 12:03:01] [AppID 7] Starting sync (down,)
+[2024-05-23 12:03:01] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 12:03:01] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-23 12:03:01] [AppID 7] Download complete in build list
+[2024-05-23 12:03:01] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-23 12:03:01] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-23 12:03:01] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+
+
+[2024-05-23 12:03:38] Client version: 1716242337
+[2024-05-23 12:03:38] [AppID 7] Starting sync (init,)
+[2024-05-23 12:03:38] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 12:03:38] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-23 12:03:38] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 12:03:40] [AppID 7] Starting sync (init,)
+[2024-05-23 12:03:40] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 12:03:40] [U:1:1583857126] [AppID 7] Init cache request complete
+[2024-05-23 12:03:40] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 12:03:41] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-23 12:03:41] [AppID 7] Starting sync (eval,)
+[2024-05-23 12:03:41] [AppID 7] AutoCloud checking local state for user 1583857126
+[2024-05-23 12:03:41] [AppID 7] Need to sync from local change number '0' to global change number '14115922346144061352', but not attempting now
+[2024-05-23 12:03:41] [AppID 7] Eval complete
+[2024-05-23 12:03:41] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-23 12:03:41] [AppID 7] Starting sync (down,)
+[2024-05-23 12:03:41] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 12:03:41] [AppID 7] Attempting to sync from local change number '0' to global change number '14115922346144061352'
+[2024-05-23 12:03:41] [AppID 7] Download complete in build list
+[2024-05-23 12:03:41] [AppID 7] Successfully synced to ChangeNumber 14115922346144061352
+[2024-05-23 12:03:41] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-23 12:03:41] [AppID 7] YldWriteCacheDirectoryToFile - empty vector, deleting 'E:\desktop\steamDownloader\steamcmd/userdata/1583857126/7/remotecache.vdf'
+[2024-05-23 12:04:41] [Roaming Config] PerformSyncCloud - all sync'd up
+
+
+[2024-05-23 12:06:41] Client version: 1716242337
+[2024-05-23 12:06:41] [AppID 7] Starting sync (init,)
+[2024-05-23 12:06:41] [AppID 7] AutoCloud checking local state for user 885391787
+[2024-05-23 12:06:41] [U:1:885391787] [AppID 7] Init cache request complete
+[2024-05-23 12:06:41] [AppID 7] YldWriteCacheDirectoryToFile - saved to 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'
+[2024-05-23 12:06:41] [Roaming Config] PerformSyncCloud - evaluating sync state
+[2024-05-23 12:06:41] [AppID 7] Starting sync (eval,)
+[2024-05-23 12:06:41] [AppID 7] AutoCloud checking local state for user 885391787
+[2024-05-23 12:06:41] [AppID 7] Need to sync from local change number '15723363953329621131' to global change number '14545698075972753530', but not attempting now
+[2024-05-23 12:06:41] [AppID 7] Need to download file serverbrowser_hist.vdf
+[2024-05-23 12:06:41] [AppID 7] Need to download file sharedconfig.vdf
+[2024-05-23 12:06:41] [AppID 7] Eval complete
+[2024-05-23 12:06:41] [Roaming Config] OnRemoteStorageStateEvaluated - result OK
+[2024-05-23 12:06:42] [Roaming Config] PerformSyncCloud - syncing cloud files locally
+[2024-05-23 12:06:42] [AppID 7] Starting sync (down,)
+[2024-05-23 12:06:42] [AppID 7] YldWriteCacheDirectoryToFile - saved to 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'
+[2024-05-23 12:06:45] [AppID 7] Attempting to sync from local change number '15723363953329621131' to global change number '14545698075972753530'
+[2024-05-23 12:06:45] [AppID 7] Need to download file serverbrowser_hist.vdf
+[2024-05-23 12:06:45] [AppID 7] Need to download file sharedconfig.vdf
+[2024-05-23 12:06:45] [AppID 7] HTTP download for file 'sharedconfig.vdf' from host 'steamcloudsweden.blob.core.windows.net', path /cloud/AB/01/C6/34/7/034_B_19609BFC_78772_211.dat?sv=2017-04-17&se=2024-05-23T10%3A06%3A45Z&sr=b&sp=r&sig=d4CRbNKGewYpbmDVelia2S%2F7rLB9cnkNA8lWoKO1gHw%3D, beginning. . .
+[2024-05-23 12:06:45] [AppID 7] HTTP download for file 'serverbrowser_hist.vdf' from host 'steamcloudsweden.blob.core.windows.net', path /cloud/AB/01/C6/34/7/034_B_19644BE1_44BEB_6668.dat?sv=2017-04-17&se=2024-05-23T10%3A06%3A45Z&sr=b&sp=r&sig=C52BvufbfVMJ2V0of2ES8wHoyWpTF5lXryIN1m6D8DI%3D, beginning. . .
+[2024-05-23 12:06:46] [AppID 7] HTTP download for file 'sharedconfig.vdf' from host 'steamcloudsweden.blob.core.windows.net' - Success.
+[2024-05-23 12:06:46] [AppID 7] Download OK for file sharedconfig.vdf
+[2024-05-23 12:06:46] [AppID 7] HTTP download for file 'serverbrowser_hist.vdf' from host 'steamcloudsweden.blob.core.windows.net' - Success.
+[2024-05-23 12:06:46] [AppID 7] Download OK for file serverbrowser_hist.vdf
+[2024-05-23 12:06:46] [AppID 7] Download complete, result OK
+[2024-05-23 12:06:46] [AppID 7] Successfully synced to ChangeNumber 14545698075972753530
+[2024-05-23 12:06:46] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-23 12:06:46] [AppID 7] YldWriteCacheDirectoryToFile - saved to 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'
+[2024-05-23 12:06:47] [AppID 7] Starting sync (down,)
+[2024-05-23 12:06:47] [AppID 7] Currently already synced to global change number '14545698075972753530', should be nothing to download
+[2024-05-23 12:06:47] [AppID 7] Download complete in build list
+[2024-05-23 12:06:47] [AppID 7] Successfully synced to ChangeNumber 0
+[2024-05-23 12:06:47] [Roaming Config] OnRemoteStorageSyncedClient() - result OK
+[2024-05-23 12:06:47] [AppID 7] YldWriteCacheDirectoryToFile - saved to 'E:\desktop\steamDownloader\steamcmd/userdata/885391787/7/remotecache.vdf'

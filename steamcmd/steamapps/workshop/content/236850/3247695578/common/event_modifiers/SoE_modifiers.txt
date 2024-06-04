@@ -1,0 +1,149 @@
+##################################################################################################
+# Scouge of Empires Modifiers - all credits to BubbleGum.
+##################################################################################################
+
+# Timers
+
+developed_adm_timer = {
+}
+
+developed_dip_timer = {
+}
+
+developed_mil_timer = {
+}
+
+produce_gold_timer = {
+}
+
+important_war_timer = {
+}
+
+secondary_war_timer = {
+}
+
+reset_loans_timer = {
+}
+
+reset_exhaustion_timer = {
+}
+
+fort_completed = {
+}
+
+# War Against The Player
+
+war_against_the_player_one = {
+	global_attacker_dice_roll_bonus = 1
+	global_defender_dice_roll_bonus = 1
+	siege_ability = 0.10
+	defensiveness = 0.10
+	recover_army_morale_speed = 0.20
+	reinforce_speed = 0.20
+	discipline = 0.05
+	war_exhaustion = -0.05
+	warscore_from_battles_modifier = 0.1
+	own_coast_naval_combat_bonus = 1
+	naval_morale = 0.1
+	ship_durability = 0.05
+	recover_navy_morale_speed = 0.2
+}
+
+war_against_the_player_two = {
+	own_territory_dice_roll_bonus = 1
+	defensiveness = 0.10
+	recover_army_morale_speed = 0.20
+	reinforce_speed = 0.20
+	war_exhaustion = -0.05
+	own_coast_naval_combat_bonus = 1
+	recover_navy_morale_speed = 0.2
+}
+
+extra_power = {
+	global_manpower_modifier = 0.25
+	land_forcelimit_modifier = 0.25
+	naval_forcelimit_modifier = 0.25
+	global_regiment_cost = -0.1
+	global_ship_cost = -0.1
+	ae_impact = -0.1
+	improve_relation_modifier = 0.25
+	development_cost = -0.1
+	build_cost = -0.1
+	inflation_reduction = 0.02
+	yearly_corruption = -0.2
+	stability_cost_modifier = -0.2
+	advisor_cost = -0.2
+	fort_maintenance_modifier = -0.25
+	state_maintenance_modifier = -0.25
+	possible_policy = 1
+	free_policy = 1
+	free_leader_pool = 1
+	years_of_nationalism = -5
+	administrative_efficiency = 0.05
+	governing_capacity_modifier = 0.2
+	max_absolutism = 10
+}
+
+important_figure = {
+	monarch_lifespan = 0.25
+}
+
+important_figure_two = {
+	monarch_lifespan = -0.50
+}
+
+estate_burghers_mountain_expansion_glacier = {
+	local_development_cost = -0.25
+}
+
+mughals_invade_india = {
+	land_forcelimit_modifier = 1
+	global_manpower_modifier = 1
+	manpower_recovery_speed = 0.5
+	land_maintenance_modifier = -0.25
+	cavalry_power = 0.25
+	siege_ability = 0.25
+	land_morale = 0.15
+	fire_damage = 0.10
+	ae_impact = -0.25
+	fabricate_claims_cost = -0.25
+	core_creation = -0.25
+	years_of_nationalism = -10
+	monarch_military_power = 2
+	global_tax_income = 24
+}
+
+afghans_invade_india = {
+	land_forcelimit_modifier = 1
+	global_manpower_modifier = 1
+	manpower_recovery_speed = 0.25
+	land_maintenance_modifier = -0.25
+	cavalry_power = 0.2
+	siege_ability = 0.2
+	land_morale = 0.1
+	shock_damage = 0.1
+	movement_speed = 0.1
+	ae_impact = -0.15
+	available_province_loot = 0.5
+	loot_amount = 0.5
+	global_tax_income = 24
+}
+
+prussian_glory = {
+	monthly_militarized_society = 0.03
+	monthly_prussian_militarized_society_1 = 0.03
+	monthly_prussian_militarized_society_2 = 0.04
+	monthly_prussian_militarized_society_3 = 0.05
+	land_forcelimit_modifier = 0.25
+	global_manpower_modifier = 0.25
+	manpower_recovery_speed = 0.25
+	land_maintenance_modifier = -0.25
+	drill_gain_modifier = 0.25 
+	drill_decay_modifier = -0.25 
+	yearly_army_professionalism = 0.0025
+	improve_relation_modifier = 0.25
+	ae_impact = -0.15
+	core_creation = -0.15
+	years_of_nationalism = -5
+	monarch_military_power = 2
+}

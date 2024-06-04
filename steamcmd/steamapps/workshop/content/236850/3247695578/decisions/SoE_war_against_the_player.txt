@@ -1,0 +1,145 @@
+country_decisions = {
+    war_against_the_player_start = {
+		color = { 245 45 45 }
+		potential = {
+			ai = yes
+			has_global_flag = soe_extra_bonuses_flag
+		}
+		allow = {
+			NOT = { has_country_modifier = war_against_the_player_one }
+			NOT = { has_country_modifier = war_against_the_player_two }
+			any_known_country = {
+				ai = no
+				war_with = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						luck = yes
+						is_great_power = yes
+					}
+				}
+				add_country_modifier = {
+					name = war_against_the_player_one
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = war_against_the_player_two
+					duration = -1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	war_against_the_player_end = {
+		color = { 245 45 45 }
+		potential = {
+			ai = yes
+		}
+		allow = {
+			OR = {
+				has_country_modifier = war_against_the_player_one
+				has_country_modifier = war_against_the_player_two
+			}
+			NOT = {
+				any_known_country = {
+					ai = no
+					war_with = ROOT
+				}
+			}
+		}
+		effect = {
+			remove_country_modifier = war_against_the_player_one
+			remove_country_modifier = war_against_the_player_two
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	war_against_the_player_economy = {
+		color = { 245 45 45 }
+		potential = {
+			ai = yes
+			has_global_flag = soe_extra_bonuses_flag
+			NOT = { has_country_modifier = reset_loans_timer }
+		}
+		allow = {
+			num_of_loans = 5
+			any_known_country = {
+				ai = no
+				war_with = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 5
+			add_inflation = -2
+			add_corruption = -2
+			add_country_modifier = {
+				name = reset_loans_timer
+				duration = 1825
+				hidden = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	war_against_the_player_long_war = {
+		color = { 245 45 45 }
+		potential = {
+			ai = yes
+			has_global_flag = soe_extra_bonuses_flag
+			NOT = { has_country_modifier = reset_exhaustion_timer }
+		}
+		allow = {
+			war_exhaustion = 5
+			any_known_country = {
+				ai = no
+				war_with = ROOT
+			}
+		}
+		effect = {
+			add_war_exhaustion = -5
+			add_yearly_manpower = 2
+			create_general = { tradition = 100 }
+			add_country_modifier = {
+				name = reset_exhaustion_timer
+				duration = 1825
+				hidden = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	soe_modifier_for_ai = {
+		potential = {
+			ai = yes
+			has_global_flag = soe_ai_bonuses_flag
+			NOT = { has_country_modifier = extra_power }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = "extra_power"
+				duration = -1
+			}
+		}
+	}
+}

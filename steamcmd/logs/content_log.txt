@@ -1,0 +1,1661 @@
+
+
+[2024-05-16 07:27:08] Client version: 1715636761
+[2024-05-16 07:27:08] Load failed: E:\desktop\steamcmd\steamapps\libraryfolders.vdf.
+[2024-05-16 07:27:08] Load failed: E:\desktop\steamcmd\config\libraryfolders.vdf.
+[2024-05-16 07:27:08] Steam library folders configuration will be reset.
+[2024-05-16 07:27:08] No install folder configuration files found.
+
+
+[2024-05-16 07:53:37] Client version: 1715636761
+[2024-05-16 07:53:37] Load failed: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf.
+[2024-05-16 07:53:37] Load failed: E:\desktop\steamDownloader\steamcmd\config\libraryfolders.vdf.
+[2024-05-16 07:53:37] Steam library folders configuration will be reset.
+[2024-05-16 07:53:37] No install folder configuration files found.
+
+
+[2024-05-16 07:54:18] Client version: 1715636761
+[2024-05-16 07:54:18] Load failed: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf.
+[2024-05-16 07:54:18] Load failed: E:\desktop\steamDownloader\steamcmd\config\libraryfolders.vdf.
+[2024-05-16 07:54:18] Steam library folders configuration will be reset.
+[2024-05-16 07:54:18] No install folder configuration files found.
+
+
+[2024-05-16 07:55:40] Client version: 1715636761
+[2024-05-16 07:55:40] Load failed: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf.
+[2024-05-16 07:55:40] Load failed: E:\desktop\steamDownloader\steamcmd\config\libraryfolders.vdf.
+[2024-05-16 07:55:40] Steam library folders configuration will be reset.
+[2024-05-16 07:55:40] No install folder configuration files found.
+
+
+[2024-05-16 07:55:52] Client version: 1715636761
+[2024-05-16 07:55:52] Load failed: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf.
+[2024-05-16 07:55:52] Load failed: E:\desktop\steamDownloader\steamcmd\config\libraryfolders.vdf.
+[2024-05-16 07:55:52] Steam library folders configuration will be reset.
+[2024-05-16 07:55:52] No install folder configuration files found.
+
+
+[2024-05-16 07:55:59] Client version: 1715636761
+[2024-05-16 07:55:59] Load failed: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf.
+[2024-05-16 07:55:59] Load failed: E:\desktop\steamDownloader\steamcmd\config\libraryfolders.vdf.
+[2024-05-16 07:55:59] Steam library folders configuration will be reset.
+[2024-05-16 07:55:59] No install folder configuration files found.
+
+
+[2024-05-16 07:58:36] Client version: 1715636761
+[2024-05-16 07:58:36] Load failed: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf.
+[2024-05-16 07:58:36] Load failed: E:\desktop\steamDownloader\steamcmd\config\libraryfolders.vdf.
+[2024-05-16 07:58:36] Steam library folders configuration will be reset.
+[2024-05-16 07:58:36] No install folder configuration files found.
+[2024-05-16 07:58:45] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 07:58:45] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 07:59:35] AppID 4000 scheduler update : Priority First, not played for 1715835575 seconds, update disabled for 0 seconds
+[2024-05-16 07:59:35] AppID 4000 update changed : Running Update,
+[2024-05-16 07:59:35] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 07:59:36] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 07:59:36] Moving to source priority class '6'
+[2024-05-16 07:59:36] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 07:59:36] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 07:59:36] Created download interface of type 'SteamCache' (7) to host cache2-svo-retn.steamcontent.com (cache2-svo-retn.steamcontent.com)
+[2024-05-16 07:59:37] HTTP/2 available
+[2024-05-16 07:59:37] Created ipv4-only http client
+[2024-05-16 07:59:37] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 07:59:37] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): cache1-hel-retn.steamcontent.com/depot/4000/manifest/3432538141457621303/5/6227160996365684363 - received 200 (OK) HTTP response
+[2024-05-16 07:59:38] AppID 4000 update changed : Running Update,
+[2024-05-16 07:59:38] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 07:59:38] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 07:59:38] AppID 4000 update changed : Running Update,
+[2024-05-16 07:59:38] AppID 4000 update started : download 0/2160, store 0/0, reuse 0/0, delta 0/0, stage 0/8253 
+[2024-05-16 07:59:38] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 07:59:38] Downloading 1 chunks from depot 4000
+[2024-05-16 07:59:38] HTTPS (SteamCache,309) - cache2-svo-retn.steamcontent.com (139.45.228.1:443 / 139.45.228.1:443, host: cache2-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 07:59:38] AppID 4000 update changed : Running Update,
+[2024-05-16 07:59:38] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 07:59:38] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 2 updated, 0 moved, 0 deleted files
+[2024-05-16 07:59:38] AppID 4000 update changed : Running Update,
+[2024-05-16 07:59:38] AppID 4000 update changed : None
+[2024-05-16 07:59:38] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 08:00:37] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 08:00:38] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 08:00:39] HTTP/2 (SteamCache,309) - cache2-svo-retn.steamcontent.com (139.45.228.1:443 / 139.45.228.1:443, host: cache2-svo-retn.steamcontent.com): Closing connection
+[2024-05-16 08:05:08] stats: (Invalid, 0) : 2617 Bytes, 1 sec (0.01 Mbps). 1 Hits / 0 Misses (100 %, 100 % bytes)
+
+
+[2024-05-16 10:30:07] Client version: 1715636761
+[2024-05-16 10:30:07] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 10:30:08] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 10:30:08] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 10:30:10] AppID 4000 scheduler update : Priority First, not played for 1715844610 seconds, update disabled for 0 seconds
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 10:30:10] Validating active workshop item 2925774481 ...
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,
+[2024-05-16 10:30:10] AppID 4000 has no changes, 1 active: 4000 (3432538141457621303), 1 target: 4000 (3432538141457621303),
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,Staging,
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 10:30:10] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 0 updated, 0 moved, 0 deleted files
+[2024-05-16 10:30:10] AppID 4000 update changed : Running Update,
+[2024-05-16 10:30:10] AppID 4000 update changed : None
+[2024-05-16 10:30:10] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+
+
+[2024-05-16 10:41:49] Client version: 1715636761
+[2024-05-16 10:41:49] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 10:41:51] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 10:41:51] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 10:41:53] AppID 4000 scheduler update : Priority First, not played for 1715845313 seconds, update disabled for 0 seconds
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 10:41:53] Validating active workshop item 2925774481 ...
+[2024-05-16 10:41:53] Validation: missing file "2925774481\gmpublisher.gma"
+[2024-05-16 10:41:53] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 10:41:53] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,
+[2024-05-16 10:41:53] AppID 4000 update started : download 0/2160, store 0/0, reuse 0/0, delta 0/0, stage 0/8253 
+[2024-05-16 10:41:53] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 10:41:53] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 10:41:53] Moving to source priority class '6'
+[2024-05-16 10:41:53] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 10:41:53] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 10:41:53] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 10:41:53] Downloading 1 chunks from depot 4000
+[2024-05-16 10:41:53] HTTP/2 available
+[2024-05-16 10:41:53] Created ipv4-only http client
+[2024-05-16 10:41:54] HTTPS (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 10:41:54] AppID 4000 update changed : Running Update,
+[2024-05-16 10:41:54] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 10:41:54] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 10:41:54] AppID 4000 update changed : Running Update,
+[2024-05-16 10:41:54] AppID 4000 update changed : None
+[2024-05-16 10:41:54] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 10:41:54] HTTP/2 (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 10:41:54] HTTP (SteamCache,141) - cache1-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 10:41:54] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 12:48:11] Client version: 1715636761
+[2024-05-16 12:48:11] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 12:48:12] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 12:48:12] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 12:48:15] AppID 4000 scheduler update : Priority First, not played for 1715852895 seconds, update disabled for 0 seconds
+[2024-05-16 12:48:15] AppID 4000 update changed : Running Update,
+[2024-05-16 12:48:15] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 12:48:16] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 12:48:16] Moving to source priority class '6'
+[2024-05-16 12:48:16] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 12:48:16] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 12:48:16] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 12:48:16] HTTP/2 available
+[2024-05-16 12:48:16] Created ipv4-only http client
+[2024-05-16 12:48:17] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 12:48:17] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/4000/manifest/3464215742853616018/5/18420657670805749623 - received 0 (Invalid) HTTP response
+[2024-05-16 12:48:17] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-16 12:48:17] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-16 12:48:17] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 0 Bytes, 0 sec (0.00 Mbps). 0 Hits / 0 Misses (0 %, 0 % bytes)
+[2024-05-16 12:48:17] Created download interface of type 'SteamCache' (7) to host cache2-svo-retn.steamcontent.com (cache2-svo-retn.steamcontent.com)
+[2024-05-16 12:48:18] HTTPS (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 12:48:18] HTTP/2 (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): cache2-hel-retn.steamcontent.com/depot/4000/manifest/3464215742853616018/5/18420657670805749623 - received 200 (OK) HTTP response
+[2024-05-16 12:48:18] AppID 4000 update changed : Running Update,
+[2024-05-16 12:48:18] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 12:48:18] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 12:48:18] AppID 4000 update changed : Running Update,
+[2024-05-16 12:48:18] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 12:48:18] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 12:48:18] Downloading 1 chunks from depot 4000
+[2024-05-16 12:48:19] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 12:48:19] AppID 4000 update changed : Running Update,
+[2024-05-16 12:48:19] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 12:48:19] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 2 updated, 0 moved, 0 deleted files
+[2024-05-16 12:48:19] AppID 4000 update changed : Running Update,
+[2024-05-16 12:48:19] AppID 4000 update changed : None
+[2024-05-16 12:48:19] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 12:48:19] HTTP (SteamCache,309) - cache2-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-svo-retn.steamcontent.com): Closing connection
+[2024-05-16 12:48:19] HTTP/2 (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 12:48:19] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 12:56:28] Client version: 1715636761
+[2024-05-16 12:56:28] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 12:56:29] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 12:56:29] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 12:56:32] AppID 4000 scheduler update : Priority First, not played for 1715853392 seconds, update disabled for 0 seconds
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 12:56:32] Validating active workshop item 3024317004 ...
+[2024-05-16 12:56:32] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 12:56:32] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 12:56:32] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,
+[2024-05-16 12:56:32] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 12:56:32] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 12:56:32] Got 28 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 12:56:32] Moving to source priority class '6'
+[2024-05-16 12:56:32] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 12:56:32] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 12:56:32] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 12:56:32] Downloading 1 chunks from depot 4000
+[2024-05-16 12:56:32] HTTP/2 available
+[2024-05-16 12:56:32] Created ipv4-only http client
+[2024-05-16 12:56:33] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 12:56:33] AppID 4000 update changed : Running Update,
+[2024-05-16 12:56:33] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 12:56:33] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 12:56:33] AppID 4000 update changed : Running Update,
+[2024-05-16 12:56:33] AppID 4000 update changed : None
+[2024-05-16 12:56:33] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 12:56:33] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 12:56:33] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 12:56:33] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 12:59:21] Client version: 1715636761
+[2024-05-16 12:59:21] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 12:59:22] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 12:59:22] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 12:59:24] AppID 4000 scheduler update : Priority First, not played for 1715853564 seconds, update disabled for 0 seconds
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 12:59:24] Validating active workshop item 3024317004 ...
+[2024-05-16 12:59:24] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 12:59:24] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 12:59:24] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,
+[2024-05-16 12:59:24] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 12:59:24] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 12:59:25] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 12:59:25] Moving to source priority class '6'
+[2024-05-16 12:59:25] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 12:59:25] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 12:59:25] Created download interface of type 'SteamCache' (7) to host cache2-svo-retn.steamcontent.com (cache2-svo-retn.steamcontent.com)
+[2024-05-16 12:59:25] Downloading 1 chunks from depot 4000
+[2024-05-16 12:59:25] HTTP/2 available
+[2024-05-16 12:59:25] Created ipv4-only http client
+[2024-05-16 12:59:25] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 12:59:25] AppID 4000 update changed : Running Update,
+[2024-05-16 12:59:25] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 12:59:25] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 12:59:25] AppID 4000 update changed : Running Update,
+[2024-05-16 12:59:25] AppID 4000 update changed : None
+[2024-05-16 12:59:25] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 12:59:26] HTTP (SteamCache,309) - cache2-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-svo-retn.steamcontent.com): Closing connection
+[2024-05-16 12:59:26] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 12:59:26] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 13:00:30] Client version: 1715636761
+[2024-05-16 13:00:30] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 13:00:31] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 13:00:31] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 13:00:33] AppID 4000 scheduler update : Priority First, not played for 1715853633 seconds, update disabled for 0 seconds
+[2024-05-16 13:00:33] AppID 4000 update changed : Running Update,
+[2024-05-16 13:00:33] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 13:00:34] AppID 4000 update changed : Running Update,
+[2024-05-16 13:00:34] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 13:00:34] Validating active workshop item 3024317004 ...
+[2024-05-16 13:00:34] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 13:00:34] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 13:00:34] AppID 4000 update changed : Running Update,
+[2024-05-16 13:00:34] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 13:00:34] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 13:00:34] AppID 4000 update changed : Running Update,
+[2024-05-16 13:00:34] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 13:00:34] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 13:00:34] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 13:00:34] Moving to source priority class '6'
+[2024-05-16 13:00:34] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 13:00:34] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 13:00:34] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 13:00:34] Downloading 1 chunks from depot 4000
+[2024-05-16 13:00:34] HTTP/2 available
+[2024-05-16 13:00:34] Created ipv4-only http client
+[2024-05-16 13:00:35] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 13:00:35] AppID 4000 update changed : Running Update,
+[2024-05-16 13:00:35] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 13:00:35] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 13:00:35] AppID 4000 update changed : Running Update,
+[2024-05-16 13:00:35] AppID 4000 update changed : None
+[2024-05-16 13:00:35] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 13:00:35] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:00:35] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:00:35] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 13:01:58] Client version: 1715636761
+[2024-05-16 13:01:58] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 13:01:59] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 13:01:59] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 13:02:01] AppID 4000 scheduler update : Priority First, not played for 1715853721 seconds, update disabled for 0 seconds
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 13:02:01] Validating active workshop item 3024317004 ...
+[2024-05-16 13:02:01] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 13:02:01] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 13:02:01] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:01] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 13:02:01] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 13:02:01] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 13:02:01] Moving to source priority class '6'
+[2024-05-16 13:02:01] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 13:02:01] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 13:02:01] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 13:02:01] Downloading 1 chunks from depot 4000
+[2024-05-16 13:02:01] HTTP/2 available
+[2024-05-16 13:02:01] Created ipv4-only http client
+[2024-05-16 13:02:02] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 13:02:02] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:02] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 13:02:02] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 13:02:02] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:02] AppID 4000 update changed : None
+[2024-05-16 13:02:02] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 13:02:02] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:02:02] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:02:02] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 13:02:31] Client version: 1715636761
+[2024-05-16 13:02:31] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 13:02:32] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 13:02:32] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 13:02:34] AppID 4000 scheduler update : Priority First, not played for 1715853754 seconds, update disabled for 0 seconds
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 13:02:34] Validating active workshop item 3024317004 ...
+[2024-05-16 13:02:34] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 13:02:34] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 13:02:34] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:34] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 13:02:34] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 13:02:34] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 13:02:34] Moving to source priority class '6'
+[2024-05-16 13:02:34] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 13:02:34] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 13:02:34] Downloading 1 chunks from depot 4000
+[2024-05-16 13:02:34] HTTP/2 available
+[2024-05-16 13:02:34] Created ipv4-only http client
+[2024-05-16 13:02:35] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 13:02:35] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:35] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 13:02:35] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 13:02:35] AppID 4000 update changed : Running Update,
+[2024-05-16 13:02:35] AppID 4000 update changed : None
+[2024-05-16 13:02:35] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 13:02:35] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:02:35] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 13:03:55] Client version: 1715636761
+[2024-05-16 13:03:55] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 13:03:57] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 13:03:57] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 13:03:58] AppID 4000 scheduler update : Priority First, not played for 1715853838 seconds, update disabled for 0 seconds
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 13:03:58] Validating active workshop item 3024317004 ...
+[2024-05-16 13:03:58] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 13:03:58] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 13:03:58] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,
+[2024-05-16 13:03:58] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 13:03:58] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 13:03:58] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 13:03:58] Moving to source priority class '6'
+[2024-05-16 13:03:58] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 13:03:58] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 13:03:58] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 13:03:58] Downloading 1 chunks from depot 4000
+[2024-05-16 13:03:58] HTTP/2 available
+[2024-05-16 13:03:58] Created ipv4-only http client
+[2024-05-16 13:03:59] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 13:03:59] AppID 4000 update changed : Running Update,
+[2024-05-16 13:03:59] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 13:03:59] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 13:03:59] AppID 4000 update changed : Running Update,
+[2024-05-16 13:03:59] AppID 4000 update changed : None
+[2024-05-16 13:03:59] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 13:03:59] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:03:59] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:03:59] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 13:05:55] Client version: 1715636761
+[2024-05-16 13:05:55] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 13:05:57] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 13:05:57] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 13:05:58] AppID 4000 scheduler update : Priority First, not played for 1715853958 seconds, update disabled for 0 seconds
+[2024-05-16 13:05:58] AppID 4000 update changed : Running Update,
+[2024-05-16 13:05:58] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 13:05:59] AppID 4000 update changed : Running Update,
+[2024-05-16 13:05:59] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 13:05:59] Validating active workshop item 3024317004 ...
+[2024-05-16 13:05:59] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 13:05:59] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 13:05:59] AppID 4000 update changed : Running Update,
+[2024-05-16 13:05:59] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 13:05:59] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 13:05:59] AppID 4000 update changed : Running Update,
+[2024-05-16 13:05:59] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 13:05:59] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 13:05:59] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 13:05:59] Moving to source priority class '6'
+[2024-05-16 13:05:59] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 13:05:59] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 13:05:59] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 13:05:59] Downloading 1 chunks from depot 4000
+[2024-05-16 13:05:59] HTTP/2 available
+[2024-05-16 13:05:59] Created ipv4-only http client
+[2024-05-16 13:06:00] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 13:06:00] AppID 4000 update changed : Running Update,
+[2024-05-16 13:06:00] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 13:06:00] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 13:06:00] AppID 4000 update changed : Running Update,
+[2024-05-16 13:06:00] AppID 4000 update changed : None
+[2024-05-16 13:06:00] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 13:06:00] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:06:00] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:06:00] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 13:26:04] Client version: 1715636761
+[2024-05-16 13:26:04] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 13:26:05] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 13:26:05] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 13:26:07] AppID 4000 scheduler update : Priority First, not played for 1715855167 seconds, update disabled for 0 seconds
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 13:26:07] Validating active workshop item 3024317004 ...
+[2024-05-16 13:26:07] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 13:26:07] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 13:26:07] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,
+[2024-05-16 13:26:07] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 13:26:07] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 13:26:07] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 13:26:07] Moving to source priority class '6'
+[2024-05-16 13:26:07] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 13:26:07] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 13:26:07] Downloading 1 chunks from depot 4000
+[2024-05-16 13:26:07] HTTP/2 available
+[2024-05-16 13:26:07] Created ipv4-only http client
+[2024-05-16 13:26:08] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 13:26:08] AppID 4000 update changed : Running Update,
+[2024-05-16 13:26:08] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 13:26:08] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 13:26:08] AppID 4000 update changed : Running Update,
+[2024-05-16 13:26:08] AppID 4000 update changed : None
+[2024-05-16 13:26:08] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 13:26:08] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 13:26:08] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 19:23:45] Client version: 1715636761
+[2024-05-16 19:23:45] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-16 19:24:21] Client version: 1715636761
+[2024-05-16 19:24:21] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 19:24:26] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 19:24:26] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 19:25:04] AppID 4000 scheduler update : Priority First, not played for 1715876704 seconds, update disabled for 0 seconds
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 19:25:04] Validating active workshop item 3024317004 ...
+[2024-05-16 19:25:04] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 19:25:04] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 19:25:04] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,
+[2024-05-16 19:25:04] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 19:25:04] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 19:25:04] Got 15 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 19:25:04] Moving to source priority class '6'
+[2024-05-16 19:25:04] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 19:25:04] Downloading 1 chunks from depot 4000
+[2024-05-16 19:25:04] HTTP/2 available
+[2024-05-16 19:25:04] Created ipv4-only http client
+[2024-05-16 19:25:05] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 19:25:05] AppID 4000 update changed : Running Update,
+[2024-05-16 19:25:05] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 19:25:05] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 19:25:05] AppID 4000 update changed : Running Update,
+[2024-05-16 19:25:05] AppID 4000 update changed : None
+[2024-05-16 19:25:05] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 19:26:06] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 22:30:16] Client version: 1715636761
+[2024-05-16 22:30:16] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 22:30:18] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 22:30:18] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 22:30:19] AppID 4000 scheduler update : Priority First, not played for 1715887819 seconds, update disabled for 0 seconds
+[2024-05-16 22:30:19] AppID 4000 update changed : Running Update,
+[2024-05-16 22:30:19] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 22:30:20] AppID 4000 update changed : Running Update,
+[2024-05-16 22:30:20] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 22:30:20] Validating active workshop item 3024317004 ...
+[2024-05-16 22:30:20] AppID 4000 update changed : Running Update,
+[2024-05-16 22:30:20] AppID 4000 has no changes, 2 active: 4000 (3464215742853616018),4000 (3432538141457621303), 2 target: 4000 (3464215742853616018),4000 (3432538141457621303),
+[2024-05-16 22:30:20] AppID 4000 update changed : Running Update,Staging,
+[2024-05-16 22:30:20] AppID 4000 update changed : Running Update,
+[2024-05-16 22:30:20] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 22:30:20] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 0 updated, 0 moved, 0 deleted files
+[2024-05-16 22:30:20] AppID 4000 update changed : Running Update,
+[2024-05-16 22:30:20] AppID 4000 update changed : None
+[2024-05-16 22:30:20] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+
+
+[2024-05-16 22:33:58] Client version: 1715636761
+[2024-05-16 22:33:58] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 22:34:00] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 22:34:00] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 22:34:01] AppID 4000 scheduler update : Priority First, not played for 1715888041 seconds, update disabled for 0 seconds
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 22:34:02] Validating active workshop item 3024317004 ...
+[2024-05-16 22:34:02] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 22:34:02] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 22:34:02] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,
+[2024-05-16 22:34:02] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 22:34:02] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 22:34:02] Got 23 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 22:34:02] Moving to source priority class '6'
+[2024-05-16 22:34:02] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 22:34:02] Downloading 1 chunks from depot 4000
+[2024-05-16 22:34:02] HTTP/2 available
+[2024-05-16 22:34:02] Created ipv4-only http client
+[2024-05-16 22:34:07] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 22:34:07] AppID 4000 update changed : Running Update,
+[2024-05-16 22:34:07] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 22:34:07] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 22:34:07] AppID 4000 update changed : Running Update,
+[2024-05-16 22:34:07] AppID 4000 update changed : None
+[2024-05-16 22:34:07] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 22:34:07] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 22:45:40] Client version: 1715636761
+[2024-05-16 22:45:40] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 22:45:41] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 22:45:41] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 22:45:43] AppID 4000 scheduler update : Priority First, not played for 1715888743 seconds, update disabled for 0 seconds
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,Validating,
+[2024-05-16 22:45:43] Validating active workshop item 3024317004 ...
+[2024-05-16 22:45:43] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-16 22:45:43] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 22:45:43] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,
+[2024-05-16 22:45:43] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-16 22:45:43] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 22:45:44] Got 29 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 22:45:44] Moving to source priority class '6'
+[2024-05-16 22:45:44] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 22:45:44] Downloading 1 chunks from depot 4000
+[2024-05-16 22:45:44] HTTP/2 available
+[2024-05-16 22:45:44] Created ipv4-only http client
+[2024-05-16 22:45:45] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 22:45:45] AppID 4000 update changed : Running Update,
+[2024-05-16 22:45:45] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 22:45:45] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-16 22:45:45] AppID 4000 update changed : Running Update,
+[2024-05-16 22:45:45] AppID 4000 update changed : None
+[2024-05-16 22:45:45] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 22:45:45] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-16 23:10:58] Client version: 1715636761
+[2024-05-16 23:10:58] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-16 23:11:03] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-16 23:11:03] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-16 23:12:52] AppID 236850 scheduler update : Priority First, not played for 1715890372 seconds, update disabled for 0 seconds
+[2024-05-16 23:12:52] AppID 236850 update changed : Running Update,
+[2024-05-16 23:12:52] AppID 236850 update changed : Running Update,Reconfiguring,
+[2024-05-16 23:12:53] AppID 236850 update changed : Running Update,Reconfiguring,Stopping,
+[2024-05-16 23:12:53] AppID 236850 update changed : Running Update,Stopping,
+[2024-05-16 23:12:53] AppID 236850 update changed : None
+[2024-05-16 23:12:53] AppID 236850 scheduler finished : removed from schedule (result Missing decryption key, state 0x0) 
+[2024-05-16 23:15:17] AppID 4000 scheduler update : Priority First, not played for 1715890517 seconds, update disabled for 0 seconds
+[2024-05-16 23:15:17] AppID 4000 update changed : Running Update,
+[2024-05-16 23:15:17] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-16 23:15:18] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 23:15:18] Moving to source priority class '6'
+[2024-05-16 23:15:18] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 23:15:18] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-16 23:15:18] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 23:15:18] HTTP/2 available
+[2024-05-16 23:15:18] Created ipv4-only http client
+[2024-05-16 23:15:19] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 23:15:19] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/4000/manifest/1855536845919544334/5/1080589048365526889 - received 200 (OK) HTTP response
+[2024-05-16 23:15:19] AppID 4000 update changed : Running Update,
+[2024-05-16 23:15:19] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-16 23:15:19] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-16 23:15:19] AppID 4000 update changed : Running Update,
+[2024-05-16 23:15:19] AppID 4000 update started : download 0/1328, store 0/0, reuse 0/0, delta 0/0, stage 0/4360 
+[2024-05-16 23:15:19] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-16 23:15:19] Downloading 1 chunks from depot 4000
+[2024-05-16 23:15:19] AppID 4000 update changed : Running Update,
+[2024-05-16 23:15:19] AppID 4000 update changed : Running Update,Committing,
+[2024-05-16 23:15:19] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 2 updated, 0 moved, 0 deleted files
+[2024-05-16 23:15:19] AppID 4000 update changed : Running Update,
+[2024-05-16 23:15:19] AppID 4000 update changed : None
+[2024-05-16 23:15:19] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 23:16:19] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 23:16:19] HTTP (SteamCache,141) - cache1-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 23:16:20] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-16 23:17:58] AppID 236850 scheduler update : Priority First, not played for 1715890678 seconds, update disabled for 0 seconds
+[2024-05-16 23:17:58] AppID 236850 update changed : Running Update,
+[2024-05-16 23:17:58] AppID 236850 update changed : Running Update,Reconfiguring,
+[2024-05-16 23:17:58] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 23:17:58] AppID 236850 update changed : Running Update,Reconfiguring,Stopping,
+[2024-05-16 23:17:58] AppID 236850 update changed : Running Update,Stopping,
+[2024-05-16 23:17:58] AppID 236850 update changed : None
+[2024-05-16 23:17:58] AppID 236850 scheduler finished : removed from schedule (result Missing decryption key, state 0x0) 
+[2024-05-16 23:22:17] AppID 236850 scheduler update : Priority First, not played for 332500 seconds, update disabled for 0 seconds
+[2024-05-16 23:22:17] AppID 236850 update changed : Running Update,
+[2024-05-16 23:22:17] AppID 236850 update changed : Running Update,Reconfiguring,
+[2024-05-16 23:22:17] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-16 23:22:17] Moving to source priority class '6'
+[2024-05-16 23:22:17] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-16 23:22:17] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-16 23:22:19] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 23:22:19] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/236850/manifest/5036247993337129612/5/7441343064321308582 - received 0 (Invalid) HTTP response
+[2024-05-16 23:22:19] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-16 23:22:19] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-16 23:22:19] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 0 Bytes, 0 sec (0.00 Mbps). 1 Hits / 0 Misses (100 %, 100 % bytes)
+[2024-05-16 23:22:19] Moving to source priority class '5'
+[2024-05-16 23:22:19] Created download interface of type 'SteamCache' (7) to host cache2-rix-retn.steamcontent.com (cache2-rix-retn.steamcontent.com)
+[2024-05-16 23:22:19] Created download interface of type 'SteamCache' (7) to host cache1-rix-retn.steamcontent.com (cache1-rix-retn.steamcontent.com)
+[2024-05-16 23:22:20] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 23:22:20] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): cache1-hel-retn.steamcontent.com/depot/236850/manifest/5036247993337129612/5/7441343064321308582 - received 200 (OK) HTTP response
+[2024-05-16 23:22:20] AppID 236850 update changed : Running Update,
+[2024-05-16 23:22:20] AppID 236850 update changed : Running Update,Preallocating,
+[2024-05-16 23:22:20] AppID 236850 preallocated 5 files (67 MB) 
+[2024-05-16 23:22:20] AppID 236850 update changed : Running Update,
+[2024-05-16 23:22:20] AppID 236850 update started : download 0/4173024, store 0/0, reuse 0/0, delta 0/0, stage 0/71858930 
+[2024-05-16 23:22:20] AppID 236850 update changed : Running Update,Downloading,Staging,
+[2024-05-16 23:22:20] Downloading 355 chunks from depot 236850
+[2024-05-16 23:22:21] HTTPS (SteamCache,140) - cache1-rix-retn.steamcontent.com (139.45.206.18:443 / 139.45.206.18:443, host: cache1-rix-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 23:22:21] HTTPS (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-16 23:22:24] AppID 236850 update changed : Running Update,
+[2024-05-16 23:22:24] AppID 236850 update changed : Running Update,Committing,
+[2024-05-16 23:22:24] AppID 236850 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/236850" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/236850" : 342 updated, 0 moved, 0 deleted files
+[2024-05-16 23:22:24] AppID 236850 update changed : Running Update,
+[2024-05-16 23:22:24] AppID 236850 update changed : None
+[2024-05-16 23:22:24] AppID 236850 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-16 23:22:31] Current download rate: 0.000 Mbps
+[2024-05-16 23:23:24] HTTP/2 (SteamCache,140) - cache1-rix-retn.steamcontent.com (139.45.206.18:443 / 139.45.206.18:443, host: cache1-rix-retn.steamcontent.com): Closing connection
+[2024-05-16 23:23:24] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-16 23:23:24] HTTP/2 (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Closing connection
+
+
+[2024-05-17 03:21:50] Client version: 1715891821
+[2024-05-17 03:21:50] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-17 03:21:52] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-17 03:21:52] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-17 03:21:53] AppID 4000 scheduler update : Priority First, not played for 1715905313 seconds, update disabled for 0 seconds
+[2024-05-17 03:21:53] AppID 4000 update changed : Running Update,
+[2024-05-17 03:21:53] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-17 03:21:54] AppID 4000 update changed : Running Update,
+[2024-05-17 03:21:54] AppID 4000 update changed : Running Update,Validating,
+[2024-05-17 03:21:54] Validating active workshop item 3024317004 ...
+[2024-05-17 03:21:54] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-17 03:21:54] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-17 03:21:54] AppID 4000 update changed : Running Update,
+[2024-05-17 03:21:54] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-17 03:21:54] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-17 03:21:54] AppID 4000 update changed : Running Update,
+[2024-05-17 03:21:54] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-17 03:21:54] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-17 03:21:54] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-17 03:21:54] Moving to source priority class '6'
+[2024-05-17 03:21:54] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-17 03:21:54] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-17 03:21:54] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-17 03:21:54] Downloading 1 chunks from depot 4000
+[2024-05-17 03:21:54] HTTP/2 available
+[2024-05-17 03:21:54] Created ipv4-only http client
+[2024-05-17 03:21:55] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-17 03:21:55] AppID 4000 update changed : Running Update,
+[2024-05-17 03:21:55] AppID 4000 update changed : Running Update,Committing,
+[2024-05-17 03:21:55] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-17 03:21:55] AppID 4000 update changed : Running Update,
+[2024-05-17 03:21:55] AppID 4000 update changed : None
+[2024-05-17 03:21:55] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-17 03:21:55] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-17 03:21:55] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-17 03:21:55] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-17 03:25:52] Client version: 1715891821
+[2024-05-17 03:25:52] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-17 03:25:53] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-17 03:25:53] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-17 03:25:55] AppID 4000 scheduler update : Priority First, not played for 1715905555 seconds, update disabled for 0 seconds
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,Validating,
+[2024-05-17 03:25:55] Validating active workshop item 3024317004 ...
+[2024-05-17 03:25:55] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-17 03:25:55] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-17 03:25:55] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,
+[2024-05-17 03:25:55] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-17 03:25:55] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-17 03:25:55] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-17 03:25:55] Moving to source priority class '6'
+[2024-05-17 03:25:55] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-17 03:25:55] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-17 03:25:55] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-17 03:25:55] Downloading 1 chunks from depot 4000
+[2024-05-17 03:25:55] HTTP/2 available
+[2024-05-17 03:25:55] Created ipv4-only http client
+[2024-05-17 03:25:56] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-17 03:25:56] AppID 4000 update changed : Running Update,
+[2024-05-17 03:25:56] AppID 4000 update changed : Running Update,Committing,
+[2024-05-17 03:25:56] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-17 03:25:56] AppID 4000 update changed : Running Update,
+[2024-05-17 03:25:56] AppID 4000 update changed : None
+[2024-05-17 03:25:56] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-17 03:25:56] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-17 03:25:56] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-17 03:25:56] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-17 03:33:25] Client version: 1715891821
+[2024-05-17 03:33:25] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-17 03:33:57] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-17 03:33:57] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-17 03:34:29] AppID 4000 scheduler update : Priority First, not played for 1715906069 seconds, update disabled for 0 seconds
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,Validating,
+[2024-05-17 03:34:29] Validating active workshop item 3024317004 ...
+[2024-05-17 03:34:29] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-17 03:34:29] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-17 03:34:29] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,
+[2024-05-17 03:34:29] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-17 03:34:29] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-17 03:34:30] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-17 03:34:30] Moving to source priority class '6'
+[2024-05-17 03:34:30] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-17 03:34:30] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-17 03:34:30] Created download interface of type 'SteamCache' (7) to host cache2-svo-retn.steamcontent.com (cache2-svo-retn.steamcontent.com)
+[2024-05-17 03:34:30] Downloading 1 chunks from depot 4000
+[2024-05-17 03:34:30] HTTP/2 available
+[2024-05-17 03:34:30] Created ipv4-only http client
+[2024-05-17 03:34:30] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-17 03:34:30] AppID 4000 update changed : Running Update,
+[2024-05-17 03:34:30] AppID 4000 update changed : Running Update,Committing,
+[2024-05-17 03:34:30] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-17 03:34:30] AppID 4000 update changed : Running Update,
+[2024-05-17 03:34:30] AppID 4000 update changed : None
+[2024-05-17 03:34:30] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-17 03:35:31] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-17 03:35:31] HTTP (SteamCache,309) - cache2-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-svo-retn.steamcontent.com): Closing connection
+[2024-05-17 03:35:31] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+
+
+[2024-05-18 07:33:03] Client version: 1715891821
+[2024-05-18 07:33:03] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-18 07:33:05] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-18 07:33:05] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-18 07:33:30] Client version: 1715891821
+[2024-05-18 07:33:30] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-18 07:36:23] Client version: 1715891821
+[2024-05-18 07:36:23] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-18 07:36:25] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-18 07:36:25] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-18 07:38:48] Client version: 1715891821
+[2024-05-18 07:38:48] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-18 07:38:49] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-18 07:38:49] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-18 07:38:51] AppID 4000 scheduler update : Priority First, not played for 1716007131 seconds, update disabled for 0 seconds
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,Validating,
+[2024-05-18 07:38:51] Validating active workshop item 3024317004 ...
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,
+[2024-05-18 07:38:51] AppID 4000 has no changes, 3 active: 4000 (3464215742853616018),4000 (3432538141457621303),4000 (1855536845919544334), 3 target: 4000 (3464215742853616018),4000 (3432538141457621303),4000 (1855536845919544334),
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,Staging,
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,Committing,
+[2024-05-18 07:38:51] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 0 updated, 0 moved, 0 deleted files
+[2024-05-18 07:38:51] AppID 4000 update changed : Running Update,
+[2024-05-18 07:38:51] AppID 4000 update changed : None
+[2024-05-18 07:38:51] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+
+
+[2024-05-18 07:57:05] Client version: 1715891821
+[2024-05-18 07:57:05] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-18 07:58:59] Client version: 1715891821
+[2024-05-18 07:58:59] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-18 08:02:22] Client version: 1715891821
+[2024-05-18 08:02:22] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-18 08:03:29] Client version: 1715891821
+[2024-05-18 08:03:29] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-18 08:30:35] Client version: 1715891821
+[2024-05-18 08:30:35] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-18 08:31:21] Client version: 1715891821
+[2024-05-18 08:31:21] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-21 10:07:58] Client version: 1716242337
+[2024-05-21 10:07:58] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-21 10:09:23] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-21 10:09:23] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-21 10:10:29] AppID 236850 scheduler update : Priority First, not played for 1716275429 seconds, update disabled for 0 seconds
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,Reconfiguring,
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,Validating,
+[2024-05-21 10:10:29] Validating active workshop item 3233483384 ...
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,
+[2024-05-21 10:10:29] AppID 236850 has no changes, 1 active: 236850 (5036247993337129612), 1 target: 236850 (5036247993337129612),
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,Staging,
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,Committing,
+[2024-05-21 10:10:29] AppID 236850 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/236850" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/236850" : 0 updated, 0 moved, 0 deleted files
+[2024-05-21 10:10:29] AppID 236850 update changed : Running Update,
+[2024-05-21 10:10:29] AppID 236850 update changed : None
+[2024-05-21 10:10:29] AppID 236850 scheduler finished : removed from schedule (result No Error, state 0x0) 
+
+
+[2024-05-21 10:11:07] Client version: 1716242337
+[2024-05-21 10:11:07] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-21 10:11:17] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-21 10:11:17] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:45:43] Client version: 1716242337
+[2024-05-22 11:45:43] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:45:44] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:45:44] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:46:56] Client version: 1716242337
+[2024-05-22 11:46:56] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:46:56] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:46:56] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:47:42] Client version: 1716242337
+[2024-05-22 11:47:42] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:47:42] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:47:42] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:48:41] Client version: 1716242337
+[2024-05-22 11:48:41] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:48:41] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:48:41] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:49:44] Client version: 1716242337
+[2024-05-22 11:49:44] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:49:44] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:49:44] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:50:16] Client version: 1716242337
+[2024-05-22 11:50:16] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:50:16] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:50:16] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:51:10] Client version: 1716242337
+[2024-05-22 11:51:10] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:51:10] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:51:10] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:51:35] Client version: 1716242337
+[2024-05-22 11:51:35] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:51:35] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:51:35] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:52:02] Client version: 1716242337
+[2024-05-22 11:52:02] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:52:02] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:52:02] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:52:33] Client version: 1716242337
+[2024-05-22 11:52:33] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:52:33] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:52:33] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:53:09] Client version: 1716242337
+[2024-05-22 11:53:09] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:53:09] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:53:09] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 11:56:29] Client version: 1716242337
+[2024-05-22 11:56:29] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 11:56:30] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 11:56:30] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 12:03:39] Client version: 1716242337
+[2024-05-22 12:03:39] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 12:03:39] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 12:03:39] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 12:04:29] Client version: 1716242337
+[2024-05-22 12:04:29] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 12:04:29] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 12:04:29] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:40:26] Client version: 1716242337
+[2024-05-22 13:40:26] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:40:26] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:40:26] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:41:10] Client version: 1716242337
+[2024-05-22 13:41:10] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:41:10] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:41:10] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:41:47] Client version: 1716242337
+[2024-05-22 13:41:47] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:41:48] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:41:48] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:42:44] Client version: 1716242337
+[2024-05-22 13:42:44] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:42:44] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:42:44] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:42:50] Client version: 1716242337
+[2024-05-22 13:42:50] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:42:50] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:42:50] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:43:20] Client version: 1716242337
+[2024-05-22 13:43:20] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:43:20] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:43:20] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:47:51] Client version: 1716242337
+[2024-05-22 13:47:51] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:47:51] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:47:51] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 13:50:34] Client version: 1716242337
+[2024-05-22 13:50:34] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-22 13:50:35] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-22 13:50:35] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-22 14:26:54] Client version: 1716242337
+[2024-05-22 14:26:54] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 06:16:01] Client version: 1716242337
+[2024-05-23 06:16:01] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 06:20:35] Client version: 1716242337
+[2024-05-23 06:20:35] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 06:21:23] Client version: 1716242337
+[2024-05-23 06:21:23] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 06:21:45] Client version: 1716242337
+[2024-05-23 06:21:45] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 06:23:26] Client version: 1716242337
+[2024-05-23 06:23:26] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 06:46:21] Client version: 1716242337
+[2024-05-23 06:46:21] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 06:46:22] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 06:46:22] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-23 06:48:54] Client version: 1716242337
+[2024-05-23 06:48:54] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 06:48:58] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 06:48:58] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-23 06:49:30] Client version: 1716242337
+[2024-05-23 06:49:30] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 06:49:32] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 06:49:32] Triggered async write of Steam library folders configuration (1 libraries).
+
+
+[2024-05-23 06:51:44] Client version: 1716242337
+[2024-05-23 06:51:44] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 06:51:49] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 06:51:49] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 06:52:08] AppID 4000 scheduler update : Priority First, not played for 1716436328 seconds, update disabled for 0 seconds
+[2024-05-23 06:52:08] AppID 4000 update changed : Running Update,
+[2024-05-23 06:52:08] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 06:52:09] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 06:52:09] Moving to source priority class '6'
+[2024-05-23 06:52:09] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 06:52:09] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 06:52:09] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 06:52:09] HTTP/2 available
+[2024-05-23 06:52:09] Created ipv4-only http client
+[2024-05-23 06:52:30] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/4000/manifest/8941429388296460093/5/4911902268184748886 - received 0 (Invalid) HTTP response
+[2024-05-23 06:52:30] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-23 06:52:30] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 06:52:30] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 0 Bytes, 0 sec (0.00 Mbps). 0 Hits / 0 Misses (0 %, 0 % bytes)
+[2024-05-23 06:52:30] Created download interface of type 'SteamCache' (7) to host cache2-svo-retn.steamcontent.com (cache2-svo-retn.steamcontent.com)
+[2024-05-23 06:52:31] HTTPS (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 06:52:31] HTTP/2 (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): cache2-hel-retn.steamcontent.com/depot/4000/manifest/8941429388296460093/5/4911902268184748886 - received 200 (OK) HTTP response
+[2024-05-23 06:52:31] AppID 4000 update changed : Running Update,
+[2024-05-23 06:52:31] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 06:52:31] AppID 4000 preallocated 1 files (245 MB) 
+[2024-05-23 06:52:31] AppID 4000 update changed : Running Update,
+[2024-05-23 06:52:31] AppID 4000 update started : download 0/99856736, store 0/0, reuse 0/0, delta 0/0, stage 0/257932179 
+[2024-05-23 06:52:31] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 06:52:31] Downloading 250 chunks from depot 4000
+[2024-05-23 06:52:32] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 06:52:32] HTTPS (SteamCache,309) - cache2-svo-retn.steamcontent.com (139.45.228.1:443 / 139.45.228.1:443, host: cache2-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 06:52:36] AppID 4000 update changed : Running Update,
+[2024-05-23 06:52:36] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 06:52:36] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 2 updated, 0 moved, 0 deleted files
+[2024-05-23 06:52:36] AppID 4000 update changed : Running Update,
+[2024-05-23 06:52:36] AppID 4000 update changed : None
+[2024-05-23 06:52:36] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 06:53:35] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 06:53:35] HTTP/2 (SteamCache,309) - cache2-svo-retn.steamcontent.com (139.45.228.1:443 / 139.45.228.1:443, host: cache2-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 06:53:35] HTTP/2 (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 06:56:02] Client version: 1716242337
+[2024-05-23 06:56:02] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 06:56:04] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 06:56:04] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 06:56:06] AppID 4000 scheduler update : Priority First, not played for 1716436566 seconds, update disabled for 0 seconds
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 06:56:06] Validating active workshop item 1420590255 ...
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:06] AppID 4000 has no changes, 4 active: 4000 (3464215742853616018),4000 (3432538141457621303),4000 (1855536845919544334),4000 (8941429388296460093), 4 target: 4000 (3464215742853616018),4000 (3432538141457621303),4000 (1855536845919544334),4000 (8941429388296460093),
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,Staging,
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 06:56:06] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 0 updated, 0 moved, 0 deleted files
+[2024-05-23 06:56:06] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:06] AppID 4000 update changed : None
+[2024-05-23 06:56:06] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+
+
+[2024-05-23 06:56:07] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 06:56:07] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 06:56:08] AppID 4000 scheduler update : Priority First, not played for 1716436568 seconds, update disabled for 0 seconds
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 06:56:08] Validating active workshop item 1420590255 ...
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:08] AppID 4000 has no changes, 4 active: 4000 (3464215742853616018),4000 (3432538141457621303),4000 (1855536845919544334),4000 (8941429388296460093), 4 target: 4000 (3464215742853616018),4000 (3432538141457621303),4000 (1855536845919544334),4000 (8941429388296460093),
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,Staging,
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 06:56:08] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 0 updated, 0 moved, 0 deleted files
+[2024-05-23 06:56:08] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:08] AppID 4000 update changed : None
+[2024-05-23 06:56:08] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+
+
+[2024-05-23 06:56:09] AppID 4000 update changed : Running Update,Stopping,
+[2024-05-23 06:56:09] AppID 4000 update changed : None
+[2024-05-23 06:56:09] AppID 4000 scheduler finished : removed from schedule (result File locked, state 0x0) 
+
+
+[2024-05-23 06:56:09] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 06:56:09] Moving to source priority class '6'
+[2024-05-23 06:56:09] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 06:56:09] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 06:56:09] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 06:56:09] Downloading 250 chunks from depot 4000
+[2024-05-23 06:56:09] HTTP/2 available
+[2024-05-23 06:56:09] Created ipv4-only http client
+[2024-05-23 06:56:10] HTTPS (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 06:56:10] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 06:56:10] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 06:56:10] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-23 06:56:14] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:14] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 06:56:14] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 2 updated, 0 moved, 0 deleted files
+[2024-05-23 06:56:14] AppID 4000 update changed : Running Update,
+[2024-05-23 06:56:14] AppID 4000 update changed : None
+[2024-05-23 06:56:14] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 06:56:14] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 06:56:14] HTTP/2 (SteamCache,209) - cache2-hel-retn.steamcontent.com (87.245.208.52:443 / 87.245.208.52:443, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 06:56:14] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 07:44:50] Client version: 1716242337
+[2024-05-23 07:44:50] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 07:44:52] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 07:44:52] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 07:44:54] AppID 4000 scheduler update : Priority First, not played for 1716439494 seconds, update disabled for 0 seconds
+[2024-05-23 07:44:54] AppID 4000 update changed : Running Update,
+[2024-05-23 07:44:54] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 07:44:54] AppID 4000 update changed : Running Update,
+[2024-05-23 07:44:54] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 07:44:54] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-23 07:44:54] AppID 4000 update changed : Running Update,
+[2024-05-23 07:44:54] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-23 07:44:54] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 07:44:54] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 07:44:54] Moving to source priority class '6'
+[2024-05-23 07:44:54] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 07:44:54] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 07:44:54] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 07:44:54] Downloading 1 chunks from depot 4000
+[2024-05-23 07:44:54] HTTP/2 available
+[2024-05-23 07:44:54] Created ipv4-only http client
+[2024-05-23 07:44:55] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 07:44:55] AppID 4000 update changed : Running Update,
+[2024-05-23 07:44:55] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 07:44:55] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 2 updated, 0 moved, 0 deleted files
+[2024-05-23 07:44:55] AppID 4000 update changed : Running Update,
+[2024-05-23 07:44:55] AppID 4000 update changed : None
+[2024-05-23 07:44:55] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 07:44:55] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:44:55] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:44:55] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 07:46:28] Client version: 1716242337
+[2024-05-23 07:46:28] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 07:46:29] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 07:46:29] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 07:46:31] AppID 4000 scheduler update : Priority First, not played for 1716439591 seconds, update disabled for 0 seconds
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 07:46:31] Validating active workshop item 3024317004 ...
+[2024-05-23 07:46:31] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-23 07:46:31] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 07:46:31] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,
+[2024-05-23 07:46:31] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-23 07:46:31] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 07:46:31] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 07:46:31] Moving to source priority class '6'
+[2024-05-23 07:46:31] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 07:46:31] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 07:46:31] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 07:46:31] Downloading 1 chunks from depot 4000
+[2024-05-23 07:46:31] HTTP/2 available
+[2024-05-23 07:46:31] Created ipv4-only http client
+[2024-05-23 07:46:32] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 07:46:32] AppID 4000 update changed : Running Update,
+[2024-05-23 07:46:32] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 07:46:32] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-23 07:46:32] AppID 4000 update changed : Running Update,
+[2024-05-23 07:46:32] AppID 4000 update changed : None
+[2024-05-23 07:46:32] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 07:46:32] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:46:32] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:46:32] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 07:52:13] Client version: 1716242337
+[2024-05-23 07:52:13] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 07:52:14] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 07:52:14] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 07:52:16] AppID 4000 scheduler update : Priority First, not played for 1716439936 seconds, update disabled for 0 seconds
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 07:52:16] Validating active workshop item 3024317004 ...
+[2024-05-23 07:52:16] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-23 07:52:16] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 07:52:16] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,
+[2024-05-23 07:52:16] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-23 07:52:16] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 07:52:17] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 07:52:17] Moving to source priority class '6'
+[2024-05-23 07:52:17] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 07:52:17] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 07:52:17] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 07:52:17] Downloading 1 chunks from depot 4000
+[2024-05-23 07:52:17] HTTP/2 available
+[2024-05-23 07:52:17] Created ipv4-only http client
+[2024-05-23 07:52:17] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 07:52:17] AppID 4000 update changed : Running Update,
+[2024-05-23 07:52:17] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 07:52:17] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-23 07:52:17] AppID 4000 update changed : Running Update,
+[2024-05-23 07:52:17] AppID 4000 update changed : None
+[2024-05-23 07:52:17] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 07:52:17] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:52:17] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:52:17] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 07:53:18] Client version: 1716242337
+[2024-05-23 07:53:18] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 07:53:19] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 07:53:19] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 07:53:21] AppID 4000 scheduler update : Priority First, not played for 1716440001 seconds, update disabled for 0 seconds
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 07:53:21] Validating active workshop item 3024317004 ...
+[2024-05-23 07:53:21] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-23 07:53:21] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 07:53:21] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,
+[2024-05-23 07:53:21] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-23 07:53:21] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 07:53:21] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 07:53:21] Moving to source priority class '6'
+[2024-05-23 07:53:21] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 07:53:21] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 07:53:21] Created download interface of type 'SteamCache' (7) to host cache2-svo-retn.steamcontent.com (cache2-svo-retn.steamcontent.com)
+[2024-05-23 07:53:21] Downloading 1 chunks from depot 4000
+[2024-05-23 07:53:21] HTTP/2 available
+[2024-05-23 07:53:21] Created ipv4-only http client
+[2024-05-23 07:53:22] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 07:53:22] AppID 4000 update changed : Running Update,
+[2024-05-23 07:53:22] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 07:53:22] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-23 07:53:22] AppID 4000 update changed : Running Update,
+[2024-05-23 07:53:22] AppID 4000 update changed : None
+[2024-05-23 07:53:22] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 07:53:22] HTTP (SteamCache,309) - cache2-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 07:53:22] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:53:22] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 07:54:41] Client version: 1716242337
+[2024-05-23 07:54:41] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 07:54:43] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 07:54:43] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 07:54:44] AppID 4000 scheduler update : Priority First, not played for 1716440084 seconds, update disabled for 0 seconds
+[2024-05-23 07:54:44] AppID 4000 update changed : Running Update,
+[2024-05-23 07:54:44] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 07:54:45] AppID 4000 update changed : Running Update,
+[2024-05-23 07:54:45] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 07:54:45] Validating active workshop item 3024317004 ...
+[2024-05-23 07:54:45] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-23 07:54:45] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-23 07:54:45] AppID 4000 update changed : Running Update,
+[2024-05-23 07:54:45] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 07:54:45] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-23 07:54:45] AppID 4000 update changed : Running Update,
+[2024-05-23 07:54:45] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-23 07:54:45] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 07:54:45] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 07:54:45] Moving to source priority class '6'
+[2024-05-23 07:54:45] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 07:54:45] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 07:54:45] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 07:54:45] Downloading 1 chunks from depot 4000
+[2024-05-23 07:54:45] HTTP/2 available
+[2024-05-23 07:54:45] Created ipv4-only http client
+[2024-05-23 07:54:46] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 07:54:46] AppID 4000 update changed : Running Update,
+[2024-05-23 07:54:46] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 07:54:46] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-23 07:54:46] AppID 4000 update changed : Running Update,
+[2024-05-23 07:54:46] AppID 4000 update changed : None
+[2024-05-23 07:54:46] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 07:54:46] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:54:46] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:54:46] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 07:57:24] Client version: 1716242337
+[2024-05-23 07:57:24] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 07:57:26] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 07:57:26] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 07:57:28] AppID 4000 scheduler update : Priority First, not played for 1716440248 seconds, update disabled for 0 seconds
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 07:57:28] Validating active workshop item 3024317004 ...
+[2024-05-23 07:57:28] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-23 07:57:28] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 07:57:28] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,
+[2024-05-23 07:57:28] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-23 07:57:28] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 07:57:28] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 07:57:28] Moving to source priority class '6'
+[2024-05-23 07:57:28] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 07:57:28] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 07:57:28] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 07:57:28] Downloading 1 chunks from depot 4000
+[2024-05-23 07:57:28] HTTP/2 available
+[2024-05-23 07:57:28] Created ipv4-only http client
+[2024-05-23 07:57:29] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 07:57:29] AppID 4000 update changed : Running Update,
+[2024-05-23 07:57:29] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 07:57:29] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-23 07:57:29] AppID 4000 update changed : Running Update,
+[2024-05-23 07:57:29] AppID 4000 update changed : None
+[2024-05-23 07:57:29] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 07:57:29] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:57:29] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 07:57:29] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 11:45:13] Client version: 1716242337
+[2024-05-23 11:45:13] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 11:45:14] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 11:45:14] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 11:45:19] AppID 4000 scheduler update : Priority First, not played for 1716453919 seconds, update disabled for 0 seconds
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 11:45:19] Validating active workshop item 3024317004 ...
+[2024-05-23 11:45:19] Validation: missing file "3024317004\gminimap.gma"
+[2024-05-23 11:45:19] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 11:45:19] AppID 4000 preallocated 0 files (0 MB) 
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,
+[2024-05-23 11:45:19] AppID 4000 update started : download 0/63072, store 0/0, reuse 0/0, delta 0/0, stage 0/143037 
+[2024-05-23 11:45:19] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 11:45:19] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 11:45:19] Moving to source priority class '6'
+[2024-05-23 11:45:19] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 11:45:19] Created download interface of type 'SteamCache' (7) to host cache2-hel-retn.steamcontent.com (cache2-hel-retn.steamcontent.com)
+[2024-05-23 11:45:19] Created download interface of type 'SteamCache' (7) to host cache1-hel-retn.steamcontent.com (cache1-hel-retn.steamcontent.com)
+[2024-05-23 11:45:19] Downloading 1 chunks from depot 4000
+[2024-05-23 11:45:19] HTTP/2 available
+[2024-05-23 11:45:19] Created ipv4-only http client
+[2024-05-23 11:45:20] HTTPS (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 11:45:20] AppID 4000 update changed : Running Update,
+[2024-05-23 11:45:20] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 11:45:20] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-23 11:45:20] AppID 4000 update changed : Running Update,
+[2024-05-23 11:45:20] AppID 4000 update changed : None
+[2024-05-23 11:45:20] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 11:45:20] HTTP/2 (SteamCache,141) - cache1-hel-retn.steamcontent.com (87.245.208.50:443 / 87.245.208.50:443, host: cache1-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 11:45:20] HTTP (SteamCache,209) - cache2-hel-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache2-hel-retn.steamcontent.com): Closing connection
+[2024-05-23 11:45:20] HTTP (SteamCache,308) - cache1-svo-retn.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: cache1-svo-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 11:58:30] Client version: 1716242337
+[2024-05-23 11:58:30] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 12:02:28] Client version: 1716242337
+[2024-05-23 12:02:28] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+
+
+[2024-05-23 12:02:58] Client version: 1716242337
+[2024-05-23 12:02:58] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 12:02:58] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 12:02:58] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 12:03:02] AppID 236850 scheduler update : Priority First, not played for 1716454982 seconds, update disabled for 0 seconds
+[2024-05-23 12:03:02] AppID 236850 update changed : Running Update,
+[2024-05-23 12:03:02] AppID 236850 update changed : Running Update,Reconfiguring,
+[2024-05-23 12:03:03] AppID 236850 update changed : Running Update,Reconfiguring,Stopping,
+[2024-05-23 12:03:03] AppID 236850 update changed : Running Update,Stopping,
+[2024-05-23 12:03:03] AppID 236850 update changed : None
+[2024-05-23 12:03:03] AppID 236850 scheduler finished : removed from schedule (result Missing decryption key, state 0x0) 
+
+
+[2024-05-23 12:03:33] Client version: 1716242337
+[2024-05-23 12:03:33] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 12:03:38] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 12:03:38] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 12:04:29] AppID 236850 scheduler update : Priority First, not played for 1716455069 seconds, update disabled for 0 seconds
+[2024-05-23 12:04:29] AppID 236850 update changed : Running Update,
+[2024-05-23 12:04:29] AppID 236850 update changed : Running Update,Reconfiguring,
+[2024-05-23 12:04:30] AppID 236850 update changed : Running Update,Reconfiguring,Stopping,
+[2024-05-23 12:04:30] AppID 236850 update changed : Running Update,Stopping,
+[2024-05-23 12:04:30] AppID 236850 update changed : None
+[2024-05-23 12:04:30] AppID 236850 scheduler finished : removed from schedule (result Missing decryption key, state 0x0) 
+
+
+[2024-05-23 12:05:35] Client version: 1716242337
+[2024-05-23 12:05:35] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 12:06:41] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 12:06:41] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 12:07:26] AppID 236850 scheduler update : Priority First, not played for 896809 seconds, update disabled for 0 seconds
+[2024-05-23 12:07:26] AppID 236850 update changed : Running Update,
+[2024-05-23 12:07:26] AppID 236850 update changed : Running Update,Reconfiguring,
+[2024-05-23 12:07:27] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 12:07:27] Moving to source priority class '6'
+[2024-05-23 12:07:27] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 12:07:27] HTTP/2 available
+[2024-05-23 12:07:27] Created ipv4-only http client
+[2024-05-23 12:07:28] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 12:07:28] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/236850/manifest/8040269199567139602/5/17556410313452103112 - received 200 (OK) HTTP response
+[2024-05-23 12:07:28] AppID 236850 update changed : Running Update,
+[2024-05-23 12:07:28] AppID 236850 update changed : Running Update,Preallocating,
+[2024-05-23 12:07:28] AppID 236850 preallocated 3 files (1 MB) 
+[2024-05-23 12:07:28] AppID 236850 update changed : Running Update,
+[2024-05-23 12:07:28] AppID 236850 update started : download 0/1432272, store 0/0, reuse 0/0, delta 0/0, stage 0/8720669 
+[2024-05-23 12:07:28] AppID 236850 update changed : Running Update,Downloading,Staging,
+[2024-05-23 12:07:28] Downloading 233 chunks from depot 236850
+[2024-05-23 12:07:30] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-23 12:07:32] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 12:07:32] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 1426924 Bytes, 4 sec (2.59 Mbps). 92 Hits / 141 Misses (39 %, 59 % bytes)
+[2024-05-23 12:07:32] Moving to source priority class '5'
+[2024-05-23 12:07:32] Created download interface of type 'SteamCache' (7) to host cache2-rix-retn.steamcontent.com (cache2-rix-retn.steamcontent.com)
+[2024-05-23 12:07:32] Created download interface of type 'SteamCache' (7) to host cache2-bud-retn.steamcontent.com (cache2-bud-retn.steamcontent.com)
+[2024-05-23 12:07:32] Moving to source priority class '2'
+[2024-05-23 12:07:32] Created download interface of type 'CDN' (2) to host steampipe.akamaized.net (steampipe.akamaized.net)
+[2024-05-23 12:07:32] HTTP (CDN,11) - steampipe.akamaized.net (0.0.0.0:0 / 0.0.0.0:0, host: steampipe.akamaized.net): AuthenticateDepotID (236850) - Success!
+[2024-05-23 12:07:32] HTTPS (SteamCache,268) - cache2-bud-retn.steamcontent.com (139.45.192.11:443 / 139.45.192.11:443, host: cache2-bud-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 12:07:32] HTTPS (CDN,11) - steampipe.akamaized.net (188.234.145.139:443 / 188.234.145.139:443, host: steampipe.akamaized.net): Negotiated HTTP/2
+[2024-05-23 12:07:33] HTTPS (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 12:07:33] AppID 236850 update changed : Running Update,
+[2024-05-23 12:07:33] AppID 236850 update changed : Running Update,Committing,
+[2024-05-23 12:07:33] AppID 236850 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/236850" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/236850" : 264 updated, 0 moved, 0 deleted files
+[2024-05-23 12:07:33] AppID 236850 update changed : Running Update,
+[2024-05-23 12:07:33] AppID 236850 update changed : None
+[2024-05-23 12:07:33] AppID 236850 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 12:07:38] HTTP/2 (CDN,11) - steampipe.akamaized.net (188.234.145.139:443 / 188.234.145.139:443, host: steampipe.akamaized.net): Closing connection
+[2024-05-23 12:07:38] HTTP/2 (SteamCache,268) - cache2-bud-retn.steamcontent.com (139.45.192.11:443 / 139.45.192.11:443, host: cache2-bud-retn.steamcontent.com): Closing connection
+[2024-05-23 12:07:38] HTTP/2 (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Closing connection
+
+
+[2024-05-23 15:42:48] Client version: 1716242337
+[2024-05-23 15:42:48] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 15:42:50] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 15:42:50] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 15:42:52] AppID 4000 scheduler update : Priority First, not played for 1716468172 seconds, update disabled for 0 seconds
+[2024-05-23 15:42:52] AppID 4000 update changed : Running Update,
+[2024-05-23 15:42:52] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 15:42:53] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 15:42:53] Moving to source priority class '6'
+[2024-05-23 15:42:53] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 15:42:53] HTTP/2 available
+[2024-05-23 15:42:53] Created ipv4-only http client
+[2024-05-23 15:42:54] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 15:42:54] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/4000/manifest/3918572798995098159/5/3994984808467674533 - received 502 (Bad Gateway) HTTP response
+[2024-05-23 15:42:54] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 15:42:54] AppID 4000 update changed : Running Update,Reconfiguring,Stopping,
+[2024-05-23 15:42:54] AppID 4000 update changed : Running Update,Stopping,
+[2024-05-23 15:42:54] AppID 4000 update changed : None
+[2024-05-23 15:42:54] AppID 4000 scheduler finished : removed from schedule (result Still busy, state 0x0) 
+[2024-05-23 15:42:54] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 0 Bytes, 0 sec (0.00 Mbps). 0 Hits / 0 Misses (0 %, 0 % bytes)
+
+
+[2024-05-23 15:44:15] Client version: 1716242337
+[2024-05-23 15:44:15] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 15:44:17] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 15:44:17] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 15:44:18] AppID 4000 scheduler update : Priority First, not played for 1716468258 seconds, update disabled for 0 seconds
+[2024-05-23 15:44:18] AppID 4000 update changed : Running Update,
+[2024-05-23 15:44:18] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 15:44:19] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 15:44:19] Moving to source priority class '6'
+[2024-05-23 15:44:19] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 15:44:19] HTTP/2 available
+[2024-05-23 15:44:19] Created ipv4-only http client
+[2024-05-23 15:44:20] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 15:44:20] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/4000/manifest/3918572798995098159/5/3994984808467674533 - received 0 (Invalid) HTTP response
+[2024-05-23 15:44:20] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-23 15:44:20] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 15:44:20] AppID 4000 update changed : Running Update,Reconfiguring,Stopping,
+[2024-05-23 15:44:20] AppID 4000 update changed : Running Update,Stopping,
+[2024-05-23 15:44:20] AppID 4000 update changed : None
+[2024-05-23 15:44:20] AppID 4000 scheduler finished : removed from schedule (result Connection timeout, state 0x0) 
+[2024-05-23 15:44:20] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 0 Bytes, 0 sec (0.00 Mbps). 0 Hits / 0 Misses (0 %, 0 % bytes)
+
+
+[2024-05-23 15:47:16] Client version: 1716242337
+[2024-05-23 15:47:16] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 15:47:47] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 15:47:47] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 15:47:57] AppID 4000 scheduler update : Priority First, not played for 1716468477 seconds, update disabled for 0 seconds
+[2024-05-23 15:47:57] AppID 4000 update changed : Running Update,
+[2024-05-23 15:47:57] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 15:47:58] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 15:47:58] Moving to source priority class '6'
+[2024-05-23 15:47:58] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 15:47:58] HTTP/2 available
+[2024-05-23 15:47:58] Created ipv4-only http client
+[2024-05-23 15:47:59] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 15:47:59] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): cache1-svo-retn.steamcontent.com/depot/4000/manifest/3918572798995098159/5/14326742735774570252 - received 200 (OK) HTTP response
+[2024-05-23 15:47:59] AppID 4000 update changed : Running Update,
+[2024-05-23 15:47:59] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 15:47:59] AppID 4000 preallocated 1 files (1091 MB) 
+[2024-05-23 15:47:59] AppID 4000 update changed : Running Update,
+[2024-05-23 15:47:59] AppID 4000 update started : download 0/404984160, store 0/0, reuse 0/0, delta 0/0, stage 0/1144614336 
+[2024-05-23 15:47:59] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 15:47:59] Downloading 1140 chunks from depot 4000
+[2024-05-23 15:48:00] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-23 15:48:11] Increasing target number of download connections to 4 (rate was 0.000, now 7.354)
+[2024-05-23 15:48:23] Increasing target number of download connections to 5 (rate was 7.354, now 89.534)
+[2024-05-23 15:48:28] HTTP/2 (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 15:48:28] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 252529732 Bytes, 27 sec (75.36 Mbps). 252 Hits / 888 Misses (22 %, 34 % bytes)
+[2024-05-23 15:48:28] Moving to source priority class '5'
+[2024-05-23 15:48:28] Created download interface of type 'SteamCache' (7) to host cache2-rix-retn.steamcontent.com (cache2-rix-retn.steamcontent.com)
+[2024-05-23 15:48:28] Moving to source priority class '2'
+[2024-05-23 15:48:28] Created download interface of type 'CDN' (2) to host alibaba.cdn.steampipe.steamcontent.com (alibaba.cdn.steampipe.steamcontent.com)
+[2024-05-23 15:48:28] Moving to source priority class '1'
+[2024-05-23 15:48:28] Created download interface of type 'CDN' (2) to host edgenext.cdn.steampipe.steamcontent.com (edgenext.cdn.steampipe.steamcontent.com)
+[2024-05-23 15:48:28] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: alibaba.cdn.steampipe.steamcontent.com): AuthenticateDepotID (4000) - Success!
+[2024-05-23 15:48:28] HTTP (CDN,29) - edgenext.cdn.steampipe.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: edgenext.cdn.steampipe.steamcontent.com): AuthenticateDepotID (4000) - Success!
+[2024-05-23 15:48:28] HTTPS (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 15:48:33] AppID 4000 update changed : Running Update,
+[2024-05-23 15:48:33] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 15:48:33] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 2 updated, 0 moved, 0 deleted files
+[2024-05-23 15:48:33] AppID 4000 update changed : Running Update,
+[2024-05-23 15:48:33] AppID 4000 update changed : None
+[2024-05-23 15:48:33] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 15:49:13] Current download rate: 0.000 Mbps
+[2024-05-23 15:49:31] HTTP/2 (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Closing connection
+[2024-05-23 15:49:32] HTTP (CDN,33) - alibaba.cdn.steampipe.steamcontent.com (18.165.121.216:80 / 18.165.121.216:80, host: alibaba.cdn.steampipe.steamcontent.com): Closing connection
+[2024-05-23 15:49:33] HTTP (CDN,29) - edgenext.cdn.steampipe.steamcontent.com (154.85.93.240:80 / 154.85.93.240:80, host: edgenext.cdn.steampipe.steamcontent.com): Closing connection
+
+
+[2024-05-23 15:51:42] Client version: 1716242337
+[2024-05-23 15:51:42] Loaded Steam library folders configuration: E:\desktop\steamDownloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-05-23 15:51:44] Loaded 0 apps from install folder "E:\desktop\steamDownloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-05-23 15:51:44] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-05-23 15:51:45] AppID 4000 scheduler update : Priority First, not played for 1716468705 seconds, update disabled for 0 seconds
+[2024-05-23 15:51:45] AppID 4000 update changed : Running Update,
+[2024-05-23 15:51:45] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-05-23 15:51:45] AppID 4000 update changed : Running Update,
+[2024-05-23 15:51:45] AppID 4000 update changed : Running Update,Validating,
+[2024-05-23 15:51:45] Validating active workshop item 2841063827 ...
+[2024-05-23 15:51:45] Validation: missing file "2841063827\gmpublisher.gma"
+[2024-05-23 15:51:45] Validation: quick scan in "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-05-23 15:51:45] AppID 4000 update changed : Running Update,
+[2024-05-23 15:51:45] AppID 4000 update changed : Running Update,Preallocating,
+[2024-05-23 15:51:45] AppID 4000 preallocated 1 files (1091 MB) 
+[2024-05-23 15:51:45] AppID 4000 update changed : Running Update,
+[2024-05-23 15:51:46] AppID 4000 update started : download 0/404984160, store 0/0, reuse 0/0, delta 0/0, stage 0/1144614336 
+[2024-05-23 15:51:46] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-05-23 15:51:46] Got 30 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-05-23 15:51:46] Moving to source priority class '6'
+[2024-05-23 15:51:46] Created download interface of type 'SteamCache' (7) to host cache1-svo-retn.steamcontent.com (cache1-svo-retn.steamcontent.com)
+[2024-05-23 15:51:46] Downloading 1140 chunks from depot 4000
+[2024-05-23 15:51:46] HTTP/2 available
+[2024-05-23 15:51:46] Created ipv4-only http client
+[2024-05-23 15:52:07] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-05-23 15:52:49] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Received 0 (Invalid) HTTP response for depot 4000
+[2024-05-23 15:52:49] HTTPS (SteamCache,308) - cache1-svo-retn.steamcontent.com (139.45.224.73:443 / 139.45.224.73:443, host: cache1-svo-retn.steamcontent.com): Closing connection
+[2024-05-23 15:52:49] stats: (SteamCache, 308) cache1-svo-retn.steamcontent.com: 0 Bytes, 0 sec (0.00 Mbps). 0 Hits / 0 Misses (0 %, 0 % bytes)
+[2024-05-23 15:52:49] Moving to source priority class '5'
+[2024-05-23 15:52:49] Created download interface of type 'SteamCache' (7) to host cache2-rix-retn.steamcontent.com (cache2-rix-retn.steamcontent.com)
+[2024-05-23 15:52:49] Created download interface of type 'SteamCache' (7) to host cache2-bud-retn.steamcontent.com (cache2-bud-retn.steamcontent.com)
+[2024-05-23 15:52:49] Moving to source priority class '2'
+[2024-05-23 15:52:49] Created download interface of type 'CDN' (2) to host google2.cdn.steampipe.steamcontent.com (google2.cdn.steampipe.steamcontent.com)
+[2024-05-23 15:52:49] HTTP (CDN,35) - google2.cdn.steampipe.steamcontent.com (0.0.0.0:0 / 0.0.0.0:0, host: google2.cdn.steampipe.steamcontent.com): AuthenticateDepotID (4000) - Success!
+[2024-05-23 15:52:50] HTTPS (SteamCache,268) - cache2-bud-retn.steamcontent.com (139.45.192.11:443 / 139.45.192.11:443, host: cache2-bud-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 15:52:50] HTTPS (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Negotiated HTTP/2
+[2024-05-23 15:53:04] Increasing target number of download connections to 4 (rate was 0.000, now 131.661)
+[2024-05-23 15:53:04] Created download interface of type 'CDN' (2) to host steampipe.akamaized.net (steampipe.akamaized.net)
+[2024-05-23 15:53:04] HTTP (CDN,11) - steampipe.akamaized.net (0.0.0.0:0 / 0.0.0.0:0, host: steampipe.akamaized.net): AuthenticateDepotID (4000) - Success!
+[2024-05-23 15:53:04] HTTPS (CDN,11) - steampipe.akamaized.net (188.234.145.162:443 / 188.234.145.162:443, host: steampipe.akamaized.net): Negotiated HTTP/2
+[2024-05-23 15:53:19] AppID 4000 update changed : Running Update,
+[2024-05-23 15:53:19] AppID 4000 update changed : Running Update,Committing,
+[2024-05-23 15:53:19] AppID 4000 starting commit from "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\steamDownloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-05-23 15:53:19] AppID 4000 update changed : Running Update,
+[2024-05-23 15:53:19] AppID 4000 update changed : None
+[2024-05-23 15:53:19] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-05-23 15:53:19] HTTP/2 (CDN,11) - steampipe.akamaized.net (188.234.145.162:443 / 188.234.145.162:443, host: steampipe.akamaized.net): Closing connection
+[2024-05-23 15:53:19] HTTPS (CDN,35) - google2.cdn.steampipe.steamcontent.com (34.104.36.43:443 / 34.104.36.43:443, host: google2.cdn.steampipe.steamcontent.com): Closing connection
+[2024-05-23 15:53:19] HTTP/2 (SteamCache,268) - cache2-bud-retn.steamcontent.com (139.45.192.11:443 / 139.45.192.11:443, host: cache2-bud-retn.steamcontent.com): Closing connection
+[2024-05-23 15:53:19] HTTP/2 (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Closing connection

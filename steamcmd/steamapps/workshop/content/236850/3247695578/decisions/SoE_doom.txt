@@ -1,0 +1,107 @@
+country_decisions = {
+    doom_has_come = {
+		color = { 250 145 10 }
+		potential = {
+			ai = no
+			has_global_flag = soe_intro_done
+			NOT = { has_country_flag = had_fifth_monarchists_end_event }
+			NOT = { has_reform = fifth_monarchists_reform }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			change_government = theocracy
+			add_government_reform = fifth_monarchists_reform
+			hidden_effect = {
+				add_devotion = 100
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	remove_extra_bonuses = {
+		color = { 44 226 246 }
+		potential = {
+			ai = no
+			has_global_flag = soe_extra_bonuses_flag
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_global_flag = soe_extra_bonuses_flag
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	remove_extra_bonuses_eco = {
+		color = { 44 226 246 }
+		potential = {
+			ai = no
+			has_global_flag = soe_ai_bonuses_flag
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				clr_global_flag = soe_ai_bonuses_flag
+				every_country = {
+					limit = {
+						ai = yes
+					}
+					remove_country_modifier = "extra_power"
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+#	remove_diplomacy = {
+#		color = { 44 226 246 }
+#		potential = {
+#			ai = no
+#			NOT = { has_global_flag = soe_extra_diplomacy_flag }
+#			NOT = { has_global_flag = no_ai_diplo }
+#		}
+#		allow = {
+#			always = yes
+#		}
+#		effect = {
+#			set_global_flag = soe_extra_diplomacy_flag
+#		}
+#
+#		ai_will_do = {
+#			factor = 0
+#		}
+#	}
+	
+	remove_diplomacy_two = {
+		color = { 44 226 246 }
+		potential = {
+			ai = no
+			has_global_flag = soe_extra_diplomacy_flag
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_global_flag = soe_extra_diplomacy_flag
+			set_global_flag = no_ai_diplo
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
