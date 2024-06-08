@@ -326,23 +326,23 @@ main {
 }
 
 @media (min-width: 1400px) and (max-width: 1600px) {
-  .file-system {
-    grid-template-columns: repeat(12, 1fr);
-  }
+    .file-system {
+        grid-template-columns: repeat(12, 1fr);
+    }
   
-  .main {
-    grid-column: 7 / 8;
-  }
+    .main {
+        grid-column: 7 / 8;
+    }
 
-  .main-div {
-    width: 600px;
-  }
+    .main-div {
+        width: 600px;
+    }
 
-  .left-aside {
-    grid-column: 2 / 5;
-  }
+    .left-aside {
+        grid-column: 2 / 5;
+    } 
 
-  .right-aside {
-    grid-column: 12 / 13;
-  }
+    .right-aside {
+        grid-column: 12 / 13;
+    }
 }
