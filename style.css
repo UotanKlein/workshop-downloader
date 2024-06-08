@@ -11,6 +11,7 @@ body {
                          'left-a left-a main main right-a right-a';
     justify-content: space-around;
     height: 100vh;
+    gap: 20px;
 }
 
 .header-file-system {
@@ -115,7 +116,7 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 2px -1px 3px rgb(97, 86, 86); 
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
 }
 
 .main {
