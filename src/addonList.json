@@ -1,9 +1,10 @@
 {
-  "2841063827": {
-    "id": "2841063827",
-    "game": "4000",
-    "name": "[Auroria] CW 2.0 Metro 2033 Weapons",
-    "icon": "https://steamuserimages-a.akamaihd.net/ugc/2050869154879531661/E56ACEDE1DC21201BD01079518B1DAB88A24F6FF/",
-    "path": "E:\\desktop\\steamDownloader\\addons\\4000\\2841063827"
-  }
+    "3024317004": {
+        "id": "3024317004",
+        "game": "4000",
+        "data": 1692743805,
+        "name": "GMinimap",
+        "icon": "https://steamuserimages-a.akamaihd.net/ugc/2019355280651905872/3FDCE3BBC595601BBA1A08B3E37D353A52A6152D/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "path": "E:\\desktop\\steamDownloader\\addons\\4000\\3024317004"
+    }
 }

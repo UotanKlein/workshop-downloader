@@ -11,8 +11,8 @@ class AddonList {
         this.addonList = {};
     }
 
-    addAddon(id, game, name, icon, addonPath) {
-        this.addonList[id] = { id, game, name, icon, path: addonPath };
+    addAddon(id, game, name, icon, addonPath, data) {
+        this.addonList[id] = { id, game, name, icon, path: addonPath, data };
     }
 
     removeAddon(id) {
