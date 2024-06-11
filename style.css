@@ -155,6 +155,7 @@ main {
     justify-content: center;
     color: white;
     box-shadow: 2px -1px 3px rgb(97, 86, 86); 
+    resize: none;
 }
 
 .right-aside {
@@ -270,79 +271,79 @@ main {
         grid-row: 1;
         grid-column: 3 / 4;
     }
-    
+
     .right-aside-work-with-file{
         height: 340px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .file-system {
-    grid-template-columns: repeat(12, 1fr);
-  }
+    .file-system {
+        grid-template-columns: repeat(12, 1fr);
+    }
 
-  .header-file-system {
-    width: 400px;
-    height: 100px;
-    gap: 20px;
-    grid-column: 1 / 3;
-  }
+    .header-file-system {
+        width: 400px;
+        height: 100px;
+        gap: 20px;
+        grid-column: 1 / 3;
+    }
 
-  .main {
-    grid-column: 2 / 8;
-    gap: 40px;
-    height: 400px;
-  }
+    .main {
+        grid-column: 2 / 8;
+        gap: 40px;
+        height: 400px;
+    }
 
-  .main-div {
-    width: 350px;
-    height: 200px;
-    grid-column: 2 / 5;
-  }
+    .main-div {
+        width: 350px;
+        height: 200px;
+        grid-column: 2 / 5;
+    }
 
-  .main-workspace {
-    height: 510px;
-  }
+    .main-workspace {
+        height: 510px;
+    }
 
-  .left-aside-file-list {
-    width: 200px;
-    height: 500px;
-  }
+    .left-aside-file-list {
+        width: 200px;
+        height: 500px;
+    }
 
-  .left-aside-filename {
-    width: 200px;
-  }
+    .left-aside-filename {
+        width: 200px;
+    }
 
-  .left-aside {
-    height: 100px;
-    width: 400px;
-    grid-column: 1 / 3;
-  }
+    .left-aside {
+        height: 100px;
+        width: 400px;
+        grid-column: 1 / 3;
+    }
 
-  .right-aside {
-    width: 200px;
-    grid-column: 5 / 6;
-  }
+    .right-aside {
+        width: 200px;
+        grid-column: 5 / 6;
+    }
 }
 
 @media (min-width: 1400px) and (max-width: 1600px) {
-  .file-system {
-    grid-template-columns: repeat(12, 1fr);
-  }
+    .file-system {
+        grid-template-columns: repeat(12, 1fr);
+    }
   
-  .main {
-    grid-column: 7 / 8;
-  }
+    .main {
+        grid-column: 7 / 8;
+    }
 
-  .main-div {
-    width: 600px;
-  }
+    .main-div {
+        width: 600px;
+    }
 
-  .left-aside {
-    grid-column: 2 / 5;
-  }
+    .left-aside {
+        grid-column: 2 / 5;
+    } 
 
-  .right-aside {
-    grid-column: 12 / 13;
-  }
+    .right-aside {
+        grid-column: 12 / 13;
+    }
 }
