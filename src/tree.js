@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-class File {
+export class File {
     constructor(name, parent = null) {
       this.name = name;
       this.parent = parent;
@@ -19,7 +19,7 @@ class File {
     }
 }
   
-  class Directory {
+export class Directory {
     constructor(name, parent = null) {
       this.name = path.basename(name);
       this.parent = parent;
@@ -72,6 +72,3 @@ class File {
     }
   }
 
-const rootDir = new Directory('/home/nikita/company-work/src'); 
-await rootDir.loadChildren(); //загрузка потомков
-console.log(rootDir.toString());

@@ -155,6 +155,7 @@ main {
     justify-content: center;
     color: white;
     box-shadow: 2px -1px 3px rgb(97, 86, 86); 
+    resize: none;
 }
 
 .right-aside {
