@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 class AddonList {
     constructor() {
-        this.json = path.join(__dirname, 'addonList.json');
+        this.json = path.join(__dirname, 'data/addonList.json');
         this.addonList = {};
     }
 
