@@ -2123,3 +2123,34 @@
 [2024-05-23 15:53:19] [Logged On, 4, 3] [a:1:2663196986] LogOff()
 [2024-05-23 15:53:19] [Logging Off, 4, 3] [a:1:2663196986] AsyncDisconnect( bDontWaitOnTCPShutdown: false )
 [2024-05-23 15:53:19] [Logging Off, 0, 3] [a:1:2663196986] Log session ended
+
+
+[2024-06-12 20:46:02] Client version: 1716584438
+[2024-06-12 20:46:02] Connectivity test: Starting test, fetching 'http://test.steampowered.com/204'
+[2024-06-12 20:46:02] [Logged Off, 0, 0] [U:1:0] CCMInterface::SetSteamID( [U:1:0] )
+[2024-06-12 20:46:02] IPv6 HTTP connectivity test (ipv6check-http.steamserver.net / 0.0.0.0:80 (0.0.0.0:80)) - TIMEOUT
+[2024-06-12 20:46:02] IPv6 UDP connectivity test (ipv6check-udp.steamserver.net) - FAILED, no addresses resolved
+[2024-06-12 20:46:02] Connectivity test: OK!
+[2024-06-12 20:46:02] Connectivity test: result=Connected (since 0.0s ago), prev=Unknown, in progress=0
+[2024-06-12 20:46:02] Clearing in-memory token - 1 (OK): SetLoginInformation
+[2024-06-12 20:46:02] [Logged Off, 0, 0] [a:1:0] CCMInterface::SetSteamID( [a:1:0] )
+[2024-06-12 20:46:02] [Logged Off, 0, 0] [a:1:0] CCMInterface::SetSteamID( [a:1:0] )
+[2024-06-12 20:46:02] [Logged Off, 4, 0] [a:1:0] EConnect called - scheduling connection for 50ms from now
+[2024-06-12 20:46:02] [Logged Off, 4, 0] [a:1:0] LogOn() called; not connected yet, scheduling connection. Schedule init returned 22
+[2024-06-12 20:46:02] [Logged Off, 4, 0] [a:1:0] EConnect called - scheduling connection for 50ms from now
+[2024-06-12 20:46:02] CCMInterface::YieldingConnect -- calling ISteamDirectory/GetCMListForConnect web api
+[2024-06-12 20:46:03] GetCMListForConnect -- got 9 Netfilter CMs and 71 WebSocket CMs
+[2024-06-12 20:46:03] GetCMListForConnect -- DC 'sto1' count: 21
+[2024-06-12 20:46:03] GetCMListForConnect -- DC 'sto2' count: 21
+[2024-06-12 20:46:03] GetCMListForConnect -- DC 'fra1' count: 19
+[2024-06-12 20:46:03] GetCMListForConnect -- DC 'fra2' count: 19
+[2024-06-12 20:46:03] [Connecting, 4, 0] [a:1:0] CM Directory list says 88% of connections should be websockets, we rolled 95 - using UDP as default.
+[2024-06-12 20:46:03] [Connecting, 4, 2] [a:1:0] Connect() starting connection (eNetQOSLevelHigh, 162.254.198.46:27018, UDP)
+[2024-06-12 20:46:03] [Connecting, 4, 2] [a:1:0] ConnectionCompleted() (162.254.197.39:27018, UDP) local address (0.0.0.0:54514)
+[2024-06-12 20:46:03] [Connecting, 4, 2] [a:1:0] Client thinks it can connect via: UDP - yes, TCP - yes, WebSocket:443 - yes, WebSocket:Non443 - yes
+[2024-06-12 20:46:03] [Connected, 4, 2] [a:1:0] Logging on [a:1:0]
+[2024-06-12 20:46:03] [Logging On, 4, 2] [a:1:0] RecvMsgClientLogOnResponse() : [a:1:4027812166] 'OK'
+[2024-06-12 20:47:24] [Logged On, 4, 2] [a:1:4027812166] ResetVoiceRecording() (was recording: 0) (last get voice time: 1718214444 seconds ago)
+[2024-06-12 20:47:24] [Logged On, 4, 2] [a:1:4027812166] LogOff()
+[2024-06-12 20:47:24] [Logging Off, 4, 2] [a:1:4027812166] AsyncDisconnect( bDontWaitOnTCPShutdown: false )
+[2024-06-12 20:47:24] [Logging Off, 0, 2] [a:1:4027812166] Log session ended

@@ -1659,3 +1659,56 @@
 [2024-05-23 15:53:19] HTTPS (CDN,35) - google2.cdn.steampipe.steamcontent.com (34.104.36.43:443 / 34.104.36.43:443, host: google2.cdn.steampipe.steamcontent.com): Closing connection
 [2024-05-23 15:53:19] HTTP/2 (SteamCache,268) - cache2-bud-retn.steamcontent.com (139.45.192.11:443 / 139.45.192.11:443, host: cache2-bud-retn.steamcontent.com): Closing connection
 [2024-05-23 15:53:19] HTTP/2 (SteamCache,142) - cache2-rix-retn.steamcontent.com (139.45.206.19:443 / 139.45.206.19:443, host: cache2-rix-retn.steamcontent.com): Closing connection
+
+
+[2024-06-12 20:46:02] Client version: 1716584438
+[2024-06-12 20:46:02] Loaded Steam library folders configuration: E:\desktop\workshop-downloader\steamcmd\steamapps\libraryfolders.vdf
+[2024-06-12 20:46:03] Loaded 0 apps from install folder "E:\desktop\workshop-downloader\steamcmd\steamapps\appmanifest_*.acf".
+[2024-06-12 20:46:03] Triggered async write of Steam library folders configuration (1 libraries).
+[2024-06-12 20:46:10] AppID 4000 scheduler update : Priority First, not played for 1718214370 seconds, update disabled for 0 seconds
+[2024-06-12 20:46:10] AppID 4000 update changed : Running Update,
+[2024-06-12 20:46:10] AppID 4000 update changed : Running Update,Reconfiguring,
+[2024-06-12 20:46:11] AppID 4000 update changed : Running Update,
+[2024-06-12 20:46:11] AppID 4000 update changed : Running Update,Validating,
+[2024-06-12 20:46:11] Validating active workshop item 2841063827 ...
+[2024-06-12 20:46:11] Validation: missing file "2841063827\gmpublisher.gma"
+[2024-06-12 20:46:11] Validation: quick scan in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop/content/4000" found 1/1 mismatching files (0 seconds).
+[2024-06-12 20:46:11] AppID 4000 update changed : Running Update,
+[2024-06-12 20:46:11] AppID 4000 update changed : Running Update,Preallocating,
+[2024-06-12 20:46:11] AppID 4000 preallocated 1 files (1091 MB) 
+[2024-06-12 20:46:11] AppID 4000 update changed : Running Update,
+[2024-06-12 20:46:11] AppID 4000 update started : download 0/404984160, store 0/0, reuse 0/0, delta 0/0, stage 0/1144614336 
+[2024-06-12 20:46:11] AppID 4000 update changed : Running Update,Downloading,Staging,
+[2024-06-12 20:46:11] Got 13 download sources and 0 caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID 149 / Launcher 3)
+[2024-06-12 20:46:11] Moving to source priority class '3'
+[2024-06-12 20:46:11] Created download interface of type 'SteamCache' (7) to host cache6-sto2.steamcontent.com (cache6-sto2.steamcontent.com)
+[2024-06-12 20:46:11] Created download interface of type 'SteamCache' (7) to host cache2-sto2.steamcontent.com (cache2-sto2.steamcontent.com)
+[2024-06-12 20:46:11] Created download interface of type 'SteamCache' (7) to host cache13-fra2.steamcontent.com (cache13-fra2.steamcontent.com)
+[2024-06-12 20:46:11] Downloading 1140 chunks from depot 4000
+[2024-06-12 20:46:11] HTTP/2 available
+[2024-06-12 20:46:11] Created ipv4-only http client
+[2024-06-12 20:46:12] HTTPS (SteamCache,200) - cache2-sto2.steamcontent.com (155.133.252.5:443 / 155.133.252.5:443, host: cache2-sto2.steamcontent.com): Negotiated HTTP/2
+[2024-06-12 20:46:12] HTTPS (SteamCache,238) - cache13-fra2.steamcontent.com (155.133.226.5:443 / 155.133.226.5:443, host: cache13-fra2.steamcontent.com): Negotiated HTTP/2
+[2024-06-12 20:46:24] Increasing target number of download connections to 4 (rate was 0.000, now 23.756)
+[2024-06-12 20:46:24] Created download interface of type 'SteamCache' (7) to host cache14-fra1.steamcontent.com (cache14-fra1.steamcontent.com)
+[2024-06-12 20:46:25] HTTPS (SteamCache,157) - cache14-fra1.steamcontent.com (162.254.197.24:443 / 162.254.197.24:443, host: cache14-fra1.steamcontent.com): Negotiated HTTP/2
+[2024-06-12 20:46:36] Increasing target number of download connections to 5 (rate was 23.756, now 68.602)
+[2024-06-12 20:46:36] Created download interface of type 'SteamCache' (7) to host cache9-fra1.steamcontent.com (cache9-fra1.steamcontent.com)
+[2024-06-12 20:46:37] HTTPS (SteamCache,249) - cache9-fra1.steamcontent.com (162.254.197.2:443 / 162.254.197.2:443, host: cache9-fra1.steamcontent.com): Negotiated HTTP/2
+[2024-06-12 20:46:48] HTTPS (SteamCache,191) - cache6-sto2.steamcontent.com (155.133.252.26:443 / 155.133.252.26:443, host: cache6-sto2.steamcontent.com): Negotiated HTTP/2
+[2024-06-12 20:46:48] IPv6 Connectivity state has changed, downgrading to ipv4-only
+[2024-06-12 20:46:49] Increasing target number of download connections to 6 (rate was 68.602, now 91.514)
+[2024-06-12 20:46:49] Created download interface of type 'SteamCache' (7) to host cache15-fra2.steamcontent.com (cache15-fra2.steamcontent.com)
+[2024-06-12 20:46:49] HTTPS (SteamCache,240) - cache15-fra2.steamcontent.com (155.133.226.38:443 / 155.133.226.38:443, host: cache15-fra2.steamcontent.com): Negotiated HTTP/2
+[2024-06-12 20:47:24] AppID 4000 update changed : Running Update,
+[2024-06-12 20:47:24] AppID 4000 update changed : Running Update,Committing,
+[2024-06-12 20:47:24] AppID 4000 starting commit from "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop/downloads/4000" to "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop/content/4000" : 1 updated, 0 moved, 0 deleted files
+[2024-06-12 20:47:24] AppID 4000 update changed : Running Update,
+[2024-06-12 20:47:24] AppID 4000 update changed : None
+[2024-06-12 20:47:24] AppID 4000 scheduler finished : removed from schedule (result No Error, state 0x0) 
+[2024-06-12 20:47:24] HTTP/2 (SteamCache,240) - cache15-fra2.steamcontent.com (155.133.226.38:443 / 155.133.226.38:443, host: cache15-fra2.steamcontent.com): Closing connection
+[2024-06-12 20:47:24] HTTP/2 (SteamCache,249) - cache9-fra1.steamcontent.com (162.254.197.2:443 / 162.254.197.2:443, host: cache9-fra1.steamcontent.com): Closing connection
+[2024-06-12 20:47:24] HTTP/2 (SteamCache,157) - cache14-fra1.steamcontent.com (162.254.197.24:443 / 162.254.197.24:443, host: cache14-fra1.steamcontent.com): Closing connection
+[2024-06-12 20:47:24] HTTP/2 (SteamCache,238) - cache13-fra2.steamcontent.com (155.133.226.5:443 / 155.133.226.5:443, host: cache13-fra2.steamcontent.com): Closing connection
+[2024-06-12 20:47:24] HTTP/2 (SteamCache,200) - cache2-sto2.steamcontent.com (155.133.252.5:443 / 155.133.252.5:443, host: cache2-sto2.steamcontent.com): Closing connection
+[2024-06-12 20:47:24] HTTP/2 (SteamCache,191) - cache6-sto2.steamcontent.com (155.133.252.26:443 / 155.133.252.26:443, host: cache6-sto2.steamcontent.com): Closing connection

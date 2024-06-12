@@ -50,14 +50,18 @@ app.post('/data', (req, res) => {
     });
 });
 
-app.get('/dataAddon', async (req, res) => {
-    const newPath = path.resolve('./src');
+app.get('/dataAddon/:id', async (req, res) => {
+    const id = req.params.id;
 
-    const dirClass = new Directory(newPath);
+    const addonsData = JSON.parse(fs.readFileSync('./data/addonList.json'));
+
+    const addonData = addonsData[id].path;
+
+    const dirClass = new Directory(addonData);
 
     const loadChilds = await dirClass.loadChildren();
 
-    res.send(loadChilds.toString());
+    res.send({ name: addonData.name, json: loadChilds.toString() });
 });
 
 app.get('/', (req, res) => {

@@ -1,8 +1,8 @@
-import { Directory, File } from "./src/tree.js";
+import { Directory, File } from './src/tree.js';
 
-export default async() => {
+export default async () => {
     const fileList = document.querySelector('.left-aside-file-list');
-    new Directory()
-    
+    new Directory();
+
     console.log('fs');
-}
+};
