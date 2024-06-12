@@ -22,30 +22,6 @@ export class File {
         );
     }
 }
-<<<<<<< HEAD
-=======
-  
-export class Directory {
-    constructor(name, parent = null) {
-      this.name = path.basename(name);
-      this.parent = parent;
-      this.path = parent ? path.join(parent.path, name) : name;
-      this.type = 'directory';
-      this.children = [];
-    }
-  
-    async loadChildren() {
-      const childrenNames = await fs.readdir(this.path);
-      this.children = await Promise.all(childrenNames.map(async (childName) => {
-        const childPath = path.join(this.path, childName);
-        if (((await fs.lstat(childPath))).isDirectory()) {
-          const newDirec = new Directory(childName, this);
-          await newDirec.loadChildren();
-          return newDirec;
-        } else {
-          return new File(childName, this);
-        }
->>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5
 
 class Directory {
     constructor(name, parent = null) {
@@ -105,7 +81,4 @@ class Directory {
     }
 }
 
-<<<<<<< HEAD
 export default Directory;
-=======
->>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5

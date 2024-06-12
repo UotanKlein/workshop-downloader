@@ -1,8 +1,6 @@
-import { Directory, File } from "./src/tree.js";
+import axios from 'axios';
 
 export default async() => {
-    const fileList = document.querySelector('.left-aside-file-list');
-    new Directory()
+    const dataLink = 'http://localhost:3000/dataAddon';
     
-    console.log('fs');
 }
