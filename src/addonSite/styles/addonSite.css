@@ -155,7 +155,11 @@ main {
     align-items: center;
     justify-content: center;
     color: white;
+<<<<<<< HEAD:src/addonSite/styles/addonSite.css
     box-shadow: 2px -1px 3px rgb(97, 86, 86);
+=======
+    box-shadow: 2px -1px 3px rgb(97, 86, 86); 
+>>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5:style.css
     resize: none;
 }
 
@@ -274,7 +278,11 @@ main {
         grid-column: 3 / 4;
     }
 
+<<<<<<< HEAD:src/addonSite/styles/addonSite.css
     .right-aside-work-with-file {
+=======
+    .right-aside-work-with-file{
+>>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5:style.css
         height: 340px;
     }
 }
@@ -332,6 +340,7 @@ main {
     .file-system {
         grid-template-columns: repeat(12, 1fr);
     }
+<<<<<<< HEAD:src/addonSite/styles/addonSite.css
 
     .main {
         grid-column: 7 / 8;
@@ -349,3 +358,22 @@ main {
         grid-column: 12 / 13;
     }
 }
+=======
+  
+    .main {
+        grid-column: 7 / 8;
+    }
+
+    .main-div {
+        width: 600px;
+    }
+
+    .left-aside {
+        grid-column: 2 / 5;
+    } 
+
+    .right-aside {
+        grid-column: 12 / 13;
+    }
+}
+>>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5:style.css
