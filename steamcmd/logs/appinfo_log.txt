@@ -950,3 +950,23 @@
 [2024-05-23 15:51:45] RequestAppInfoUpdate: AppIDs 4000
 [2024-05-23 15:51:45] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
 [2024-05-23 15:51:45] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-12 20:46:03] Client version: 1716584438
+[2024-06-12 20:46:03] RequestAppInfoUpdate: AppIDs 7
+[2024-06-12 20:46:04] Packages changed: force all
+[2024-06-12 20:46:04] Apps changed: force all
+[2024-06-12 20:46:04] Change number 23660865->23943839, apps: 0/0, packages: 0/0
+[2024-06-12 20:46:04] Requesting 1566 apps, 128 packages (meta data, 1024 prev attempts, expected 79 KB)
+[2024-06-12 20:46:05] Requested 216 app access tokens, 53 received, 163 denied
+[2024-06-12 20:46:05] Updated SHAs with 53 new access tokens
+[2024-06-12 20:46:05] Downloaded 149 apps via HTTP, 4852 KB (1167 KB compressed)
+[2024-06-12 20:46:05] Requesting 456 apps, 2 packages (full data, 1024 prev attempts, expected 1628 KB)
+[2024-06-12 20:46:09] UpdatesJob: finished OK, apps updated 605 (6428 KB), packages updated 2 (30 KB)
+[2024-06-12 20:46:09] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-12 20:46:09] Requesting 89 apps, 0 packages (meta data, 1024 prev attempts, expected 4 KB)
+[2024-06-12 20:46:10] Requested 78 app access tokens, 0 received, 78 denied
+[2024-06-12 20:46:10] Downloaded 2 apps via HTTP, 22 KB (5 KB compressed)
+[2024-06-12 20:46:10] Requesting 8 apps, 0 packages (full data, 1024 prev attempts, expected 17 KB)
+[2024-06-12 20:46:10] UpdatesJob: finished OK, apps updated 10 (40 KB), packages updated 0 (0 KB)
+[2024-06-12 20:46:25] Starting async write E:\desktop\workshop-downloader\steamcmd/appcache/appinfo.vdf (8858 KB)

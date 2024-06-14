@@ -1046,3 +1046,15 @@
 [2024-05-23 15:52:50] Flushed store 'userlocal' to 'E:\desktop\steamDownloader\steamcmd\userdata\anonymous\config\localconfig.vdf'
 [2024-05-23 15:53:05] Flushed store 'userlocal' to 'E:\desktop\steamDownloader\steamcmd\userdata\anonymous\config\localconfig.vdf'
 [2024-05-23 15:53:08] Flushed store 'install' to 'E:\desktop\steamDownloader\steamcmd\config\config.vdf'
+
+
+[2024-06-12 20:46:02] Client version: 1716584438
+[2024-06-12 20:46:02] Loaded store 'install' from 'E:\desktop\workshop-downloader\steamcmd\config\config.vdf' successfully
+[2024-06-12 20:46:02] Loaded store 'install' from 'E:\desktop\workshop-downloader\steamcmd\config\config.vdf' successfully
+[2024-06-12 20:46:02] Loaded store 'install' from 'E:\desktop\workshop-downloader\steamcmd\config\config.vdf' successfully
+[2024-06-12 20:46:02] Loaded store 'install' from 'E:\desktop\workshop-downloader\steamcmd\config\config.vdf' successfully
+[2024-06-12 20:46:03] Loaded store 'install' from 'E:\desktop\workshop-downloader\steamcmd\config\config.vdf' successfully
+[2024-06-12 20:46:03] Loaded store 'userlocal' from 'E:\desktop\workshop-downloader\steamcmd\userdata\anonymous\config\localconfig.vdf' successfully
+[2024-06-12 20:46:10] Flushed store 'userlocal' to 'E:\desktop\workshop-downloader\steamcmd\userdata\anonymous\config\localconfig.vdf'
+[2024-06-12 20:46:43] Flushed store 'install' to 'E:\desktop\workshop-downloader\steamcmd\config\config.vdf'
+[2024-06-12 20:47:13] Flushed store 'install' to 'E:\desktop\workshop-downloader\steamcmd\config\config.vdf'

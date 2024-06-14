@@ -1,25 +1,21 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-export class File {
+class File {
     constructor(name, parent = null) {
-        this.name = name;
-        this.parent = parent;
-        this.path = parent ? path.join(parent.path, name) : name;
-        this.type = 'file';
+      this.name = name;
+      this.parent = parent;
+      this.path = parent ? path.join(parent.path, name) : name;
+      this.type = 'file';
     }
 
     toString() {
-        return JSON.stringify(
-            this,
-            (key, value) => {
-                if (key === 'parent' && value) {
-                    return value.path;
-                }
-                return value;
-            },
-            2,
-        );
+      return JSON.stringify(this, (key, value) => {
+        if (key === 'parent' && value) {
+            return value.path;
+        }
+        return value;
+      }, 2);
     }
 }
 
@@ -50,34 +46,30 @@ class Directory {
     }
 
     getChildren(name) {
-        const child = this.children.find((ch) => ch.name === name);
-        if (!child) {
-            throw new Error('No such');
-        }
-        if (child.type !== 'directory') {
-            throw new Error(`${name} not directory`);
-        }
-        return child;
+      const child = this.children.find((ch) => ch.name === name);
+      if (!child) {
+        throw new Error('No such');
+      }
+      if (child.type !== 'directory') {
+        throw new Error(`${name} not directory`);
+      }
+      return child;
     }
 
     getParent() {
-        if (!this.parent) {
-            throw new Error('Cannot go back');
-        }
-        return this.parent;
+      if (!this.parent) {
+        throw new Error('Cannot go back');
+      }
+      return this.parent;
     }
 
     toString() {
-        return JSON.stringify(
-            this,
-            (key, value) => {
-                if (key === 'parent' && value) {
-                    return value.path;
-                }
-                return value;
-            },
-            2,
-        );
+      return JSON.stringify(this, (key, value) => {
+        if (key === 'parent' && value) {
+            return value.path;
+        }
+        return value;
+      }, 2);
     }
 }
 

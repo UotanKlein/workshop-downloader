@@ -1,5 +1,6 @@
 import express from 'express';
 import fs from 'fs';
+import fsp from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
@@ -8,7 +9,7 @@ import Directory from './tree.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const expressPort = 3000;
+const expressPort = 3002;
 const webpackPort = 9000;
 
 const app = express();
@@ -51,13 +52,32 @@ app.post('/data', (req, res) => {
 });
 
 app.get('/dataAddon', async (req, res) => {
-    const newPath = path.resolve('./src');
+    
+    const addonsData = JSON.parse(fs.readFileSync('./src/data/addonList.json'));
 
-    const dirClass = new Directory(newPath);
+    const addonData = addonsData['3024317004'].path;
 
-    const loadChilds = await dirClass.loadChildren();
+    const dirClass = new Directory(path.resolve(addonData));
 
-    res.send(loadChilds.toString());
+    const loadChilds = (await dirClass.loadChildren()).toString();
+
+    res.send({ name: addonsData['3024317004'].name, json: loadChilds });
+});
+
+app.post('/dataAddon', async (req, res) => {
+    const pathToFile = req.body.path;
+    try {
+        if (pathToFile.endsWith('.png')) {
+            const readPng = await fsp.readFile(pathToFile);
+            res.writeHead(200, { 'Content-type': 'image/png' })
+            res.end(readPng, 'binary');
+        } else {
+            const readFile = await fsp.readFile(pathToFile, 'utf-8');
+            res.send(readFile);
+        }    
+    } catch (error) {
+        console.error(`Ошибка чтения: ${error.message}}`);
+    }
 });
 
 app.get('/', (req, res) => {

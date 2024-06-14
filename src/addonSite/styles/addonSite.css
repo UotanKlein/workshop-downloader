@@ -115,15 +115,16 @@ main {
 }
 
 .left-aside-file-list {
-    display: grid;
     background: #212121;
-    height: 492px;
+    height: 510px;
     width: 285px;
     border-radius: 7px;
     align-items: center;
     justify-content: center;
     color: white;
     box-shadow: 4px -3px 5px rgb(97, 86, 86);
+    overflow-y: auto;
+    
 }
 
 .main-div {
@@ -155,12 +156,9 @@ main {
     align-items: center;
     justify-content: center;
     color: white;
-<<<<<<< HEAD:src/addonSite/styles/addonSite.css
     box-shadow: 2px -1px 3px rgb(97, 86, 86);
-=======
-    box-shadow: 2px -1px 3px rgb(97, 86, 86); 
->>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5:style.css
     resize: none;
+    padding: 20px;
 }
 
 .right-aside {
@@ -205,6 +203,27 @@ main {
     width: 80px;
     filter: invert(1) sepia(1) saturate(10000%) hue-rotate(50deg)
         brightness(150%) drop-shadow(2px 2px 5px green);
+}
+
+.file-system-buttons {
+    display: flex;
+    justify-content: space-between;
+    background: #212121;
+    border: #212121;
+    border-radius: 5px;
+    color: white;
+}
+
+.file-system-buttons:hover {
+    background: #383838;
+}
+
+.file-system-buttons img {
+    margin-right: 5px;
+}
+
+.file-system-li {
+    
 }
 
 @media (max-width: 767px) {
@@ -278,11 +297,7 @@ main {
         grid-column: 3 / 4;
     }
 
-<<<<<<< HEAD:src/addonSite/styles/addonSite.css
     .right-aside-work-with-file {
-=======
-    .right-aside-work-with-file{
->>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5:style.css
         height: 340px;
     }
 }
@@ -340,7 +355,6 @@ main {
     .file-system {
         grid-template-columns: repeat(12, 1fr);
     }
-<<<<<<< HEAD:src/addonSite/styles/addonSite.css
 
     .main {
         grid-column: 7 / 8;
@@ -358,22 +372,3 @@ main {
         grid-column: 12 / 13;
     }
 }
-=======
-  
-    .main {
-        grid-column: 7 / 8;
-    }
-
-    .main-div {
-        width: 600px;
-    }
-
-    .left-aside {
-        grid-column: 2 / 5;
-    } 
-
-    .right-aside {
-        grid-column: 12 / 13;
-    }
-}
->>>>>>> b28382cd1b5137ae1da65ccd30329213da3f0be5:style.css

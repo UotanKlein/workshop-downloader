@@ -12,9 +12,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const curPath = path.resolve(__dirname, '..');
-
 const steamcmdPath = path.join(curPath, 'steamcmd/steamcmd.exe');
+
 const addonsDir = path.join(curPath, 'addons');
+
 const steamContentDir = path.join(
     curPath,
     `steamcmd/steamapps/workshop/content`,
@@ -180,10 +181,10 @@ const prepareAddon = async (link) => {
 };
 
 await prepareAddon(
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=2841063827',
+    'https://steamcommunity.com/sharedfiles/filedetails/?id=3024317004',
 );
 
-export default prepareAddon;
+//export default prepareAddon;
 
 // [
 //     {
