@@ -14,18 +14,6 @@ const __dirname = path.dirname(__filename);
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const createHtmlPlugins = (pages) => {
-    return pages.map(
-        (page) =>
-            new HtmlWebpackPlugin({
-                filename: `${page}.html`,
-                template: path.resolve(__dirname, `src/${page}/${page}.html`),
-                chunks: [page],
-                publicPath: '../',
-            }),
-    );
-};
-
 const config = {
     entry: {
         addonList: path.resolve(__dirname, './src/addonList/addonListEntry.js'),
@@ -49,7 +37,24 @@ const config = {
         },
     },
     plugins: [
-        ...createHtmlPlugins(['addonList', 'addonSite', 'addonMain']),
+        new HtmlWebpackPlugin({
+            filename: `addonList.html`,
+            template: path.resolve(__dirname, `src/addonList/addonList.html`),
+            chunks: ['addonList'],
+            publicPath: '../',
+        }),
+        new HtmlWebpackPlugin({
+            filename: `addonSite.html`,
+            template: path.resolve(__dirname, `src/addonSite/addonSite.html`),
+            chunks: ['addonSite'],
+            publicPath: '../../',
+        }),
+        new HtmlWebpackPlugin({
+            filename: `addonMain.html`,
+            template: path.resolve(__dirname, `src/addonMain/addonMain.html`),
+            chunks: ['addonMain'],
+            publicPath: '/',
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),

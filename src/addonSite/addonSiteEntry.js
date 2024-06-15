@@ -5,3 +5,4 @@ import './workWithFiles.js';
 import './images/blueFolder.png';
 import './images/blackFile.png';
 import './images/blueFile.png';
+import './images/cpp.jpg';

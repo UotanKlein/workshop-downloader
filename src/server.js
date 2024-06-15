@@ -11,7 +11,7 @@ import archiver from 'archiver';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const expressPort = 3003;
+const expressPort = 3002;
 const webpackPort = 9000;
 
 const app = express();

@@ -30,7 +30,7 @@ const app = async () => {
         e.preventDefault();
 
         const linkBox = document.querySelector('#link-box');
-        const errorText = linkBox.querySelector('.error-text');
+        const errorText = linkBox.querySelector('#error-event');
 
         const value = state.inputValue;
 
@@ -47,21 +47,14 @@ const app = async () => {
             errorText.textContent = data;
         } catch (err) {
             const errorResponse = err.response;
+            const errorData = errorResponse.data;
 
-            console.log(errorResponse);
+            inputLink.classList.remove('successful-input');
+            inputLink.classList.add('error-input');
 
-            if (errorResponse) {
-                const errorData = errorResponse.data;
-
-                inputLink.classList.remove('successful-input');
-                inputLink.classList.add('error-input');
-
-                errorText.classList.remove('dp-none');
-                errorText.classList.add('error-text');
-                errorText.textContent = errorData.text;
-            } else {
-                console.log('Ошибка при запросе:', err);
-            }
+            errorText.classList.remove('dp-none');
+            errorText.classList.add('error-text');
+            errorText.textContent = errorData.text;
         }
     });
 };

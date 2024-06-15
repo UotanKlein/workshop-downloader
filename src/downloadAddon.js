@@ -121,6 +121,8 @@ function isValidSteamLink(url) {
     return regex.test(url);
 }
 
+// https://steamcommunity.com/sharedfiles/filedetails/?id=264467687
+
 const prepareAddon = async (link) => {
     if (!isValidSteamLink(link)) {
         throw new errors.InvalidUrlError();
