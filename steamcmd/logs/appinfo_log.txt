@@ -970,3 +970,34 @@
 [2024-06-12 20:46:10] Requesting 8 apps, 0 packages (full data, 1024 prev attempts, expected 17 KB)
 [2024-06-12 20:46:10] UpdatesJob: finished OK, apps updated 10 (40 KB), packages updated 0 (0 KB)
 [2024-06-12 20:46:25] Starting async write E:\desktop\workshop-downloader\steamcmd/appcache/appinfo.vdf (8858 KB)
+
+
+[2024-06-15 03:17:38] Client version: 1718305764
+[2024-06-15 03:17:38] RequestAppInfoUpdate: AppIDs 7
+[2024-06-15 03:17:38] Packages changed: force all
+[2024-06-15 03:17:38] Apps changed: force all
+[2024-06-15 03:17:38] Change number 23943850->23980700, apps: 0/0, packages: 0/0
+[2024-06-15 03:17:38] Requesting 1576 apps, 128 packages (meta data, 1024 prev attempts, expected 79 KB)
+[2024-06-15 03:17:39] Requested 217 app access tokens, 53 received, 164 denied
+[2024-06-15 03:17:39] Updated SHAs with 53 new access tokens
+[2024-06-15 03:17:39] Downloaded 87 apps via HTTP, 3821 KB (878 KB compressed)
+[2024-06-15 03:17:39] Requesting 123 apps, 1 packages (full data, 1024 prev attempts, expected 585 KB)
+[2024-06-15 03:17:40] UpdatesJob: finished OK, apps updated 210 (4371 KB), packages updated 1 (29 KB)
+[2024-06-15 03:17:40] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-15 03:17:40] Requesting 79 apps, 0 packages (meta data, 1024 prev attempts, expected 3 KB)
+[2024-06-15 03:17:41] Requested 78 app access tokens, 0 received, 78 denied
+[2024-06-15 03:17:41] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-15 03:19:20] Client version: 1718305764
+[2024-06-15 03:19:20] RequestAppInfoUpdate: AppIDs 7
+[2024-06-15 03:19:20] Apps changed: 710560=23980721,108600=23980719,
+[2024-06-15 03:19:20] Change number 23980700->23980724, apps: 2/16, packages: 0/5
+[2024-06-15 03:19:21] Requesting 113 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-15 03:19:21] Requested 110 app access tokens, 0 received, 110 denied
+[2024-06-15 03:19:21] Downloaded 1 apps via HTTP, 21 KB (6 KB compressed)
+[2024-06-15 03:19:21] Requesting 1 apps, 0 packages (full data, 1024 prev attempts, expected 4 KB)
+[2024-06-15 03:19:22] UpdatesJob: finished OK, apps updated 2 (25 KB), packages updated 0 (0 KB)
+[2024-06-15 03:19:22] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-15 03:19:22] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-15 03:19:22] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)

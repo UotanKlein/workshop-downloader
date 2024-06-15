@@ -1,7 +1,21 @@
 import axios from 'axios';
 
+const location = window.location;
+const host = location.host;
+
+window.onload = () => {
+    const addonMainLink = `http://${host}`;
+
+    const addonMain = document.querySelector('.site-name');
+
+    console.log(addonMainLink);
+    console.log(addonMain);
+
+    addonMain.setAttribute('href', addonMainLink);
+};
+
 const getAddonData = async () => {
-    const dataLink = 'http://localhost:3000/data';
+    const dataLink = `http://${host}/data`;
 
     try {
         const res = await axios.get(dataLink);
@@ -33,18 +47,18 @@ const formattedDate = (sec) => {
 const app = async () => {
     const addonList = document.getElementById('addon-list');
     const addonJson = await getAddonData();
-
     const domParser = new DOMParser();
 
     Object.entries(addonJson).forEach(([id, val]) => {
         const name = val.name;
         const icon = val.icon;
+        const dataLink = `http://${host}/addonSite/${id}`;
         const data = formattedDate(val.data);
 
         const addonHtml = `
             <a
                 class="addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 link-without"
-                href="#"
+                href="${dataLink}"
             >
                 <div class="addon-date">
                     <p class="mg-0 main-font">${data}</p>

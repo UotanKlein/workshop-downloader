@@ -1901,3 +1901,98 @@
 [2024-06-12 20:46:02] Verification complete
 [2024-06-12 20:46:04] Clearing cached metrics (E:\desktop\workshop-downloader\steamcmd\package\steam_cmd_metrics.bin)
 [2024-06-12 20:47:24] Shutdown
+
+
+[2024-06-15 03:17:27] Startup - updater built May 24 2024 13:48:18
+[2024-06-15 03:17:27] Startup - Steam Client launched with: E:\desktop\workshop-downloader\steamcmd\steamcmd.exe +login anonymous +workshop_download_item 4000 264467687 +quit
+[2024-06-15 03:17:27] Using the following download hosts for Public, Realm steamglobal
+[2024-06-15 03:17:27] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-06-15 03:17:27] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-06-15 03:17:27] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-06-15 03:17:27] Checking for update on startup
+[2024-06-15 03:17:27] Checking for available updates...
+[2024-06-15 03:17:27] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_cmd_win32
+[2024-06-15 03:17:27] Manifest download: send request
+[2024-06-15 03:17:28] Manifest download: waiting for download to finish
+[2024-06-15 03:17:28] Manifest download: finished
+[2024-06-15 03:17:28] Downloaded new manifest: /steam_cmd_win32 version 1718305764, installed version 1716584438, existing pending version 0
+[2024-06-15 03:17:28] Package file steamcmd_public_all.zip.4fca2ae37e5603666735370b04080a9de0830b72 missing or incorrect size
+[2024-06-15 03:17:28] Package file steamcmd_bins_win32.zip.vz.8cb2f765d44368957e98ec593ac56a686650dca7_6641247 missing or incorrect size
+[2024-06-15 03:17:28] Package file steamcmd_steamservice_win32.zip.vz.f537aa10c66b1d5b0e7e6b13c04aa9e0b4992bc3_1697771 missing or incorrect size
+[2024-06-15 03:17:28] Package file steamcmd_steamerrorreporter_win32.zip.7aa4144f210ed47228d120116cd2b7db2444e2bc missing or incorrect size
+[2024-06-15 03:17:28] Package file steamcmd_siteserverui_win32.zip.vz.ade55897fdb43bd6a975d833d1ff73fc90f6749f_35295571 missing or incorrect size
+[2024-06-15 03:17:28] Package file steamcmd_win32.zip.vz.732ce334456579fe12249fdb16617b8733da4b17_1747290 missing or incorrect size
+[2024-06-15 03:17:28] Add pending download: https://client-update.akamai.steamstatic.com/steamcmd_public_all.zip.4fca2ae37e5603666735370b04080a9de0830b72
+[2024-06-15 03:17:28] Manifest download: send request
+[2024-06-15 03:17:28] Add pending download: https://client-update.akamai.steamstatic.com/steamcmd_bins_win32.zip.vz.8cb2f765d44368957e98ec593ac56a686650dca7_6641247
+[2024-06-15 03:17:28] Manifest download: send request
+[2024-06-15 03:17:28] Add pending download: https://client-update.akamai.steamstatic.com/steamcmd_steamservice_win32.zip.vz.f537aa10c66b1d5b0e7e6b13c04aa9e0b4992bc3_1697771
+[2024-06-15 03:17:28] Manifest download: send request
+[2024-06-15 03:17:28] Add pending download: https://client-update.akamai.steamstatic.com/steamcmd_steamerrorreporter_win32.zip.7aa4144f210ed47228d120116cd2b7db2444e2bc
+[2024-06-15 03:17:28] Manifest download: send request
+[2024-06-15 03:17:28] Add pending download: https://client-update.akamai.steamstatic.com/steamcmd_siteserverui_win32.zip.vz.ade55897fdb43bd6a975d833d1ff73fc90f6749f_35295571
+[2024-06-15 03:17:28] Manifest download: send request
+[2024-06-15 03:17:28] Add pending download: https://client-update.akamai.steamstatic.com/steamcmd_win32.zip.vz.732ce334456579fe12249fdb16617b8733da4b17_1747290
+[2024-06-15 03:17:28] Manifest download: send request
+[2024-06-15 03:17:28] Downloading update (50 of 44,549 KB)...
+[2024-06-15 03:17:28] Downloading update (3,775 of 44,549 KB)...
+[2024-06-15 03:17:29] Downloading update (13,132 of 44,549 KB)...
+[2024-06-15 03:17:29] Downloading update (21,932 of 44,549 KB)...
+[2024-06-15 03:17:29] Downloading update (26,565 of 44,549 KB)...
+[2024-06-15 03:17:29] Downloading update (31,206 of 44,549 KB)...
+[2024-06-15 03:17:30] Downloading update (35,822 of 44,549 KB)...
+[2024-06-15 03:17:30] Downloading update (44,372 of 44,549 KB)...
+[2024-06-15 03:17:30] Downloading update (44,549 of 44,549 KB)...
+[2024-06-15 03:17:30] Download complete.
+[2024-06-15 03:17:30] Saving metrics to disk (E:\desktop\workshop-downloader\steamcmd\package\steam_cmd_metrics.bin)
+[2024-06-15 03:17:30] uninstalled manifest found in E:\desktop\workshop-downloader\steamcmd\package\steam_cmd_win32 (1).
+[2024-06-15 03:17:30] Found pending update
+[2024-06-15 03:17:30] Installing update...
+[2024-06-15 03:17:30] Extracting package...
+[2024-06-15 03:17:33] Installing update...
+[2024-06-15 03:17:33] Committing NTFS transaction (0 non-transactional backup files)
+[2024-06-15 03:17:34] Cleaning up...
+[2024-06-15 03:17:34] Update complete, launching Steamcmd...
+[2024-06-15 03:17:34] Shutdown
+
+
+[2024-06-15 03:17:34] Startup - updater built Jun 13 2024 11:41:47
+[2024-06-15 03:17:34] Startup - Steam Client launched with: E:\desktop\workshop-downloader\steamcmd\steamcmd.exe +login anonymous +workshop_download_item 4000 264467687 +quit
+[2024-06-15 03:17:34] Loading cached metrics from disk (E:\desktop\workshop-downloader\steamcmd\package\steam_cmd_metrics.bin)
+[2024-06-15 03:17:34] Using the following download hosts for Public, Realm steamglobal
+[2024-06-15 03:17:34] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-06-15 03:17:34] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-06-15 03:17:34] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-06-15 03:17:34] Checking for update on startup
+[2024-06-15 03:17:34] Checking for available updates...
+[2024-06-15 03:17:34] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_cmd_win32
+[2024-06-15 03:17:34] Manifest download: send request
+[2024-06-15 03:17:34] Manifest download: waiting for download to finish
+[2024-06-15 03:17:34] Manifest download: finished
+[2024-06-15 03:17:34] Download skipped: /steam_cmd_win32 version 1718305764, installed version 1718305764, existing pending version 0
+[2024-06-15 03:17:34] Nothing to do
+[2024-06-15 03:17:34] Verifying installation...
+[2024-06-15 03:17:34] Performing checksum verification of executable files
+[2024-06-15 03:17:36] Verification complete
+[2024-06-15 03:17:39] Clearing cached metrics (E:\desktop\workshop-downloader\steamcmd\package\steam_cmd_metrics.bin)
+[2024-06-15 03:17:44] Shutdown
+
+
+[2024-06-15 03:19:17] Startup - updater built Jun 13 2024 11:41:47
+[2024-06-15 03:19:17] Startup - Steam Client launched with: E:\desktop\workshop-downloader\steamcmd\steamcmd.exe +login anonymous +workshop_download_item 4000 3024317004 +quit
+[2024-06-15 03:19:18] Using the following download hosts for Public, Realm steamglobal
+[2024-06-15 03:19:18] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-06-15 03:19:18] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-06-15 03:19:18] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-06-15 03:19:18] Checking for update on startup
+[2024-06-15 03:19:18] Checking for available updates...
+[2024-06-15 03:19:18] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_cmd_win32
+[2024-06-15 03:19:18] Manifest download: send request
+[2024-06-15 03:19:18] Manifest download: waiting for download to finish
+[2024-06-15 03:19:18] Manifest download: finished
+[2024-06-15 03:19:18] Download skipped: /steam_cmd_win32 version 1718305764, installed version 1718305764, existing pending version 0
+[2024-06-15 03:19:18] Nothing to do
+[2024-06-15 03:19:18] Verifying installation...
+[2024-06-15 03:19:18] Performing checksum verification of executable files
+[2024-06-15 03:19:18] Verification complete
+[2024-06-15 03:19:24] Shutdown

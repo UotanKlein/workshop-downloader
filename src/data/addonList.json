@@ -1,10 +1,18 @@
 {
+  "264467687": {
+    "id": "264467687",
+    "game": "4000",
+    "name": "Improved Stacker",
+    "icon": "https://steamuserimages-a.akamaihd.net/ugc/501399955305272493/195A9B1A1FF2DB2E464BFC96997A7E30A1E60131/",
+    "path": "E:\\desktop\\workshop-downloader\\addons\\4000\\264467687",
+    "data": 1401270377
+  },
   "3024317004": {
     "id": "3024317004",
     "game": "4000",
     "name": "GMinimap",
     "icon": "https://steamuserimages-a.akamaihd.net/ugc/2019355280651905872/3FDCE3BBC595601BBA1A08B3E37D353A52A6152D/",
-    "path": "addons/4000/3024317004",
+    "path": "E:\\desktop\\workshop-downloader\\addons\\4000\\3024317004",
     "data": 1692743805
   }
 }

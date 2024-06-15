@@ -7,6 +7,7 @@ import addonList from './addonList.js';
 import { isFile, isDir, checkExists } from './fileSystem.js';
 import { fileURLToPath } from 'url';
 import users from './usersData.js';
+import errors from './errors.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,24 +21,6 @@ const steamContentDir = path.join(
     curPath,
     `steamcmd/steamapps/workshop/content`,
 );
-
-const getAddonInfo = async (addonId) => {
-    try {
-        return await new Promise((resolve, reject) => {
-            const workshop = new SteamWorkshop();
-            workshop.getPublishedFileDetails(addonId, (err, data) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(data);
-                }
-            });
-        });
-    } catch (err) {
-        console.error(err);
-        return;
-    }
-};
 
 const getAddonId = (link) => new URL(link).searchParams.get('id');
 
@@ -108,18 +91,49 @@ const downloadAddon = (gameId, addonId, requireLogin, cb = async () => {}) => {
 
     executeCommand(steamcmdPath, steamcmdCommands)
         .then(async (code) => {
-            console.log(`Child process exited with code ${code}`);
             await cb(null, code);
         })
         .catch(async (error) => {
-            console.error(`Error: ${error.message}`);
             await cb(error);
         });
 };
 
+const getAddonInfo = async (addonId) => {
+    try {
+        return await new Promise((resolve, reject) => {
+            const workshop = new SteamWorkshop();
+            workshop.getPublishedFileDetails(addonId, (err, data) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+    } catch (err) {
+        throw new errors.AddonNotFoundError();
+    }
+};
+
+function isValidSteamLink(url) {
+    const regex =
+        /^https:\/\/steamcommunity\.com\/sharedfiles\/filedetails\/\?id=\d+$/;
+    return regex.test(url);
+}
+
 const prepareAddon = async (link) => {
+    if (!isValidSteamLink(link)) {
+        throw new errors.InvalidUrlError();
+    }
+
     const addonId = getAddonId(link);
-    const addonInfo = await getAddonInfo(addonId);
+    let addonInfo;
+
+    try {
+        addonInfo = await getAddonInfo(addonId);
+    } catch (err) {
+        throw err;
+    }
 
     const gameId = addonInfo[0].creator_app_id.toString();
     const addonName = addonInfo[0].title;
@@ -128,16 +142,22 @@ const prepareAddon = async (link) => {
 
     const app = gameList[gameId];
 
+    if (!app) {
+        throw new errors.GameNotSupportedError();
+    }
+
     if (
-        !app ||
         !(await checkExists(steamcmdPath)) ||
         !(await isFile(steamcmdPath)) ||
         !(await checkExists(addonsDir)) ||
         !(await isDir(addonsDir)) ||
         (await checkExists(path.join(addonsDir, gameId, addonId)))
     ) {
-        console.error('Invalid setup or addon already exists');
-        return;
+        throw new Error();
+    }
+
+    if (await checkExists(path.join(addonsDir, gameId, addonId))) {
+        throw new errors.AddonAlreadyExistsError();
     }
 
     downloadAddon(gameId, addonId, app.requireLogin, async (err, code) => {
@@ -149,8 +169,7 @@ const prepareAddon = async (link) => {
 
             try {
                 if (!(await checkExists(addonDir))) {
-                    console.error(`Addon directory not found at ${addonDir}`);
-                    return;
+                    throw new Error(`Addon directory not found at ${addonDir}`);
                 }
 
                 const newPathAddon = path.join(destinationDir, addonId);
@@ -172,19 +191,15 @@ const prepareAddon = async (link) => {
                 await addonList.saveList();
                 console.log('Directory successfully moved.');
             } catch (err) {
-                console.error('Error moving directory:', err);
+                throw new Error(`Error moving directory: ${err}`);
             }
         } else {
-            console.error(`Error downloading addon: exit code ${code}`);
+            throw new Error(`Error downloading addon: exit code ${code}`);
         }
     });
 };
 
-await prepareAddon(
-    'https://steamcommunity.com/sharedfiles/filedetails/?id=3024317004',
-);
-
-//export default prepareAddon;
+export default prepareAddon;
 
 // [
 //     {

@@ -7,14 +7,10 @@ import { gmod } from './decompilers.js';
 
 const gameList = {
     4000: {
+        id: 4000,
         game: "Garry's Mod",
         decompileFunc: gmod,
         requireLogin: false,
-    },
-    236850: {
-        game: 'Europa Universalis IV',
-        decompileFunc: null,
-        requireLogin: true,
     },
 };
 

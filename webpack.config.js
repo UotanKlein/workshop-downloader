@@ -21,6 +21,7 @@ const createHtmlPlugins = (pages) => {
                 filename: `${page}.html`,
                 template: path.resolve(__dirname, `src/${page}/${page}.html`),
                 chunks: [page],
+                publicPath: '../',
             }),
     );
 };
@@ -29,10 +30,12 @@ const config = {
     entry: {
         addonList: path.resolve(__dirname, './src/addonList/addonListEntry.js'),
         addonSite: path.resolve(__dirname, './src/addonSite/addonSiteEntry.js'),
+        addonMain: path.resolve(__dirname, './src/addonMain/addonMainEntry.js'),
     },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '../',
         clean: true,
     },
     devServer: {
@@ -46,10 +49,11 @@ const config = {
         },
     },
     plugins: [
-        ...createHtmlPlugins(['addonList', 'addonSite']),
+        ...createHtmlPlugins(['addonList', 'addonSite', 'addonMain']),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
+        ...(isProduction ? [new WorkboxWebpackPlugin.GenerateSW()] : []),
     ],
     module: {
         rules: [
@@ -88,11 +92,6 @@ const config = {
 };
 
 export default () => {
-    if (isProduction) {
-        config.mode = 'production';
-        config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
-    } else {
-        config.mode = 'development';
-    }
+    config.mode = isProduction ? 'production' : 'development';
     return config;
 };

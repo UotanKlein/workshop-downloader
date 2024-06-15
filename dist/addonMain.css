@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.title,
+.addonList,
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.title {
+    flex: 1;
+    color: white;
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+    width: 45%;
+}
+
+.addonList {
+    flex: 1;
+    width: 45%;
+    background-color: #383333;
+    color: white;
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.description {
+    width: 40%;
+    height: 310px;
+    background-color: #212121;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+}
+
+.upload-section {
+    width: 40%;
+    display: grid;
+    flex-direction: column;
+    margin: 0;
+}
+
+.upload-link {
+    display: grid;
+    background-color: #212121;
+    border: #212121;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    padding-left: 10px;
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+}
+.upload-link::placeholder {
+    color: rgb(68, 64, 64);
+    font-size: 17px;
+}
+.upload-button {
+    background-color: #212121;
+    border: #212121;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    color: white;
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+    transition: 1s;
+}
+.upload-button:hover {
+    background-color: #817272;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.error-input {
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.error-text {
+    color: red;
+}
+
+.successful-text {
+    color: green;
+}
+
+.successful-input {
+    box-sizing: border-box;
+    border: 1px solid green;
+}
+
+.dp-none {
+    display: none;
+}
+
+.left-image {
+    width: 100%;
+    height: 100%;
+}
+
