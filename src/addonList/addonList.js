@@ -40,24 +40,17 @@ const formattedDate = (sec) => {
 };
 
 const formAddonBlock = (dataLink, data, icon, name) => `
-    <a
-        class="addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 link-without"
-        href="${dataLink}"
-    >
-        <div class="addon-date">
-            <p class="mg-0 main-font">${data}</p>
-        </div>
-        <div class="addon-image">
-            <img
-                class="addon-img img-fluid"
-                src="${icon}"
-                alt="test-image-addon"
-            />
-        </div>
-        <div class="addon-name">
-            <p class="mg-0 main-font">${name}</p>
-        </div>
-    </a>
+  <a class="addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 link-without" href="${dataLink}">
+    <div class="card h-100">
+      <img src="${icon}" class="card-img-top" alt="Addon Image">
+      <div class="card-body">
+        <h5 class="card-title text-center">${name}</h5>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary text-center">Date of creation: ${data}</small>
+      </div>
+    </div>
+  </a>
 `;
 
 const app = async () => {

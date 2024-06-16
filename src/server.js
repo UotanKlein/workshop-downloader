@@ -1,8 +1,10 @@
 import express from 'express';
 import fs from 'fs';
 import fsp from 'fs/promises';
+import { isFile, isDir, checkExists } from './fileSystem.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
 import cors from 'cors';
 import Directory from './tree.js';
 import prepareAddon from './downloadAddon.js';
@@ -82,13 +84,15 @@ app.post('/dataAddon/:id', async (req, res) => {
     }
 });
 
-app.post('/changeFile/:id', async (req, res) => { // новый путь для кнопок обрабатывающих файлы
+app.post('/changeFile/:id', async (req, res) => {
+    // новый путь для кнопок обрабатывающих файлы
     const path = req.body.path;
     const changedData = req.body.data;
     console.log(req.body.path);
     if (!path.endsWith('.png') && fs.lstatSync(path).isFile()) {
         try {
             await fsp.writeFile(path, changedData, 'utf-8');
+            res.status(200).send(``);
         } catch (error) {
             console.error(`Ошибка записи: ${error.message}}`);
             res.status(500).send(`Ошибка записи: ${error.message}`);
@@ -96,14 +100,18 @@ app.post('/changeFile/:id', async (req, res) => { // новый путь для 
     }
 });
 
-app.delete('/changeFile/:id', async (req, res) => { //удаление
+app.delete('/changeFile/:id', async (req, res) => {
+    //удаление
     const pathToDelete = req.body.path;
+
     try {
         await fsp.unlink(pathToDelete);
+        res.status(200).send('');
     } catch (error) {
+        console.log(error);
         res.status(500).send(`Ошибка удаления файла: ${error.message}`);
     }
-})
+});
 
 app.get('/download-zip/:id', (req, res) => {
     const id = req.params.id;

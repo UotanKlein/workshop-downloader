@@ -55,11 +55,7 @@ const init = async () => {
     function renderFS(addon) {
         const ul = document.createElement('ul');
 
-        if (
-            addon.children &&
-            addon.children.length !== 0 &&
-            Array.isArray(addon.children)
-        ) {
+        if (addon.children && addon.children.length !== 0 && Array.isArray(addon.children)) {
             addon.children.forEach((item) => {
                 const li = document.createElement('li');
 
@@ -68,9 +64,7 @@ const init = async () => {
                 const span = document.createElement('span');
                 const img = document.createElement('img');
 
-                img.src = item.children
-                    ? '../images/blueFolder.png'
-                    : '../images/blueFile.png';
+                img.src = item.children ? '../images/blueFolder.png' : '../images/blueFile.png';
                 img.style.height = '16px';
                 img.style.width = '16px';
                 span.textContent = item.name;
@@ -82,26 +76,18 @@ const init = async () => {
                     const child = renderFS(item);
                     child.style.display = 'none';
                     button.addEventListener('click', () => {
-                        child.style.display =
-                        child.style.display === 'none' ? 'block' : 'none';
+                        child.style.display = child.style.display === 'none' ? 'block' : 'none';
                     });
                     li.appendChild(child);
                 } else {
-                   
                     button.addEventListener('click', async (event) => {
-                        const eventTarget =
-                            event.currentTarget.querySelector(
-                                'span',
-                            ).textContent;
-                        const listHead = document.querySelector(
-                            '.left-aside-filename',
-                        );
+                        const eventTarget = event.currentTarget.querySelector('span').textContent;
+                        const listHead = document.querySelector('.left-aside-filename');
                         try {
                             const postFile = await axios.post(dataLink, {
                                 path: item.path,
                             });
-                            const textArea =
-                                document.querySelector('.main-workspace');
+                            const textArea = document.querySelector('.main-workspace');
                             if (eventTarget.endsWith('.png')) {
                                 textArea.value = '¯_(ツ)_/¯';
                                 listHead.textContent = eventTarget;
@@ -117,7 +103,6 @@ const init = async () => {
                     });
                 }
                 ul.appendChild(li);
-
             });
         }
 
@@ -128,7 +113,7 @@ const init = async () => {
         const divShow = document.querySelector('.message');
         divShow.textContent = txt;
         divShow.style.display = 'block';
-        
+
         setTimeout(() => {
             divShow.style.display = 'none';
         }, 3000);
@@ -138,43 +123,52 @@ const init = async () => {
     listAddon.textContent = '';
     listAddon.appendChild(renderFS(mainAddon));
 
+    const test = () => {
+        console.log('test');
+    };
+
+    const test2 = () => {
+        console.log('test2');
+    };
+
     const buttonsForFiles = document.querySelectorAll('.button-for-work-with-files');
-                const httpCh = `http://${host}/changeFile/${id}`;
-                buttonsForFiles.forEach((button) => {
-                    button.addEventListener('click', async (event) => {
-                        const textArea = document.querySelector('.main-workspace');
-                        if (event.target.classList.contains('change-file')) {
-                            textArea.disabled = false;
-                        } else if (event.target.classList.contains('save-file')) {
-                            textArea.disabled = true;
-                            try {
-                                await axios.post(httpCh, { path: currentFilePath, data: textArea.value }, {timeout: 10000});
-                                showMessage('Файл успешно сохранён');
-                            } catch (error) {
-                                console.error(`Ошибка сохранения ${error.message}`);
-                                console.log(error);
-                            }
-                        } else if (event.target.classList.contains('select-all')) {
-                            textArea.select();
-                        } else if (event.target.classList.contains('copy-all')) {
-                            try {
-                                await navigator.clipboard.writeText(textArea.value);
-                            } catch (error) {
-                                console.error(`Ошибка копирования: ${error.message}`);
-                            }
-                        } else if (event.target.classList.contains('delete-file')) {
-                            try {
-                                await axios.delete(httpCh, { data: { path: currentFilePath }});
-                                listAddon.textContent = '';
-                                const getNewSystem = await axios.get(dataLink);
-                                const NewMainAddon = JSON.parse(getNewSystem.data.json);
-                                listAddon.appendChild(renderFS(NewMainAddon));
-                            } catch (error) {
-                                console.error(`Ошибка удаления файла: ${error.message}`);
-                            }
-                        }
-                    });
-                });
+    const httpCh = `http://${host}/changeFile/${id}`;
+    buttonsForFiles.forEach((button) => {
+        button.addEventListener('click', async (event) => {
+            const textArea = document.querySelector('.main-workspace');
+            if (event.target.classList.contains('change-file')) {
+                textArea.disabled = false;
+            } else if (event.target.classList.contains('save-file')) {
+                textArea.disabled = true;
+                try {
+                    await axios.post(httpCh, { path: currentFilePath, data: textArea.value }, { timeout: 10000 });
+                    showMessage('Файл успешно сохранён');
+                } catch (error) {
+                    console.error(`Ошибка сохранения ${error.message}`);
+                    console.log(error);
+                }
+            } else if (event.target.classList.contains('select-all')) {
+                textArea.select();
+            } else if (event.target.classList.contains('copy-all')) {
+                try {
+                    await navigator.clipboard.writeText(textArea.value);
+                } catch (error) {
+                    console.error(`Ошибка копирования: ${error.message}`);
+                }
+            } else if (event.target.classList.contains('delete-file')) {
+                try {
+                    await axios.delete(httpCh, { data: { path: currentFilePath } });
+                    listAddon.textContent = '';
+                    const getNewSystem = await axios.get(dataLink);
+                    const NewMainAddon = JSON.parse(getNewSystem.data.json);
+                    listAddon.appendChild(renderFS(NewMainAddon));
+                } catch (error) {
+                    console.log(JSON.stringify(error, null, 2));
+                    console.error(`Ошибка удаления файла: ${error.message}`);
+                }
+            }
+        });
+    });
 };
 
 await init();
