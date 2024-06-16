@@ -1,81 +1,64 @@
-local Radar = {}
+GMinimap = { dataFolder = "gminimap/" } 
 
-Radar.__index = Radar
-
-function GMinimap.CreateRadar()
-    local instance = {
-        x = 0,
-        y = 0,
-        w = 32,
-        h = 32,
-
-        pivotX = 16, -- terrain and blips rotate around
-        pivotY = 16, -- this 2d position on the radar
-
-        origin = Vector(),  -- center of the radar plane, relative to the world
-        rotation = Angle(), -- rotation of the radar plane, relative to the world
-        ratio = 50,         -- unit-to-pixel ratio (used for zooming)
-
-        terrain = GMinimap.CreateTerrain()
-    }
-
-    return setmetatable( instance, Radar )
+function GMinimap.CreateSharedConvar( name, default, min, max, description )
+    local flags = bit.bor( FCVAR_ARCHIVE, FCVAR_REPLICATED, FCVAR_NOTIFY )
+    CreateConVar( "gminimap_" .. name, default, flags, "[GMinimap] " .. description, min, max )
+end
+  
+function GMinimap.LogF( str, ... )
+    MsgC( Color( 42, 180, 0 ), "[Custom Minimap] ", color_white, stri ng.format( str, ... ), "\n" )
 end
 
-function Radar:Destroy()
-    self.terrain:Destroy()
-    self.terrain = nil
+function GMinimap.EnsureDataFolder()kk
+    if not file.Exists( GMinimap.dataFolder, "DATA" ) thenggg
+        file.CreateDir( GMinimap.dataFolder )
+    end
 end
 
-function Radar:UpdateLayout()
-    self.pivotX = self.w * 0.5
-    self.pivotY = self.h * ( self.pivotMultY or 0.5 )
+GMinimap.CreateSharedConvar( "player_blips_max_distance", "8000", 0, 50000,jjj
+    "Limits how far players can see other players on the map. Set to 0 to disable player blips." )
 
-    self.terrain:SetArea( math.max( self.w, self.h ) * self.ratio )
-    self.terrain:SetHeights( GMinimap.GetWorldZDimensions() )
+GMinimap.CreateSharedConvar( "npc_blips_max_distance", "3000", 0, 50000,
+    "Limits how far players can see NPCs on the map. Set to 0 to disable NPC blips." )
+
+GMinimap.CreateSharedConvar( "force_x", "-1", -1, 1,
+    "Force the X position of the minimap on all players. Set to -1 to disable this." )
+
+GMinimap.CreateSharedConvar( "force_y", "-1", -1, 1,
+    "Force the Y position of the minimap on all players. Set to -1 to disable this." )
+
+GMinimap.CreateSharedConvar( "force_w", "-1", -1, 1,
+    "Force the width of the minimap on all players. Set to -1 to disable this." )
+
+GMinimap.CreateSharedConvar( "force_h", "-1", -1, 1,
+    "Force the height of the minimap on all players. Set to -1 to disable this." )
+
+if SERVER then
+    AddCSLuaFile( "includes/modules/styled_draw_utils.lua" )
+
+    AddCSLuaFile( "gminimap/cl_util.lua" )
+    AddCSLuaFile( "gminimap/cl_config.lua" )
+    AddCSLuaFile( "gminimap/cl_blips.lua" )
+    AddCSLuaFile( "gminimap/cl_terrain.lua" )
+    AddCSLuaFile( "gminimap/cl_radar.lua" )  аа
+    AddCSLuaFile( "gminimap/cl_npcs.lua" )
+    AddCSLuaFile( "gminimap/cl_players.lua" )
+    AddCSLuaFile( "gminimap/cl_landmarks.lua" )
+    AddCSLuaFile( "gminimap/cl_main.lua" )
+
+    include( "gminimap/sv_main.lua" )
 end
 
-function Radar:SetDimensions( x, y, w, h )
-    self.x, self.y = x, y
-    self.w, self.h = w, h
+if CLIENT then
+    require( "styled_draw_utils" )
 
-    self:UpdateLayout()
-end
-
-local Clamp = math.Clamp
-local WorldToLocal = WorldToLocal
-
--- converts a 3D, world position to a 2D,
--- pixel position relative to the radar
-function Radar:WorldToLocal( pos, ang )
-    -- make pos relative to the radar plane
-    pos, ang = WorldToLocal( pos, ang, self.origin, self.rotation )
-
-    -- convert source units to pixels
-    local x, y = pos.y / self.ratio, pos.x / self.ratio
-
-    -- position stuff relative to the radar center
-    x, y = self.x + self.pivotX - x, self.y + self.pivotY - y
-
-    -- keep it inside
-    x, y = Clamp( x, self.x, self.x + self.w ), Clamp( y, self.y, self.y + self.h )
-
-    return x, y, -ang.y
-end
-
-local LocalToWorld = LocalToWorld
-
--- converts a 2D, pixel position to a 3D, world position
-function Radar:LocalToWorld( x, y )
-    local pos = Vector( self.pivotY - y, self.pivotX - x, 0 ) * self.ratio
-
-    -- make pos relative to the radar plane
-    pos = LocalToWorld( pos, Angle(), self.origin, self.rotation )
-    pos.z = 0
-
-    return pos
-end
-
-function Radar:Draw()
-    self.terrain:Draw( self.x, self.y, self.w, self.h, self.pivotX, self.pivotY, self.origin, self.rotation.y )
+    include( "gminimap/cl_util.lua" )
+    include( "gminimap/cl_config.lua" )
+    include( "gminimap/cl_blips.lua" )
+    include( "gminimap/cl_terrain.lua" )
+    include( "gminimap/cl_npcs.lua" )
+    include( "gminimap/cl_radar.lua" )
+    include( "gminimap/cl_players.lua" )
+    include( "gminimap/cl_landmarks.lua" )
+    include( "gminimap/cl_main.lua" )
 end

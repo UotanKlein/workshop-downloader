@@ -10,6 +10,7 @@ const dataLink = `http://${host}/dataAddon/${id}`;
 window.onload = function () {
     const textArea = document.querySelector('.main-workspace');
     textArea.value = '';
+    textArea.disabled = true;
 
     const goBack = document.querySelector('.go-back');
     const goAddonList = document.querySelector('.go-addonList');
@@ -49,6 +50,8 @@ const init = async () => {
         await downloadZip(id);
     });
 
+    let currentFilePath = null;
+
     function renderFS(addon) {
         const ul = document.createElement('ul');
 
@@ -80,10 +83,11 @@ const init = async () => {
                     child.style.display = 'none';
                     button.addEventListener('click', () => {
                         child.style.display =
-                            child.style.display === 'none' ? 'block' : 'none';
+                        child.style.display === 'none' ? 'block' : 'none';
                     });
                     li.appendChild(child);
                 } else {
+                   
                     button.addEventListener('click', async (event) => {
                         const eventTarget =
                             event.currentTarget.querySelector(
@@ -105,20 +109,72 @@ const init = async () => {
                                 textArea.value = postFile.data;
                                 listHead.textContent = eventTarget;
                             }
+
+                            currentFilePath = item.path;
                         } catch (error) {
                             console.error(`Ошибка: ${error.message}`);
                         }
                     });
                 }
                 ul.appendChild(li);
+
             });
         }
 
         return ul;
     }
 
+    function showMessage(txt) {
+        const divShow = document.querySelector('.message');
+        divShow.textContent = txt;
+        divShow.style.display = 'block';
+        
+        setTimeout(() => {
+            divShow.style.display = 'none';
+        }, 3000);
+        console.log('A');
+    }
+
     listAddon.textContent = '';
     listAddon.appendChild(renderFS(mainAddon));
+
+    const buttonsForFiles = document.querySelectorAll('.button-for-work-with-files');
+                const httpCh = `http://${host}/changeFile/${id}`;
+                buttonsForFiles.forEach((button) => {
+                    button.addEventListener('click', async (event) => {
+                        const textArea = document.querySelector('.main-workspace');
+                        if (event.target.classList.contains('change-file')) {
+                            textArea.disabled = false;
+                        } else if (event.target.classList.contains('save-file')) {
+                            textArea.disabled = true;
+                            try {
+                                await axios.post(httpCh, { path: currentFilePath, data: textArea.value }, {timeout: 10000});
+                                showMessage('Файл успешно сохранён');
+                            } catch (error) {
+                                console.error(`Ошибка сохранения ${error.message}`);
+                                console.log(error);
+                            }
+                        } else if (event.target.classList.contains('select-all')) {
+                            textArea.select();
+                        } else if (event.target.classList.contains('copy-all')) {
+                            try {
+                                await navigator.clipboard.writeText(textArea.value);
+                            } catch (error) {
+                                console.error(`Ошибка копирования: ${error.message}`);
+                            }
+                        } else if (event.target.classList.contains('delete-file')) {
+                            try {
+                                await axios.delete(httpCh, { data: { path: currentFilePath }});
+                                listAddon.textContent = '';
+                                const getNewSystem = await axios.get(dataLink);
+                                const NewMainAddon = JSON.parse(getNewSystem.data.json);
+                                listAddon.appendChild(renderFS(NewMainAddon));
+                            } catch (error) {
+                                console.error(`Ошибка удаления файла: ${error.message}`);
+                            }
+                        }
+                    });
+                });
 };
 
 await init();

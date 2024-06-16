@@ -4,7 +4,7 @@
     "game": "4000",
     "name": "Gmod Legs 3",
     "icon": "https://steamuserimages-a.akamaihd.net/ugc/1875202855979959454/C752C11300863D1EB61EA601AA67F195AA00D18B/",
-    "path": "E:\\desktop\\workshop-downloader\\addons\\4000\\112806637",
+    "path": "addons/4000/112806637",
     "data": 1355264397
   },
   "3024317004": {
@@ -12,7 +12,7 @@
     "game": "4000",
     "name": "GMinimap",
     "icon": "https://steamuserimages-a.akamaihd.net/ugc/2019355280651905872/3FDCE3BBC595601BBA1A08B3E37D353A52A6152D/",
-    "path": "E:\\desktop\\workshop-downloader\\addons\\4000\\3024317004",
+    "path": "addons/4000/3024317004",
     "data": 1692743805
   }
 }

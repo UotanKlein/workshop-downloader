@@ -6,3 +6,5 @@ import './images/blueFolder.png';
 import './images/blackFile.png';
 import './images/blueFile.png';
 import './images/cpp.jpg';
+import './images/Space.jpg';
+import './images/mult-kosmo.png';
