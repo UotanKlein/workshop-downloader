@@ -88,7 +88,6 @@ app.post('/changeFile/:id', async (req, res) => {
     // новый путь для кнопок обрабатывающих файлы
     const path = req.body.path;
     const changedData = req.body.data;
-    console.log(req.body.path);
     if (!path.endsWith('.png') && fs.lstatSync(path).isFile()) {
         try {
             await fsp.writeFile(path, changedData, 'utf-8');
@@ -103,12 +102,10 @@ app.post('/changeFile/:id', async (req, res) => {
 app.delete('/changeFile/:id', async (req, res) => {
     //удаление
     const pathToDelete = req.body.path;
-
     try {
         await fsp.unlink(pathToDelete);
         res.status(200).send('');
     } catch (error) {
-        console.log(error);
         res.status(500).send(`Ошибка удаления файла: ${error.message}`);
     }
 });
