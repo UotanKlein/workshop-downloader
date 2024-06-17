@@ -7,12 +7,20 @@
     "path": "addons/4000/112806637",
     "data": 1355264397
   },
-  "3024317004": {
-    "id": "3024317004",
+  "2160669896": {
+    "id": "2160669896",
     "game": "4000",
-    "name": "GMinimap",
-    "icon": "https://steamuserimages-a.akamaihd.net/ugc/2019355280651905872/3FDCE3BBC595601BBA1A08B3E37D353A52A6152D/",
-    "path": "addons/4000/3024317004",
-    "data": 1692743805
+    "name": "Dynamic Height + Crouch Fix",
+    "icon": "https://steamuserimages-a.akamaihd.net/ugc/1329075451107808184/B28950822F343B467731D5886B4C38C88878191B/",
+    "path": "addons/4000/2160669896",
+    "data": 1594346017
+  },
+  "3266923184": {
+    "id": "3266923184",
+    "game": "4000",
+    "name": "Tactical Leaning for any weapons",
+    "icon": "https://steamuserimages-a.akamaihd.net/ugc/2462986576125520498/342520C9A6B897F719124BC709F77B42CB885575/",
+    "path": "addons/4000/3266923184",
+    "data": 1718279138
   }
 }

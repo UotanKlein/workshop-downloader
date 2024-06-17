@@ -1,5 +1,6 @@
 import axios from 'axios';
 import errors from '../errors.js';
+import { domEach } from 'cheerio/lib/utils';
 
 const location = window.location;
 const host = location.host;
@@ -32,12 +33,27 @@ const app = async () => {
         const linkBox = document.querySelector('#link-box');
         const errorText = linkBox.querySelector('#error-event');
 
+        errorText.innerHTML = '';
+
+        const domParser = new DOMParser();
+
+        const loadStr = `
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        `;
+
+        const loadDiv = domParser.parseFromString(loadStr, 'text/html').body.firstChild;
+        errorText.append(loadDiv);
+
         const value = state.inputValue;
 
         try {
             const { status, data } = await axios.post(addonDownload, {
                 link: value,
             });
+
+            errorText.innerHTML = '';
 
             inputLink.classList.remove('error-input');
             inputLink.classList.add('successful-input');
@@ -46,6 +62,8 @@ const app = async () => {
             errorText.classList.add('successful-text');
             errorText.textContent = data;
         } catch (err) {
+            errorText.innerHTML = '';
+
             const errorResponse = err.response;
             const errorData = errorResponse.data;
 

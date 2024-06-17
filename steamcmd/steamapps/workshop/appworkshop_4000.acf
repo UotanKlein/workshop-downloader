@@ -1,7 +1,7 @@
 "AppWorkshop"
 {
 	"appid"		"4000"
-	"SizeOnDisk"		"1402908012"
+	"SizeOnDisk"		"1402922709"
 	"NeedsUpdate"		"0"
 	"NeedsDownload"		"0"
 	"TimeLastUpdated"		"0"
@@ -27,6 +27,12 @@
 			"timeupdated"		"1611086207"
 			"manifest"		"8941429388296460093"
 		}
+		"2160669896"
+		{
+			"size"		"4360"
+			"timeupdated"		"1594743909"
+			"manifest"		"1855536845919544334"
+		}
 		"2841063827"
 		{
 			"size"		"1144614336"
@@ -39,6 +45,12 @@
 			"timeupdated"		"1702082561"
 			"manifest"		"3464215742853616018"
 		}
+		"3266923184"
+		{
+			"size"		"10337"
+			"timeupdated"		"1718390903"
+			"manifest"		"7397664425601451299"
+		}
 	}
 	"WorkshopItemDetails"
 	{
@@ -46,7 +58,9 @@
 		{
 			"manifest"		"6397397464092322100"
 			"timeupdated"		"1657342925"
-			"timetouched"		"1718439023"
+			"timetouched"		"1718597788"
+			"BytesDownloaded"		"4640"
+			"BytesToDownload"		"4640"
 			"latest_timeupdated"		"1657342925"
 			"latest_manifest"		"6397397464092322100"
 		}
@@ -68,6 +82,16 @@
 			"latest_timeupdated"		"1611086207"
 			"latest_manifest"		"8941429388296460093"
 		}
+		"2160669896"
+		{
+			"manifest"		"1855536845919544334"
+			"timeupdated"		"1594743909"
+			"timetouched"		"1718598107"
+			"BytesDownloaded"		"1328"
+			"BytesToDownload"		"1328"
+			"latest_timeupdated"		"1594743909"
+			"latest_manifest"		"1855536845919544334"
+		}
 		"2841063827"
 		{
 			"manifest"		"3918572798995098159"
@@ -82,11 +106,21 @@
 		{
 			"manifest"		"3464215742853616018"
 			"timeupdated"		"1702082561"
-			"timetouched"		"1718437990"
+			"timetouched"		"1718596582"
 			"BytesDownloaded"		"63072"
 			"BytesToDownload"		"63072"
 			"latest_timeupdated"		"1702082561"
 			"latest_manifest"		"3464215742853616018"
+		}
+		"3266923184"
+		{
+			"manifest"		"7397664425601451299"
+			"timeupdated"		"1718390903"
+			"timetouched"		"1718597668"
+			"BytesDownloaded"		"2960"
+			"BytesToDownload"		"2960"
+			"latest_timeupdated"		"1718390903"
+			"latest_manifest"		"7397664425601451299"
 		}
 	}
 }

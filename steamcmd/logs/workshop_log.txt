@@ -615,3 +615,142 @@
 [2024-06-15 11:10:23] [AppID 4000] Download item 112806637 result : OK
 [2024-06-15 11:10:23] [AppID 4000] Finished Workshop download job : No Error
 [2024-06-15 11:10:23] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:31:16] Client version: 1718305764
+[2024-06-17 06:31:16] Loading workshop items for 0 installed apps for user [a:1:1603858706]:
+[2024-06-17 06:31:18] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (5 installed, 5 needed)
+[2024-06-17 06:31:18] [AppID 4000] Download item 3266923184 requested by app
+[2024-06-17 06:31:18] [AppID 4000] Starting Workshop download job (requested item 3266923184 )
+[2024-06-17 06:31:19] [AppID 4000] Detected workshop change (latest from server) : changed cached item 3266923184, new manifest 7397664425601451299
+[2024-06-17 06:31:20] [AppID 4000] Download item 3266923184 result : OK
+[2024-06-17 06:31:20] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-06-17 06:34:42] Client version: 1718305764
+[2024-06-17 06:34:42] Loading workshop items for 0 installed apps for user [a:1:2137682070]:
+[2024-06-17 06:34:43] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (6 installed, 6 needed)
+[2024-06-17 06:34:43] [AppID 4000] Download item 2160669896 requested by app
+[2024-06-17 06:34:43] [AppID 4000] Starting Workshop download job (requested item 2160669896 )
+[2024-06-17 06:34:43] [AppID 4000] Detected workshop change (latest from server) : changed cached item 2160669896, new manifest 1855536845919544334
+[2024-06-17 06:34:44] [AppID 4000] Download item 2160669896 result : OK
+[2024-06-17 06:34:44] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:34:44] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:37:12] Client version: 1718305764
+[2024-06-17 06:37:12] Loading workshop items for 0 installed apps for user [a:1:1675605119]:
+[2024-06-17 06:37:14] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:37:14] [AppID 4000] Download item 2160669896 requested by app
+[2024-06-17 06:37:14] [AppID 4000] Starting Workshop download job (requested item 2160669896 )
+[2024-06-17 06:37:16] [AppID 4000] Download item 2160669896 result : OK
+[2024-06-17 06:37:16] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:37:16] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:37:55] Client version: 1718305764
+[2024-06-17 06:37:55] Loading workshop items for 0 installed apps for user [a:1:790276455]:
+[2024-06-17 06:37:56] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:37:56] [AppID 4000] Download item 3266923184 requested by app
+[2024-06-17 06:37:56] [AppID 4000] Starting Workshop download job (requested item 3266923184 )
+[2024-06-17 06:37:58] [AppID 4000] Download item 3266923184 result : OK
+[2024-06-17 06:37:58] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:37:58] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:39:10] Client version: 1718305764
+[2024-06-17 06:39:10] Loading workshop items for 0 installed apps for user [a:1:1368605926]:
+[2024-06-17 06:39:11] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:39:11] [AppID 4000] Download item 3266923184 requested by app
+[2024-06-17 06:39:11] [AppID 4000] Starting Workshop download job (requested item 3266923184 )
+[2024-06-17 06:39:12] [AppID 4000] Download item 3266923184 result : OK
+[2024-06-17 06:39:12] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:39:13] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:41:30] Client version: 1718305764
+[2024-06-17 06:41:30] Loading workshop items for 0 installed apps for user [a:1:1871589705]:
+[2024-06-17 06:41:31] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:41:31] [AppID 4000] Download item 3024317004 requested by app
+[2024-06-17 06:41:31] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-06-17 06:41:33] [AppID 4000] Download item 3024317004 result : OK
+[2024-06-17 06:41:33] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:41:33] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:44:41] Client version: 1718305764
+[2024-06-17 06:44:41] Loading workshop items for 0 installed apps for user [a:1:744238150]:
+[2024-06-17 06:44:42] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:44:42] [AppID 4000] Download item 3024317004 requested by app
+[2024-06-17 06:44:42] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-06-17 06:44:44] [AppID 4000] Download item 3024317004 result : OK
+[2024-06-17 06:44:44] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:44:44] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:51:12] Client version: 1718305764
+[2024-06-17 06:51:12] Loading workshop items for 0 installed apps for user [a:1:1165392970]:
+[2024-06-17 06:51:14] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:51:14] [AppID 4000] Download item 3024317004 requested by app
+[2024-06-17 06:51:14] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-06-17 06:51:15] [AppID 4000] Download item 3024317004 result : OK
+[2024-06-17 06:51:15] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-06-17 06:52:54] Client version: 1718305764
+[2024-06-17 06:52:54] Loading workshop items for 0 installed apps for user [a:1:1179295962]:
+[2024-06-17 06:52:55] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:52:55] [AppID 4000] Download item 3024317004 requested by app
+[2024-06-17 06:52:55] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-06-17 06:52:57] [AppID 4000] Download item 3024317004 result : OK
+[2024-06-17 06:52:57] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:52:57] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 06:56:19] Client version: 1718305764
+[2024-06-17 06:56:19] Loading workshop items for 0 installed apps for user [a:1:3670715454]:
+[2024-06-17 06:56:21] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 06:56:21] [AppID 4000] Download item 3024317004 requested by app
+[2024-06-17 06:56:21] [AppID 4000] Starting Workshop download job (requested item 3024317004 )
+[2024-06-17 06:56:22] [AppID 4000] Download item 3024317004 result : OK
+[2024-06-17 06:56:22] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 06:56:22] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 07:01:31] Client version: 1718305764
+[2024-06-17 07:01:31] Loading workshop items for 0 installed apps for user [a:1:2383669420]:
+[2024-06-17 07:01:33] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 07:01:33] [AppID 4000] Download item 3266923184 requested by app
+[2024-06-17 07:01:33] [AppID 4000] Starting Workshop download job (requested item 3266923184 )
+[2024-06-17 07:01:34] [AppID 4000] Download item 3266923184 result : OK
+[2024-06-17 07:01:34] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 07:01:34] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 07:14:25] Client version: 1718305764
+[2024-06-17 07:14:25] Loading workshop items for 0 installed apps for user [a:1:1175851275]:
+[2024-06-17 07:14:26] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 07:14:26] [AppID 4000] Download item 3266923184 requested by app
+[2024-06-17 07:14:26] [AppID 4000] Starting Workshop download job (requested item 3266923184 )
+[2024-06-17 07:14:28] [AppID 4000] Download item 3266923184 result : OK
+[2024-06-17 07:14:28] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 07:14:28] [AppID 4000] Updating workshop item details failed with Failure
+
+
+[2024-06-17 07:16:25] Client version: 1718305764
+[2024-06-17 07:16:25] Loading workshop items for 0 installed apps for user [a:1:1820803284]:
+[2024-06-17 07:16:26] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 07:16:26] [AppID 4000] Download item 112806637 requested by app
+[2024-06-17 07:16:26] [AppID 4000] Starting Workshop download job (requested item 112806637 )
+[2024-06-17 07:16:28] [AppID 4000] Download item 112806637 result : OK
+[2024-06-17 07:16:28] [AppID 4000] Finished Workshop download job : No Error
+
+
+[2024-06-17 07:21:44] Client version: 1718305764
+[2024-06-17 07:21:44] Loading workshop items for 0 installed apps for user [a:1:1733845359]:
+[2024-06-17 07:21:46] [AppID 4000] Loaded workshop items in "E:\desktop\workshop-downloader\steamcmd\steamapps\workshop" (7 installed, 7 needed)
+[2024-06-17 07:21:46] [AppID 4000] Download item 2160669896 requested by app
+[2024-06-17 07:21:46] [AppID 4000] Starting Workshop download job (requested item 2160669896 )
+[2024-06-17 07:21:47] [AppID 4000] Download item 2160669896 result : OK
+[2024-06-17 07:21:47] [AppID 4000] Finished Workshop download job : No Error
+[2024-06-17 07:21:47] [AppID 4000] Updating workshop item details failed with Failure

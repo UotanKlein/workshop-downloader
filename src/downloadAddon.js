@@ -17,10 +17,7 @@ const steamcmdPath = path.join(curPath, 'steamcmd/steamcmd.exe');
 
 const addonsDir = path.join(curPath, 'addons');
 
-const steamContentDir = path.join(
-    curPath,
-    `steamcmd/steamapps/workshop/content`,
-);
+const steamContentDir = path.join(curPath, `steamcmd/steamapps/workshop/content`);
 
 const getAddonId = (link) => new URL(link).searchParams.get('id');
 
@@ -42,60 +39,42 @@ const getLoginData = () => {
 
 // FIXME: Решить проблему парарлелльной загрузки аддонов.
 
-const downloadAddon = (gameId, addonId, requireLogin, cb = async () => {}) => {
-    let steamcmdCommands;
+const downloadAddon = (gameId, addonId, requireLogin) => {
+    return new Promise((resolve, reject) => {
+        let steamcmdCommands;
+        if (requireLogin) {
+            const tblUsrData = getLoginData();
+            steamcmdCommands = ['+login', tblUsrData.login, tblUsrData.password, '+workshop_download_item', gameId, addonId, '+quit'];
+        } else {
+            steamcmdCommands = ['+login', 'anonymous', '+workshop_download_item', gameId, addonId, '+quit'];
+        }
 
-    if (requireLogin) {
-        const tblUsrData = getLoginData();
-        steamcmdCommands = [
-            '+login',
-            tblUsrData.login,
-            tblUsrData.password,
-            '+workshop_download_item',
-            gameId,
-            addonId,
-            '+quit',
-        ];
-    } else {
-        steamcmdCommands = [
-            '+login',
-            'anonymous',
-            '+workshop_download_item',
-            gameId,
-            addonId,
-            '+quit',
-        ];
-    }
+        const executeCommand = (command, args) => {
+            return new Promise((resolve, reject) => {
+                const cmd = spawn(command, args);
 
-    const executeCommand = (command, args) => {
-        return new Promise((resolve, reject) => {
-            const cmd = spawn(command, args);
+                cmd.stdout.on('data', (data) => {
+                    console.log(`stdout: ${data.toString()}`);
+                });
 
-            cmd.stdout.on('data', (data) => {
-                console.log(`stdout: ${data.toString()}`);
+                cmd.stderr.on('data', (data) => {
+                    console.error(`stderr: ${data.toString()}`);
+                });
+
+                cmd.on('close', (code) => {
+                    if (code === 0) {
+                        resolve(code);
+                    } else {
+                        reject(new Error(`Process exited with code ${code}`));
+                    }
+                });
             });
+        };
 
-            cmd.stderr.on('data', (data) => {
-                console.error(`stderr: ${data.toString()}`);
-            });
-
-            cmd.on('close', (code) => {
-                if (code === 0) {
-                    resolve(code);
-                } else {
-                    reject(new Error(`Process exited with code ${code}`));
-                }
-            });
-        });
-    };
-
-    executeCommand(steamcmdPath, steamcmdCommands)
-        .then(async (code) => {
-            await cb(null, code);
-        })
-        .catch(async (error) => {
-            await cb(error);
-        });
+        executeCommand(steamcmdPath, steamcmdCommands)
+            .then((code) => resolve(code))
+            .catch((error) => reject(error));
+    });
 };
 
 const getAddonInfo = async (addonId) => {
@@ -115,11 +94,12 @@ const getAddonInfo = async (addonId) => {
     }
 };
 
-function isValidSteamLink(url) {
-    const regex =
-        /^https:\/\/steamcommunity\.com\/sharedfiles\/filedetails\/\?id=\d+$/;
+const isValidSteamLink = (url) => {
+    const regex = /^https:\/\/steamcommunity\.com\/sharedfiles\/filedetails\/\?id=\d+$/;
     return regex.test(url);
-}
+};
+
+const pathToLinux = (oldPath) => oldPath.split(path.sep).join('/');
 
 // https://steamcommunity.com/sharedfiles/filedetails/?id=264467687
 
@@ -143,62 +123,47 @@ const prepareAddon = async (link) => {
     const addonData = addonInfo[0].time_created;
 
     const app = gameList[gameId];
-
     if (!app) {
         throw new errors.GameNotSupportedError();
     }
 
-    if (
-        !(await checkExists(steamcmdPath)) ||
-        !(await isFile(steamcmdPath)) ||
-        !(await checkExists(addonsDir)) ||
-        !(await isDir(addonsDir)) ||
-        (await checkExists(path.join(addonsDir, gameId, addonId)))
-    ) {
-        throw new Error();
-    }
-
-    if (await checkExists(path.join(addonsDir, gameId, addonId))) {
-        throw new errors.AddonAlreadyExistsError();
-    }
-
-    downloadAddon(gameId, addonId, app.requireLogin, async (err, code) => {
-        if (!err && code === 0) {
-            console.log('Addon successfully downloaded');
-
-            const addonDir = path.join(steamContentDir, gameId, addonId);
-            const destinationDir = path.join(addonsDir, gameId);
-
-            try {
-                if (!(await checkExists(addonDir))) {
-                    throw new Error(`Addon directory not found at ${addonDir}`);
-                }
-
-                const newPathAddon = path.join(destinationDir, addonId);
-                await fsp.mkdir(destinationDir, { recursive: true });
-                await moveAddon(addonDir, newPathAddon);
-
-                if (app.decompileFunc) {
-                    await app.decompileFunc(path.join(destinationDir, addonId));
-                }
-
-                addonList.addAddon(
-                    addonId,
-                    gameId,
-                    addonName,
-                    addonIcon,
-                    newPathAddon,
-                    addonData,
-                );
-                await addonList.saveList();
-                console.log('Directory successfully moved.');
-            } catch (err) {
-                throw new Error(`Error moving directory: ${err}`);
-            }
-        } else {
-            throw new Error(`Error downloading addon: exit code ${code}`);
+    try {
+        if (!(await checkExists(steamcmdPath)) || !(await isFile(steamcmdPath)) || !(await checkExists(addonsDir)) || !(await isDir(addonsDir))) {
+            throw new Error('Необходимые файлы или каталоги отсутствуют.');
         }
-    });
+
+        if (await checkExists(path.join(addonsDir, gameId, addonId))) {
+            throw new errors.AddonAlreadyExistsError();
+        }
+
+        await downloadAddon(gameId, addonId, app.requireLogin);
+
+        console.log('Addon successfully downloaded');
+
+        const addonDir = path.join(steamContentDir, gameId, addonId);
+        const destinationDir = path.join(addonsDir, gameId);
+
+        if (!(await checkExists(addonDir))) {
+            throw new Error(`Directory of addon not found at ${addonDir}`);
+        }
+
+        const newPathAddon = path.join(destinationDir, addonId);
+        await fsp.mkdir(destinationDir, { recursive: true });
+        await moveAddon(addonDir, newPathAddon);
+
+        if (app.decompileFunc) {
+            await app.decompileFunc(path.join(destinationDir, addonId));
+        }
+
+        const linuxPath = pathToLinux(path.join('addons', gameId, addonId));
+
+        addonList.addAddon(addonId, gameId, addonName, addonIcon, linuxPath, addonData);
+        await addonList.saveList();
+        console.log('Directory successfully moved.');
+    } catch (err) {
+        console.log(err);
+        throw new Error(`Error during addon processing: ${err.message}`);
+    }
 };
 
 export default prepareAddon;

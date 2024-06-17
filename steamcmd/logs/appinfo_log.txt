@@ -1042,3 +1042,172 @@
 [2024-06-15 11:10:20] RequestAppInfoUpdate: AppIDs 4000
 [2024-06-15 11:10:20] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
 [2024-06-15 11:10:20] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:31:16] Client version: 1718305764
+[2024-06-17 06:31:16] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:31:16] Packages changed: force all
+[2024-06-17 06:31:16] Apps changed: force all
+[2024-06-17 06:31:16] Change number 23983309->23995527, apps: 0/0, packages: 0/0
+[2024-06-17 06:31:16] Requesting 1576 apps, 128 packages (meta data, 1024 prev attempts, expected 79 KB)
+[2024-06-17 06:31:17] Requested 217 app access tokens, 53 received, 164 denied
+[2024-06-17 06:31:17] Updated SHAs with 53 new access tokens
+[2024-06-17 06:31:17] Downloaded 47 apps via HTTP, 1827 KB (450 KB compressed)
+[2024-06-17 06:31:17] Requesting 69 apps, 0 packages (full data, 1024 prev attempts, expected 296 KB)
+[2024-06-17 06:31:18] UpdatesJob: finished OK, apps updated 116 (2120 KB), packages updated 0 (0 KB)
+[2024-06-17 06:31:18] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:31:18] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:31:18] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:34:42] Client version: 1718305764
+[2024-06-17 06:34:42] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:34:42] Change number 23995527->23995546, apps: 0/16, packages: 0/4
+[2024-06-17 06:34:42] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:34:43] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:34:43] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 06:34:43] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:34:43] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:34:43] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:37:12] Client version: 1718305764
+[2024-06-17 06:37:12] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:37:13] Apps changed: 996560=23995554,700330=23995551,
+[2024-06-17 06:37:13] Change number 23995546->23995557, apps: 2/10, packages: 0/0
+[2024-06-17 06:37:13] Requesting 114 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:37:13] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:37:14] Downloaded 1 apps via HTTP, 38 KB (6 KB compressed)
+[2024-06-17 06:37:14] Requesting 1 apps, 0 packages (full data, 1024 prev attempts, expected 7 KB)
+[2024-06-17 06:37:14] UpdatesJob: finished OK, apps updated 2 (45 KB), packages updated 0 (0 KB)
+[2024-06-17 06:37:14] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:37:14] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:37:14] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:37:55] Client version: 1718305764
+[2024-06-17 06:37:55] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:37:55] Change number 23995557->23995562, apps: 0/4, packages: 0/0
+[2024-06-17 06:37:55] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:37:56] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:37:56] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 06:37:56] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:37:56] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:37:56] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:39:09] Client version: 1718305764
+[2024-06-17 06:39:09] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:39:10] Change number 23995562->23995566, apps: 0/3, packages: 0/0
+[2024-06-17 06:39:10] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:39:11] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:39:11] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 06:39:11] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:39:11] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:39:11] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:41:30] Client version: 1718305764
+[2024-06-17 06:41:30] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:41:30] Change number 23995566->23995581, apps: 0/14, packages: 0/0
+[2024-06-17 06:41:30] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:41:31] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:41:31] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 06:41:31] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:41:31] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:41:31] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:44:41] Client version: 1718305764
+[2024-06-17 06:44:41] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:44:41] Apps changed: 108600=23995605,
+[2024-06-17 06:44:41] Change number 23995581->23995608, apps: 1/25, packages: 0/7
+[2024-06-17 06:44:41] Requesting 113 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:44:42] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:44:42] Downloaded 1 apps via HTTP, 21 KB (6 KB compressed)
+[2024-06-17 06:44:42] UpdatesJob: finished OK, apps updated 1 (21 KB), packages updated 0 (0 KB)
+[2024-06-17 06:44:42] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:44:42] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:44:42] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:51:12] Client version: 1718305764
+[2024-06-17 06:51:12] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:51:13] Apps changed: 380870=23995615,
+[2024-06-17 06:51:13] Change number 23995608->23995642, apps: 1/22, packages: 0/3
+[2024-06-17 06:51:13] Requesting 113 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:51:13] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:51:13] Downloaded 1 apps via HTTP, 17 KB (5 KB compressed)
+[2024-06-17 06:51:13] UpdatesJob: finished OK, apps updated 1 (17 KB), packages updated 0 (0 KB)
+[2024-06-17 06:51:13] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:51:13] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:51:14] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:52:54] Client version: 1718305764
+[2024-06-17 06:52:54] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:52:54] Change number 23995642->23995654, apps: 0/10, packages: 0/1
+[2024-06-17 06:52:54] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:52:55] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:52:55] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 06:52:55] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:52:55] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:52:55] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 06:56:19] Client version: 1718305764
+[2024-06-17 06:56:19] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 06:56:20] Change number 23995654->23995670, apps: 0/14, packages: 0/1
+[2024-06-17 06:56:20] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 06:56:20] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 06:56:20] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 06:56:20] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 06:56:20] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 06:56:21] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 07:01:31] Client version: 1718305764
+[2024-06-17 07:01:31] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 07:01:31] Apps changed: 2089300=23995702,380870=23995700,108600=23995683,1007950=23995682,
+[2024-06-17 07:01:31] Change number 23995670->23995704, apps: 4/26, packages: 0/6
+[2024-06-17 07:01:31] Requesting 116 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 07:01:32] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 07:01:32] Downloaded 2 apps via HTTP, 38 KB (12 KB compressed)
+[2024-06-17 07:01:32] Requesting 2 apps, 0 packages (full data, 1024 prev attempts, expected 7 KB)
+[2024-06-17 07:01:32] UpdatesJob: finished OK, apps updated 4 (46 KB), packages updated 0 (0 KB)
+[2024-06-17 07:01:32] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 07:01:32] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 07:01:33] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 07:14:25] Client version: 1718305764
+[2024-06-17 07:14:25] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 07:14:25] Change number 23995704->23995808, apps: 0/109, packages: 0/16
+[2024-06-17 07:14:25] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 07:14:26] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 07:14:26] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 07:14:26] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 07:14:26] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 07:14:26] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 07:16:25] Client version: 1718305764
+[2024-06-17 07:16:25] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 07:16:25] Change number 23995808->23995827, apps: 0/15, packages: 0/6
+[2024-06-17 07:16:25] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 07:16:26] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 07:16:26] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 07:16:26] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 07:16:26] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 07:16:26] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+
+
+[2024-06-17 07:21:44] Client version: 1718305764
+[2024-06-17 07:21:44] RequestAppInfoUpdate: AppIDs 7
+[2024-06-17 07:21:45] Change number 23995827->23995855, apps: 0/14, packages: 0/2
+[2024-06-17 07:21:45] Requesting 112 apps, 0 packages (meta data, 1024 prev attempts, expected 5 KB)
+[2024-06-17 07:21:45] Requested 111 app access tokens, 0 received, 111 denied
+[2024-06-17 07:21:45] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)
+[2024-06-17 07:21:45] RequestAppInfoUpdate: AppIDs 4000
+[2024-06-17 07:21:45] Requesting 1 apps, 0 packages (meta data, 1024 prev attempts, expected 0 KB)
+[2024-06-17 07:21:46] UpdatesJob: finished OK, apps updated 0 (0 KB), packages updated 0 (0 KB)

@@ -1,4 +1,5 @@
-import fs from 'fs/promises';
+import fs from 'fs';
+import fsp from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -7,8 +8,16 @@ const __dirname = path.dirname(__filename);
 
 class AddonList {
     constructor() {
-        this.json = path.join(__dirname, 'data/addonList.json');
-        this.addonList = {};
+        const dataDirPath = path.resolve(__dirname, 'data');
+        const dataPath = path.join(dataDirPath, 'addonList.json');
+
+        if (!fs.existsSync(dataPath)) {
+            fs.mkdirSync(dataDirPath, { recursive: true });
+            fs.writeFileSync(path.join(dataPath, 'addonList.json'), '{}');
+        }
+
+        this.json = dataPath;
+        this.addonList = JSON.parse(fs.readFileSync(this.json, 'utf8'));
     }
 
     addAddon(id, game, name, icon, addonPath, data) {
@@ -21,10 +30,7 @@ class AddonList {
 
     async saveList() {
         try {
-            await fs.writeFile(
-                this.json,
-                JSON.stringify(this.addonList, null, 2),
-            );
+            await fsp.writeFile(this.json, JSON.stringify(this.addonList, null, 2));
         } catch (err) {
             console.error(err);
         }

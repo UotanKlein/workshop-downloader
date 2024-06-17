@@ -1,26 +1,14 @@
 import axios from 'axios';
 
-const location = window.location;
-const host = location.host;
-
-window.onload = () => {
-    const addonMainLink = `http://${host}`;
-    const addonMain = document.querySelector('.site-name');
-
-    addonMain.setAttribute('href', addonMainLink);
-};
-
 const getAddonData = async () => {
-    const dataLink = `http://${host}/data`;
+    const dataLink = `/data`;
 
     try {
         const addonsData = (await axios.get(dataLink)).data;
 
         return addonsData;
     } catch (error) {
-        console.error(
-            `Couldn't get access to the server ${error.message} to link ${dataLink}`,
-        );
+        console.error(`Couldn't get access to the server ${error.message} to link ${dataLink}`);
 
         return {};
     }
@@ -28,12 +16,7 @@ const getAddonData = async () => {
 
 const formattedDate = (sec) => {
     const date = new Date(sec * 1000);
-    return `${date.getFullYear()}-${(date.getMonth() + 1)
-        .toString()
-        .padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')} ${date
-        .getHours()
-        .toString()
-        .padStart(2, '0')}:${date
+    return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')} ${date.getHours().toString().padStart(2, '0')}:${date
         .getMinutes()
         .toString()
         .padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`;
@@ -61,15 +44,31 @@ const app = async () => {
 
     Object.entries(addonJson).forEach(([id, val]) => {
         const { name, icon, data } = val;
-        const dataLink = `http://${host}/addonSite/${id}`;
+        const dataLink = `/addonSite/${id}`;
         const createTime = formattedDate(data);
 
-        const element = domParser.parseFromString(
-            formAddonBlock(dataLink, createTime, icon, name),
-            'text/html',
-        ).body.firstChild;
+        const element = domParser.parseFromString(formAddonBlock(dataLink, createTime, icon, name), 'text/html').body.firstChild;
 
         addonList.appendChild(element);
+    });
+
+    const search = document.getElementById('search');
+    search.addEventListener('input', (e) => {
+        const value = e.target.value.toLowerCase();
+        const children = addonList.children;
+
+        Array.from(children).forEach((child) => {
+            if (value === '') {
+                child.classList.remove('d-none');
+            } else {
+                const title = child.querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes(value)) {
+                    child.classList.remove('d-none');
+                } else {
+                    child.classList.add('d-none');
+                }
+            }
+        });
     });
 };
 
