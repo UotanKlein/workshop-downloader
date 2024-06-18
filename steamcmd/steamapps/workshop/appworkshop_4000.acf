@@ -64,7 +64,7 @@
 		{
 			"manifest"		"6397397464092322100"
 			"timeupdated"		"1657342925"
-			"timetouched"		"1718597788"
+			"timetouched"		"1718692955"
 			"BytesDownloaded"		"4640"
 			"BytesToDownload"		"4640"
 			"latest_timeupdated"		"1657342925"
@@ -112,7 +112,9 @@
 		{
 			"manifest"		"3432538141457621303"
 			"timeupdated"		"1676512784"
-			"timetouched"		"1718602408"
+			"timetouched"		"1718693107"
+			"BytesDownloaded"		"2160"
+			"BytesToDownload"		"2160"
 			"latest_timeupdated"		"1676512784"
 			"latest_manifest"		"3432538141457621303"
 		}
@@ -120,7 +122,7 @@
 		{
 			"manifest"		"3464215742853616018"
 			"timeupdated"		"1702082561"
-			"timetouched"		"1718681529"
+			"timetouched"		"1718692944"
 			"BytesDownloaded"		"63072"
 			"BytesToDownload"		"63072"
 			"latest_timeupdated"		"1702082561"

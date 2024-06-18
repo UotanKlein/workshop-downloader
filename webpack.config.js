@@ -18,7 +18,7 @@ const config = {
     entry: {
         addonList: path.resolve(__dirname, './src/addonList/addonListEntry.js'),
         addonSite: path.resolve(__dirname, './src/addonSite/addonSiteEntry.js'),
-        addonMain: path.resolve(__dirname, './src/addonMain/addonMainEntry.js'),
+        index: path.resolve(__dirname, './src/addonMain/indexEntry.js'),
     },
     output: {
         filename: '[name].bundle.js',
@@ -50,9 +50,9 @@ const config = {
             publicPath: '../../',
         }),
         new HtmlWebpackPlugin({
-            filename: `addonMain.html`,
-            template: path.resolve(__dirname, `src/addonMain/addonMain.html`),
-            chunks: ['addonMain'],
+            filename: `index.html`,
+            template: path.resolve(__dirname, `src/addonMain/index.html`),
+            chunks: ['index'],
             publicPath: '/',
         }),
         new MiniCssExtractPlugin({

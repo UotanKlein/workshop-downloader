@@ -1,0 +1,208 @@
+:root {
+    --white-color: #dee2e6;
+    --black-color: #212529;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--black-color);
+}
+
+.header {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.title,
+.addonList,
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.title {
+    flex: 1;
+    color: var(--black-color);
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+    width: 45%;
+    font-weight: var(--font-s);
+}
+
+.addonList {
+    flex: 1;
+    width: 45%;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-weight: var(--font-s);
+}
+
+.addonList:hover {
+    background-color: #f5f5f5d7;
+    transition: 0.5s;
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.description {
+    width: 40%;
+    height: 310px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+}
+
+.upload-section {
+    width: 40%;
+    display: grid;
+    flex-direction: column;
+    margin: 0;
+}
+
+.upload-link {
+    display: grid;
+    background-color: var(--white-color);
+    border: #212121;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    color: var(--black-color);
+    padding-left: 10px;
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+}
+
+.upload-link::placeholder {
+    color: rgb(68, 64, 64);
+    font-size: 17px;
+}
+
+.upload-button {
+    background-color: var(--white-color);
+    border: #212121;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    color: var(--black-color);
+    box-shadow: 4px -3px 5px rgb(97, 86, 86);
+    font-weight: var(--font-s);
+}
+
+.upload-button:hover {
+    background-color: #f5f5f5d7;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.error-input {
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.error-text {
+    color: red;
+}
+
+.successful-text {
+    color: green;
+}
+
+.successful-input {
+    box-sizing: border-box;
+    border: 1px solid green;
+}
+
+.dp-none {
+    display: none;
+}
+
+.left-image {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+main {
+    width: 100%;
+}
+
+.addon-card {
+    padding: 0;
+}
+
+#addon-block {
+    transition: 0.3s;
+}
+
+#addon-block:hover {
+    filter: grayscale(50%);
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+#link-box {
+    position: relative;
+}
+
+.load-spinner {
+    position: absolute;
+    left: 93%;
+    top: 10%;
+}
+
+.invalid-feedback {
+    margin: 0 !important;
+}
+
+.to-addon-list {
+    transition: 0.3s;
+    color: white;
+}
+
+.to-addon-list:hover {
+    transform: translateX(5px);
+    color: grey;
+    transition: 0.3s;
+}

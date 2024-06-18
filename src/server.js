@@ -85,6 +85,25 @@ app.get('/dataAddon/:id', async (req, res) => {
     res.send({ name: addonData.name, json: loadChilds });
 });
 
+app.delete('/changeAddon/:id', async (req, res) => {
+    const id = req.params.id;
+    const addonsData = JSON.parse(await fsp.readFile('./src/data/addonList.json', 'utf-8'));
+
+    if (!addonsData[id]) {
+        res.status(404).send('Аддон не найден');
+        return;
+    }
+
+    try {
+        const addonPath = addonsData[id].path;
+        await fsp.rm(addonPath, { recursive: true, force: true });
+        delete addonsData[id];
+        await fsp.writeFile('./src/data/addonList.json', JSON.stringify(addonsData));
+        res.status(200).send('Аддон удален');
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
 app.post('/dataAddon/:id', async (req, res) => {
     const pathToFile = req.body.path;
     try {
@@ -168,7 +187,7 @@ app.get('/download-zip/:id', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist', 'addonMain.html'));
+    res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
 app.get('/addonList', (req, res) => {

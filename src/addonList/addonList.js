@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const domParser = new DOMParser();
+
 const getAddonData = async () => {
     const dataLink = `/data`;
 
@@ -22,32 +24,47 @@ const formattedDate = (sec) => {
         .padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`;
 };
 
-const formAddonBlock = (dataLink, data, icon, name) => `
-  <a class="addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4 link-without" href="${dataLink}">
-    <div class="card h-100">
-      <img src="${icon}" class="card-img-top" alt="Addon Image">
-      <div class="card-body">
-        <h5 class="card-title text-center">${name}</h5>
-      </div>
-      <div class="card-footer">
-        <small class="text-body-secondary text-center">Date of creation: ${data}</small>
-      </div>
+const formAddonBlock = (id, data, icon, name) => `
+    <div class="d-flex addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
+        <div class="card-box">
+            <a href="/addonSite/${id}" class="custom-card card h-100 link-without">
+                <img src="${icon}" class="card-img-top" alt="Addon Image">
+                <div class="card-body">
+                    <h5 class="card-title text-center">${name}</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary text-center">Date of creation: ${data}</small>
+                </div>
+            </a>
+            <div class="btn-close-box d-flex justify-content-end">
+                <button type="button" class="close-btn btn-close" aria-label="Close"></button>
+            </div>
+        </div>
     </div>
-  </a>
 `;
 
 const app = async () => {
     const addonList = document.getElementById('addon-list');
-
     const addonJson = await getAddonData();
-    const domParser = new DOMParser();
+
+    addonList.innerHTML = '';
 
     Object.entries(addonJson).forEach(([id, val]) => {
         const { name, icon, data } = val;
-        const dataLink = `/addonSite/${id}`;
         const createTime = formattedDate(data);
 
-        const element = domParser.parseFromString(formAddonBlock(dataLink, createTime, icon, name), 'text/html').body.firstChild;
+        const element = domParser.parseFromString(formAddonBlock(id, createTime, icon, name), 'text/html').body.firstChild;
+
+        element.querySelector('.close-btn').addEventListener('click', async (e) => {
+            try {
+                await axios.delete(`/changeAddon/${id}`);
+                setTimeout(async () => {
+                    await app();
+                }, 100);
+            } catch (err) {
+                console.error(err.response.data);
+            }
+        });
 
         addonList.appendChild(element);
     });
