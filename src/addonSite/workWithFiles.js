@@ -110,26 +110,17 @@ const init = async () => {
     }
 
     function showMessage(txt) {
-        const divShow = document.querySelector('.message');
+        const divShow = document.querySelector('.go-back');
         divShow.textContent = txt;
-        divShow.style.display = 'block';
+        divShow.style.opacity = '1';
 
         setTimeout(() => {
-            divShow.style.display = 'none';
-        }, 3000);
-        console.log('A');
+            divShow.style.opacity = '0';
+        }, 2000);
     }
 
     listAddon.textContent = '';
     listAddon.appendChild(renderFS(mainAddon));
-
-    const test = () => {
-        console.log('test');
-    };
-
-    const test2 = () => {
-        console.log('test2');
-    };
 
     const buttonsForFiles = document.querySelectorAll('.button-for-work-with-files');
     const httpCh = `http://${host}/changeFile/${id}`;
@@ -148,10 +139,16 @@ const init = async () => {
                     console.log(error);
                 }
             } else if (event.target.classList.contains('select-all')) {
-                textArea.select();
+                if (textArea.disabled) {
+                    showMessage('Начните редактирование');
+                } else {
+                    textArea.select();
+                showMessage('Файл успешно выделен');
+                }  
             } else if (event.target.classList.contains('copy-all')) {
                 try {
                     await navigator.clipboard.writeText(textArea.value);
+                    showMessage('Файл успешно скопирован');
                 } catch (error) {
                     console.error(`Ошибка копирования: ${error.message}`);
                 }
@@ -162,6 +159,7 @@ const init = async () => {
                     const getNewSystem = await axios.get(dataLink);
                     const NewMainAddon = JSON.parse(getNewSystem.data.json);
                     listAddon.appendChild(renderFS(NewMainAddon));
+                    showMessage('Файл успешно удалён');
                 } catch (error) {
                     console.log(JSON.stringify(error, null, 2));
                     console.error(`Ошибка удаления файла: ${error.message}`);
