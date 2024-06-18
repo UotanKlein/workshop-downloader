@@ -1,6 +1,6 @@
 :root {
-    --white-color: #f5f5f5;
-    --black-color: #212121;
+    --white-color: #dee2e6;
+    --black-color: #212529;
 }
 
 html {
@@ -31,7 +31,6 @@ body {
 }
 
 header {
-    display: flex;
     margin: 0;
     margin-bottom: 50px;
     box-sizing: border-box;

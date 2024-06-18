@@ -1,7 +1,7 @@
 "AppWorkshop"
 {
 	"appid"		"4000"
-	"SizeOnDisk"		"1402922709"
+	"SizeOnDisk"		"1402930962"
 	"NeedsUpdate"		"0"
 	"NeedsDownload"		"0"
 	"TimeLastUpdated"		"0"
@@ -38,6 +38,12 @@
 			"size"		"1144614336"
 			"timeupdated"		"1679858946"
 			"manifest"		"3918572798995098159"
+		}
+		"2925774481"
+		{
+			"size"		"8253"
+			"timeupdated"		"1676512784"
+			"manifest"		"3432538141457621303"
 		}
 		"3024317004"
 		{
@@ -102,11 +108,19 @@
 			"latest_timeupdated"		"1679858946"
 			"latest_manifest"		"3918572798995098159"
 		}
+		"2925774481"
+		{
+			"manifest"		"3432538141457621303"
+			"timeupdated"		"1676512784"
+			"timetouched"		"1718602408"
+			"latest_timeupdated"		"1676512784"
+			"latest_manifest"		"3432538141457621303"
+		}
 		"3024317004"
 		{
 			"manifest"		"3464215742853616018"
 			"timeupdated"		"1702082561"
-			"timetouched"		"1718596582"
+			"timetouched"		"1718681529"
 			"BytesDownloaded"		"63072"
 			"BytesToDownload"		"63072"
 			"latest_timeupdated"		"1702082561"

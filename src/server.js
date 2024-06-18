@@ -2,6 +2,7 @@ import express from 'express';
 import fs from 'fs';
 import fsp from 'fs/promises';
 import { isFile, isDir, checkExists } from './fileSystem.js';
+import getAddonInfo from './getAddonInfo.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -23,6 +24,21 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 const dataPath = path.join(__dirname, '/data/addonList.json');
+
+app.get('/addonInfo/:id', async (req, res) => {
+    const addonId = req.params.id;
+
+    if (addonId === undefined) {
+        throw new Error('The link does not have a parameter ID');
+    }
+
+    try {
+        const addonData = await getAddonInfo(addonId);
+        res.status(200).send(addonData[0]);
+    } catch (err) {
+        res.status(404).send(err);
+    }
+});
 
 // Получение данных из JSON файла
 app.get('/data', (req, res) => {
@@ -46,8 +62,9 @@ app.post('/downloadAddon', async (req, res) => {
         await prepareAddon(link);
         res.status(200).send('Addon successfully downloaded');
     } catch (err) {
+        console.log(`Aboba: ${JSON.stringify(err, null, 2)}`);
         const statusCode = err.statusCode || 500;
-        res.status(statusCode).send(JSON.stringify(err));
+        res.status(statusCode).send(err);
     }
 });
 

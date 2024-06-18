@@ -22,8 +22,10 @@
         "dotenv": "^16.4.5",
         "express": "^4.19.2",
         "lodash": "^4.17.21",
+        "on-change": "^5.0.1",
         "path": "^0.12.7",
-        "steam-workshop": "^0.0.5"
+        "steam-workshop": "^0.0.5",
+        "yup": "^1.4.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.24.7",

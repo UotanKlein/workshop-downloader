@@ -1,78 +1,135 @@
 import axios from 'axios';
+import onChange from 'on-change';
+import { object, string } from 'yup';
+import getAddonId from '../getAddonId.js';
 import errors from '../errors.js';
 import { domEach } from 'cheerio/lib/utils';
 
-const location = window.location;
-const host = location.host;
+const domParser = new DOMParser();
 
-const addonListLink = `http://${host}/addonList`;
-const addonDownload = `http://${host}/downloadAddon`;
-
-window.onload = () => {
-    const addonList = document.querySelector('.addonList');
-    addonList.setAttribute('href', addonListLink);
-};
+const schema = object({
+    link: string().url().required(),
+});
 
 const app = async () => {
     const state = {
+        elements: {
+            addonName: document.getElementById('addon-name'),
+            addonImage: document.getElementById('addon-image'),
+            linkInput: document.getElementById('link-input'),
+            linkSubmit: document.getElementById('link-submit'),
+            linkForm: document.getElementById('link-box'),
+            addonBlock: document.getElementById('addon-block'),
+            spinner: document.getElementById('spinner'),
+            invalidFeedback: document.getElementById('validation-addon-link'),
+        },
+        curAddon: {
+            title: 'Workshop Downloader',
+            image: './images/billy-gif.gif',
+            link: '#',
+        },
+        button: {
+            status: false,
+        },
         inputValue: '',
     };
 
-    const inputLink = document.querySelector('.upload-link');
-    const submitForm = document.querySelector('.upload-section');
+    const watchedState = onChange(state, (path, value, prevVal, applyData) => {
+        if (path === 'curAddon.title') {
+            state.elements.addonName.textContent = value;
+        }
 
-    inputLink.addEventListener('input', (e) => {
-        var newInputValue = e.target.value;
+        if (path === 'curAddon.image') {
+            state.elements.addonImage.setAttribute('src', value);
+        }
 
-        state.inputValue = newInputValue;
+        if (path === 'curAddon.link') {
+            state.elements.addonBlock.setAttribute('href', value);
+        }
+
+        if (path === 'button.status') {
+            if (value) {
+                state.elements.linkSubmit.classList.remove('disabled');
+            } else {
+                state.elements.linkSubmit.classList.add('disabled');
+            }
+        }
     });
 
-    submitForm.addEventListener('submit', async (e) => {
+    state.elements.linkInput.addEventListener('input', async (e) => {
+        const inputValue = e.target.value;
+
+        watchedState.inputValue = inputValue;
+
+        if (inputValue === '') {
+            state.elements.linkInput.classList.remove('is-invalid');
+            state.elements.linkInput.classList.remove('is-valid');
+            watchedState.button.status = false;
+
+            watchedState.curAddon.title = 'Workshop Downloader';
+            watchedState.curAddon.image = './images/billy-gif.gif';
+            watchedState.curAddon.link = '#';
+        } else {
+            try {
+                await schema.validate({ link: inputValue });
+
+                const addonId = getAddonId(inputValue);
+
+                if (addonId === undefined) {
+                    throw new Error('The link does not have a parameter ID');
+                }
+
+                const addonData = (await axios.get(`/addonInfo/${addonId}`)).data;
+
+                watchedState.curAddon.title = addonData.title;
+                watchedState.curAddon.image = addonData.preview_url;
+
+                state.elements.linkInput.classList.remove('is-invalid');
+
+                watchedState.button.status = true;
+            } catch (err) {
+                state.elements.linkInput.classList.remove('is-valid');
+                state.elements.linkInput.classList.add('is-invalid');
+                watchedState.button.status = false;
+                watchedState.curAddon.title = 'Workshop Downloader';
+                watchedState.curAddon.image = './images/billy-gif.gif';
+                watchedState.curAddon.link = '#';
+            }
+        }
+    });
+
+    state.elements.linkForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const linkBox = document.querySelector('#link-box');
-        const errorText = linkBox.querySelector('#error-event');
+        if (!watchedState.button.status) {
+            return;
+        }
 
-        errorText.innerHTML = '';
-
-        const domParser = new DOMParser();
-
-        const loadStr = `
-            <div class="spinner-border text-light" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        `;
-
-        const loadDiv = domParser.parseFromString(loadStr, 'text/html').body.firstChild;
-        errorText.append(loadDiv);
-
-        const value = state.inputValue;
+        const value = watchedState.inputValue;
+        const addonId = getAddonId(value);
 
         try {
-            const { status, data } = await axios.post(addonDownload, {
+            state.elements.spinner.classList.remove('d-none');
+
+            const { status, data } = await axios.post('/downloadAddon', {
                 link: value,
             });
 
-            errorText.innerHTML = '';
+            state.elements.invalidFeedback.textContent = data;
+            watchedState.curAddon.link = `/addonSite/${addonId}`;
 
-            inputLink.classList.remove('error-input');
-            inputLink.classList.add('successful-input');
+            state.elements.linkInput.classList.remove('is-invalid');
+            state.elements.linkInput.classList.add('is-valid');
 
-            errorText.classList.remove('dp-none');
-            errorText.classList.add('successful-text');
-            errorText.textContent = data;
+            state.elements.spinner.classList.add('d-none');
         } catch (err) {
-            errorText.innerHTML = '';
+            const resErr = err.response.data;
 
-            const errorResponse = err.response;
-            const errorData = errorResponse.data;
+            state.elements.invalidFeedback.textContent = resErr.text;
 
-            inputLink.classList.remove('successful-input');
-            inputLink.classList.add('error-input');
-
-            errorText.classList.remove('dp-none');
-            errorText.classList.add('error-text');
-            errorText.textContent = errorData.text;
+            state.elements.linkInput.classList.remove('is-valid');
+            state.elements.linkInput.classList.add('is-invalid');
+            state.elements.spinner.classList.add('d-none');
         }
     });
 };

@@ -1,10 +1,11 @@
-import SteamWorkshop from 'steam-workshop';
 import path from 'path';
 import { spawn } from 'child_process';
 import fsp from 'fs/promises';
 import gameList from './gameList.js';
 import addonList from './addonList.js';
 import { isFile, isDir, checkExists } from './fileSystem.js';
+import getAddonInfo from './getAddonInfo.js';
+import getAddonId from './getAddonId.js';
 import { fileURLToPath } from 'url';
 import users from './usersData.js';
 import errors from './errors.js';
@@ -18,8 +19,6 @@ const steamcmdPath = path.join(curPath, 'steamcmd/steamcmd.exe');
 const addonsDir = path.join(curPath, 'addons');
 
 const steamContentDir = path.join(curPath, `steamcmd/steamapps/workshop/content`);
-
-const getAddonId = (link) => new URL(link).searchParams.get('id');
 
 const moveAddon = async (oldPath, newPath) => {
     await fsp.rename(oldPath, newPath);
@@ -77,37 +76,11 @@ const downloadAddon = (gameId, addonId, requireLogin) => {
     });
 };
 
-const getAddonInfo = async (addonId) => {
-    try {
-        return await new Promise((resolve, reject) => {
-            const workshop = new SteamWorkshop();
-            workshop.getPublishedFileDetails(addonId, (err, data) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(data);
-                }
-            });
-        });
-    } catch (err) {
-        throw new errors.AddonNotFoundError();
-    }
-};
-
-const isValidSteamLink = (url) => {
-    const regex = /^https:\/\/steamcommunity\.com\/sharedfiles\/filedetails\/\?id=\d+$/;
-    return regex.test(url);
-};
-
 const pathToLinux = (oldPath) => oldPath.split(path.sep).join('/');
 
 // https://steamcommunity.com/sharedfiles/filedetails/?id=264467687
 
 const prepareAddon = async (link) => {
-    if (!isValidSteamLink(link)) {
-        throw new errors.InvalidUrlError();
-    }
-
     const addonId = getAddonId(link);
     let addonInfo;
 
@@ -161,8 +134,7 @@ const prepareAddon = async (link) => {
         await addonList.saveList();
         console.log('Directory successfully moved.');
     } catch (err) {
-        console.log(err);
-        throw new Error(`Error during addon processing: ${err.message}`);
+        throw err;
     }
 };
 

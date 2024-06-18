@@ -23,7 +23,7 @@ const formattedDate = (sec) => {
 };
 
 const formAddonBlock = (dataLink, data, icon, name) => `
-  <a class="addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 link-without" href="${dataLink}">
+  <a class="addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4 link-without" href="${dataLink}">
     <div class="card h-100">
       <img src="${icon}" class="card-img-top" alt="Addon Image">
       <div class="card-body">
