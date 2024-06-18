@@ -81,8 +81,15 @@ const app = async () => {
 
                 const addonData = (await axios.get(`/addonInfo/${addonId}`)).data;
 
-                watchedState.curAddon.title = addonData.title;
-                watchedState.curAddon.image = addonData.preview_url;
+                if (addonData.result === 9) {
+                    throw new errors.AddonNotFoundError();
+                }
+
+                const addonTitle = addonData.title;
+                const addonImg = addonData.preview_url;
+
+                watchedState.curAddon.title = addonTitle;
+                watchedState.curAddon.image = addonImg;
 
                 state.elements.linkInput.classList.remove('is-invalid');
 
