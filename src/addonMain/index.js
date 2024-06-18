@@ -3,13 +3,44 @@ import onChange from 'on-change';
 import { object, string } from 'yup';
 import getAddonId from '../getAddonId.js';
 import errors from '../errors.js';
-import { domEach } from 'cheerio/lib/utils';
+import i18n from 'i18next';
+import translations from '../translations.js';
+import i18next from 'i18next';
+
+const initI18n = () =>
+    i18n.init({
+        lng: 'en',
+        resources: translations,
+        useLocalStorage: true,
+        useDataAttrOptions: true,
+        interpolation: {
+            escapeValue: false,
+        },
+    });
 
 const domParser = new DOMParser();
 
 const schema = object({
     link: string().url().required(),
 });
+
+const createInfo = async () => {
+    const info = await axios.get('/getInfo');
+    const { gameCount, addonCount } = info.data;
+
+    return `
+        <div class="d-flex justify-content-around">
+            <div>
+                <h5 class="card-title mb-2">${addonCount}</h5>
+                <p class="card-text">${i18next.t('infoAddons')}</p>
+            </div>
+            <div>
+                <h5 class="card-title mb-2">${gameCount}</h5>
+                <p class="card-text">${i18next.t('infoGames')}</p>
+            </div>
+        </div>
+    `;
+};
 
 const app = async () => {
     const state = {
@@ -22,6 +53,11 @@ const app = async () => {
             addonBlock: document.getElementById('addon-block'),
             spinner: document.getElementById('spinner'),
             invalidFeedback: document.getElementById('validation-addon-link'),
+            info: document.getElementById('info'),
+            support: document.getElementById('support'),
+            cardBody: document.getElementById('card-body'),
+            inputLabel: document.getElementById('input-label'),
+            toAddonList: document.getElementById('to-addon-list'),
         },
         curAddon: {
             title: 'Workshop Downloader',
@@ -32,9 +68,26 @@ const app = async () => {
             status: false,
         },
         inputValue: '',
+        curNav: 'info',
     };
 
-    const watchedState = onChange(state, (path, value, prevVal, applyData) => {
+    const changeLang = (lang) => {
+        i18next.changeLanguage(lang, () => {
+            console.log(state.elements.toAddonList.textContent);
+            state.elements.info.textContent = i18next.t('information');
+            state.elements.support.textContent = i18next.t('supportProj');
+            state.elements.inputLabel.textContent = i18next.t('inputPlaceholder');
+            state.elements.toAddonList.textContent = i18next.t('addonList');
+            state.elements.linkSubmit.setAttribute('value', i18next.t('downloadButton'));
+            console.log(state.elements.toAddonList.textContent);
+        });
+    };
+
+    changeLang('ru');
+
+    state.elements.cardBody.innerHTML = await createInfo();
+
+    const watchedState = onChange(state, async (path, value, prevVal, applyData) => {
         if (path === 'curAddon.title') {
             state.elements.addonName.textContent = value;
         }
@@ -54,6 +107,33 @@ const app = async () => {
                 state.elements.linkSubmit.classList.add('disabled');
             }
         }
+
+        if (path === 'curNav') {
+            const preEl = state.elements[prevVal];
+            const curEl = state.elements[value];
+            const cardBody = state.elements.cardBody;
+
+            preEl.classList.remove('active');
+            curEl.classList.add('active');
+
+            if (value === 'info') {
+                cardBody.innerHTML = await createInfo();
+            } else if (value === 'support') {
+                const supportBody = `
+                    <h5 class="card-title mb-2">${i18next.t('supportProj')}</h5>
+                    <a href="#" class="btn btn-primary">${i18next.t('sendDonation')}</a>
+                `;
+                cardBody.innerHTML = supportBody;
+            }
+        }
+    });
+
+    state.elements.info.addEventListener('click', (e) => {
+        watchedState.curNav = 'info';
+    });
+
+    state.elements.support.addEventListener('click', (e) => {
+        watchedState.curNav = 'support';
     });
 
     state.elements.linkInput.addEventListener('input', async (e) => {
@@ -115,6 +195,9 @@ const app = async () => {
             return;
         }
 
+        state.elements.linkInput.classList.remove('is-invalid');
+        state.elements.linkInput.classList.remove('is-valid');
+
         const value = watchedState.inputValue;
         const addonId = getAddonId(value);
 
@@ -124,14 +207,17 @@ const app = async () => {
             const { status, data } = await axios.post('/downloadAddon', {
                 link: value,
             });
+            const { id, message } = data;
 
-            state.elements.invalidFeedback.textContent = data;
-            watchedState.curAddon.link = `/addonSite/${addonId}`;
-
+            state.elements.invalidFeedback.textContent = message;
+            watchedState.curAddon.link = `/addonSite/${id}`;
             state.elements.linkInput.classList.remove('is-invalid');
             state.elements.linkInput.classList.add('is-valid');
-
             state.elements.spinner.classList.add('d-none');
+
+            if (watchedState.curNav === 'info') {
+                state.elements.cardBody.innerHTML = await createInfo();
+            }
         } catch (err) {
             const resErr = err.response.data;
 
@@ -144,4 +230,5 @@ const app = async () => {
     });
 };
 
+await initI18n();
 await app();

@@ -3,12 +3,13 @@ import fs from 'fs';
 import fsp from 'fs/promises';
 import { isFile, isDir, checkExists } from './fileSystem.js';
 import getAddonInfo from './getAddonInfo.js';
+import gameList from './gameList.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 import cors from 'cors';
 import Directory from './tree.js';
-import prepareAddon from './downloadAddon.js';
+import prepareAddon from './prepareAddon.js';
 import archiver from 'archiver';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -59,10 +60,9 @@ app.post('/downloadAddon', async (req, res) => {
     }
 
     try {
-        await prepareAddon(link);
-        res.status(200).send('Addon successfully downloaded');
+        const id = await prepareAddon(link);
+        res.status(200).send({ id, message: 'Addon successfully downloaded' });
     } catch (err) {
-        console.log(`Aboba: ${JSON.stringify(err, null, 2)}`);
         const statusCode = err.statusCode || 500;
         res.status(statusCode).send(err);
     }
@@ -98,7 +98,7 @@ app.delete('/changeAddon/:id', async (req, res) => {
         const addonPath = addonsData[id].path;
         await fsp.rm(addonPath, { recursive: true, force: true });
         delete addonsData[id];
-        await fsp.writeFile('./src/data/addonList.json', JSON.stringify(addonsData));
+        await fsp.writeFile('./src/data/addonList.json', JSON.stringify(addonsData, null, 2));
         res.status(200).send('Аддон удален');
     } catch (err) {
         res.status(500).send(err);
@@ -184,6 +184,18 @@ app.get('/download-zip/:id', (req, res) => {
     archive.pipe(output);
     archive.directory(addonDataPath, false);
     archive.finalize();
+});
+
+app.get('/getInfo', (req, res) => {
+    const addonsData = JSON.parse(fs.readFileSync('./src/data/addonList.json'));
+
+    const gameCount = Object.keys(gameList).length;
+    const addonCount = Object.keys(addonsData).length;
+
+    res.status(200).send({
+        gameCount,
+        addonCount,
+    });
 });
 
 app.get('/', (req, res) => {

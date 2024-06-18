@@ -20,12 +20,8 @@
             </a>
 
             <a href="/addonList" class="to-addon-list d-flex justify-content-center align-items-center col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3 text-decoration-none">
-                <span>Список Аддонов →</span>
+                <span id="to-addon-list">Список Модификаций →</span>
             </a>
-
-            <!-- <a href="/addonList" class="d-flex btn btn-light justify-content-center align-items-center col-12 col-lg-3 mb-3 mb-lg-0 me-lg-3">
-                <span class="fs-4 text-black">Список Аддонов</span>
-            </a> -->
         </header>
         <main class="row d-flex justify-content-center">
             <a href="#" id="addon-block" class="addon-card card col-12 col-lg-3 text-decoration-none mb-4">
@@ -36,16 +32,29 @@
                     <h5 id="addon-name" class="card-title">Workshop Downloader</h5>
                 </div>
             </a>
-            <div class="col-12 col-lg-4 d-flex align-items-center">
-                <form id="link-box" class="d-flex flex-column form-floating flex-grow-1">
-                    <input id="link-input" class="form-control mb-3" id="floatingInputValue" placeholder="https://steamcommunity.com/sharedfiles/filedetails/?id=112806637" />
-                    <label for="floatingInputValue">Addon URL</label>
+            <div class="col-12 col-lg-4 d-flex flex-column justify-content-center">
+                <form id="link-box" class="d-flex flex-column form-floating">
+                    <input id="link-input" class="form-control mb-2" id="floatingInputValue" placeholder="https://steamcommunity.com/sharedfiles/filedetails/?id=112806637" />
+                    <label id="input-label" for="floatingInputValue">Addon URL</label>
                     <div id="spinner" class="load-spinner spinner-border text-dark d-none" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
                     <div id="validation-addon-link" class="invalid-feedback"></div>
-                    <input id="link-submit" type="submit" class="btn btn-light disabled mt-3" value="Загрузить модификацию" />
+                    <input id="link-submit" type="submit" class="btn btn-primary disabled mt-2" value="Загрузить модификацию" />
                 </form>
+                <div class="card text-center mt-3">
+                    <div class="card-header">
+                        <ul class="nav nav-pills card-header-pills">
+                            <li class="nav-item">
+                                <a id="info" class="nav-link active" href="#">Информация</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="support" class="nav-link" href="#">Поддержать проект</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="card-body" class="card-body"></div>
+                </div>
             </div>
         </main>
         <script

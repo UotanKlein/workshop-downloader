@@ -21,8 +21,8 @@ class AddonList {
         this.addonList = JSON.parse(fs.readFileSync(this.json, 'utf8'));
     }
 
-    addAddon(id, game, name, icon, addonPath, data) {
-        this.addonList[id] = { id, game, name, icon, path: addonPath, data };
+    addAddon(uniqueId, id, game, name, icon, addonPath, data) {
+        this.addonList[uniqueId] = { id, game, name, icon, path: addonPath, data };
     }
 
     async saveList() {

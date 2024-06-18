@@ -24,10 +24,10 @@ const formattedDate = (sec) => {
         .padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`;
 };
 
-const formAddonBlock = (id, data, icon, name) => `
+const formAddonBlock = (uniqueId, data, icon, name) => `
     <div class="d-flex addon-block col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
         <div class="card-box">
-            <a href="/addonSite/${id}" class="custom-card card h-100 link-without">
+            <a href="/addonSite/${uniqueId}" class="custom-card card h-100 link-without">
                 <img src="${icon}" class="card-img-top" alt="Addon Image">
                 <div class="card-body">
                     <h5 class="card-title text-center">${name}</h5>
@@ -49,15 +49,15 @@ const app = async () => {
 
     addonList.innerHTML = '';
 
-    Object.entries(addonJson).forEach(([id, val]) => {
-        const { name, icon, data } = val;
+    Object.entries(addonJson).forEach(([uniqueId, val]) => {
+        const { id, name, icon, data } = val;
         const createTime = formattedDate(data);
 
-        const element = domParser.parseFromString(formAddonBlock(id, createTime, icon, name), 'text/html').body.firstChild;
+        const element = domParser.parseFromString(formAddonBlock(uniqueId, createTime, icon, name), 'text/html').body.firstChild;
 
         element.querySelector('.close-btn').addEventListener('click', async (e) => {
             try {
-                await axios.delete(`/changeAddon/${id}`);
+                await axios.delete(`/changeAddon/${uniqueId}`);
                 setTimeout(async () => {
                     await app();
                 }, 100);
