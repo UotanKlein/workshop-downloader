@@ -1,6 +1,7 @@
 import fs from 'fs';
 import fsp from 'fs/promises';
 import path from 'path';
+import _ from 'lodash';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -22,10 +23,6 @@ class AddonList {
 
     addAddon(id, game, name, icon, addonPath, data) {
         this.addonList[id] = { id, game, name, icon, path: addonPath, data };
-    }
-
-    removeAddon(id) {
-        delete this.addonList[id];
     }
 
     async saveList() {

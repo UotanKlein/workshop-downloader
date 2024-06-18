@@ -92,6 +92,7 @@ const app = async () => {
 
                 watchedState.curAddon.title = addonTitle;
                 watchedState.curAddon.image = addonImg;
+                watchedState.curAddon.link = inputValue;
 
                 state.elements.linkInput.classList.remove('is-invalid');
 

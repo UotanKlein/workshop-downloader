@@ -14,19 +14,8 @@ body {
     background-color: var(--black-color);
 }
 
-.mg-0 {
-    margin: 0;
-}
-
 .link-without {
     text-decoration: none;
-    color: var(--black-color);
-}
-
-.main-font {
-    font-size: 2vw;
-    line-height: 1.5;
-    font-family: sans-serif;
     color: var(--black-color);
 }
 
@@ -37,52 +26,9 @@ header {
     padding-left: 20px;
 }
 
-.circle {
-    width: 50%;
-    height: 0;
-    padding-bottom: 50%;
-    border-radius: 50%;
-    background-color: var(--white-color);
-}
-
 .addons {
     display: flex;
     box-sizing: border-box;
-}
-
-.addon-date {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--white-color);
-}
-
-.addon-image {
-    width: 100%;
-    background-color: var(--white-color);
-}
-
-.site-name {
-    color: var(--white-color) !important;
-    position: relative;
-}
-
-.site-name-image {
-    aspect-ratio: 1 / 1;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-}
-
-.site-name-text {
-    margin: 0;
-}
-
-.inp-grp-cng {
-    width: auto !important;
 }
 
 .addon-block {
