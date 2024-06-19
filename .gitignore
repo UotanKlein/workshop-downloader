@@ -2,4 +2,3 @@ node_modules/
 .vs/
 steamcmd/
 .prettierrc
-webpack.config.js
