@@ -31,4 +31,4 @@ class AddonAlreadyExistsError extends BaseError {
     }
 }
 
-export { InvalidUrlError, AddonNotFoundError, GameNotSupportedError, AddonAlreadyExistsError };
+export default { InvalidUrlError, AddonNotFoundError, GameNotSupportedError, AddonAlreadyExistsError };

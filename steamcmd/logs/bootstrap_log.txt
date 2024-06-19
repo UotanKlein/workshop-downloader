@@ -3628,3 +3628,197 @@
 [2024-06-19 02:49:32] Performing checksum verification of executable files
 [2024-06-19 02:49:32] Verification complete
 [2024-06-19 02:49:37] Shutdown
+
+
+[2024-06-19 07:47:45] Startup - updater built Jun 18 2024 15:41:21
+[2024-06-19 07:47:45] Startup - Steam Client launched with: E:\desktop\workshop-downloader\steamcmd\steamcmd.exe +login anonymous +workshop_download_item 4000 3024317004 +quit
+[2024-06-19 07:47:45] Using the following download hosts for Public, Realm steamglobal
+[2024-06-19 07:47:45] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-06-19 07:47:45] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-06-19 07:47:45] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-06-19 07:47:45] Checking for update on startup
+[2024-06-19 07:47:45] Checking for available updates...
+[2024-06-19 07:47:45] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_cmd_win32
+[2024-06-19 07:47:45] Manifest download: send request
+[2024-06-19 07:47:45] Manifest download: waiting for download to finish
+[2024-06-19 07:47:45] Manifest download: finished
+[2024-06-19 07:47:45] Download skipped: /steam_cmd_win32 version 1718751852, installed version 1718751852, existing pending version 0
+[2024-06-19 07:47:45] Nothing to do
+[2024-06-19 07:47:45] Verifying installation...
+[2024-06-19 07:47:45] Performing checksum verification of executable files
+[2024-06-19 07:47:45] BVerifyInstalledFiles: bad directory siteserverui\win32\
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-console-l1-1-0.dll is -1 bytes, expected 18744
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-datetime-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-debug-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-errorhandling-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-file-l1-1-0.dll is -1 bytes, expected 21816
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-file-l1-2-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-file-l2-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-handle-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-heap-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-interlocked-l1-1-0.dll is -1 bytes, expected 17856
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-libraryloader-l1-1-0.dll is -1 bytes, expected 18744
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-localization-l1-2-0.dll is -1 bytes, expected 20792
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-memory-l1-1-0.dll is -1 bytes, expected 18744
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-namedpipe-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-processenvironment-l1-1-0.dll is -1 bytes, expected 19248
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-processthreads-l1-1-0.dll is -1 bytes, expected 19392
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-processthreads-l1-1-1.dll is -1 bytes, expected 18744
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-profile-l1-1-0.dll is -1 bytes, expected 17712
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-rtlsupport-l1-1-0.dll is -1 bytes, expected 17720
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-string-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-synch-l1-1-0.dll is -1 bytes, expected 20280
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-synch-l1-2-0.dll is -1 bytes, expected 18744
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-sysinfo-l1-1-0.dll is -1 bytes, expected 19248
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-timezone-l1-1-0.dll is -1 bytes, expected 18224
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-core-util-l1-1-0.dll is -1 bytes, expected 18232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-conio-l1-1-0.dll is -1 bytes, expected 19256
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-convert-l1-1-0.dll is -1 bytes, expected 22328
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-environment-l1-1-0.dll is -1 bytes, expected 18736
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-filesystem-l1-1-0.dll is -1 bytes, expected 20280
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-heap-l1-1-0.dll is -1 bytes, expected 19256
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-locale-l1-1-0.dll is -1 bytes, expected 18744
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-math-l1-1-0.dll is -1 bytes, expected 28984
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-multibyte-l1-1-0.dll is -1 bytes, expected 26424
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-private-l1-1-0.dll is -1 bytes, expected 73016
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-process-l1-1-0.dll is -1 bytes, expected 19256
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-runtime-l1-1-0.dll is -1 bytes, expected 22840
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-stdio-l1-1-0.dll is -1 bytes, expected 24368
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-string-l1-1-0.dll is -1 bytes, expected 23488
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-time-l1-1-0.dll is -1 bytes, expected 20792
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\api-ms-win-crt-utility-l1-1-0.dll is -1 bytes, expected 18744
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\blink_image_resources_200_percent.pak is -1 bytes, expected 25856
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\content_resources_200_percent.pak is -1 bytes, expected 15
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\content_shell.pak is -1 bytes, expected 10266133
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\d3dcompiler_47.dll is -1 bytes, expected 3466856
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\ffmpeg.dll is -1 bytes, expected 1695232
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\icudtl.dat is -1 bytes, expected 10130560
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\libEGL.dll is -1 bytes, expected 15872
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\libGLESv2.dll is -1 bytes, expected 2543616
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\LICENSE is -1 bytes, expected 1080
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\LICENSES.chromium.html is -1 bytes, expected 1783609
+[2024-06-19 07:47:45] BVerifyInstalledFiles: bad directory siteserverui\win32\locales\
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\am.pak is -1 bytes, expected 6669
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ar.pak is -1 bytes, expected 6252
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\bg.pak is -1 bytes, expected 7220
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\bn.pak is -1 bytes, expected 9514
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ca.pak is -1 bytes, expected 4447
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\cs.pak is -1 bytes, expected 4278
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\da.pak is -1 bytes, expected 3875
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\de.pak is -1 bytes, expected 4406
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\el.pak is -1 bytes, expected 7882
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\en-GB.pak is -1 bytes, expected 3733
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\en-US.pak is -1 bytes, expected 3735
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\es-419.pak is -1 bytes, expected 4582
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\es.pak is -1 bytes, expected 4720
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\et.pak is -1 bytes, expected 4024
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\fa.pak is -1 bytes, expected 6173
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\fake-bidi.pak is -1 bytes, expected 6501
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\fi.pak is -1 bytes, expected 4123
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\fil.pak is -1 bytes, expected 4630
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\fr.pak is -1 bytes, expected 4880
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\gu.pak is -1 bytes, expected 8939
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\he.pak is -1 bytes, expected 4944
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\hi.pak is -1 bytes, expected 8544
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\hr.pak is -1 bytes, expected 4256
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\hu.pak is -1 bytes, expected 4734
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\id.pak is -1 bytes, expected 3922
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\it.pak is -1 bytes, expected 4446
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ja.pak is -1 bytes, expected 5240
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\kn.pak is -1 bytes, expected 10194
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ko.pak is -1 bytes, expected 4207
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\lt.pak is -1 bytes, expected 4468
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\lv.pak is -1 bytes, expected 4650
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ml.pak is -1 bytes, expected 11305
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\mr.pak is -1 bytes, expected 8733
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ms.pak is -1 bytes, expected 4035
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\nb.pak is -1 bytes, expected 3858
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\nl.pak is -1 bytes, expected 4105
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\pl.pak is -1 bytes, expected 4263
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\pt-BR.pak is -1 bytes, expected 4262
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\pt-PT.pak is -1 bytes, expected 4317
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ro.pak is -1 bytes, expected 4616
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ru.pak is -1 bytes, expected 6720
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\sk.pak is -1 bytes, expected 4385
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\sl.pak is -1 bytes, expected 4236
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\sr.pak is -1 bytes, expected 6705
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\sv.pak is -1 bytes, expected 3769
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\sw.pak is -1 bytes, expected 4293
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\ta.pak is -1 bytes, expected 10990
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\te.pak is -1 bytes, expected 10565
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\th.pak is -1 bytes, expected 8414
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\tr.pak is -1 bytes, expected 4176
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\uk.pak is -1 bytes, expected 6924
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\vi.pak is -1 bytes, expected 5062
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\zh-CN.pak is -1 bytes, expected 3779
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\locales\zh-TW.pak is -1 bytes, expected 3730
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\msvcp140.dll is -1 bytes, expected 440120
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\natives_blob.bin is -1 bytes, expected 239010
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\node.dll is -1 bytes, expected 14177792
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\pdf_viewer_resources.pak is -1 bytes, expected 140979
+[2024-06-19 07:47:45] BVerifyInstalledFiles: bad directory siteserverui\win32\resources\
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\resources\app.asar is -1 bytes, expected 28167367
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\resources\electron.asar is -1 bytes, expected 240641
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\siteserverui.exe is -1 bytes, expected 50115584
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\snapshot_blob.bin is -1 bytes, expected 1177052
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\ucrtbase.dll is -1 bytes, expected 1142072
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\ui_resources_200_percent.pak is -1 bytes, expected 76195
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\vcruntime140.dll is -1 bytes, expected 83784
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\version is -1 bytes, expected 6
+[2024-06-19 07:47:45] BVerifyInstalledFiles: siteserverui\win32\views_resources_200_percent.pak is -1 bytes, expected 57450
+[2024-06-19 07:47:45] Verification complete
+[2024-06-19 07:47:45] Downloading update...
+[2024-06-19 07:47:45] Checking for available updates...
+[2024-06-19 07:47:45] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_cmd_win32
+[2024-06-19 07:47:45] Manifest download: send request
+[2024-06-19 07:47:46] Manifest download: waiting for download to finish
+[2024-06-19 07:47:46] Manifest download: finished
+[2024-06-19 07:47:46] Downloaded new manifest: /steam_cmd_win32 version 1718751852, installed version 1718751852, existing pending version 0
+[2024-06-19 07:47:46] Download complete.
+[2024-06-19 07:47:46] uninstalled manifest found in E:\desktop\workshop-downloader\steamcmd\package\steam_cmd_win32 (1).
+[2024-06-19 07:47:46] Extracting package...
+[2024-06-19 07:47:48] Installing update...
+[2024-06-19 07:47:49] Committing NTFS transaction (0 non-transactional backup files)
+[2024-06-19 07:47:50] Cleaning up...
+[2024-06-19 07:47:50] Update complete, launching Steamcmd...
+[2024-06-19 07:47:50] Shutdown
+
+
+[2024-06-19 07:47:50] Startup - updater built Jun 18 2024 15:41:21
+[2024-06-19 07:47:50] Startup - Steam Client launched with: E:\desktop\workshop-downloader\steamcmd\steamcmd.exe +login anonymous +workshop_download_item 4000 3024317004 +quit
+[2024-06-19 07:47:50] Using the following download hosts for Public, Realm steamglobal
+[2024-06-19 07:47:50] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-06-19 07:47:50] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-06-19 07:47:50] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-06-19 07:47:50] Checking for update on startup
+[2024-06-19 07:47:50] Checking for available updates...
+[2024-06-19 07:47:50] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_cmd_win32
+[2024-06-19 07:47:50] Manifest download: send request
+[2024-06-19 07:47:50] Manifest download: waiting for download to finish
+[2024-06-19 07:47:50] Manifest download: finished
+[2024-06-19 07:47:50] Download skipped: /steam_cmd_win32 version 1718751852, installed version 1718751852, existing pending version 0
+[2024-06-19 07:47:50] Nothing to do
+[2024-06-19 07:47:50] Verifying installation...
+[2024-06-19 07:47:50] Performing checksum verification of executable files
+[2024-06-19 07:47:52] Verification complete
+[2024-06-19 07:47:57] Shutdown
+
+
+[2024-06-20 00:35:07] Startup - updater built Jun 18 2024 15:41:21
+[2024-06-20 00:35:07] Startup - Steam Client launched with: E:\desktop\workshop-downloader\steamcmd\steamcmd.exe +login anonymous +workshop_download_item 4000 3024317004 +quit
+[2024-06-20 00:35:07] Using the following download hosts for Public, Realm steamglobal
+[2024-06-20 00:35:07] 1. https://client-update.akamai.steamstatic.com, /, Realm 'steamglobal', weight was 1000, source = 'update_hosts_cached.vdf'
+[2024-06-20 00:35:07] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'update_hosts_cached.vdf'
+[2024-06-20 00:35:07] 3. https://cdn.steamstatic.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2024-06-20 00:35:07] Checking for update on startup
+[2024-06-20 00:35:07] Checking for available updates...
+[2024-06-20 00:35:07] Downloading manifest: https://client-update.akamai.steamstatic.com/steam_cmd_win32
+[2024-06-20 00:35:07] Manifest download: send request
+[2024-06-20 00:35:08] Manifest download: waiting for download to finish
+[2024-06-20 00:35:08] Manifest download: finished
+[2024-06-20 00:35:08] Download skipped: /steam_cmd_win32 version 1718751852, installed version 1718751852, existing pending version 0
+[2024-06-20 00:35:08] Nothing to do
+[2024-06-20 00:35:08] Verifying installation...
+[2024-06-20 00:35:08] Performing checksum verification of executable files
+[2024-06-20 00:35:10] Verification complete
+[2024-06-20 00:35:16] Shutdown
