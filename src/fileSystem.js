@@ -1,23 +1,20 @@
 import fs from 'fs/promises';
 
-const isFile = async (filePath) => {
+const checkPathType = async (path, typeCheck) => {
     try {
-        const stats = await fs.stat(filePath);
-        return stats.isFile();
+        const stats = await fs.stat(path);
+        return stats[typeCheck]();
     } catch (err) {
-        console.error(`Error checking type of ${filePath}: ${err}`);
         return false;
     }
 };
 
+const isFile = async (filePath) => {
+    return checkPathType(filePath, 'isFile');
+};
+
 const isDir = async (dirPath) => {
-    try {
-        const stats = await fs.stat(dirPath);
-        return stats.isDirectory();
-    } catch (err) {
-        console.error(`Error checking type of ${dirPath}: ${err}`);
-        return false;
-    }
+    return checkPathType(dirPath, 'isDirectory');
 };
 
 const checkExists = async (pathToCheck) => {

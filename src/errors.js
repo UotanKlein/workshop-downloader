@@ -1,42 +1,34 @@
-class InvalidUrlError extends Error {
-    constructor(message) {
+class BaseError extends Error {
+    constructor(message, text, name, statusCode) {
         super(message);
-        this.text = 'Некорректная ссылка';
-        this.name = 'InvalidUrlError';
-        this.statusCode = 400;
+        this.text = text;
+        this.name = name;
+        this.statusCode = statusCode;
     }
 }
 
-class AddonNotFoundError extends Error {
+class InvalidUrlError extends BaseError {
     constructor(message) {
-        super(message);
-        this.text = 'Аддон не найден';
-        this.name = 'AddonNotFoundError';
-        this.statusCode = 404;
+        super(message, 'Некорректная ссылка', 'InvalidUrlError', 400);
     }
 }
 
-class GameNotSupportedError extends Error {
+class AddonNotFoundError extends BaseError {
     constructor(message) {
-        super(message);
-        this.text = 'Игра не поддерживается';
-        this.name = 'GameNotSupportedError';
-        this.statusCode = 403;
+        super(message, 'Аддон не найден', 'AddonNotFoundError', 404);
     }
 }
 
-class AddonAlreadyExistsError extends Error {
+class GameNotSupportedError extends BaseError {
     constructor(message) {
-        super(message);
-        this.text = 'Аддон уже существует';
-        this.name = 'AddonAlreadyExistsError';
-        this.statusCode = 409;
+        super(message, 'Игра не поддерживается', 'GameNotSupportedError', 403);
     }
 }
 
-export default {
-    InvalidUrlError,
-    AddonNotFoundError,
-    GameNotSupportedError,
-    AddonAlreadyExistsError,
-};
+class AddonAlreadyExistsError extends BaseError {
+    constructor(message) {
+        super(message, 'Аддон уже существует', 'AddonAlreadyExistsError', 409);
+    }
+}
+
+export { InvalidUrlError, AddonNotFoundError, GameNotSupportedError, AddonAlreadyExistsError };

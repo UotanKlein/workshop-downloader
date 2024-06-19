@@ -6,10 +6,8 @@
     "type": "module",
     "scripts": {
         "build": "npx webpack --mode production",
-        "start": "npx webpack --mode development",
         "server": "npx webpack serve --config webpack.config.js --watch",
-        "express": "node src/server.js",
-        "start-site": "concurrently \"npm run server\" \"npm run express\""
+        "start": "node index.js"
     },
     "author": "",
     "license": "ISC",
