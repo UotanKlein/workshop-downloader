@@ -5,8 +5,8 @@ Workshop Downloader - это инструмент для скачивания а
 Он позволяет создателям модов быстро скачивать аддоны без лишних хлопот с декомпилированием и сразу получить доступ к исходным файлам, чтобы начать работу с ними.
 Workshop Downloader также позволяет до скачивания изменять скаченные файлы аддона и после чего уже скачать измененный заархивированный измененный аддон. Все скаченные аддоны сохраняются и к ним можно получить доступ в списке аддонов.
 
-<img src="https://i.imgur.com/P9L5wrv.png" alt="Logo" style="width:50%; height:auto;">
-
-![Logo](https://i.imgur.com/P9L5wrv.png)
+<div style="text-align: center;">
+  <img src="https://i.imgur.com/P9L5wrv.png" alt="Logo" style="width:50%; height:auto;">
+</div>
 
 ![Gif](https://i.imgur.com/8Ig3rlu.gif)
