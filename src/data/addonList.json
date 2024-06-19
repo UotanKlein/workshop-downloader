@@ -1,26 +1,10 @@
 {
-  "0": {
-    "id": "112806637",
+  "1": {
+    "id": "3024317004",
     "game": "4000",
-    "name": "Gmod Legs 3",
-    "icon": "https://steamuserimages-a.akamaihd.net/ugc/1875202855979959454/C752C11300863D1EB61EA601AA67F195AA00D18B/",
-    "path": "addons/0",
-    "data": 1355264397
-  },
-  "2": {
-    "id": "112806637",
-    "game": "4000",
-    "name": "Gmod Legs 3",
-    "icon": "https://steamuserimages-a.akamaihd.net/ugc/1875202855979959454/C752C11300863D1EB61EA601AA67F195AA00D18B/",
-    "path": "addons/2",
-    "data": 1355264397
-  },
-  "3": {
-    "id": "112806637",
-    "game": "4000",
-    "name": "Gmod Legs 3",
-    "icon": "https://steamuserimages-a.akamaihd.net/ugc/1875202855979959454/C752C11300863D1EB61EA601AA67F195AA00D18B/",
-    "path": "addons/3",
-    "data": 1355264397
+    "name": "GMinimap",
+    "icon": "https://steamuserimages-a.akamaihd.net/ugc/2019355280651905872/3FDCE3BBC595601BBA1A08B3E37D353A52A6152D/",
+    "path": "addons/1",
+    "data": 1692743805
   }
 }
