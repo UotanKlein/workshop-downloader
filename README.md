@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/26ffa6f4b43c9c5d38d2/maintainability)](https://codeclimate.com/github/UotanKlein/workshop-downloader/maintainability)
+[![Code Climate](https://api.codeclimate.com/v1/badges/26ffa6f4b43c9c5d38d2/maintainability)](https://codeclimate.com/github/UotanKlein/workshop-downloader/maintainability)
 
 <p align="center">
     <img src="https://i.imgur.com/P9L5wrv.png" alt="Logo" style="width:50%; height:auto;">
