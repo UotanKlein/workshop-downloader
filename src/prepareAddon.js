@@ -43,41 +43,42 @@ const getLoginData = () => {
 
 // FIXME: Решить проблему парарлелльной загрузки аддонов.
 
-const downloadAddon = (gameId, addonId, requireLogin) => new Promise((resolve, reject) => {
-    let steamcmdCommands;
-    if (requireLogin) {
-        const tblUsrData = getLoginData();
-        steamcmdCommands = ['+login', tblUsrData.login, tblUsrData.password, '+workshop_download_item', gameId, addonId, '+quit'];
-    } else {
-        steamcmdCommands = ['+force_install_dir', downloadDir, '+login', 'anonymous', '+workshop_download_item', gameId, addonId, '+quit'];
-    }
+const downloadAddon = (gameId, addonId, requireLogin) =>
+    new Promise((resolve, reject) => {
+        let steamcmdCommands;
+        if (requireLogin) {
+            const tblUsrData = getLoginData();
+            steamcmdCommands = ['+login', tblUsrData.login, tblUsrData.password, '+workshop_download_item', gameId, addonId, '+quit'];
+        } else {
+            steamcmdCommands = ['+force_install_dir', downloadDir, '+login', 'anonymous', '+workshop_download_item', gameId, addonId, '+quit'];
+        }
 
-    const executeCommand = (command, args) => {
-        return new Promise((resolve, reject) => {
-            const cmd = spawn(command, args);
+        const executeCommand = (command, args) => {
+            return new Promise((resolve, reject) => {
+                const cmd = spawn(command, args);
 
-            cmd.stdout.on('data', (data) => {
-                console.log(`stdout: ${data.toString()}`);
+                cmd.stdout.on('data', (data) => {
+                    console.log(`stdout: ${data.toString()}`);
+                });
+
+                cmd.stderr.on('data', (data) => {
+                    console.error(`stderr: ${data.toString()}`);
+                });
+
+                cmd.on('close', (code) => {
+                    if (code === 0) {
+                        resolve(code);
+                    } else {
+                        reject(new Error(`Process exited with code ${code}`));
+                    }
+                });
             });
+        };
 
-            cmd.stderr.on('data', (data) => {
-                console.error(`stderr: ${data.toString()}`);
-            });
-
-            cmd.on('close', (code) => {
-                if (code === 0) {
-                    resolve(code);
-                } else {
-                    reject(new Error(`Process exited with code ${code}`));
-                }
-            });
-        });
-    };
-
-    executeCommand('steamcmd', steamcmdCommands)
-        .then((code) => resolve(code))
-        .catch((error) => reject(error));
-});
+        executeCommand('steamcmd', steamcmdCommands)
+            .then((code) => resolve(code))
+            .catch((error) => reject(error));
+    });
 
 const pathToLinux = (oldPath) => oldPath.split(path.sep).join('/');
 
@@ -130,8 +131,6 @@ const prepareAddon = async (link) => {
         const uniqueId = await getUniqueId();
         const addonDir = path.join(downloadDir, 'steamapps', 'workshop', 'content', gameId, addonId);
         const newPathAddon = path.join(addonsDir, uniqueId);
-
-        console.log(`Aboba, chel, kak delaaaa: ${addonDir}`);
 
         if (!(await checkExists(addonDir))) {
             throw new Error(`Directory of addon not found at ${addonDir}`);

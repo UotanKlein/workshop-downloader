@@ -1,42 +1,42 @@
-# Этап 1: Установка зависимостей и сборка приложения
-FROM node:14 as build
+FROM archlinux:multilib-devel
 
-# Установка рабочей директории
+# Установка необходимых пакетов
+RUN pacman -Syu --noconfirm \
+    && pacman -S --needed --noconfirm nodejs npm git base-devel sudo glibc-locales curl
+
+# Создание пользователя без прав суперпользователя
+RUN useradd -m builder \
+    && passwd -d builder \
+    && printf 'builder ALL=(ALL) NOPASSWD: ALL\n' | tee /etc/sudoers.d/builder
+
+# Настройка локалей
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
+    && locale-gen
+
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+USER builder
+WORKDIR /home/builder
+
+# Клонирование репозитория yay и установка yay
+RUN git clone https://aur.archlinux.org/yay.git \
+    && cd yay \
+    && makepkg -si --noconfirm
+
+# Обновление системы и установка необходимых пакетов с помощью yay
+RUN yay -Syu --noconfirm \
+    && yay -S --noconfirm wine winetricks steamcmd
+
 WORKDIR /app
+COPY . /app/
 
-# Копирование package.json и package-lock.json
-COPY ./package*.json ./
+# Установка зависимостей проекта
+RUN sudo npm install --unsafe-perm=true
 
-# Установка зависимостей npm
-RUN npm install
+# Указание порта, который будет использоваться
+EXPOSE 3000
 
-# Копирование всех файлов из локальной директории workshop-downloader в /app
-COPY ./ /app/
-
-# Этап 2: Сборка финального образа с SteamCMD и другими зависимостями
-FROM steamcmd/steamcmd:alpine
-
-# Обновление пакетов и установка необходимых зависимостей
-RUN apk update && apk add --no-cache \
-    nodejs \
-    npm \
-    wine \
-    cabextract \
-    xterm \
-    gcompat \
-    wget \
-    && rm -rf /var/cache/apk/*
-
-# Скачивание и установка winetricks
-RUN wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
-    && chmod +x winetricks \
-    && mv winetricks /usr/local/bin/
-
-# Установка рабочей директории
-WORKDIR /app
-
-# Копирование собранных файлов из предыдущего этапа
-COPY --from=build /app /app
-
-# Указание точки входа
-ENTRYPOINT ["npm", "run", "start"]
+# Запуск приложения
+ENTRYPOINT ["sudo", "npm", "run", "start"]
