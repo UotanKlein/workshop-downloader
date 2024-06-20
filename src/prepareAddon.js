@@ -15,9 +15,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const curPath = path.resolve(__dirname, '..');
-const steamcmdPath = path.join(curPath, 'steamcmd/steamcmd.exe');
 
 const addonsDir = path.join(curPath, 'addons');
+const downloadDir = path.join(curPath, 'temp');
 
 const steamContentDir = path.join(curPath, `steamcmd/steamapps/workshop/content`);
 
@@ -43,43 +43,41 @@ const getLoginData = () => {
 
 // FIXME: Решить проблему парарлелльной загрузки аддонов.
 
-const downloadAddon = (gameId, addonId, requireLogin) => {
-    return new Promise((resolve, reject) => {
-        let steamcmdCommands;
-        if (requireLogin) {
-            const tblUsrData = getLoginData();
-            steamcmdCommands = ['+login', tblUsrData.login, tblUsrData.password, '+workshop_download_item', gameId, addonId, '+quit'];
-        } else {
-            steamcmdCommands = ['+login', 'anonymous', '+workshop_download_item', gameId, addonId, '+quit'];
-        }
+const downloadAddon = (gameId, addonId, requireLogin) => new Promise((resolve, reject) => {
+    let steamcmdCommands;
+    if (requireLogin) {
+        const tblUsrData = getLoginData();
+        steamcmdCommands = ['+login', tblUsrData.login, tblUsrData.password, '+workshop_download_item', gameId, addonId, '+quit'];
+    } else {
+        steamcmdCommands = ['+force_install_dir', downloadDir, '+login', 'anonymous', '+workshop_download_item', gameId, addonId, '+quit'];
+    }
 
-        const executeCommand = (command, args) => {
-            return new Promise((resolve, reject) => {
-                const cmd = spawn(command, args);
+    const executeCommand = (command, args) => {
+        return new Promise((resolve, reject) => {
+            const cmd = spawn(command, args);
 
-                cmd.stdout.on('data', (data) => {
-                    console.log(`stdout: ${data.toString()}`);
-                });
-
-                cmd.stderr.on('data', (data) => {
-                    console.error(`stderr: ${data.toString()}`);
-                });
-
-                cmd.on('close', (code) => {
-                    if (code === 0) {
-                        resolve(code);
-                    } else {
-                        reject(new Error(`Process exited with code ${code}`));
-                    }
-                });
+            cmd.stdout.on('data', (data) => {
+                console.log(`stdout: ${data.toString()}`);
             });
-        };
 
-        executeCommand(steamcmdPath, steamcmdCommands)
-            .then((code) => resolve(code))
-            .catch((error) => reject(error));
-    });
-};
+            cmd.stderr.on('data', (data) => {
+                console.error(`stderr: ${data.toString()}`);
+            });
+
+            cmd.on('close', (code) => {
+                if (code === 0) {
+                    resolve(code);
+                } else {
+                    reject(new Error(`Process exited with code ${code}`));
+                }
+            });
+        });
+    };
+
+    executeCommand('steamcmd', steamcmdCommands)
+        .then((code) => resolve(code))
+        .catch((error) => reject(error));
+});
 
 const pathToLinux = (oldPath) => oldPath.split(path.sep).join('/');
 
@@ -117,7 +115,7 @@ const prepareAddon = async (link) => {
     }
 
     try {
-        if (!(await checkExists(steamcmdPath)) || !(await isFile(steamcmdPath)) || !(await checkExists(addonsDir)) || !(await isDir(addonsDir))) {
+        if (!(await checkExists(addonsDir)) || !(await isDir(addonsDir))) {
             throw new Error('Необходимые файлы или каталоги отсутствуют.');
         }
 
@@ -130,8 +128,10 @@ const prepareAddon = async (link) => {
         console.log('Addon successfully downloaded');
 
         const uniqueId = await getUniqueId();
-        const addonDir = path.join(steamContentDir, gameId, addonId);
+        const addonDir = path.join(downloadDir, 'steamapps', 'workshop', 'content', gameId, addonId);
         const newPathAddon = path.join(addonsDir, uniqueId);
+
+        console.log(`Aboba, chel, kak delaaaa: ${addonDir}`);
 
         if (!(await checkExists(addonDir))) {
             throw new Error(`Directory of addon not found at ${addonDir}`);
