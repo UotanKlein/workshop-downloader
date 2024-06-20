@@ -15,7 +15,7 @@ import archiver from 'archiver';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const expressPort = 80;
+const expressPort = 3000;
 
 const startServer = () => {
     const app = express();
@@ -104,7 +104,7 @@ const startServer = () => {
             res.status(500).send(err);
         }
     });
-    
+
     app.post('/dataAddon/:id', async (req, res) => {
         const pathToFile = req.body.path;
         try {

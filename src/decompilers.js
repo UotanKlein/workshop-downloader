@@ -22,7 +22,7 @@ const gmod = async (dirPath) => {
             try {
                 const gmaFilePath = path.join(dirPath, el);
                 exec(
-                    `${gmadPath} ${gmaFilePath}`,
+                    `wine ${gmadPath} extract -file "${gmaFilePath}"`,
                     async (err, stdout, stderr) => {
                         if (err) {
                             console.error(
